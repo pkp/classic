@@ -1,0 +1,40 @@
+/**
+ * @file less/objects/issue_toc.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief issue table of content
+ *
+ */
+
+// date published
+
+.published {
+	padding-top: 22px;
+	color: @warm-grey;
+	font-size: 14px;
+	font-family: 'Cardo', serif;
+}
+
+// issue introduction
+
+.description_cover {
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+@media (min-width: 992px) {
+	.description {
+		max-width: 50%;
+	}
+	.cover_image {
+		max-width: 210px;
+	}
+}
+
+.issue_heading {
+	padding-top: 63px;
+}

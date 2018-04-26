@@ -1,0 +1,225 @@
+/**
+ * @file less/components/header.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for site header
+ *
+ */
+
+// all header
+
+.header {
+	background-color: @black;
+	padding-top: 7px;
+}
+
+.home-link:hover {
+	text-decoration: none;
+}
+
+.header .row {
+	min-height: @minHeight-userMenu;
+}
+
+
+.user-dropdown a:focus {
+	background-color: @sun-yellow;
+}
+
+@media (min-width: 992px) {
+	.header {
+		.container-padding()
+	}
+}
+
+#nav-small {
+	display: none;
+}
+
+.nav-tabs .nav-link {
+	border: 0;
+	&:focus, &:hover {
+		color: @sun-yellow;
+	}
+}
+
+header {
+	& li:first-child a {
+		padding-left: 0;
+	}
+	& li:last-child a {
+		padding-right: 0;
+	}
+}
+
+
+// user navigation menu
+#navigationUser {
+	justify-content: flex-end;
+	border-bottom: 0;
+}
+
+#navigationUser a {
+	font-size: 12px;
+	border: 0;
+}
+
+// menu dropdown
+.nav-item.show .nav-link.dropdown-toggle {
+	background-color: @black;
+	color: @sun-yellow;
+}
+.dropdown-item {
+
+	&:focus {
+		background-color: @sun-yellow;
+	}
+}
+
+#navigationUser .dropdown-item {
+	font-size: 14px;
+}
+
+// styling journal logo
+.upper-header {
+	padding-top: 7px;
+	padding-left: 16px;
+}
+
+.journal-logo-text {
+	color: @white;
+	padding-top: 5px;
+	font-family: 'Cardo', serif;
+	font-size: 22px;
+	&:focus, &:hover {
+		color: @sun-yellow;
+	}
+}
+
+.journal-logo {
+	max-height: @minHeight-userMenu;
+}
+
+.logo-wraper {
+	padding-left: 0;
+}
+
+/* primary navigation menu
+ * FOR LARGE SCREENS
+ */
+@media (min-width: 992px) {
+	// always show primary menu on big screens
+	#modal-on-small {
+		display: block;
+	}
+
+	#close-small-modal {
+		display: none;
+	}
+
+	#navigationPrimary {
+		border: 0;
+		justify-content: space-between;
+		padding-bottom: 15px;
+	}
+
+	#navigationPrimary .nav-link {
+		text-transform: uppercase;
+	}
+}
+
+/* primary navigation
+ * menu FOR small SCREENS
+ */
+@media (max-width: 991px) {
+	#show-modal {
+		cursor: pointer;
+		color: @white;
+		&:focus, &:hover {
+			color: @sun-yellow;
+		}
+	}
+
+	#nav-small {
+		display: flex;
+		border-bottom: 0;
+		padding-bottom: 15px;
+	}
+
+	#nav-small li {
+		margin-bottom: 0;
+	}
+
+	#nav-small a {
+		border: 0;
+		text-transform: uppercase;
+	}
+
+	.nav-modal {
+		.modal();
+	}
+
+	// we don't want to display modal element while it has hide class value
+	.nav-modal.hide {
+		display: none;
+	}
+
+	#primary-nav-wraper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		width: 50%;
+		overflow-y: auto;
+	}
+
+	#close-small-modal {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		color: #aaaaaa;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	#close-small-modal:hover,
+	#close-small-modal:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	// styling nav inside modal menu
+	#navigationPrimary {
+		display: block;
+		border-bottom: 0;
+	}
+
+	#navigationPrimary a {
+		border: 0;
+		color: #0a0a0a;
+	}
+
+	#navigationPrimary .user-dropdown a {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 767px) {
+	#primary-nav-wraper {
+		width: 100%
+	}
+}
+
+.site-footer .title {
+	text-align: center;
+}
+
+

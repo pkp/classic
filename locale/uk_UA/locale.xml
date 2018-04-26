@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="uk_UA" full_name="Ukrainian">
+
+    <message key="plugins.themes.humanities.name">Humanities Theme</message>
+    <message key="plugins.themes.humanities.description">Тема для OJS 3</message>
+    <message key="plugins.themes.humanities.issueDescription">Опис випуску</message>
+    
+</locale>

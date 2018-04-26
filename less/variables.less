@@ -1,0 +1,34 @@
+/**
+ * @file less/variables.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief less theme-wide variables
+ *
+ */
+
+/* Setting up the base URL to fontawesome fonts */
+@fa-font-path: "@{baseUrl}/plugins/themes/humanities/node_modules/@fortawesome/fontawesome-free-webfonts/webfonts";
+
+/* site-wide color variables */
+@font-size: 16px;
+@black: #000000;
+@sun-yellow: #ffd120;
+@warm-grey: #757575;
+@gunmetal: #4d6066;
+@black-two: #333333;
+@white: #ffffff;
+@pinkish-grey: #cccccc;
+
+/* header variables */
+@minHeight-userMenu: 100px;
+@site-padding: 30px;
+
+/* need to be changed before production */
+@image-maxwidth: 400px;
+img {
+	max-width: @image-maxwidth;
+}

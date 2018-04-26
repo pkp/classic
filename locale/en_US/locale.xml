@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="en_US" full_name="U.S. English">
+   
+    <message key="plugins.themes.humanities.name">Humanities Theme</message>
+    <message key="plugins.themes.humanities.description">The Theme For OJS 3</message>
+    <message key="plugins.themes.humanities.issueDescription">Issue Description</message>
+    
+</locale>
