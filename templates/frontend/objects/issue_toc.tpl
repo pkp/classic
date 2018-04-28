@@ -37,49 +37,29 @@
 	{/if}
 
 	{* Issue introduction area above articles *}
-	<div class="issue_heading">
-		{* Description *}
-		<div class="flex_container description_cover">
-			{if $issue->hasDescription()}
-				<div class="description">
-					<h2 class="description_label">{translate key="plugins.themes.humanities.issueDescription"}</h2>
-					{$issue->getLocalizedDescription()|strip_unsafe_html}
-				</div>
-			{/if}
+	{if $issue->hasDescription() || $issue->getLocalizedCoverImageUrl()}
+		<div class="issue_heading">
+			{* Description *}
+			<div class="flex_container description_cover">
+				{if $issue->hasDescription()}
+					<div class="description">
+						<h2 class="description_label">{translate key="plugins.themes.humanities.issueDescription"}</h2>
+						{$issue->getLocalizedDescription()|strip_unsafe_html}
+					</div>
+				{/if}
 
-			{* Issue cover image *}
-			{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-			{if $issueCover}
-				<div class="issue_cover_block">
-					<a href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-						<img class="cover_image" src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
-					</a>
-				</div>
-			{/if}
+				{* Issue cover image *}
+				{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
+				{if $issueCover}
+					<div class="issue_cover_block">
+						<a href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
+							<img class="cover_image" src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+						</a>
+					</div>
+				{/if}
+			</div>
 		</div>
-
-		{* PUb IDs (eg - DOI) *}
-		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-			{if $pubId}
-				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-				<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
-					<span class="type">
-						{$pubIdPlugin->getPubIdDisplayType()|escape}:
-					</span>
-					<span class="id">
-						{if $doiUrl}
-							<a href="{$doiUrl|escape}">
-								{$doiUrl}
-							</a>
-						{else}
-							{$pubId}
-						{/if}
-					</span>
-				</div>
-			{/if}
-		{/foreach}
-	</div>
+	{/if}
 
 	{* Full-issue galleys *}
 	{if $issueGalleys}
@@ -103,17 +83,20 @@
 		<div class="section">
 		{if $section.articles}
 			{if $section.title}
-				<h2>
+				<div class="section_title">
 					{$section.title|escape}
-				</h2>
+				</div>
 			{/if}
-			<ul class="cmp_article_list articles">
-				{foreach from=$section.articles item=article}
-					<li>
-						{include file="frontend/objects/article_summary.tpl"}
-					</li>
+			<div class="section_content">
+				{assign var=parts value=$section.articles|@array_chunk:3}
+				{foreach from=$parts item=sectionArticles key=key}
+					<div class="articlesGroup">
+						{foreach from=$sectionArticles item=article}
+								{include file="frontend/objects/article_summary.tpl"}
+						{/foreach}
+					</div>
 				{/foreach}
-			</ul>
+			</div>
 		{/if}
 		</div>
 	{/foreach}

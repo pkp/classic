@@ -36,7 +36,7 @@
 					<span class="current_issue_number">{translate key="issue.no"} {$issue->getNumber()|strip_unsafe_html}</span>
 				</h1>
 				{include file="frontend/objects/issue_toc.tpl"}
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+				<a class="btn-black read_more" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
 					{translate key="journal.viewAllIssues"}
 				</a>
 			</div>

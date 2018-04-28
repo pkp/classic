@@ -34,3 +34,31 @@ h3 {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 }
+
+.btn-sunshine {
+	.button();
+	background-color: @sun-yellow;
+	color: @black;
+	font-size: 14px;
+	font-weight: bold;
+
+	&:hover {
+		background-color: @sun-yellow / 1.2;
+		text-decoration: none;
+		color: @black;
+	}
+}
+
+.btn-black {
+	.button();
+	background-color: @black;
+	color: @white;
+	font-size: 14px;
+	font-weight: bold;
+
+	&:hover {
+		background-color: @gunmetal;
+		text-decoration: none;
+		color: @white;
+	}
+}

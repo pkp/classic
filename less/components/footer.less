@@ -10,7 +10,7 @@
  *
  */
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 	.container-footer {
 		.container-padding();
 	}
@@ -70,7 +70,16 @@
 }
 
 .block_make_submission_link {
-	.btn-info();
+	.button();
+	border: 1px solid @white;
+	color: @black;
+	display: block;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+		background-color: @sun-yellow / 1.2;
+	}
 }
 
 .site-footer {
