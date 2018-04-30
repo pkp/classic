@@ -6,5 +6,7 @@
     <message key="plugins.themes.humanities.name">Humanities Theme</message>
     <message key="plugins.themes.humanities.description">The Theme For OJS 3</message>
     <message key="plugins.themes.humanities.issueDescription">Issue Description</message>
+    <message key="plugins.themes.humanities.more">More</message>
+    <message key="plugins.themes.humanities.fullIssue">Full Issue</message>
     
 </locale>

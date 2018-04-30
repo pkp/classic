@@ -44,7 +44,25 @@
 				{if $issue->hasDescription()}
 					<div class="description">
 						<h2 class="description_label">{translate key="plugins.themes.humanities.issueDescription"}</h2>
-						{$issue->getLocalizedDescription()|strip_unsafe_html}
+						{assign var=issueDescription value=$issue->getLocalizedDescription()|strip_unsafe_html}
+						{if $issueDescription|strlen < 800}
+							<div class="description_text">
+								{$issueDescription}
+							</div>
+						{elseif $requestedPage|escape !== "issue"}
+							<div class="description_text">
+								{$issueDescription|substr:0:800|mb_convert_encoding:'UTF-8'|replace:'?':''}<span
+										class="three_dots">...</span>
+								<a class="more_button"
+								   href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
+									{translate key="plugins.themes.humanities.more"}
+								</a>
+							</div>
+						{else}
+							<div class="description_text">
+								{$issueDescription}
+							</div>
+						{/if}
 					</div>
 				{/if}
 
@@ -53,7 +71,8 @@
 				{if $issueCover}
 					<div class="issue_cover_block">
 						<a href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-							<img class="cover_image" src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+							<img class="cover_image"
+							     src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 						</a>
 					</div>
 				{/if}
@@ -77,28 +96,38 @@
 		</div>
 	{/if}
 
+	{if $requestedPage|escape === 'issue'}
+		<div class="full_issue_label">
+			<span>{translate key="plugins.themes.humanities.fullIssue"}</span>
+		</div>
+	{/if}
+
 	{* Articles *}
 	<div class="sections">
-	{foreach name=sections from=$publishedArticles item=section}
-		<div class="section">
-		{if $section.articles}
-			{if $section.title}
-				<div class="section_title">
-					{$section.title|escape}
-				</div>
-			{/if}
-			<div class="section_content">
-				{assign var=parts value=$section.articles|@array_chunk:3}
-				{foreach from=$parts item=sectionArticles key=key}
-					<div class="articlesGroup">
-						{foreach from=$sectionArticles item=article}
-								{include file="frontend/objects/article_summary.tpl"}
+		{foreach name=sections from=$publishedArticles item=section}
+			<div class="section">
+				{if $section.articles}
+					{if $section.title}
+						<div class="section_title">
+							{$section.title|escape}
+						</div>
+					{/if}
+					<div class="section_content">
+						{assign var=parts value=$section.articles|@array_chunk:3}
+						{foreach from=$parts item=sectionArticles key=key}
+							<div class="articlesGroup">
+								{foreach from=$sectionArticles item=article}
+									{include file="frontend/objects/article_summary.tpl"}
+								{/foreach}
+							</div>
 						{/foreach}
 					</div>
-				{/foreach}
+				{/if}
 			</div>
-		{/if}
-		</div>
-	{/foreach}
+		{/foreach}
 	</div><!-- .sections -->
+
+	<a class="btn-black read_more" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
+		{translate key="journal.viewAllIssues"}
+	</a>
 </div>

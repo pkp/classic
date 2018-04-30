@@ -34,6 +34,21 @@
 	.header {
 		.container-padding()
 	}
+
+	header {
+		& li:first-child .nav-link {
+			padding-left: 0;
+		}
+		& li:last-child .nav-link {
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	#show-modal {
+		padding-left: 0;
+	}
 }
 
 #nav-small {
@@ -44,15 +59,6 @@
 	border: 0;
 	&:focus, &:hover {
 		color: @sun-yellow;
-	}
-}
-
-header {
-	& li:first-child .nav-link {
-		padding-left: 0;
-	}
-	& li:last-child .nav-link {
-		padding-right: 0;
 	}
 }
 
@@ -93,7 +99,7 @@ header {
 .journal-logo-text {
 	color: @white;
 	padding-top: 5px;
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 	font-size: 22px;
 	&:focus, &:hover {
 		color: @sun-yellow;

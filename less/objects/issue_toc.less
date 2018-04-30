@@ -16,7 +16,7 @@
 	padding-top: 22px;
 	color: @warm-grey;
 	font-size: 14px;
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 }
 
 // issue introduction
@@ -44,11 +44,12 @@
 }
 
 .section_title {
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 	font-size: 18px;
 	color: @gunmetal;
 	font-weight: bold;
 	padding-bottom: 42px;
+	padding-top: 3px;
 }
 
 .section {
@@ -64,4 +65,46 @@
 	display: flex;
 	flex-flow: row wrap;
 }
+
+.more_button {
+	color: @black;
+	border-bottom: 3px solid @sun-yellow;
+	line-height: 2px;
+	display: inline-block;
+
+	&:hover {
+		color: @sun-yellow;
+		border-bottom: 0;
+		text-decoration: none;
+	}
+}
+
+// button
+
+.read_more {
+	margin-top: 34px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+// only for issue page
+.full_issue_label {
+	border-top: 2px solid #bcbcbc;
+	font-size: 18px;
+	font-family: @font-family-primary;
+	margin-top: 57px;
+	padding-top: 39px;
+}
+
+@media (min-width: 992px) {
+	.full_issue_label {
+		max-width: 50%;
+	}
+}
+
+.full_issue_label span {
+	display: inline-block;
+	border-bottom: 3px solid @sun-yellow;
+}
+
 

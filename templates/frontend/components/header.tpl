@@ -15,6 +15,12 @@
 	{if $displayPageHeaderTitle && !$displayPageHeaderLogo && is_string($displayPageHeaderTitle)}
 		{assign var="showingLogo" value=false}
 	{/if}
+
+	{if $currentContext && $multipleContexts}
+		{url|assign:"homeUrl" page="index" router=$smarty.const.ROUTE_PAGE}
+	{else}
+		{url|assign:"homeUrl" context="index" router=$smarty.const.ROUTE_PAGE}
+	{/if}
 {/strip}
 
 {capture assign="journalLogo"}

@@ -22,10 +22,11 @@
 */
 
 .summary_title {
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 	color: @black;
 	font-size: 20px;
 	line-height: 1.2;
+	text-shadow: 0 0, 0 0, 0 0;
 
 	&:hover {
 		text-decoration: none;
@@ -40,7 +41,7 @@
 
 .summary_meta {
 	padding-top: 30px;
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 	line-height: 1.25;
 	font-size: 16px;
 	color: @warm-grey;
@@ -62,15 +63,27 @@
 	flex: 1 1 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 	.article_summary {
 		max-width: 33.3%;
 	}
+	.article_summary:not(:last-child) {
+		padding-right: 4%;
+	}
+	.articlesGroup:not(:last-child) {
+		padding-bottom: 72px;
+	}
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 991px) {
 	.article_summary {
-		max-width: 50%;
+		max-width: 100%;
+	}
+	.article_summary:not(:last-child) {
+		padding-right: 2%;
+	}
+	.article_summary {
+		padding-bottom: 40px;
 	}
 }
 

@@ -16,21 +16,13 @@
  *}
 
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
-	<ol>
-		<li>
-			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
-				{translate key="common.homepageNavigationLabel"}
-			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
-		</li>
-		<li class="current">
-			<h1>
-				{if $currentTitleKey}
-					{translate key=$currentTitleKey}
-				{else}
-					{$currentTitle|escape}
-				{/if}
-			</h1>
-		</li>
-	</ol>
+	<div class="current_page_title">
+		<h1 class="{if $requestedPage|escape === 'issue' && $requestedOp|escape === "view"}text-left{else}text-center{/if}">
+			{if $currentTitleKey}
+				{translate key=$currentTitleKey}
+			{else}
+				{$currentTitle|escape}
+			{/if}
+		</h1>
+	</div>
 </nav>

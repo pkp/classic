@@ -1,0 +1,191 @@
+/**
+ * @file less/objects/article_details.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for article landing page
+ *
+ */
+
+// article title block
+
+.article_issue_credentials {
+	font-family: @font-family-primary;
+	font-size: 20px;
+	font-weight: bold;
+	color: @gunmetal;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+
+.article_section_title {
+	color: @warm-grey;
+	font-size: 14px;
+	font-family: @font-family-primary;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+.page_article .galley-link {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.page_article .galleys {
+	text-align: right;
+}
+
+@media (max-width: 767px) {
+	.page_article .galleys {
+		text-align: left;
+	}
+	.page_article .btn-sunshine:first-child {
+		margin-left: 0;
+	}
+}
+
+.authors_list {
+	padding-left: 0;
+	list-style-type: none;
+	color: @warm-grey;
+	font-size: 14px;
+	font-family: 'Cardo', serif;
+	padding-top: 15px;
+	margin-bottom: 0;
+
+	& li {
+		display: inline;
+	}
+}
+
+@media (max-width: 767px) {
+	.authors_list {
+		margin-bottom: 16px;
+	}
+}
+
+.author_block:not(:last-child):after {
+	content: ',';
+	margin-left: -3px;
+}
+
+/* Main article data block, including
+ * article's data: doi, cover image, keywords, etc.
+ * and article abstract with references
+ */
+
+@media (min-width: 1200px) {
+	.main_entry {
+		padding-right: 3%;
+	}
+	.article_abstract_block {
+		padding-left: 6%;
+	}
+}
+
+.article_main_data {
+	padding-top: 66px;
+	font-family: @font-family-primary;
+	font-size: 18px;
+}
+
+.main_entry > div:not(:last-child) {
+	padding-bottom: 45px;
+}
+
+// article's data block
+
+// doi and date
+
+.doi, .published_date {
+	color: @warm-grey;
+	font-size: 14px;
+}
+
+.doi_value a {
+	color: @warm-grey;
+
+	&:hover {
+		color: @sun-yellow;
+	}
+}
+
+.doi + .published_date {
+	margin-top: -25px;
+}
+
+// authors' data
+
+.entry_authors_list {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.entry_author_block:not(:last-child) {
+	padding-bottom: 15px;
+}
+
+.affiliation_wrapper, .author_orcid {
+	font-size: 14px;
+	color: @warm-grey;
+}
+
+// keywords
+
+.keywords_label {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+.keywords_value {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.label_fontawesome {
+	color: @sun-yellow;
+}
+
+.keywords_value span {
+	padding-left: 5px;
+}
+
+// citation formats
+
+.citation_format_label {
+	font-size: 24px;
+	padding-bottom: 15px;
+}
+
+.citation_dropdown_button {
+	margin-top: 10px;
+	display: block;
+}
+
+.download-cite {
+	padding: 4px 24px 4px 24px;
+}
+
+// copyright
+
+.copyright {
+	background-color: @pinkish-grey;
+	padding: 11px;
+}
+
+// article abtsract
+
+.abstract_label {
+	color: @black-two;
+	padding-bottom: 3px;
+}
+
+.abstract {
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.2px;
+}
+

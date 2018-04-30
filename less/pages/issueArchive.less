@@ -1,0 +1,48 @@
+/**
+ * @file less/pages/issueArchive.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for issue archive page
+ *
+ */
+
+.page_issue_archive {
+	padding-bottom: 100px;
+}
+
+.issues_list {
+	flex-direction: row;
+	flex-flow: row wrap;
+}
+
+.issue_item {
+	max-width: 25%;
+	padding-top: 37px;
+	padding-right: 10%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.issue_item {
+		max-width: 100%/3;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.issue_item {
+		max-width: 100%/2;
+	}
+}
+
+@media (max-width: 575px) {
+	.issue_item {
+		max-width: 100%;
+		text-align: center;
+		padding-right: 0;
+	}
+}
+

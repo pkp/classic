@@ -11,7 +11,7 @@
  */
 
 h1, h2, h3, p, li, a, blockquote {
-	font-family: 'Cardo', serif;
+	font-family: @font-family-primary;
 }
 
 h1 {
@@ -31,7 +31,7 @@ h3 {
 
 .nav-link {
 	color: @white;
-	font-family: 'Montserrat', sans-serif;
+	font-family: @font-family-secondary;
 	font-size: 14px;
 }
 
@@ -41,6 +41,7 @@ h3 {
 	color: @black;
 	font-size: 14px;
 	font-weight: bold;
+	cursor: pointer;
 
 	&:hover {
 		background-color: @sun-yellow / 1.2;

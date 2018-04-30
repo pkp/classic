@@ -12,10 +12,12 @@
 
 <footer class="site-footer">
 	<div class="container-fluid container-footer">
-		<div class="row">
+		<div class="sidebar_wrapper">
 			{call_hook name="Templates::Common::Sidebar"}
+		</div>
+		<div class="row">
 			<div class="col-md-6">
-				Published in cooperation with Palgrave Macmillan
+				<p>Published in cooperation with Palgrave Macmillan</p>
 			</div>
 			<div class="col-md-6 pkpbrand-wrapper">
 				<a href="{url page="about" op="aboutThisPublishingSystem"}">
