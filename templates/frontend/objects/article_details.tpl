@@ -40,7 +40,7 @@
 				</h1>
 
 				{if $article->getLocalizedSubtitle()}
-					<h2 class="subtitle">
+					<h2 class="article_detail_subtitle">
 						{$article->getLocalizedSubtitle()|escape}
 					</h2>
 				{/if}

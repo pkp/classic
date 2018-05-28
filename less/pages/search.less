@@ -1,0 +1,64 @@
+/**
+ * @file less/pages/search.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet search page
+ *
+ */
+
+#dateFrom, #dataAfter {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+.search_advanced {
+	margin-top: 20px;
+}
+
+.search-advanced-legend {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.search-form-label {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	display: block;
+
+	& span {
+		padding-bottom: 5px;
+		border-bottom: 2px solid @sun-yellow;
+	}
+}
+
+.search_advanced {
+	select {
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		width: auto;
+		max-width: 30%;
+		border-bottom: 1px solid #ced4da;
+		flex: 1 0 50%;
+	}
+}
+
+// Search results
+
+.search_results {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	& .article_summary {
+		margin-bottom: 40px;
+	}
+}

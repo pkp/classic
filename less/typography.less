@@ -14,14 +14,22 @@ h1, h2, h3, p, li, a, blockquote {
 	font-family: @font-family-primary;
 }
 
+p {
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.2px;
+}
+
 h1 {
 	font-size: 48px;
 	color: @black;
+	text-align: center;
 }
 
 h2 {
 	font-size: 36px;
 	color: @black-two;
+	text-align: center;
 }
 
 h3 {
@@ -61,5 +69,14 @@ h3 {
 		background-color: @gunmetal;
 		text-decoration: none;
 		color: @white;
+	}
+}
+
+button.btn-sunshine {
+	border: 0;
+
+	&:focus {
+		box-shadow: none;
+		outline: 0;
 	}
 }

@@ -14,8 +14,9 @@
 
 .container-page {
 	padding-top: 40px;
-	padding-bottom: 51px;
+	padding-bottom: 150px;
 }
+
 
 .flex_container {
 	display: flex;
@@ -26,4 +27,78 @@
 		.container-padding();
 	}
 }
+
+.hidden {
+	display: none;
+}
+
+.container-page {
+	margin-top: 15px;
+}
+
+.pkp_screen_reader {
+	display: none;
+}
+
+.cmp_edit_link {
+	display: inline-block;
+	border-bottom: 3px solid @sun-yellow;
+	font-size: 18px;
+	font-family: @font-family-primary;
+	color: @black;
+	margin-bottom: 20px;
+
+	&:hover {
+		text-decoration: none;
+		color: @sun-yellow;
+	}
+}
+
+// forms
+.form-control {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+
+	&:focus {
+		border-bottom: 1px solid @sun-yellow;
+		box-shadow: none;
+	}
+}
+
+.form-row > .form-group {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+// pagination
+
+.search-pagination-results {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	& span {
+		border-bottom: 2px solid @sun-yellow;
+	}
+}
+
+.search-pagination-numbers {
+	display: flex;
+
+	& a, strong {
+		border: 1px solid #ced4da;
+		padding: 5px;
+		color: @black-two;
+	}
+
+	& strong {
+		background-color: @sun-yellow;
+		font-weight: normal;
+		color: white;
+	}
+}
+
 

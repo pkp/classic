@@ -1,0 +1,42 @@
+/**
+ * @file less/objects/announcement_summary.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for announcement summary on the announcements page
+ *
+ */
+
+.obj_announcement_summary {
+	display: flex;
+	flex-direction: column;
+
+	& .date {
+		padding-top: 0;
+		margin-top: 5px;
+	}
+
+	& .buttons {
+		margin-top: 20px;
+	}
+}
+
+.announcement-summary-heading {
+	font-family: @font-family-primary;
+	color: @black;
+	font-size: 20px;
+	line-height: 1.2;
+	text-shadow: 0 0, 0 0, 0 0;
+
+	& a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	& a:focus {
+		color: #0056b3;
+	}
+}

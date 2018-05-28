@@ -1,0 +1,26 @@
+/**
+ * @file less/pages/information.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for information page (for readers, for authors, for librarians)
+ *
+ */
+
+
+
+.page_information {
+
+	.headerSize(@h_count) when (@h_count < 7) {
+
+		h@{h_count} {
+			font-size: (36px - 10px/10*@h_count);
+		}
+
+		.headerSize(@h_count + 1);
+	}
+
+	.headerSize(2);
+}

@@ -1,0 +1,36 @@
+/**
+ * @file less/components/announcements.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2018 Vitalii Bezsheiko
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet components of announcements page (iteration through announcements)
+ *
+ */
+
+.cmp_announcements {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.cmp_announcement {
+	flex: 1 0 50%;
+	margin-bottom: 30px;
+	max-width: 50%;
+	padding: 7px;
+}
+
+@media (max-width: 767px) {
+	.cmp_announcements {
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	.cmp_announcement {
+		max-width: 100%;
+	}
+}
+

@@ -1,0 +1,56 @@
+/**
+ * @file less/components/registrationForm.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for journal's registration form
+ *
+ */
+
+.register-form-legend {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.identity, .login-data {
+	margin-top: 40px;
+}
+
+// tag-it
+
+.reviewer {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	& legend {
+		margin-bottom: 20px;
+	}
+}
+
+.reviewer_interests {
+	margin-top: 10px;
+
+	& .label {
+		margin-top: 7px;
+		margin-bottom: 7px;
+	}
+}
+
+#tagitInput {
+	border-bottom: 1px solid #ced4da;
+}
+
+.tagit-choice-editable {
+	background-color: @sun-yellow;
+}
+
+.text-icon {
+	color: @gunmetal;
+}
+
+ul.tagit li.tagit-choice .tagit-close .text-icon {
+	display: inline;
+}
+
