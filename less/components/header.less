@@ -181,7 +181,8 @@
 		height: 100%;
 		background-color: #fefefe;
 		margin: auto;
-		padding: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		width: 50%;
 		overflow-y: auto;
 	}
@@ -216,11 +217,39 @@
 	#navigationPrimary .user-dropdown a {
 		font-size: 16px;
 	}
+
+	// overriding the Bootstrap and look for big screens
+
+	.nav-item.show .nav-link.dropdown-toggle {
+		background-color: white;
+	}
+
+	.navigation-dropdown.dropdown-menu {
+		transform: translate3d(15px, 37px, 0px) !important;
+	}
+
+	// styling nav menu
+
+	#navigationPrimary > li {
+		padding-top: 8px;
+		padding-bottom: 8px;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #ced4da;
+		}
+	}
+
 }
 
 @media (max-width: 767px) {
 	#primary-nav-wraper {
-		width: 100%
+		width: 67%;
+	}
+}
+
+@media (max-width: 576px) {
+	#primary-nav-wraper {
+		width: 100%;
 	}
 }
 

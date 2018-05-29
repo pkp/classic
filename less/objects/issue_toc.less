@@ -95,15 +95,21 @@
 	padding-top: 39px;
 }
 
+.full_issue_label span {
+	display: inline-block;
+	border-bottom: 3px solid @sun-yellow;
+}
+
 @media (min-width: 992px) {
 	.full_issue_label {
 		max-width: 50%;
 	}
 }
 
-.full_issue_label span {
-	display: inline-block;
-	border-bottom: 3px solid @sun-yellow;
+@media (max-width: 991px) {
+	.articlesGroup {
+		flex-direction: column;
+	}
 }
 
 
