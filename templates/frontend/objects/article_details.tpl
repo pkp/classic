@@ -35,15 +35,9 @@
 			<div class="col-md-8">
 
 				{* article title, subtitle and authors *}
-				<h1 class="page_title">
-					{$article->getLocalizedTitle()|escape}
+				<h1 class="page_title article-full-title">
+					{$article->getLocalizedFullTitle()|escape}
 				</h1>
-
-				{if $article->getLocalizedSubtitle()}
-					<h2 class="article_detail_subtitle">
-						{$article->getLocalizedSubtitle()|escape}
-					</h2>
-				{/if}
 
 				{if $article->getAuthors()}
 					<ul class="authors_list">
@@ -264,6 +258,24 @@
 					{$article->getLocalizedAbstract()|strip_unsafe_html}
 				</div>
 			{/if}
+
+			{* Article Galleys only for mobile view *}
+			<div class="for-mobile-view">
+				{if $primaryGalleys}
+					<div class="item galleys">
+						{foreach from=$primaryGalleys item=galley}
+							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+						{/foreach}
+					</div>
+				{/if}
+				{if $supplementaryGalleys}
+					<div class="item galleys">
+						{foreach from=$supplementaryGalleys item=galley}
+							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
+						{/foreach}
+					</div>
+				{/if}
+			</div>
 
 			{call_hook name="Templates::Article::Main"}
 
