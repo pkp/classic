@@ -49,7 +49,7 @@ class HumanitiesThemePlugin extends ThemePlugin
 		$this->addStyle(
 			'montserrat',
 			'//fonts.googleapis.com/css?family=Montserrat',
-			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet'));
+			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet'));
 
 		HookRegistry::register('TemplateManager::display', array($this, 'orcidImage'));
 	}

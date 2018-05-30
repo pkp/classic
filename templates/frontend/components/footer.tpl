@@ -15,7 +15,7 @@
 		<div class="sidebar_wrapper">
 			{call_hook name="Templates::Common::Sidebar"}
 		</div>
-		<div class="row">
+		<div class="additional-footer-info">
 			<div class="col-md-6">
 				<p>Published in cooperation with Palgrave Macmillan</p>
 			</div>
