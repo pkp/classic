@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.ThemePlugin');
 
+define('ORCID_IMAGE_URL', 'images/orcid.png');
+
 class HumanitiesThemePlugin extends ThemePlugin
 {
 	public function init()
@@ -48,15 +50,22 @@ class HumanitiesThemePlugin extends ThemePlugin
 			'montserrat',
 			'//fonts.googleapis.com/css?family=Montserrat',
 			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet'));
+
+		HookRegistry::register('TemplateManager::display', array($this, 'orcidImage'));
 	}
 
-	public function getDisplayName()
-	{
+	public function getDisplayName() {
 		return __('plugins.themes.humanities.name');
 	}
 
-	public function getDescription()
-	{
+	public function getDescription() {
 		return __('plugins.themes.humanities.description');
 	}
+
+	public function orcidImage($hookName, $args) {
+		$smarty = $args[0];
+		$orcidImageUrl = "/" . $this->getPluginPath() . "/" . ORCID_IMAGE_URL;
+		$smarty->assign("orcidImageUrl", $orcidImageUrl);
+	}
+
 }

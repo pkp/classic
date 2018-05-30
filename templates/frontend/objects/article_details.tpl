@@ -39,17 +39,7 @@
 					{$article->getLocalizedFullTitle()|escape}
 				</h1>
 
-				{if $article->getAuthors()}
-					<ul class="authors_list">
-						{foreach from=$article->getAuthors() item=author}
-							<li class="author_block">
-								<span class="name">
-									{$author->getFullName()|escape}
-								</span>
-							</li>
-						{/foreach}
-					</ul>
-				{/if}
+
 			</div>
 
 			<div class="col-md-4">
@@ -69,6 +59,31 @@
 						{/foreach}
 					</div>
 				{/if}
+
+				{if $article->getAuthors()}
+					<div class="authors_info">
+						<ul class="entry_authors_list">
+							{strip}
+								{foreach from=$article->getAuthors() item=author key=number}
+									<li class="entry_author_block">
+										{if $author->getOrcid()}
+											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$orcidImageUrl}"></a>
+										{/if}
+										<span class="name_wrapper">
+											{$author->getFullName()|escape}
+											{if $author->getLocalizedAffiliation()}
+												<span class="author-affiliation">
+													{$author->getLocalizedAffiliation()|escape}
+												</span>
+											{/if}
+										</span>
+									</li>
+								{/foreach}
+							{/strip}
+						</ul>
+					</div>
+				{/if}
+
 			</div>
 		</div>
 	</div>
@@ -121,34 +136,6 @@
 					<span class="published_date_value">
 						{$article->getDatePublished()|date_format:$dateFormatLong}
 					</span>
-				</div>
-			{/if}
-
-			{if $article->getAuthors()}
-				<div class="authors_info">
-					<ul class="entry_authors_list">
-						{strip}
-						{foreach from=$article->getAuthors() item=author key=number}
-							<li class="entry_author_block{if $number === 0} first_author{/if}">
-								<div class="name_wrapper">
-									{$author->getFullName()|escape}
-								</div>
-								{if $number === 0}
-									{if $author->getLocalizedAffiliation()}
-										<div class="affiliation_wrapper">
-											{$author->getLocalizedAffiliation()|escape}
-										</div>
-									{/if}
-									{if $author->getOrcid()}
-										<div class="author_orcid">
-											{$author->getOrcid()|escape|regex_replace:"/http.*org\//":" "}
-										</div>
-									{/if}
-								{/if}
-							</li>
-						{/foreach}
-						{/strip}
-					</ul>
 				</div>
 			{/if}
 
