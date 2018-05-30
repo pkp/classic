@@ -15,13 +15,19 @@
 	margin-top: 40px;
 }
 
-.page-link {
+.page-item .page-link {
 	color: @black;
 
 	&:hover {
 		color: @sun-yellow;
 	}
 }
+
+// overriding Bootstrap
+.page-item:last-child .page-link, .page-item:first-child .page-link {
+	border-radius: 0;
+}
+
 
 .page-item.active .page-link {
 	background-color: @sun-yellow;
