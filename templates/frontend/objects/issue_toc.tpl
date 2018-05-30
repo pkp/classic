@@ -113,13 +113,8 @@
 						</div>
 					{/if}
 					<div class="section_content">
-						{assign var=parts value=$section.articles|@array_chunk:3}
-						{foreach from=$parts item=sectionArticles key=key}
-							<div class="articlesGroup">
-								{foreach from=$sectionArticles item=article}
-									{include file="frontend/objects/article_summary.tpl"}
-								{/foreach}
-							</div>
+						{foreach from=$section.articles item=article}
+							{include file="frontend/objects/article_summary.tpl"}
 						{/foreach}
 					</div>
 				{/if}
