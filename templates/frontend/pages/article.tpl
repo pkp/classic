@@ -23,7 +23,9 @@
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}
 
-		{call_hook name="Templates::Article::Footer::PageFooter"}
+		<div class="footer-hook-block">
+			{call_hook name="Templates::Article::Footer::PageFooter"}
+		</div>
 	</div>
 
 </div><!-- .page -->

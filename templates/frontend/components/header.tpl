@@ -46,13 +46,16 @@
 <header>
 	<div class="header container-fluid">
 		<div class="upper-header row">
-			<div class="logo-wraper col-sm-7">
+			<div class="logo-wraper col-md-7">
 				<a href="{$homeUrl}" class="home-link">
 					{$journalLogo}
 				</a>
 			</div>
-			<div id="user-nav-wraper" class="col-sm-5">
+			<div id="user-nav-wraper" class="col-md-5">
+				{* user navigation manu *}
 				{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user"}
+				{* language toggle block *}
+				{include file="frontend/components/languageSwitcher.tpl" id="languageNav"}
 			</div>
 		</div>
 		<div class="lower-header">

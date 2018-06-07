@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
- * Copyright (c) 2018 Vitalii Bezsheiko
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Stylesheet for article landing page
@@ -40,6 +39,7 @@
 
 .article-full-title {
 	text-align: left;
+	font-size: 36px;
 }
 
 .for-mobile-view {
@@ -52,13 +52,15 @@
 
 .entry_author_block {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
+	padding-right: 10px;
+
+	&:not(:last-child):after {
+		content: ",";
+	}
 }
 
 @media (max-width: 767px) {
-	.entry_author_block {
-		flex-direction: row-reverse;
-	}
 
 	.orcid-image-url {
 		margin-right: 0;
@@ -81,11 +83,10 @@
 	color: #fff;
 	text-align: center;
 	padding: 5px 0;
-	border-radius: 6px;
 	position: absolute;
 	z-index: 1;
 	top: 100%;
-	right: 0
+	left: 0;
 }
 
 @media (max-width: 575px) {
@@ -160,10 +161,9 @@
 .entry_authors_list {
 	list-style-type: none;
 	padding-left: 0;
-}
-
-.entry_author_block:not(:last-child) {
-	padding-bottom: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .affiliation_wrapper, .author_orcid {
@@ -212,13 +212,26 @@
 .copyright {
 	background-color: @pinkish-grey;
 	padding: 11px;
-	font-size: 16px;
+	font-size: 13px;
 	& a,p {
 		font-size: inherit;
+		margin-bottom: 6px;
+		margin-top: 6px;
+		line-height: 1.3;
 	}
 }
 
-// article abtsract
+// article abstact block
+.article_abstract_block {
+
+	& h3 {
+		font-size: 28px;
+	}
+
+	& > div:not(:first-child) {
+		margin-top: 35px;
+	}
+}
 
 .abstract_label {
 	color: @black-two;
@@ -234,6 +247,7 @@
 // for mobiles
 
 @media (max-width: 767px) {
+
 	.for-mobile-view {
 		display: block;
 	}
@@ -245,14 +259,7 @@
 		margin-left: 0;
 	}
 
-	.article_abstract_block, .references {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-
 	.authors_list {
 		margin-bottom: 16px;
 	}
-
 }
-

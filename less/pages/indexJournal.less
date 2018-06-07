@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
- * Copyright (c) 2018 Vitalii Bezsheiko
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Stylesheet for index page for single-journal installations
@@ -12,7 +11,7 @@
 
 // headers
 
-.current_issue_label {
+.current_issue_label, .current_issue_title {
 	font-size: 24px;
 	color: @gunmetal;
 	font-weight: bold;
@@ -20,11 +19,9 @@
 }
 
 .current_issue_title {
-	margin-top: 51px;
-	line-height: 1.04;
+	margin-top: 20px;
 	text-align: left;
-	font-size: 25px;
-	font-weight: bold;
+	display: inline;
 }
 
 .current_issue_year {

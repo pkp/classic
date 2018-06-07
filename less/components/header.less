@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
- * Copyright (c) 2018 Vitalii Bezsheiko
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Stylesheet for site header
@@ -39,7 +38,7 @@
 		& li:first-child .nav-link {
 			padding-left: 0;
 		}
-		& li:last-child .nav-link {
+		& li:last-child .nav-link.locales-toogle-off {
 			padding-right: 0;
 		}
 	}
@@ -63,16 +62,31 @@
 }
 
 
-// user navigation menu
+// user navigation menu & language toggle block
 #navigationUser {
 	justify-content: flex-end;
 	border-bottom: 0;
 }
 
-#navigationUser a {
+#navigationUser a, #user-nav-wraper a {
 	font-size: 12px;
 	border: 0;
 }
+
+#user-nav-wraper {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#languageNav {
+	border-bottom: none;
+
+	& .dropdown-toggle {
+		color: white;
+		cursor: pointer;
+	}
+}
+
 
 // menu dropdown
 .nav-item.show .nav-link.dropdown-toggle {
@@ -88,6 +102,10 @@
 
 #navigationUser .dropdown-item {
 	font-size: 14px;
+}
+
+.nav-tabs .dropdown-menu {
+	border-radius: 0;
 }
 
 // styling journal logo
@@ -113,6 +131,30 @@
 .logo-wraper {
 	padding-left: 0;
 }
+
+/* user navigation
+ * menu && language toggle FOR small SCREENS
+ */
+@media (max-width: 991px) {
+	#navigationUser, #languageNav {
+		& .nav-item.show .nav-link.dropdown-toggle {
+			background-color: @black;
+		}
+	}
+
+}
+
+@media (max-width: 767px) {
+	#user-nav-wraper {
+		justify-content: flex-start;
+		padding-left: 0;
+	}
+
+	#navigationUser li:first-child .nav-link {
+		padding-left: 0;
+	}
+}
+
 
 /* primary navigation menu
  * FOR LARGE SCREENS
@@ -224,7 +266,7 @@
 		background-color: white;
 	}
 
-	.navigation-dropdown.dropdown-menu {
+	#navigationPrimary .navigation-dropdown.dropdown-menu {
 		transform: translate3d(15px, 37px, 0px) !important;
 	}
 

@@ -60,6 +60,11 @@
 					</div>
 				{/if}
 
+			</div>
+
+			<div class="col-md-12">
+
+				{* authors list *}
 				{if $article->getAuthors()}
 					<div class="authors_info">
 						<ul class="entry_authors_list">
@@ -83,7 +88,6 @@
 						</ul>
 					</div>
 				{/if}
-
 			</div>
 		</div>
 	</div>
@@ -322,8 +326,6 @@
 			{/if}
 
 		</div><!-- .article_abstract_block -->
-
-
 	</div><!-- .row -->
 
 </article>

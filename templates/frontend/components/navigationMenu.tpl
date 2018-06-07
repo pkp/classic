@@ -19,7 +19,7 @@
             {/if}
             {if !empty($navigationMenuItemAssignment->children)}
                 <li class="{$liClass|escape} nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle{if !($languageToggleLocales && $languageToggleLocales|@count > 1)} locales-toogle-off{/if}" href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
                     </a>
                     <div class="navigation-dropdown dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

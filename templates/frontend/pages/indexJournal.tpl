@@ -27,13 +27,11 @@
 		{* Latest issue *}
 		{if $issue}
 			<div class="current_issue">
-				<div class="current_issue_label">
-					{translate key="journal.currentIssue"}
-				</div>
+				<span class="current_issue_label">
+					{translate key="journal.currentIssue"}{if $issue->getIssueSeries()},{/if}
+				</span>
 				<h1 class="current_issue_title">
-					<span class="current_issue_year">{$issue->getYear()|strip_unsafe_html}</span>
-					<span class="current_issue_volume">{translate key="issue.vol"}. {$issue->getVolume()|strip_unsafe_html}</span>
-					<span class="current_issue_number">{translate key="issue.no"} {$issue->getNumber()|strip_unsafe_html}</span>
+					{$issue->getIssueSeries()}
 				</h1>
 				{include file="frontend/objects/issue_toc.tpl"}
 			</div>

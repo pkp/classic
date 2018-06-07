@@ -51,7 +51,7 @@ class HumanitiesThemePlugin extends ThemePlugin
 			'//fonts.googleapis.com/css?family=Montserrat',
 			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet'));
 
-		HookRegistry::register('TemplateManager::display', array($this, 'orcidImage'));
+		HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
 	}
 
 	public function getDisplayName() {
@@ -62,10 +62,28 @@ class HumanitiesThemePlugin extends ThemePlugin
 		return __('plugins.themes.humanities.description');
 	}
 
-	public function orcidImage($hookName, $args) {
+	public function loadAdditionalData($hookName, $args) {
 		$smarty = $args[0];
-		$orcidImageUrl = "/" . $this->getPluginPath() . "/" . ORCID_IMAGE_URL;
-		$smarty->assign("orcidImageUrl", $orcidImageUrl);
+
+		$request = Application::getRequest();
+		$context = $request->getContext();
+
+		if (!defined('SESSION_DISABLE_INIT')) {
+
+			// Get possible locales
+			if ($context) {
+				$locales = $context->getSupportedLocaleNames();
+			} else {
+				$locales = $request->getSite()->getSupportedLocaleNames();
+			}
+
+			$orcidImageUrl = "/" . $this->getPluginPath() . "/" . ORCID_IMAGE_URL;
+
+			$smarty->assign(array(
+				'languageToggleLocales' => $locales,
+				'orcidImageUrl' =>  $orcidImageUrl,
+			));
+		}
 	}
 
 }
