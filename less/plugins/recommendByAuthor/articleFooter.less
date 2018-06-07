@@ -1,0 +1,70 @@
+/**
+ * @file less/plugins/recommendByAuthor/articleFooter.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for Recommend Article by Author plugin
+ *
+ */
+
+#articlesBySameAuthorList {
+
+	& li {
+		margin-bottom: 8px;
+		position: relative;
+	}
+
+	& li:before {
+		content: '';
+		display: inline-block;
+		position: static;
+		left: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px;
+		border-top-color: @black;
+		transform: rotate(-90deg);
+	}
+
+	& li a {
+		margin-right: -4px;
+		color: @black;
+
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px dotted @black;
+		}
+	}
+
+	& ul {
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+		padding-left: 3px;
+		flex-direction: column;
+	}
+}
+
+#articlesBySameAuthorPages {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	& strong, a {
+		border: 1px solid #ddd;
+		padding: 5px;
+		margin: 0;
+	}
+
+	& a {
+		color: @black-two;
+	}
+
+	& strong {
+		background-color: @sun-yellow;
+		font-weight: normal;
+	}
+}

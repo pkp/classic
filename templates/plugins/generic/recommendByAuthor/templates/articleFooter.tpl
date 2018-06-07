@@ -15,13 +15,13 @@
 		{if !$articlesBySameAuthor->wasEmpty()}
 			<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
 
-			<div class="recommendByAuthor-block">
+			<ul>
 				{iterate from=articlesBySameAuthor item=articleBySameAuthor}
 				{assign var=publishedArticle value=$articleBySameAuthor.publishedArticle}
 				{assign var=article value=$articleBySameAuthor.article}
 				{assign var=issue value=$articleBySameAuthor.issue}
 				{assign var=journal value=$articleBySameAuthor.journal}
-					<div>
+					<li>
 						{foreach from=$article->getAuthors() item=author}
 							{$author->getFullName()|escape},
 						{/foreach}
@@ -31,9 +31,9 @@
 						<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
 							{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 						</a>
-					</div>
+					</li>
 				{/iterate}
-			</div>
+			</ul>
 			<div id="articlesBySameAuthorPages">
 				{page_links anchor="articlesBySameAuthor" iterator=$articlesBySameAuthor name="articlesBySameAuthor"}
 			</div>
