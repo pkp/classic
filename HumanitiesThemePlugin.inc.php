@@ -5,7 +5,6 @@
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
- * Copyright (c) 2018 Vitalii Bezsheiko
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HumanitiesThemePlugin
@@ -52,6 +51,8 @@ class HumanitiesThemePlugin extends ThemePlugin
 			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet'));
 
 		HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
+		// Check if CSS embedded to the HTML galley
+		HookRegistry::register('TemplateManager::display', array($this, 'hasEmbeddedCSS'));
 	}
 
 	public function getDisplayName() {
@@ -84,6 +85,44 @@ class HumanitiesThemePlugin extends ThemePlugin
 				'orcidImageUrl' =>  $orcidImageUrl,
 			));
 		}
+	}
+
+	public function hasEmbeddedCSS($hookName, $args) {
+		$templateMgr = $args[0];
+		$template = $args[1];
+		$request = $this->getRequest();
+
+		// Retun false if not a galley page
+		if ($template != 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
+
+		$articleArrays = $templateMgr->get_template_vars('article');
+
+		$boolEmbeddedCss = false;
+
+		foreach ($articleArrays->getGalleys() as $galley) {
+			if ($galley->getFileType() === 'text/html') {
+				$submissionFile = $galley->getFile();
+
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				import('lib.pkp.classes.submission.SubmissionFile'); // Constants
+				$embeddableFiles = array_merge(
+					$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
+					$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
+				);
+
+				foreach ($embeddableFiles as $embeddableFile) {
+					if ($embeddableFile->getFileType() == 'text/css') {
+						$boolEmbeddedCss = true;
+					}
+				}
+			}
+
+		}
+
+		$templateMgr->assign(array(
+			'boolEmbeddedCss' => $boolEmbeddedCss,
+			'themePath' => $request->getBaseUrl() . "/" . $this->getPluginPath(),
+		));
 	}
 
 }
