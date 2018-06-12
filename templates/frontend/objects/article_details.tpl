@@ -152,12 +152,16 @@
 				</div>
 				<ul class="keywords_value">
 					{foreach from=$keywords item=keywordArray}
-						{foreach from=$keywordArray item=keyword}
-							<li class="keyword_item">
-								<i class="label_fontawesome fas fa-tag"></i>
-								<span>{$keyword|escape}</span>
+						{foreach from=$keywordArray item=keyword key=k}
+							<li class="keyword_item{if $k>4} more-than-five{/if}">
+								<span>{$keyword|escape}</span>{if $k+1 < $keywordArray|@count}<span class="keyword-delimeter">,</span>{/if}
 							</li>
 						{/foreach}
+						{if $keywordArray|@count > 5}<span class="ellipsis">...</span>
+							<a class="more_button" id="more_keywords">
+								{translate key="plugins.themes.humanities.more"}
+							</a>
+						{/if}
 					{/foreach}
 				</ul>
 				{/strip}
