@@ -57,7 +57,7 @@
 				</div>
 
 				<div class="filter-authors">
-					<input type="text" class="form-control" for="authors" name="authors" value="{$authors}" placeholder="{translate key="search.author"}">
+					<input type="text" class="form-control" for="authors" name="authors" value="{$authors|escape}" placeholder="{translate key="search.author"}">
 				</div>
 			</fieldset>
 
