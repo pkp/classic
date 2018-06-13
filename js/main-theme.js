@@ -42,3 +42,28 @@ $(document).ready(function() {
     }
 })();
 
+// more keywords functionality
+
+$(document).ready(function(){
+    $("#more_keywords").click(function(){
+        $(".keyword_item").removeClass("more-than-five");
+        $(this).addClass("hide");
+        $("#keywords-ellipsis").addClass("hide");
+        $("#less_keywords").removeClass("hide");
+        $(".fifth-keyword-delimeter").removeClass("hide");
+    });
+
+    $("#less_keywords").click(function () {
+
+        $(".keyword_item").each(function(i) {
+            if (i > 4) {
+                $(this).addClass("more-than-five");
+            }
+        });
+
+        $(this).addClass("hide");
+        $("#keywords-ellipsis").removeClass("hide");
+        $("#more_keywords").removeClass("hide");
+        $(".fifth-keyword-delimeter").addClass("hide");
+    })
+});

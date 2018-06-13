@@ -7,6 +7,7 @@
     <message key="plugins.themes.humanities.description">Тема для OJS 3</message>
     <message key="plugins.themes.humanities.issueDescription">Опис випуску</message>
     <message key="plugins.themes.humanities.more">Більше</message>
+    <message key="plugins.themes.humanities.less">Менше</message>
     <message key="plugins.themes.humanities.fullIssue">Повний випуск</message>
     
 </locale>
