@@ -2,10 +2,10 @@
 * text=auto
 
 # Declare files that will always have CRLF line endings on checkout.
-*.css text eol=crlf
-*.tpl text eol=crlf
-*.js text eol=crlf
-*.less text eol=crlf
-*.php text eol=crlf
-*.json text eol=crlf
-*.xml text eol=crlf
+*.css text eol=lf
+*.tpl text eol=lf
+*.js text eol=lf
+*.less text eol=lf
+*.php text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
