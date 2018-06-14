@@ -17,7 +17,6 @@
 			<ul>
 				{foreach from=$languageToggleLocales item=localeName key=localeKey}
 					<li class="locale_{$localeKey|escape}{if $localeKey == $currentLocale} current{/if}">
-						<i class="fas fa-globe"></i>
 						<a href="{url router=$smarty.const.ROUTE_PAGE page="user" op="setLocale" path=$localeKey source=$smarty.server.REQUEST_URI}">
 							{$localeName}
 						</a>
