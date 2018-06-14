@@ -9,5 +9,7 @@
     <message key="plugins.themes.humanities.more">More</message>
     <message key="plugins.themes.humanities.less">Less</message>
     <message key="plugins.themes.humanities.fullIssue">Full Issue</message>
-    
+    <message key="plugins.themes.humanities.close">Close</message>
+    <message key="plugins.themes.humanities.biography">Bio</message>
+
 </locale>

@@ -69,23 +69,61 @@
 					<div class="authors_info">
 						<ul class="entry_authors_list">
 							{strip}
-								{foreach from=$article->getAuthors() item=author key=number}
+								{foreach from=$article->getAuthors() item=author}
 									<li class="entry_author_block">
 										{if $author->getOrcid()}
 											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$orcidImageUrl}"></a>
 										{/if}
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
-											{if $author->getLocalizedAffiliation()}
-												<span class="author-affiliation">
-													{$author->getLocalizedAffiliation()|escape}
-												</span>
-											{/if}
 										</span>
 									</li>
 								{/foreach}
 							{/strip}
 						</ul>
+					</div>
+					<div class="additional-authors-info">
+						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
+							<i class="fas fa-plus" id="more-authors-data-symbol"></i>
+							<i class="fas fa-minus hide" id="less-authors-data-symbol"></i>
+							more info
+						</a>
+						<div class="collapse" id="authorInfoCollapse">
+							{foreach from=$article->getAuthors() item=author}
+								<div class="additional-author-block">
+									<span class="additional-author-name">{$author->getFullName()|escape}</span>
+									{if $author->getLocalizedAffiliation()}
+										<br/>
+										<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()}</span>
+									{/if}
+									{if $author->getLocalizedBiography()}
+										<br/>
+										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio">
+											{translate key="plugins.themes.humanities.biography"}
+										</a>
+										{* author's biography *}
+										<div class="modal fade" id="modalAuthorBio" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="modalAuthorBioTitle">{translate key="submission.authorBiography"}</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														{$author->getLocalizedBiography()|strip_unsafe_html}
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn-sunshine" data-dismiss="modal">{translate key="plugins.themes.humanities.close"}</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									{/if}
+								</div>
+							{/foreach}
+						</div>
 					</div>
 				{/if}
 			</div>

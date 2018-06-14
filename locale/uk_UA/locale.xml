@@ -9,5 +9,7 @@
     <message key="plugins.themes.humanities.more">Більше</message>
     <message key="plugins.themes.humanities.less">Менше</message>
     <message key="plugins.themes.humanities.fullIssue">Повний випуск</message>
+    <message key="plugins.themes.humanities.close">Закрити</message>
+    <message key="plugins.themes.humanities.biography">Біографія</message>
     
 </locale>

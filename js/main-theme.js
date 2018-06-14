@@ -65,5 +65,19 @@ $(document).ready(function(){
         $("#keywords-ellipsis").removeClass("hide");
         $("#more_keywords").removeClass("hide");
         $(".fifth-keyword-delimeter").addClass("hide");
-    })
+    });
+});
+
+// more authors data functionality
+
+$(document).ready(function () {
+    $("#collapseButton").click(function () {
+        if ($("#authorInfoCollapse").hasClass("show")) {
+            $("#more-authors-data-symbol").removeClass("hide");
+            $("#less-authors-data-symbol").addClass("hide");
+        } else {
+            $("#more-authors-data-symbol").addClass("hide");
+            $("#less-authors-data-symbol").removeClass("hide");
+        }
+    });
 });
