@@ -23,49 +23,51 @@
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="common.search"}
 
-		<form class="cmp_form" method="post" action="{url op="search"}">
-			{csrf}
+		<div class="row">
+			<form class="cmp_form col-sm-10 offset-sm-1 col-md-8 offset-md-2" method="post" action="{url op="search"}">
+				{csrf}
 
-			{* Repeat the label text just so that screen readers have a clear
-			   label/input relationship *}
-			<div class="form-row">
-				<div class="form-group col-sm-12">
-					<label class="pkp_screen_reader" for="query">
-						{translate key="search.searchFor"}
-					</label>
-					<input type="text" id="query" name="query" value="{$query|escape}" class="query form-control" placeholder="{translate|escape key="common.search"}">
-				</div>
-			</div>
-
-			<fieldset class="search_advanced">
-				<legend class="search-advanced-legend">
-					{translate key="search.advancedFilters"}
-				</legend>
-
-				<div class="search-form-label">
-					<span>{translate key="search.dateFrom"}</span>
-				</div>
-				<div id="dateFrom">
-					{html_select_date prefix="dateFrom" time=$dateFrom start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
+				{* Repeat the label text just so that screen readers have a clear
+				   label/input relationship *}
+				<div class="form-row">
+					<div class="form-group col-sm-12">
+						<label class="pkp_screen_reader" for="query">
+							{translate key="search.searchFor"}
+						</label>
+						<input type="text" id="query" name="query" value="{$query|escape}" class="query form-control" placeholder="{translate|escape key="common.search"}">
+					</div>
 				</div>
 
-				<div class="search-form-label">
-					<span>{translate key="search.dateTo"}</span>
-				</div>
-				<div id="dataAfter">
-					{html_select_date prefix="dateTo" time=$dateTo start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
-				</div>
+				<fieldset class="search_advanced">
+					<legend class="search-advanced-legend">
+						{translate key="search.advancedFilters"}
+					</legend>
 
-				<div class="filter-authors">
-					<input type="text" class="form-control" for="authors" name="authors" value="{$authors|escape}" placeholder="{translate key="search.author"}">
+					<div class="search-form-label">
+						<span>{translate key="search.dateFrom"}</span>
+					</div>
+					<div id="dateFrom">
+						{html_select_date prefix="dateFrom" time=$dateFrom start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
+					</div>
+
+					<div class="search-form-label">
+						<span>{translate key="search.dateTo"}</span>
+					</div>
+					<div id="dataAfter">
+						{html_select_date prefix="dateTo" time=$dateTo start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
+					</div>
+
+					<div class="filter-authors">
+						<input type="text" class="form-control" for="authors" name="authors" value="{$authors|escape}" placeholder="{translate key="search.author"}">
+					</div>
+				</fieldset>
+
+
+				<div class="submit buttons">
+					<button class="submit btn-sunshine" type="submit">{translate key="common.search"}</button>
 				</div>
-			</fieldset>
-
-
-			<div class="submit buttons">
-				<button class="submit btn-sunshine" type="submit">{translate key="common.search"}</button>
-			</div>
-		</form>
+			</form>
+		</div>
 
 		{* Search results, finally! *}
 		<div class="search_results">
