@@ -70,19 +70,25 @@
 		</div>
 
 		{* Search results, finally! *}
-		<div class="search_results">
-			{iterate from=results item=result}
-				{include file="frontend/objects/article_summary.tpl" article=$result.publishedArticle journal=$result.journal showDatePublished=true hideGalleys=true}
-			{/iterate}
-		</div>
+		{if !$results->wasEmpty()}
+			<div class="search_results">
+				{iterate from=results item=result}
+					{include file="frontend/objects/article_summary.tpl" article=$result.publishedArticle journal=$result.journal showDatePublished=true hideGalleys=true}
+				{/iterate}
+			</div>
+		{/if}
 
 		{* No results found *}
 		{if $results->wasEmpty()}
-			{if $error}
-				{include file="frontend/components/notification.tpl" type="error" message=$error|escape}
-			{else}
-				{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
-			{/if}
+			<div class="row">
+				<div class="search-notifications col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+					{if $error}
+						{include file="frontend/components/notification.tpl" type="error" message=$error|escape}
+					{else}
+						{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
+					{/if}
+				</div>
+			</div>
 
 		{* Results pagination *}
 		{else}
