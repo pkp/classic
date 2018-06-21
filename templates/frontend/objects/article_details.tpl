@@ -99,7 +99,7 @@
 									{if $author->getLocalizedBiography()}
 										<br/>
 										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio">
-											{translate key="plugins.themes.humanities.biography"}
+											{translate key="plugins.themes.traditional.biography"}
 										</a>
 										{* author's biography *}
 										<div class="modal fade" id="modalAuthorBio" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
@@ -115,7 +115,7 @@
 														{$author->getLocalizedBiography()|strip_unsafe_html}
 													</div>
 													<div class="modal-footer">
-														<button type="button" class="btn-sunshine" data-dismiss="modal">{translate key="plugins.themes.humanities.close"}</button>
+														<button type="button" class="btn-sunshine" data-dismiss="modal">{translate key="plugins.themes.traditional.close"}</button>
 													</div>
 												</div>
 											</div>
@@ -197,11 +197,11 @@
 						{/foreach}
 						{if $keywordArray|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
 							<a class="more_button" id="more_keywords">
-								{translate key="plugins.themes.humanities.more"}
+								{translate key="plugins.themes.traditional.more"}
 							</a>
 							<br/>
 							<a class="more_button hide" id="less_keywords">
-								{translate key="plugins.themes.humanities.less"}
+								{translate key="plugins.themes.traditional.less"}
 							</a>
 						{/if}
 					{/foreach}

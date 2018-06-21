@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file plugins/themes/healthSciences/HealthSciencesThemePlugin.inc.php
+ * @file plugins/themes/traditional/TraditionalThemePlugin.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class HumanitiesThemePlugin
- * @ingroup plugins_themes_humanities
+ * @class TraditionalThemePlugin
+ * @ingroup plugins_themes_traditional
  *
- * @brief Humanities theme
+ * @brief Traditional theme
  */
 
 import('lib.pkp.classes.plugins.ThemePlugin');
 
 define('ORCID_IMAGE_URL', 'images/orcid.png');
 
-class HumanitiesThemePlugin extends ThemePlugin
+class TraditionalThemePlugin extends ThemePlugin
 {
 	public function init()
 	{
@@ -56,11 +56,11 @@ class HumanitiesThemePlugin extends ThemePlugin
 	}
 
 	public function getDisplayName() {
-		return __('plugins.themes.humanities.name');
+		return __('plugins.themes.traditional.name');
 	}
 
 	public function getDescription() {
-		return __('plugins.themes.humanities.description');
+		return __('plugins.themes.traditional.description');
 	}
 
 	public function loadAdditionalData($hookName, $args) {

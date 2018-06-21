@@ -3,7 +3,7 @@
 
 <version>
 	<!-- The application should match the theme folder to ensure it is unique -->
-	<application>humanities</application>
+	<application>traditional</application>
 
 	<!-- The type should always be `plugins.themes` -->
 	<type>plugins.themes</type>
@@ -22,5 +22,5 @@
 	<lazy-load>0</lazy-load>
 
 	<!-- The class name of the plugin. See index.php -->
-	<class>HumanitiesThemePlugin</class>
+	<class>TraditionalThemePlugin</class>
 </version>

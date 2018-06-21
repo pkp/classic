@@ -3,13 +3,13 @@
 
 <locale name="uk_UA" full_name="Ukrainian">
 
-    <message key="plugins.themes.humanities.name">Humanities Theme</message>
-    <message key="plugins.themes.humanities.description">Тема для OJS 3</message>
-    <message key="plugins.themes.humanities.issueDescription">Опис випуску</message>
-    <message key="plugins.themes.humanities.more">Більше</message>
-    <message key="plugins.themes.humanities.less">Менше</message>
-    <message key="plugins.themes.humanities.fullIssue">Повний випуск</message>
-    <message key="plugins.themes.humanities.close">Закрити</message>
-    <message key="plugins.themes.humanities.biography">Біографія</message>
+    <message key="plugins.themes.traditional.name">Humanities Theme</message>
+    <message key="plugins.themes.traditional.description">Тема для OJS 3</message>
+    <message key="plugins.themes.traditional.issueDescription">Опис випуску</message>
+    <message key="plugins.themes.traditional.more">Більше</message>
+    <message key="plugins.themes.traditional.less">Менше</message>
+    <message key="plugins.themes.traditional.fullIssue">Повний випуск</message>
+    <message key="plugins.themes.traditional.close">Закрити</message>
+    <message key="plugins.themes.traditional.biography">Біографія</message>
     
 </locale>

@@ -1,7 +1,7 @@
 <?php
 
-require_once('HumanitiesThemePlugin.inc.php');
+require_once('TraditionalThemePlugin.inc.php');
 
-return new HumanitiesThemePlugin();
+return new TraditionalThemePlugin();
 
 ?>

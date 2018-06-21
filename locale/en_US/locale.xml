@@ -3,13 +3,13 @@
 
 <locale name="en_US" full_name="U.S. English">
    
-    <message key="plugins.themes.humanities.name">Humanities Theme</message>
-    <message key="plugins.themes.humanities.description">The Theme For OJS 3</message>
-    <message key="plugins.themes.humanities.issueDescription">Issue Description</message>
-    <message key="plugins.themes.humanities.more">More</message>
-    <message key="plugins.themes.humanities.less">Less</message>
-    <message key="plugins.themes.humanities.fullIssue">Full Issue</message>
-    <message key="plugins.themes.humanities.close">Close</message>
-    <message key="plugins.themes.humanities.biography">Bio</message>
+    <message key="plugins.themes.traditional.name">Traditional Theme</message>
+    <message key="plugins.themes.traditional.description">The Theme For OJS 3</message>
+    <message key="plugins.themes.traditional.issueDescription">Issue Description</message>
+    <message key="plugins.themes.traditional.more">More</message>
+    <message key="plugins.themes.traditional.less">Less</message>
+    <message key="plugins.themes.traditional.fullIssue">Full Issue</message>
+    <message key="plugins.themes.traditional.close">Close</message>
+    <message key="plugins.themes.traditional.biography">Bio</message>
 
 </locale>
