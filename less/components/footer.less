@@ -124,12 +124,43 @@ footer a {
 
 .additional-footer-info {
 	display: flex;
-	margin-top: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.user-page-footer {
+	max-width: 75%;
+	flex: 0 0 75%;
+	
+	& p {
+		margin-bottom: 6px;
+	}
 }
 
 .pkpbrand-wrapper {
+	max-width: 25%;
+	flex: 0 0 25%;
 	display: flex;
 	justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+	.user-page-footer {
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+	.pkpbrand-wrapper {
+		max-width: 100%;
+		flex: 0 0 100%
+	}
+}
+
+.sidebar_wrapper + .additional-footer-info {
+	margin-top: 40px;
+	padding-top: 35px;
+	border-top: 1px solid white;
 }
 
 .footer-brand-image {

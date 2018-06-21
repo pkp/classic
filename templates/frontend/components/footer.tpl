@@ -12,14 +12,18 @@
 
 <footer class="site-footer">
 	<div class="container-fluid container-footer">
-		<div class="sidebar_wrapper">
-			{call_hook name="Templates::Common::Sidebar"}
-		</div>
-		<div class="additional-footer-info">
-			<div class="col-md-6">
-				<p>Published in cooperation with Palgrave Macmillan</p>
+		{if $hasSidebar}
+			<div class="sidebar_wrapper">
+				{call_hook name="Templates::Common::Sidebar"}
 			</div>
-			<div class="col-md-6 pkpbrand-wrapper">
+		{/if}
+		<div class="additional-footer-info">
+			{if $pageFooter}
+				<div class="user-page-footer">
+					{$pageFooter}
+				</div>
+			{/if}
+			<div class="pkpbrand-wrapper">
 				<a href="{url page="about" op="aboutThisPublishingSystem"}">
 					<img class="footer-brand-image" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
 				</a>
