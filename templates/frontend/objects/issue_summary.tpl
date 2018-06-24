@@ -25,9 +25,7 @@
 
 	{if $issueSeries}
 		<a class="issue_summary_title" href="{url op="view" path=$issue->getBestIssueId()}">
-			<span class="current_issue_year">{$issue->getYear()|strip_unsafe_html}</span>
-			<span class="current_issue_volume">{translate key="issue.vol"}. {$issue->getVolume()|strip_unsafe_html}</span>
-			<span class="current_issue_number">{translate key="issue.no"} {$issue->getNumber()|strip_unsafe_html}</span>
+			<span class="current_issue_data">{$issue->getIssueIdentification()}</span>
 		</a>
 	{/if}
 	{if $issueTitle}

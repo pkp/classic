@@ -42,3 +42,42 @@
 	white-space: nowrap;
 	display: inline-block;
 }
+
+// for issue arhcive page
+
+.issue-archive(@archive-margin) {
+	.issue_item:nth-child(4n+1) {
+		& .obj_issue_summary {
+			margin-right: @archive-margin;
+		}
+	}
+	
+	.issue_item:nth-child(4n+2) {
+		& .obj_issue_summary {
+			margin-left: @archive-margin/3;
+			margin-right: @archive-margin/3*2;
+		}
+	}
+	
+	.issue_item:nth-child(4n+3) {
+		& .obj_issue_summary {
+			margin-left: @archive-margin/3*2;
+			margin-right: @archive-margin/3;
+		}
+	}
+	
+	.issue_item:nth-child(4n+4) {
+		& .obj_issue_summary {
+			margin-left: @archive-margin;
+		}
+	}
+}
+
+.issue-archive-media(@multiplier, @count, @archive-margin-left, @archive-margin-right) {
+	.issue_item:nth-child(@{multiplier}n+@{count}) {
+		& .obj_issue_summary {
+			margin-left: @archive-margin-left;
+			margin-right: @archive-margin-right;
+		}
+	}
+}

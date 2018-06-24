@@ -19,27 +19,56 @@
 }
 
 .issue_item {
-	max-width: 25%;
-	margin-top: 37px;
-	padding-right: 10%;
+	width: 25%;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
 
+// issue arhcive page for different screens
+
+@media (min-width: 1800px) {
+	.issue-archive(55%);
+}
+
+@media (min-width: 1600px) and (max-width: 1799px) {
+	.issue-archive(45%);
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+	.issue-archive(130px);
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+	.issue-archive(100px);
+	
+}
 
 @media (min-width: 768px) and (max-width: 1199px) {
 	.issue_item {
-		max-width: 100%/3;
+		width: 100%/3;
 	}
+	
+	.issue-archive-media(3, 1, 0, 100px);
+	.issue-archive-media(3, 2, 50px, 50px);
+	.issue-archive-media(3, 3, 100px, 0);
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
 	.issue_item {
-		max-width: 100%/2;
+		width: 100%/2;
 	}
+	
+	.issue-archive-media(2, 1, 0, 30%);
+	.issue-archive-media(2, 2, 30%, 0);
 }
 
 @media (max-width: 575px) {
 	.issue_item {
-		max-width: 100%;
-		padding-right: 0;
+		width: 100%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.issue_item:not(:last-child) {
+		margin-bottom: 70px;
 	}
 }

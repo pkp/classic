@@ -26,10 +26,42 @@
 
 @media (min-width: 992px) {
 	.description {
-		max-width: 50%;
+		width: 50%;
 	}
 	.cover_image {
 		max-width: 210px;
+	}
+	.issue_cover_block {
+		width: 50%;
+	}
+}
+
+@media (max-width: 991px)  {
+	.cover_image {
+		max-width: 300px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.description {
+		width: 70%;
+		margin-right: 5%;
+	}
+	.issue_cover_block {
+		width: 25%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.description_text {
+		column-count: 2;
+		margin: 15px 0 35px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.description_text {
+		margin: 15px 0 35px 0;
 	}
 }
 
