@@ -23,14 +23,24 @@
 		</a>
 	{/if}
 
-	{if $issueSeries}
+	{if $issue->getShowVolume() || $issue->getShowNumber() || $issue->getShowYear()}
 		<a class="issue_summary_title" href="{url op="view" path=$issue->getBestIssueId()}">
-			<span class="current_issue_data">{$issue->getIssueIdentification()}</span>
+			{strip}
+				{if $issue->getVolume() && $issue->getShowVolume()}
+					<span class="current-issue-volume">{translate key="plugins.themes.traditional.volume-abbr"} {$issue->getVolume()|escape}</span>
+				{/if}
+				{if $issue->getNumber() && $issue->getShowNumber()}
+					<span class="current-issue-number">{translate key="plugins.themes.traditional.number-abbr"} {$issue->getNumber()|escape}</span>
+				{/if}
+				{if $issue->getYear() && $issue->getShowYear()}
+					<span class="current-issue-year">({$issue->getYear()|escape})</span>
+				{/if}
+			{/strip}
 		</a>
 	{/if}
-	{if $issueTitle}
+	{if $issue->getLocalizedTitle() && $issue->getShowTitle()}
 		<div class="issue_title">
-			{$issueTitle|escape}
+			{$issue->getLocalizedTitle()|escape}
 		</div>
 	{/if}
 

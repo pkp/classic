@@ -53,6 +53,8 @@ class TraditionalThemePlugin extends ThemePlugin
 		HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
 		// Check if CSS embedded to the HTML galley
 		HookRegistry::register('TemplateManager::display', array($this, 'hasEmbeddedCSS'));
+		// Get additional issue data to the issue page
+		HookRegistry::register('TemplateManager::display', array($this, 'loadIssueData'));
 	}
 
 	public function getDisplayName() {
@@ -93,7 +95,7 @@ class TraditionalThemePlugin extends ThemePlugin
 		$request = $this->getRequest();
 
 		// Retun false if not a galley page
-		if ($template != 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
+		if ($template !== 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
 
 		$articleArrays = $templateMgr->get_template_vars('article');
 
@@ -123,6 +125,41 @@ class TraditionalThemePlugin extends ThemePlugin
 			'boolEmbeddedCss' => $boolEmbeddedCss,
 			'themePath' => $request->getBaseUrl() . "/" . $this->getPluginPath(),
 		));
+	}
+	
+	public function loadIssueData($hookName, $args) {
+		$templateMgr = $args[0];
+		$template = $args[1];
+		
+		if ($template !== 'frontend/pages/issue.tpl') return false;
+		
+		// Return false if not an issue page
+		$issue = $templateMgr->get_template_vars('issue');
+		
+		$issueIdentificationString = null;
+		
+		if ($issue->getVolume() && $issue->getShowVolume()) {
+			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.traditional.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
+		}
+		if ($issue->getNumber() && $issue->getShowNumber()) {
+			$issueIdentificationString .= ", " . $templateMgr->smartyTranslate(array('key' =>'plugins.themes.traditional.number-abbr'), $templateMgr) . " " . $issue->getNumber();
+		}
+		if ($issue->getYear() && $issue->getShowYear()) {
+			if ($issueIdentificationString !== null) {
+				$issueIdentificationString .= " (" . $issue->getYear() . ")";
+			} else {
+				$issueIdentificationString .= $issue->getYear();
+			}
+		}
+		if ($issue->getLocalizedTitle() && $issue->getShowTitle()) {
+			if ($issueIdentificationString !== null) {
+				$issueIdentificationString .= ": " . $issue->getLocalizedTitle();
+			} else {
+				$issueIdentificationString .= $issue->getLocalizedTitle();
+			}
+		}
+		
+		$templateMgr->assign('issueIdentificationString', $issueIdentificationString);
 	}
 
 }

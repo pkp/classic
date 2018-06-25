@@ -11,6 +11,7 @@
  * @uses $issue Issue The issue
  * @uses $issueIdentification string Label for this issue, consisting of one or
  *       more of the volume, number, year and title, depending on settings
+ * @uses $issueIdentificationString string custom label for the issue, developed for the Traditional theme
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $primaryGenreIds array List of file genre IDs for primary types
  *}
@@ -26,7 +27,7 @@
 
 		{* Display an issue with the Table of Contents *}
 		{else}
-			{include file="frontend/components/breadcrumbs.tpl" currentTitle=$issueIdentification}
+			{include file="frontend/components/breadcrumbs.tpl" currentTitle=$issueIdentificationString}
 			{include file="frontend/objects/issue_toc.tpl"}
 		{/if}
 	</div>
