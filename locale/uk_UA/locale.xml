@@ -11,5 +11,6 @@
     <message key="plugins.themes.traditional.fullIssue">Повний випуск</message>
     <message key="plugins.themes.traditional.close">Закрити</message>
     <message key="plugins.themes.traditional.biography">Біографія</message>
+    <message key="plugins.themes.traditional.more-info">більше інформації</message>
     
 </locale>

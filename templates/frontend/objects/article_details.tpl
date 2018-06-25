@@ -1,4 +1,4 @@
-{**
+ {**
  * templates/frontend/objects/article_details.tpl
  *
  * Copyright (c) 2014-2018 Simon Fraser University
@@ -86,7 +86,7 @@
 						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
 							<i class="fas fa-plus" id="more-authors-data-symbol"></i>
 							<i class="fas fa-minus hide" id="less-authors-data-symbol"></i>
-							more info
+							{translate key="plugins.themes.traditional.more-info"}
 						</a>
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$article->getAuthors() item=author}

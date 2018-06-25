@@ -11,5 +11,6 @@
     <message key="plugins.themes.traditional.fullIssue">Full Issue</message>
     <message key="plugins.themes.traditional.close">Close</message>
     <message key="plugins.themes.traditional.biography">Bio</message>
+    <message key="plugins.themes.traditional.more-info">more info</message>
 
 </locale>
