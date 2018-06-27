@@ -17,6 +17,21 @@
 	content: ", ";
 }
 
+span + .current-issue-year:before {
+	content: " (";
+}
+
+span + .current-issue-year:after {
+	content: ")";
+}
+
+.issue_title {
+	font-family: "Cardo", serif;
+	color: @black;
+	line-height: 1.5;
+	font-size: 17px;
+}
+
 .obj_issue_summary {
 	display: flex;
 	flex-direction: column;

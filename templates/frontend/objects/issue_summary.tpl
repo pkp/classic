@@ -33,7 +33,7 @@
 					<span class="current-issue-number">{translate key="plugins.themes.traditional.number-abbr"} {$issue->getNumber()|escape}</span>
 				{/if}
 				{if $issue->getYear() && $issue->getShowYear()}
-					<span class="current-issue-year">({$issue->getYear()|escape})</span>
+					<span class="current-issue-year">{$issue->getYear()|escape}</span>
 				{/if}
 			{/strip}
 		</a>

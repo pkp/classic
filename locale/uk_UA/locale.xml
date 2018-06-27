@@ -13,7 +13,7 @@
     <message key="plugins.themes.traditional.biography">Біографія</message>
     <message key="plugins.themes.traditional.more-info">більше інформації</message>
     
-    <message key="plugins.themes.traditional.volume-abbr">Вип.</message>
+    <message key="plugins.themes.traditional.volume-abbr">Вип</message>
     <message key="plugins.themes.traditional.number-abbr">№</message>
     
 </locale>

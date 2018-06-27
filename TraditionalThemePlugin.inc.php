@@ -131,9 +131,9 @@ class TraditionalThemePlugin extends ThemePlugin
 		$templateMgr = $args[0];
 		$template = $args[1];
 		
-		if ($template !== 'frontend/pages/issue.tpl') return false;
+		// Return false if not an issue or journal landing page
+		if ($template !== 'frontend/pages/issue.tpl' && $template !== 'frontend/pages/indexJournal.tpl') return false;
 		
-		// Return false if not an issue page
 		$issue = $templateMgr->get_template_vars('issue');
 		
 		$issueIdentificationString = null;
