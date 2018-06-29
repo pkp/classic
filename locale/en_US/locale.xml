@@ -2,16 +2,17 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <locale name="en_US" full_name="U.S. English">
-   
-    <message key="plugins.themes.traditional.name">Traditional Theme</message>
-    <message key="plugins.themes.traditional.description">The Theme For OJS 3</message>
-    <message key="plugins.themes.traditional.issueDescription">Issue Description</message>
-    <message key="plugins.themes.traditional.more">More</message>
-    <message key="plugins.themes.traditional.less">Less</message>
-    <message key="plugins.themes.traditional.fullIssue">Full Issue</message>
-    <message key="plugins.themes.traditional.close">Close</message>
-    <message key="plugins.themes.traditional.biography">Bio</message>
-    <message key="plugins.themes.traditional.more-info">more info</message>
+	
+	<message key="plugins.themes.traditional.name">Traditional Theme</message>
+	<message key="plugins.themes.traditional.description">The Theme For OJS 3</message>
+	<message key="plugins.themes.traditional.menu">Menu</message>
+	<message key="plugins.themes.traditional.issueDescription">Issue Description</message>
+	<message key="plugins.themes.traditional.more">More</message>
+	<message key="plugins.themes.traditional.less">Less</message>
+	<message key="plugins.themes.traditional.fullIssue">Full Issue</message>
+	<message key="plugins.themes.traditional.close">Close</message>
+	<message key="plugins.themes.traditional.biography">Bio</message>
+	<message key="plugins.themes.traditional.more-info">more info</message>
 	
 	<message key="plugins.themes.traditional.volume-abbr">Vol</message>
 	<message key="plugins.themes.traditional.number-abbr">No</message>

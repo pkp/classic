@@ -2,18 +2,19 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <locale name="uk_UA" full_name="Ukrainian">
+	
+	<message key="plugins.themes.traditional.name">Humanities Theme</message>
+	<message key="plugins.themes.traditional.description">Тема для OJS 3</message>
+	<message key="plugins.themes.traditional.menu">Меню</message>
+	<message key="plugins.themes.traditional.issueDescription">Опис випуску</message>
+	<message key="plugins.themes.traditional.more">Більше</message>
+	<message key="plugins.themes.traditional.less">Менше</message>
+	<message key="plugins.themes.traditional.fullIssue">Повний випуск</message>
+	<message key="plugins.themes.traditional.close">Закрити</message>
+	<message key="plugins.themes.traditional.biography">Біографія</message>
+	<message key="plugins.themes.traditional.more-info">більше інформації</message>
+	
+	<message key="plugins.themes.traditional.volume-abbr">Вип</message>
+	<message key="plugins.themes.traditional.number-abbr">№</message>
 
-    <message key="plugins.themes.traditional.name">Humanities Theme</message>
-    <message key="plugins.themes.traditional.description">Тема для OJS 3</message>
-    <message key="plugins.themes.traditional.issueDescription">Опис випуску</message>
-    <message key="plugins.themes.traditional.more">Більше</message>
-    <message key="plugins.themes.traditional.less">Менше</message>
-    <message key="plugins.themes.traditional.fullIssue">Повний випуск</message>
-    <message key="plugins.themes.traditional.close">Закрити</message>
-    <message key="plugins.themes.traditional.biography">Біографія</message>
-    <message key="plugins.themes.traditional.more-info">більше інформації</message>
-    
-    <message key="plugins.themes.traditional.volume-abbr">Вип</message>
-    <message key="plugins.themes.traditional.number-abbr">№</message>
-    
 </locale>

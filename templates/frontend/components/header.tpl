@@ -58,25 +58,33 @@
 				{include file="frontend/components/languageSwitcher.tpl" id="languageNav"}
 			</div>
 		</div>
-		<div class="lower-header">
-			<ul id="nav-small" class="nav nav-tabs">
-				<li class="nav-item">
-					<a id="show-modal" class="nav-link">
-						<i class="fas fa-bars"></i>
-						Menu
-					</a>
-				</li>
-			</ul>
-			{* modal div is added for menu adaptation for small screens *}
-			<div id="modal-on-small" class="nav-modal hide">
-				<div id="primary-nav-wraper">
-                        <span id="close-small-modal">
-                            <i class="fas fa-times"></i>
-                        </span>
-					{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+
+		{capture assign="primaryMenu"}
+			{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+		{/capture}
+
+		{* Show the primary menu only if it is set *}
+		{if !empty(trim($primaryMenu)) || $currentContext}
+			<div class="lower-header">
+				<ul id="nav-small" class="nav nav-tabs">
+					<li class="nav-item">
+						<a id="show-modal" class="nav-link">
+							<i class="fas fa-bars"></i>
+							{translate key="plugins.themes.traditional.menu"}
+						</a>
+					</li>
+				</ul>
+				{* modal div is added for menu adaptation for small screens *}
+				<div id="modal-on-small" class="nav-modal hide">
+					<div id="primary-nav-wraper">
+		                    <span id="close-small-modal">
+		                        <i class="fas fa-times"></i>
+		                    </span>
+						{$primaryMenu}
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 	</div>
 </header>
 

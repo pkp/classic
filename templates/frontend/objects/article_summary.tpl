@@ -25,12 +25,7 @@
 	<div class="article_summary_body">
 		<div class="summary_title_wrapper">
 			<a class="summary_title" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
-				{$article->getLocalizedTitle()|strip_unsafe_html}
-				{if $article->getLocalizedSubtitle()}
-					<span class="subtitle">
-						{$article->getLocalizedSubtitle()|escape}
-					</span>
-				{/if}
+				{$article->getLocalizedFullTitle()|escape}
 			</a>
 		</div>
 
