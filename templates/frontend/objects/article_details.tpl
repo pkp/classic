@@ -322,15 +322,17 @@
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
-					<div class="value">
-						{if $parsedCitations->getCount()}
+					{if $parsedCitations->getCount()}
+						<ol class="references-list">
 							{iterate from=parsedCitations item=parsedCitation}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+								<li>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</li>
 							{/iterate}
-						{elseif $article->getCitations()}
+						</ol>
+					{elseif $article->getCitations()}
+						<div class="value">
 							{$article->getCitations()|nl2br}
-						{/if}
-					</div>
+						</div>
+					{/if}
 				</div>
 			{/if}
 
