@@ -1,7 +1,6 @@
 fieldset[name="contexts"] {
 	margin-top: 30px;
 	margin-bottom: 20px;
-	font-family: "Cardo", serif;
 	
 	& ul {
 		padding-left: 0;
@@ -20,4 +19,13 @@ fieldset[name="contexts"] {
 	& li.context legend {
 		font-size: 18px;
 	}
+}
+
+.consent-context .fields:not(:last-child){
+	margin-bottom: 20px;
+}
+
+.reviewer_nocontext_interests legend, [name="contexts"] legend {
+	font-size: 24px;
+	font-family: "Cardo", serif;
 }

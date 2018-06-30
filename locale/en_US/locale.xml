@@ -16,5 +16,8 @@
 	
 	<message key="plugins.themes.traditional.volume-abbr">Vol</message>
 	<message key="plugins.themes.traditional.number-abbr">No</message>
+	
+	<message key="plugins.themes.traditional.register.privacyConsent">Yes, I agree to have my data collected and stored according to the journal's Policy Statement:</message>
+	<message key="plugins.themes.traditional.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Policy Statement</a> of {$privacyContextName}.]]></message>
 
 </locale>
