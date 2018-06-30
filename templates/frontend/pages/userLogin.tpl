@@ -56,13 +56,13 @@
 				</div>
 
 				<div class="buttons">
-					<button class="submit btn-sunshine" type="submit">
+					<button class="submit btn-primary" type="submit">
 						{translate key="user.login"}
 					</button>
 
 					{if !$disableUserReg}
 						{url|assign:registerUrl page="user" op="register" source=$source}
-						<a href="{$registerUrl}" class="register btn-sunshine">
+						<a href="{$registerUrl}" class="register btn-primary">
 							{translate key="user.login.registerNewAccount"}
 						</a>
 					{/if}

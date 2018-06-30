@@ -10,11 +10,14 @@
  */
 
 footer {
-	font-family: @font-family-primary;
+	font-family: @font-family-secondary;
 }
 
-footer p {
-	font-size: 18px;
+footer p,
+footer li,
+footer a {
+	font-size: 16px;
+	font-family: @font-family-secondary;
 }
 
 footer ul {
@@ -71,7 +74,7 @@ footer a {
 }
 
 .pkp_block .title {
-	font-size: 24px;
+	font-weight: bolder;
 }
 
 .pkp_block img {
@@ -104,7 +107,7 @@ footer a {
 	color: white;
 	display: inline-block;
 	text-align: center;
-	font-family: @font-family-primary;
+	font-family: @font-family-secondary;
 	line-height: 24px;
 	font-size: 18px;
 
@@ -130,7 +133,7 @@ footer a {
 .user-page-footer {
 	max-width: 75%;
 	flex: 0 0 75%;
-	
+
 	& p {
 		margin-bottom: 6px;
 	}

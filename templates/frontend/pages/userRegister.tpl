@@ -152,12 +152,12 @@
 			{/if}
 
 			<div class="buttons">
-				<button class="submit btn-sunshine" type="submit">
+				<button class="submit btn-primary" type="submit">
 					{translate key="user.register"}
 				</button>
 
 				{capture assign="rolesProfileUrl"}{url page="user" op="profile" path="roles"}{/capture}
-				<a href="{url page="login" source=$rolesProfileUrl}" class="login btn-sunshine register-button">{translate key="user.login"}</a>
+				<a href="{url page="login" source=$rolesProfileUrl}" class="login btn-primary register-button">{translate key="user.login"}</a>
 			</div>
 		</form>
 	</div>

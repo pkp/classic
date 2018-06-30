@@ -27,7 +27,7 @@
 			</a>
 		</div>
 		<div class="pdf-download-button">
-			<a href="{$pdfUrl}" class="btn-sunshine" download>
+			<a href="{$pdfUrl}" class="btn-primary" download>
 				<span class="label">
 					{translate key="common.download"}
 				</span>
