@@ -43,7 +43,7 @@ class TraditionalThemePlugin extends ThemePlugin
 		$this->addStyle(
 			'cardo',
 			'//fonts.googleapis.com/css?family=Cardo',
-			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet'));
+			array('baseUrl' => '<link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet'));
 
 		$this->addStyle(
 			'montserrat',
@@ -126,18 +126,18 @@ class TraditionalThemePlugin extends ThemePlugin
 			'themePath' => $request->getBaseUrl() . "/" . $this->getPluginPath(),
 		));
 	}
-	
+
 	public function loadIssueData($hookName, $args) {
 		$templateMgr = $args[0];
 		$template = $args[1];
-		
+
 		// Return false if not an issue or journal landing page
 		if ($template !== 'frontend/pages/issue.tpl' && $template !== 'frontend/pages/indexJournal.tpl') return false;
-		
+
 		$issue = $templateMgr->get_template_vars('issue');
-		
+
 		$issueIdentificationString = null;
-		
+
 		if ($issue->getVolume() && $issue->getShowVolume()) {
 			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.traditional.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
 		}
@@ -158,7 +158,7 @@ class TraditionalThemePlugin extends ThemePlugin
 				$issueIdentificationString .= $issue->getLocalizedTitle();
 			}
 		}
-		
+
 		$templateMgr->assign('issueIdentificationString', $issueIdentificationString);
 	}
 
