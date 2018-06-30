@@ -36,11 +36,6 @@ class TraditionalThemePlugin extends ThemePlugin
 		$this->addMenuArea(array('primary', 'user'));
 
 		$this->addStyle(
-			'roboto',
-			'//fonts.googleapis.com/css?family=Ubuntu',
-			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet'));
-
-		$this->addStyle(
 			'cardo',
 			'//fonts.googleapis.com/css?family=Cardo',
 			array('baseUrl' => '<link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet'));
