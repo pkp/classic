@@ -43,7 +43,7 @@ class TraditionalThemePlugin extends ThemePlugin
 		$this->addStyle(
 			'montserrat',
 			'//fonts.googleapis.com/css?family=Montserrat',
-			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet'));
+			array('baseUrl' => 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i" rel="stylesheet'));
 
 		HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
 		// Check if CSS embedded to the HTML galley
