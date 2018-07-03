@@ -5,6 +5,8 @@
 	
 	<message key="plugins.themes.traditional.name">Humanities Theme</message>
 	<message key="plugins.themes.traditional.description">Тема для OJS 3</message>
+	<message key="plugins.themes.traditional.option.primaryColor.label">Основний колір</message>
+	<message key="plugins.themes.traditional.option.primaryColor.description">Змінити основний колір для цієї теми</message>
 	<message key="plugins.themes.traditional.menu">Меню</message>
 	<message key="plugins.themes.traditional.issueDescription">Опис випуску</message>
 	<message key="plugins.themes.traditional.more">Більше</message>

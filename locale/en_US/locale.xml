@@ -5,6 +5,8 @@
 	
 	<message key="plugins.themes.traditional.name">Traditional Theme</message>
 	<message key="plugins.themes.traditional.description">The Theme For OJS 3</message>
+	<message key="plugins.themes.traditional.option.primaryColor.label">Primary color</message>
+	<message key="plugins.themes.traditional.option.primaryColor.description">Change primary color of the theme</message>
 	<message key="plugins.themes.traditional.menu">Menu</message>
 	<message key="plugins.themes.traditional.issueDescription">Issue Description</message>
 	<message key="plugins.themes.traditional.more">More</message>

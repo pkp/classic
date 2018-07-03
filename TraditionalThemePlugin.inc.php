@@ -21,9 +21,25 @@ class TraditionalThemePlugin extends ThemePlugin
 {
 	public function init()
 	{
+		/* Additional theme options */
+		// Changing theme primary color
+		$this->addOption('primaryColor', 'colour', array(
+			'label' => 'plugins.themes.traditional.option.primaryColor.label',
+			'description' => 'plugins.themes.traditional.option.primaryColor.description',
+			'default' => '#ffd120',
+		));
+		
+		
+		$additionalLessVariables = [];
+		if ($this->getOption('primaryColor') !== '#ffd120') {
+			$additionalLessVariables[] = '@sun-yellow:' . $this->getOption('primaryColor') . ';';
+		}
+		
+		//
 		$this->addStyle('bootstrap', 'node_modules/bootstrap/dist/css/bootstrap.css');
 		$this->addStyle('tagit', 'node_modules/tag-it/css/jquery.tagit.css');
 		$this->addStyle('stylesheet', 'less/import.less');
+		$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
 
 		$this->addScript('jquery', 'node_modules/jquery/dist/jquery.min.js');
 		$this->addScript('popper', 'node_modules/popper.js/dist/umd/popper.min.js');
