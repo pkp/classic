@@ -52,6 +52,18 @@ h3 {
 		text-decoration: none;
 		color: white;
 	}
+	
+	&:focus {
+		background-color: @black;
+		color: white;
+		box-shadow: none;
+		border-color: @black-two;
+	}
+}
+
+// overriding Bootstrap
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+	background-color: @black;
 }
 
 .btn-black.btn-black {

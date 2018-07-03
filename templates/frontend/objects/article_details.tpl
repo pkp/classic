@@ -130,8 +130,8 @@
 		</div>
 	</div>
 
-	<div class="row article_main_data">
-		<div class="main_entry col-md-4">
+	<div class="row article_main_data" id="articleMainData">
+		<div class="main_entry col-md-4" id="mainEntry" >
 
 			{* Article/Issue cover image *}
 			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
@@ -286,7 +286,7 @@
 
 		</div><!-- .main_entry -->
 
-		<div class="article_abstract_block col-md-8">
+		<div class="article_abstract_block col-md-8" id="articleAbstractBlock">
 
 			{* Abstract *}
 			{if $article->getLocalizedAbstract()}

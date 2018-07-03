@@ -26,6 +26,7 @@
 })();
 
 // initiating tag-it
+
 $(document).ready(function() {
     $("#tagitInput").tagit();
 });
@@ -83,3 +84,35 @@ $(document).ready(function () {
         }
     });
 });
+
+// change article's blocks logic for small screens
+
+(function () {
+	var articleMainData = $("#articleMainData");
+	var mainEntry = $("#mainEntry");
+	var mainEntryChildren = mainEntry.children();
+	var articleAbstractBlock = $("#articleAbstractBlock");
+	var articleAbstractBlockChildren = articleAbstractBlock.children();
+	var dataForMobilesMark = "data-for-mobiles";
+	
+	// article's blocks in one column for mobiles and two for big screens
+	function reorganizeArticleBlocks() {
+		if (articleMainData !== null && !articleMainData.hasClass(dataForMobilesMark) && window.innerWidth < 768) {
+			mainEntryChildren.unwrap();
+			articleAbstractBlockChildren.unwrap();
+			articleMainData.addClass(dataForMobilesMark);
+		} else if (articleMainData !== null && articleMainData.hasClass(dataForMobilesMark) && window.innerWidth >= 768) {
+			mainEntryChildren.wrapAll("<div class='main_entry col-md-4' id='mainEntry'></div>");
+			articleAbstractBlockChildren.wrapAll("<div class='article_abstract_block col-md-8' id='articleAbstractBlock'></div>");
+			articleMainData.removeClass(dataForMobilesMark);
+		}
+	}
+	
+	reorganizeArticleBlocks();
+	
+	window.addEventListener("resize", function () {
+		reorganizeArticleBlocks();
+	});
+})();
+
+

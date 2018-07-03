@@ -293,8 +293,61 @@
 	.page_article .btn-primary:first-child {
 		margin-left: 0;
 	}
+	
+	// blocks ordering
 
-	.authors_list {
-		margin-bottom: 16px;
+	.article_main_data {
+		flex-direction: column;
+		margin-left: 0;
+		margin-right: 0;
+		
+		& .article_cover_wrapper {
+			max-width: 250px;
+		}
+		
+		& h3 {
+			font-size: 30px;
+			color: @black-two;
+		}
+		
+		& .doi {
+			order: 1;
+		}
+		
+		& .published_date {
+			order: 2;
+		}
+		
+		& .abstract {
+			order: 3;
+		}
+		
+		& .for-mobile-view {
+			order: 4;
+			margin-top: -20px;
+		}
+		
+		& .keywords {
+			order: 5;
+		}
+		
+		& .citation {
+			order: 6;
+		}
+		
+		& .references {
+			order: 7;
+		}
+		
+		& .copyright {
+			order: 8;
+		}
+		
 	}
+	
+	.article_main_data > * {
+		margin-bottom: 30px;
+	}
+	
 }
+
