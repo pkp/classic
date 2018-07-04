@@ -17,7 +17,7 @@
 
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
 	<div class="current_page_title">
-		<h1 class="{if $requestedPage|escape === 'issue' && $requestedOp|escape === "view"}text-left{else}text-center{/if}">
+		<h1 class="{if $requestedPage|escape === 'issue' && $requestedOp|escape === "view"}text-left issue-header{else}text-center{/if}">
 			{if $currentTitleKey}
 				{translate key=$currentTitleKey}
 			{else}
