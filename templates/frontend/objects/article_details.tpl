@@ -94,7 +94,7 @@
 									<span class="additional-author-name">{$author->getFullName()|escape}</span>
 									{if $author->getLocalizedAffiliation()}
 										<br/>
-										<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()}</span>
+										<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
 									{/if}
 									{if $author->getLocalizedBiography()}
 										<br/>
@@ -278,7 +278,28 @@
 							</a>
 						{/if}
 					{/if}
-					{$copyright}
+					{* copyright modal *}
+					<a class="more_button" data-toggle="modal" data-target="#copyrightModal">
+						{translate key="about.copyrightNotice"}
+					</a>
+					<div class="modal fade" id="copyrightModal" tabindex="-1" role="dialog" aria-labelledby="copyrightModalTitle" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="copyrightModalTitle">{translate key="about.copyrightNotice"}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									{$copyright|strip_unsafe_html}
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.traditional.close"}</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			{/if}
 
