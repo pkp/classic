@@ -124,3 +124,23 @@ $(document).ready(function () {
 		reorganizeArticleBlocks();
 	});
 })();
+
+// hide authors for mobiles
+
+$(document).ready(function () {
+	var authorViewLimit = $('.limit-for-mobiles');
+	$('#show-all-authors').click(function () {
+		authorViewLimit.removeClass("limit-for-mobiles");
+		$(this).addClass("hide");
+		$('#hide-authors').removeClass("hide");
+		$('.fifth-author .author-delimiter').addClass("show");
+	});
+	
+	$('#hide-authors').click(function () {
+		authorViewLimit.addClass("limit-for-mobiles");
+		$('.limit-for-mobiles').removeClass("show-authors");
+		$(this).addClass("hide");
+		$('#show-all-authors').removeClass("hide");
+		$('.fifth-author .author-delimiter').removeClass("show");
+	})
+});

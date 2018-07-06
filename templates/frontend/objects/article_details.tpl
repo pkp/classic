@@ -69,16 +69,23 @@
 					<div class="authors_info">
 						<ul class="entry_authors_list">
 							{strip}
-								{foreach from=$article->getAuthors() item=author}
-									<li class="entry_author_block">
+								{foreach from=$article->getAuthors() item=author key=authorNumber}
+									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
 										{if $author->getOrcid()}
-											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$orcidImageUrl}"></a>
+											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$baseUrl}/{$orcidImageUrl}"></a>
 										{/if}
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
 										</span>
+										{if $authorNumber+1 !== $article->getAuthors()|@count}
+											<span class="author-delimiter">, </span>
+										{/if}
 									</li>
 								{/foreach}
+								{if $article->getAuthors()|@count > 4}
+									<span class="collapse-authors" id="show-all-authors"><ion-icon name="add-circle"></ion-icon></span>
+									<span class="collapse-authors hide" id="hide-authors"><ion-icon name="remove-circle"></ion-icon></ion-icon></span>
+								{/if}
 							{/strip}
 						</ul>
 					</div>

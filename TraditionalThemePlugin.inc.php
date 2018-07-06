@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.plugins.ThemePlugin');
 
-define('ORCID_IMAGE_URL', 'images/orcid.png');
+define('ORCID_IMAGE_URL', 'templates/images/orcid.png');
 
 class TraditionalThemePlugin extends ThemePlugin
 {
@@ -87,7 +87,7 @@ class TraditionalThemePlugin extends ThemePlugin
 				$locales = $request->getSite()->getSupportedLocaleNames();
 			}
 
-			$orcidImageUrl = "/" . $this->getPluginPath() . "/" . ORCID_IMAGE_URL;
+			$orcidImageUrl = $this->getPluginPath() . '/' . ORCID_IMAGE_URL;
 
 			$smarty->assign(array(
 				'languageToggleLocales' => $locales,

@@ -54,10 +54,10 @@
 	display: flex;
 	justify-content: flex-start;
 	padding-right: 10px;
+}
 
-	&:not(:last-child):after {
-		content: ",";
-	}
+#show-all-authors, #hide-authors {
+	display: none;
 }
 
 .name_wrapper {
@@ -69,6 +69,38 @@
 	.orcid-image-url {
 		margin-right: 0;
 		margin-left: 5px;
+	}
+	
+	.limit-for-mobiles {
+		display: none;
+	}
+	
+	.entry_author_block.fifth-author .author-delimiter {
+		display: none;
+	}
+	
+	.entry_author_block.fifth-author .author-delimiter.show {
+		display: inline;
+	}
+	
+	#show-all-authors, #hide-authors {
+		display: inline-block;
+		cursor: pointer;
+	}
+	
+	#show-all-authors.hide, #hide-authors.hide {
+		display: none;
+	}
+	
+	.collapse-authors {
+		font-family: "Cardo", serif;
+		color: @black-two;
+		line-height: 1.5;
+	}
+	
+	.collapse-authors ion-icon {
+		width: 1.3rem;
+		height: 1.3rem;
 	}
 }
 
