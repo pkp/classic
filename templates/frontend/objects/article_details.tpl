@@ -86,7 +86,7 @@
 						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
 							<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
 							<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
-							{translate key="plugins.themes.traditional.more-info"}
+							<span class="ion-icon-text">{translate key="plugins.themes.traditional.more-info"}</span>
 						</a>
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$article->getAuthors() item=author}

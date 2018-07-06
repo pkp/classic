@@ -69,7 +69,7 @@
 					<li class="nav-item">
 						<a id="show-modal" class="nav-link">
 							<ion-icon name="menu"></ion-icon>
-							{translate key="plugins.themes.traditional.menu"}
+							<span class="ion-icon-text">{translate key="plugins.themes.traditional.menu"}</span>
 						</a>
 					</li>
 				</ul>
