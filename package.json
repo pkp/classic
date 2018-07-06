@@ -6,6 +6,6 @@
 		"popper.js": "^1.14.3",
 		"jquery-ui-dist": "^1.12.1",
 		"tag-it": "^2.0.0",
-		"@fortawesome/fontawesome-free-webfonts": "^1.0.5"
+		"ionicons": "^4.2.4"
 	}
 }

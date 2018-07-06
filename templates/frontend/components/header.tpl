@@ -68,7 +68,7 @@
 				<ul id="nav-small" class="nav nav-tabs">
 					<li class="nav-item">
 						<a id="show-modal" class="nav-link">
-							<i class="fas fa-bars"></i>
+							<ion-icon name="menu"></ion-icon>
 							{translate key="plugins.themes.traditional.menu"}
 						</a>
 					</li>
@@ -77,7 +77,7 @@
 				<div id="modal-on-small" class="nav-modal hide">
 					<div id="primary-nav-wraper">
 		                    <span id="close-small-modal">
-		                        <i class="fas fa-times"></i>
+		                        <ion-icon name="close"></ion-icon>
 		                    </span>
 						{$primaryMenu}
 					</div>

@@ -46,6 +46,7 @@ class TraditionalThemePlugin extends ThemePlugin
 		$this->addScript('bootstrap-js', 'node_modules/bootstrap/dist/js/bootstrap.min.js');
 		$this->addScript('jqueryui', 'node_modules/jquery-ui-dist/jquery-ui.min.js');
 		$this->addScript('tagit-js', 'js/tag-it.min.js'); // own instance of tag-it library (modified source code)
+		$this->addScript('ionicons', 'node_modules/ionicons/dist/ionicons.js');
 		$this->addScript('main-js', 'js/main-theme.js');
 
 		/* Adding navigation menu as in OJS 3.1+ we can have custom */

@@ -84,8 +84,8 @@
 					</div>
 					<div class="additional-authors-info">
 						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
-							<i class="fas fa-plus" id="more-authors-data-symbol"></i>
-							<i class="fas fa-minus hide" id="less-authors-data-symbol"></i>
+							<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
+							<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
 							{translate key="plugins.themes.traditional.more-info"}
 						</a>
 						<div class="collapse" id="authorInfoCollapse">
