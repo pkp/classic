@@ -1,3 +1,13 @@
+/**
+ * @file /js/main-theme.js
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Custom javascript functionality for Traditional OJS 3 theme plugin
+ */
+
 
 /* This self-invoking function provides primary menu rendering for small screens
  * We want to treat it like a typical modal
@@ -114,6 +124,3 @@ $(document).ready(function () {
 		reorganizeArticleBlocks();
 	});
 })();
-
-
-

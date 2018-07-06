@@ -10,6 +10,7 @@
  *
  * @uses $currentContext Journal|Press The current journal or press
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="about.aboutContext"}
 
 <div class="page page_about">

@@ -8,6 +8,7 @@
  * Generic error page.
  * Displays a simple error message and (optionally) a return link.
  *}
+
 {include file="frontend/components/header.tpl"}
 
 <div class="page page_error">

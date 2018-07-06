@@ -5,10 +5,11 @@
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * User registration form.
+ * @brief User registration form.
  *
  * @uses $primaryLocale string The primary locale for this journal/press
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
 <div class="page page_register">

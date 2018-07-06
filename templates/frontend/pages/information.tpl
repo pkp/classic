@@ -8,6 +8,7 @@
  * Information page.
  *
  *}
+
 {if !$contentOnly}
 	{include file="frontend/components/header.tpl" pageTitle=$pageTitle}
 {/if}

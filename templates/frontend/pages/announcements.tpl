@@ -9,6 +9,7 @@
  *
  * @uses $announcements array List of announcements
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="announcement.announcements"}
 
 <div class="page page_announcements">

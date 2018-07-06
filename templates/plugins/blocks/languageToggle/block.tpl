@@ -5,8 +5,9 @@
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Common site sidebar menu -- language toggle.
+ * @brief Common site sidebar menu -- language toggle.
  *}
+
 {if $enableLanguageToggle}
 	<div class="pkp_block block_language">
 	<span class="title">

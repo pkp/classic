@@ -7,6 +7,7 @@
  *
  * @brief A landing page displayed to users upon successful registration
  *}
+
 {include file="frontend/components/header.tpl"}
 
 <div class="page page_register_complete">

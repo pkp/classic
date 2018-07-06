@@ -1,12 +1,13 @@
 {**
  * plugins/generic/pdfJsViewer/templates/display.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Template to view a PDF or HTML galley
  *}
+
 <!DOCTYPE html>
 <html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
 {capture assign="pageTitleTranslated"}{translate key="article.pageTitle" title=$title}{/capture}

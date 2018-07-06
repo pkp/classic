@@ -9,6 +9,7 @@
  *
  * @uses $currentContext Journal|Press The current journal or press
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="about.editorialTeam"}
 
 <div class="page page_editorial_team">

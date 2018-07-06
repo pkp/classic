@@ -14,6 +14,7 @@
  * @uses $subscriptionPhone string Contact phone number for subscriptions
  * @uses $subscriptionEmail string Contact email address for subscriptions
  *}
+
  <div class="cmp_subscription_contact">
 	 {if $subscriptionAdditionalInformation}
 		<div class="cmp_subscription-description">

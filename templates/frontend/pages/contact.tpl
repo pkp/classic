@@ -18,6 +18,7 @@
  * @uses $supportPhone string Support contact phone number
  * @uses $supportEmail string Support contact email address
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="about.contact"}
 
 <div class="page page_contact">

@@ -15,6 +15,7 @@
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $primaryGenreIds array List of file genre IDs for primary types
  *}
+
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 
 <div class="page page_issue">

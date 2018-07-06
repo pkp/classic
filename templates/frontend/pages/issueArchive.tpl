@@ -14,6 +14,7 @@
  * @uses $showingEnd int The number of the last item on this page
  * @uses $total int Count of all published monographs
  *}
+
 {capture assign="pageTitle"}
 	{if $prevPage}
 		{translate key="archive.archivesPageNumber" pageNumber=$prevPage+1}

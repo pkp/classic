@@ -5,7 +5,7 @@
  * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Password reset form.
+ * @brief Password reset form.
  *
  *}
 {include file="frontend/components/header.tpl" pageTitle="user.login.resetPassword"}

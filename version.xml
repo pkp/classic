@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
+<!--
+  * plugins/themes/traditional/version.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+
 <version>
 	<!-- The application should match the theme folder to ensure it is unique -->
 	<application>traditional</application>
@@ -16,7 +26,7 @@
 	<release>1.0.0.0</release>
 
 	<!-- The date of the latest version -->
-	<date>2018-03-20</date>
+	<date>2018-07-06</date>
 
 	<!-- This should always be 0 -->
 	<lazy-load>0</lazy-load>

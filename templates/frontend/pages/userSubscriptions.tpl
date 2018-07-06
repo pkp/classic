@@ -15,6 +15,7 @@
  *			subscription types been created?
  * @uses $userInstitutionalSubscriptions array
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.mySubscriptions"}
 
 <div class="page page_user_subscriptions">

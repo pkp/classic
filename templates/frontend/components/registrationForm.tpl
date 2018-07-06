@@ -16,6 +16,7 @@
  * @uses $email string Email input entry if available
  * @uses $username string Username input entry if available
  *}
+
 <fieldset class="identity">
 	<legend class="register-form-legend">
 		{translate key="user.profile"}

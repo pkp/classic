@@ -6,8 +6,8 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common site sidebar menu -- information links.
- *
  *}
+
 {if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 	<div class="pkp_block block_information">
 		<span class="title">{translate key="plugins.block.information.link"}</span>

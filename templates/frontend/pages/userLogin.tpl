@@ -8,6 +8,7 @@
  * User login form.
  *
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="user.login"}
 
 <div class="page page_login">

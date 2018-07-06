@@ -11,6 +11,7 @@
  * @uses $languageToggleLocales array All supported locales
  * @uses $id string A unique ID for this language toggle
  *}
+
 {if $languageToggleLocales && $languageToggleLocales|@count > 1}
 	<ul id="{$id|escape}" class="dropdown language-toggle nav nav-tabs">
 		<li class="nav-item dropdown">

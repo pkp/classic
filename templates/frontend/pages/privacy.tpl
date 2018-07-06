@@ -9,6 +9,7 @@
  *
  * @uses $currentContext Journal|Press The current journal or press
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="manager.setup.privacyStatement"}
 
 <div class="page page_privacy">

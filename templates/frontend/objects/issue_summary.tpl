@@ -9,6 +9,7 @@
  *
  * @uses $issue Issue The issue
  *}
+
 {if $issue->getShowTitle()}
 {assign var=issueTitle value=$issue->getLocalizedTitle()}
 {/if}

@@ -10,6 +10,7 @@
  * @uses $currentContext Journal|Press The current journal or press
  * @uses $submissionChecklist array List of requirements for submissions
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="about.submissions"}
 
 <div class="page page_submissions">

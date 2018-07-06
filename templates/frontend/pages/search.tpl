@@ -16,6 +16,7 @@
  * @uses $yearStart Earliest year that can be used in from/to filters
  * @uses $yearEnd Latest year that can be used in from/to filters
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="common.search"}
 
 <div class="page page_search">

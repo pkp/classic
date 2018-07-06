@@ -8,6 +8,7 @@
  * About the Journal Subscriptions.
  *
  *}
+
 {include file="frontend/components/header.tpl" pageTitle="about.subscriptions"}
 
 <div class="page page_subscriptions">

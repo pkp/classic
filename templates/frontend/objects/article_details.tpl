@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
- * Copyright (c) 2018 Vitalii Bezsheiko
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -23,6 +22,7 @@
  *   included with published articles.
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
+
 <article class="obj_article_details">
 	<div class="article_header_wrapper">
 		<div class="article_issue_credentials">
