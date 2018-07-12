@@ -28,10 +28,10 @@
 		<a class="issue_summary_title" href="{url op="view" path=$issue->getBestIssueId()}">
 			{strip}
 				{if $issue->getVolume() && $issue->getShowVolume()}
-					<span class="current-issue-volume">{translate key="plugins.themes.traditional.volume-abbr"} {$issue->getVolume()|escape}</span>
+					<span class="current-issue-volume">{translate key="plugins.themes.classic.volume-abbr"} {$issue->getVolume()|escape}</span>
 				{/if}
 				{if $issue->getNumber() && $issue->getShowNumber()}
-					<span class="current-issue-number">{translate key="plugins.themes.traditional.number-abbr"} {$issue->getNumber()|escape}</span>
+					<span class="current-issue-number">{translate key="plugins.themes.classic.number-abbr"} {$issue->getNumber()|escape}</span>
 				{/if}
 				{if $issue->getYear() && $issue->getShowYear()}
 					<span class="current-issue-year">{$issue->getYear()|escape}</span>

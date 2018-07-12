@@ -3,23 +3,23 @@
 
 <locale name="en_US" full_name="U.S. English">
 	
-	<message key="plugins.themes.traditional.name">Traditional Theme</message>
-	<message key="plugins.themes.traditional.description">The Theme For OJS 3</message>
-	<message key="plugins.themes.traditional.option.primaryColor.label">Primary color</message>
-	<message key="plugins.themes.traditional.option.primaryColor.description">Change primary color of the theme</message>
-	<message key="plugins.themes.traditional.menu">Menu</message>
-	<message key="plugins.themes.traditional.issueDescription">Issue Description</message>
-	<message key="plugins.themes.traditional.more">More</message>
-	<message key="plugins.themes.traditional.less">Less</message>
-	<message key="plugins.themes.traditional.fullIssue">Full Issue</message>
-	<message key="plugins.themes.traditional.close">Close</message>
-	<message key="plugins.themes.traditional.biography">Bio</message>
-	<message key="plugins.themes.traditional.more-info">more info</message>
+	<message key="plugins.themes.classic.name">Classic Theme</message>
+	<message key="plugins.themes.classic.description">The Theme For OJS 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">Primary color</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">Change primary color of the theme</message>
+	<message key="plugins.themes.classic.menu">Menu</message>
+	<message key="plugins.themes.classic.issueDescription">Issue Description</message>
+	<message key="plugins.themes.classic.more">More</message>
+	<message key="plugins.themes.classic.less">Less</message>
+	<message key="plugins.themes.classic.fullIssue">Full Issue</message>
+	<message key="plugins.themes.classic.close">Close</message>
+	<message key="plugins.themes.classic.biography">Bio</message>
+	<message key="plugins.themes.classic.more-info">more info</message>
 	
-	<message key="plugins.themes.traditional.volume-abbr">Vol</message>
-	<message key="plugins.themes.traditional.number-abbr">No</message>
+	<message key="plugins.themes.classic.volume-abbr">Vol</message>
+	<message key="plugins.themes.classic.number-abbr">No</message>
 	
-	<message key="plugins.themes.traditional.register.privacyConsent">Yes, I agree to have my data collected and stored according to the journal's Policy Statement:</message>
-	<message key="plugins.themes.traditional.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Policy Statement</a> of {$privacyContextName}.]]></message>
+	<message key="plugins.themes.classic.register.privacyConsent">Yes, I agree to have my data collected and stored according to the journal's Policy Statement:</message>
+	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Policy Statement</a> of {$privacyContextName}.]]></message>
 	
 </locale>

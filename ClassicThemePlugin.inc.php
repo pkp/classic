@@ -1,31 +1,31 @@
 <?php
 
 /**
- * @file plugins/themes/traditional/TraditionalThemePlugin.inc.php
+ * @file plugins/themes/traditional/ClassicThemePlugin.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class TraditionalThemePlugin
- * @ingroup plugins_themes_traditional
+ * @class ClassicThemePlugin
+ * @ingroup plugins_themes_classic
  *
- * @brief Traditional theme
+ * @brief Classic theme
  */
 
 import('lib.pkp.classes.plugins.ThemePlugin');
 
 define('ORCID_IMAGE_URL', 'templates/images/orcid.png');
 
-class TraditionalThemePlugin extends ThemePlugin
+class ClassicThemePlugin extends ThemePlugin
 {
 	public function init()
 	{
 		/* Additional theme options */
 		// Changing theme primary color
 		$this->addOption('primaryColor', 'colour', array(
-			'label' => 'plugins.themes.traditional.option.primaryColor.label',
-			'description' => 'plugins.themes.traditional.option.primaryColor.description',
+			'label' => 'plugins.themes.classic.option.primaryColor.label',
+			'description' => 'plugins.themes.classic.option.primaryColor.description',
 			'default' => '#ffd120',
 		));
 		
@@ -65,11 +65,11 @@ class TraditionalThemePlugin extends ThemePlugin
 	}
 
 	public function getDisplayName() {
-		return __('plugins.themes.traditional.name');
+		return __('plugins.themes.classic.name');
 	}
 
 	public function getDescription() {
-		return __('plugins.themes.traditional.description');
+		return __('plugins.themes.classic.description');
 	}
 
 	public function loadAdditionalData($hookName, $args) {
@@ -146,10 +146,10 @@ class TraditionalThemePlugin extends ThemePlugin
 		$issueIdentificationString = null;
 
 		if ($issue->getVolume() && $issue->getShowVolume()) {
-			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.traditional.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
+			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
 		}
 		if ($issue->getNumber() && $issue->getShowNumber()) {
-			$issueIdentificationString .= ", " . $templateMgr->smartyTranslate(array('key' =>'plugins.themes.traditional.number-abbr'), $templateMgr) . " " . $issue->getNumber();
+			$issueIdentificationString .= ", " . $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.number-abbr'), $templateMgr) . " " . $issue->getNumber();
 		}
 		if ($issue->getYear() && $issue->getShowYear()) {
 			if ($issueIdentificationString !== null) {

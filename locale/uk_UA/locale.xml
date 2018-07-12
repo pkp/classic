@@ -3,20 +3,20 @@
 
 <locale name="uk_UA" full_name="Ukrainian">
 	
-	<message key="plugins.themes.traditional.name">Humanities Theme</message>
-	<message key="plugins.themes.traditional.description">Тема для OJS 3</message>
-	<message key="plugins.themes.traditional.option.primaryColor.label">Основний колір</message>
-	<message key="plugins.themes.traditional.option.primaryColor.description">Змінити основний колір для цієї теми</message>
-	<message key="plugins.themes.traditional.menu">Меню</message>
-	<message key="plugins.themes.traditional.issueDescription">Опис випуску</message>
-	<message key="plugins.themes.traditional.more">Більше</message>
-	<message key="plugins.themes.traditional.less">Менше</message>
-	<message key="plugins.themes.traditional.fullIssue">Повний випуск</message>
-	<message key="plugins.themes.traditional.close">Закрити</message>
-	<message key="plugins.themes.traditional.biography">Біографія</message>
-	<message key="plugins.themes.traditional.more-info">більше інформації</message>
+	<message key="plugins.themes.classic.name">Класична тема</message>
+	<message key="plugins.themes.classic.description">Тема для OJS 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">Основний колір</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">Змінити основний колір для цієї теми</message>
+	<message key="plugins.themes.classic.menu">Меню</message>
+	<message key="plugins.themes.classic.issueDescription">Опис випуску</message>
+	<message key="plugins.themes.classic.more">Більше</message>
+	<message key="plugins.themes.classic.less">Менше</message>
+	<message key="plugins.themes.classic.fullIssue">Повний випуск</message>
+	<message key="plugins.themes.classic.close">Закрити</message>
+	<message key="plugins.themes.classic.biography">Біографія</message>
+	<message key="plugins.themes.classic.more-info">більше інформації</message>
 	
-	<message key="plugins.themes.traditional.volume-abbr">Вип</message>
-	<message key="plugins.themes.traditional.number-abbr">№</message>
+	<message key="plugins.themes.classic.volume-abbr">Вип</message>
+	<message key="plugins.themes.classic.number-abbr">№</message>
 
 </locale>

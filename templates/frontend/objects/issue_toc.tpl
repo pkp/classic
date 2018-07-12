@@ -43,7 +43,7 @@
 			<div class="flex_container description_cover">
 				{if $issue->hasDescription()}
 					<div class="description">
-						<h2 class="description_label">{translate key="plugins.themes.traditional.issueDescription"}</h2>
+						<h2 class="description_label">{translate key="plugins.themes.classic.issueDescription"}</h2>
 						{assign var=issueDescription value=$issue->getLocalizedDescription()|strip_unsafe_html}
 						{if $issueDescription|strlen < 800}
 							<div class="description_text">
@@ -55,7 +55,7 @@
 										class="three_dots">...</span>
 								<a class="more_button"
 								   href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-									{translate key="plugins.themes.traditional.more"}
+									{translate key="plugins.themes.classic.more"}
 								</a>
 							</div>
 						{else}
@@ -98,7 +98,7 @@
 
 	{if $requestedPage|escape === 'issue'}
 		<div class="full_issue_label">
-			<span>{translate key="plugins.themes.traditional.fullIssue"}</span>
+			<span>{translate key="plugins.themes.classic.fullIssue"}</span>
 		</div>
 	{/if}
 

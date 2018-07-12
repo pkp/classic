@@ -27,14 +27,14 @@
 			<div class="optin optin-privacy">
 				<label>
 					<input type="checkbox" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
-					{translate key="plugins.themes.traditional.register.privacyConsent"}
+					{translate key="plugins.themes.classic.register.privacyConsent"}
 				</label>
 				{foreach from=$contexts item=context}
 					{assign var=contextPath value=$context->getPath()|escape}
 					{assign var=privacyContextName value=$context->getLocalizedName()|escape}
 					{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE context=$contextPath page="about" op="privacy"}{/capture}
 					<div class="context_consent_policy">
-						{translate key="plugins.themes.traditional.register.privacyConsentContext" privacyUrl=$privacyUrl privacyContextName=$privacyContextName}
+						{translate key="plugins.themes.classic.register.privacyConsentContext" privacyUrl=$privacyUrl privacyContextName=$privacyContextName}
 					</div>
 				{/foreach}
 			</div>

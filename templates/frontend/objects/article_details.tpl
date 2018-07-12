@@ -93,7 +93,7 @@
 						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
 							<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
 							<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
-							<span class="ion-icon-text">{translate key="plugins.themes.traditional.more-info"}</span>
+							<span class="ion-icon-text">{translate key="plugins.themes.classic.more-info"}</span>
 						</a>
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$article->getAuthors() item=author}
@@ -106,7 +106,7 @@
 									{if $author->getLocalizedBiography()}
 										<br/>
 										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio">
-											{translate key="plugins.themes.traditional.biography"}
+											{translate key="plugins.themes.classic.biography"}
 										</a>
 										{* author's biography *}
 										<div class="modal fade" id="modalAuthorBio" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
@@ -122,7 +122,7 @@
 														{$author->getLocalizedBiography()|strip_unsafe_html}
 													</div>
 													<div class="modal-footer">
-														<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.traditional.close"}</button>
+														<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
 													</div>
 												</div>
 											</div>
@@ -204,11 +204,11 @@
 						{/foreach}
 						{if $keywordArray|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
 							<a class="more_button" id="more_keywords">
-								{translate key="plugins.themes.traditional.more"}
+								{translate key="plugins.themes.classic.more"}
 							</a>
 							<br/>
 							<a class="more_button hide" id="less_keywords">
-								{translate key="plugins.themes.traditional.less"}
+								{translate key="plugins.themes.classic.less"}
 							</a>
 						{/if}
 					{/foreach}
@@ -303,7 +303,7 @@
 										{$copyright|strip_unsafe_html}
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.traditional.close"}</button>
+										<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
 									</div>
 								</div>
 							</div>
