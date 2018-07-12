@@ -285,8 +285,8 @@
 							</a>
 						{/if}
 					{/if}
-					{* copyright modal *}
-					{if $copyright}
+					{* Copyright modal. Show only if license is absent *}
+					{if $copyright && !$licenseUrl}
 						<a class="more_button" data-toggle="modal" data-target="#copyrightModal">
 							{translate key="about.copyrightNotice"}
 						</a>
