@@ -40,10 +40,16 @@
 
 				<div class="form-row">
 					<div class="form-group col-sm-6">
+						<label for="username" class="sr-only">
+							{translate key="user.username"}
+						</label>
 						<input type="text" class="form-control" name="username" id="username" value="{$username|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
 						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 					</div>
 					<div class="form-group col-sm-6">
+						<label for="password" class="sr-only">
+							{translate key="user.password"}
+						</label>
 						<input type="password" class="form-control" name="password" id="password" value="{$password|escape}" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>
 						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 						<a href="{url page="login" op="lostPassword"}">
