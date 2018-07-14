@@ -24,20 +24,20 @@
 	<div class="fields">
 
 		<div class="form-row">
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-12">
 				<label for="firstName" class="sr-only">
 					{translate key="user.firstName"}
 				</label>
 				<input type="text"  class="form-control" name="firstName" id="firstName" value="{$firstName|escape}" maxlength="40" placeholder="{translate key="user.firstName"}" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
-			<div class="form-group col-sm-4">
+			<div class="form-group middle-name col-sm-12">
 				<label for="middleName" class="sr-only">
 					{translate key="user.middleName"}
 				</label>
 				<input type="text" class="form-control" name="middleName" id="middleName" value="{$middleName|escape}" maxlength="40" placeholder="{translate key="user.middleName"}">
 			</div>
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-12">
 				<label for="lastName" class="sr-only">
 					{translate key="user.lastName"}
 				</label>
@@ -47,14 +47,14 @@
 		</div>
 
 		<div class="form-row">
-			<div class="form-group col-sm-6">
+			<div class="form-group col-sm-8">
 				<label for="affiliation" class="sr-only">
 					{translate key="user.affiliation"}
 				</label>
 				<input type="text" class="form-control" name="affiliation[{$primaryLocale|escape}]" id="affiliation" value="{$affiliation.$primaryLocale|escape}" placeholder="{translate key="user.affiliation"}" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
-			<div class="form-group col-sm-6">
+			<div class="form-group col-sm-4">
 				<label for="country" class="sr-only">
 					{translate key="common.country"}
 				</label>
@@ -75,14 +75,14 @@
 	</legend>
 	<div class="fields">
 		<div class="form-row">
-			<div class="form-group col-sm-6">
+			<div class="form-group col-sm-12">
 				<label for="email" class="sr-only">
 					{translate key="user.email"}
 				</label>
 				<input type="text" class="form-control" name="email" id="email" value="{$email|escape}" maxlength="90" placeholder="{translate key="user.email"}" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
-			<div class="form-group col-sm-6">
+			<div class="form-group col-sm-12">
 				<label for="username" class="sr-only">
 					{translate key="user.username"}
 				</label>
