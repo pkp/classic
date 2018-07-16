@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <locale name="en_US" full_name="U.S. English">
-	
+
 	<message key="plugins.themes.classic.name">Classic Theme</message>
 	<message key="plugins.themes.classic.description">The Theme For OJS 3</message>
 	<message key="plugins.themes.classic.option.primaryColor.label">Primary color</message>
@@ -12,14 +12,15 @@
 	<message key="plugins.themes.classic.more">More</message>
 	<message key="plugins.themes.classic.less">Less</message>
 	<message key="plugins.themes.classic.fullIssue">Full Issue</message>
+	<message key="plugins.themes.classic.tableOfContents">Table of Contents</message>
 	<message key="plugins.themes.classic.close">Close</message>
 	<message key="plugins.themes.classic.biography">Bio</message>
 	<message key="plugins.themes.classic.more-info">more info</message>
-	
+
 	<message key="plugins.themes.classic.volume-abbr">Vol</message>
 	<message key="plugins.themes.classic.number-abbr">No</message>
-	
+
 	<message key="plugins.themes.classic.register.privacyConsent">Yes, I agree to have my data collected and stored according to the journal's Policy Statement:</message>
 	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Policy Statement</a> of {$privacyContextName}.]]></message>
-	
+
 </locale>
