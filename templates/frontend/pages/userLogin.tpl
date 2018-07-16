@@ -66,7 +66,7 @@
 
 					{if !$disableUserReg}
 						{url|assign:registerUrl page="user" op="register" source=$source}
-						<a href="{$registerUrl}" class="register btn-primary">
+						<a href="{$registerUrl}" class="register">
 							{translate key="user.login.registerNewAccount"}
 						</a>
 					{/if}
