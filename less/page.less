@@ -52,7 +52,6 @@
 	
 	&:hover {
 		text-decoration: none;
-		color: @sun-yellow;
 	}
 }
 
@@ -106,7 +105,7 @@
 // additional rules for text pages
 
 @media (min-width: 1400px) {
-	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_submissions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
+	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_user_subscriptions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
 		
 		& .container-page {
 			padding-left: 28%;
@@ -116,7 +115,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_submissions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
+	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_user_subscriptions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
 		
 		& .container-page {
 			padding-left: 25%;
@@ -126,7 +125,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_submissions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
+	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_user_subscriptions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
 		
 		& .container-page {
 			padding-left: 17%;
@@ -136,7 +135,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_submissions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
+	.page_about, .page_subscriptions, .page_contact, .page_information, .page_submissions, .page_editorial_team, .page_user_subscriptions, .page_index_site, .page_privacy, .page_login, .page_register, .static_page, .navigation-item-content {
 		
 		& .container-page {
 			padding-left: 8%;
@@ -159,5 +158,15 @@
 	& .close span {
 		color: white;
 	}
+}
+
+// tables
+
+.table-wrapper {
+	overflow-x: auto;
+}
+
+table {
+	border-bottom: 1px solid #ddd;
 }
 

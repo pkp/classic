@@ -169,7 +169,7 @@
 						<span class="doi_value">
 							<a href="{$doiUrl}">
 								{* maching DOI's (with new and old format) *}
-								{$doiUrl|regex_replace:"/http.*org\//":" "}
+								{$doiUrl|escape}
 							</a>
 						</span>
 					</div>

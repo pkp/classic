@@ -233,10 +233,6 @@
 	margin-left: 5px;
 	margin-right: 5px;
 	cursor: pointer;
-
-	&:hover {
-		color: @sun-yellow;
-	}
 }
 
 #less_keywords {
@@ -400,7 +396,6 @@
 		& .copyright {
 			order: 8;
 		}
-		
 	}
 	
 	.article_main_data > * {
@@ -419,5 +414,19 @@
 		}
 	}
 	
+}
+
+// overriding default typographics
+.orcid-image-url, .more-authors-info-button, .doi_value a {
+	border-bottom: none;
+	box-shadow: none;
+	
+	&:hover {
+		background-color: inherit;
+	}
+}
+
+.doi_value a {
+	word-wrap: break-word;
 }
 
