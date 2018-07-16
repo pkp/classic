@@ -19,7 +19,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.mySubscriptions"}
 
 <div class="page page_user_subscriptions">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container_subscriptions">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
 		{include file="frontend/components/subscriptionContact.tpl"}
@@ -28,7 +28,7 @@
 			<div class="my_subscription_payments">
 				<h3 class="subscriptions-heading"><span>{translate key="user.subscriptions.subscriptionStatus"}</span></h3>
 				<p>{translate key="user.subscriptions.statusInformation"}</p>
-				<table class="cmp_table">
+				<table class="table">
 					<tr>
 						<th>{translate key="user.subscriptions.status"}</th>
 						<th>{translate key="user.subscriptions.statusDescription"}</th>
@@ -58,7 +58,7 @@
 				<h3 class="subscriptions-heading"><span>{translate key="user.subscriptions.individualSubscriptions"}</span></h3>
 				<p>{translate key="subscriptions.individualDescription"}</p>
 				{if $userIndividualSubscription}
-					<table class="cmp_table">
+					<table class="table">
 						<tr>
 							<th>{translate key="user.subscriptions.form.typeId"}</th>
 							<th>{translate key="subscriptions.status"}</th>
@@ -122,13 +122,13 @@
 					</table>
 				{elseif $paymentsEnabled}
 					<p>
-						<a class="action" href="{url op="purchaseSubscription" path="individual"}">
+						<a class="action btn-primary" href="{url op="purchaseSubscription" path="individual"}">
 							{translate key="user.subscriptions.purchaseNewSubscription"}
 						</a>
 					</p>
 				{else}
 					<p>
-						<a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+						<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
 							{translate key="user.subscriptions.viewSubscriptionTypes"}
 						</a>
 					</p>
@@ -146,7 +146,7 @@
 					{/if}
 				</p>
 				{if $userInstitutionalSubscriptions}
-					<table class="cmp_table">
+					<table class="table">
 						<tr>
 							<th>{translate key="user.subscriptions.form.typeId"}</th>
 							<th>{translate key="user.subscriptions.form.institutionName"}</th>
@@ -221,11 +221,11 @@
 				{/if}
 				<p>
 					{if $paymentsEnabled}
-						<a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">
+						<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
 							{translate key="user.subscriptions.purchaseNewSubscription"}
 						</a>
 					{else}
-						<a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+						<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
 							{translate key="user.subscriptions.viewSubscriptionTypes"}
 						</a>
 					{/if}
