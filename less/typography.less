@@ -40,13 +40,13 @@ dt, address, table, label {
 ol {
 	list-style: none;
 	counter-reset: item;
-}
 
-ol li:before {
-	font-family: @font-family-secondary;
-	font-size: smaller;
-	counter-increment: item;
-	content: counter(item) '. ';
+	& li:before {
+		font-family: @font-family-secondary;
+		font-size: smaller;
+		counter-increment: item;
+		content: counter(item) '. ';
+	}
 }
 
 li {
@@ -66,10 +66,10 @@ cite {
 dt {
 	font-weight: normal;
 	margin: 30px 0 10px 0;
-}
 
-dt:first-child {
-	margin-top: 0;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 code {
@@ -89,23 +89,23 @@ a {
 	overflow-wrap: break-word;
 	word-break: break-word;
 	word-wrap: break-word;
-}
 
-a:hover {
-	color: #000;
-	text-decoration: none;
-	background-color: @primary-colour;
+	&:hover {
+		color: #000;
+		text-decoration: none;
+		background-color: @primary-colour;
+	}
 }
 
 address a {
 	border-bottom: 1px solid #000;
 	box-shadow: none;
-}
 
-address a:hover {
-	color: #000;
-	text-decoration: none;
-	background-color: transparent;
+	&:hover {
+		color: #000;
+		text-decoration: none;
+		background-color: transparent;
+	}
 }
 
 // overriding for header, footer links, buttons and articles' summary title
