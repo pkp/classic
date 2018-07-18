@@ -35,8 +35,8 @@
 					{* Require the user to agree to the terms of the privacy policy *}
 					<div class="fields">
 						<div class="custom-control custom-checkbox optin optin-privacy">
-							<input type="checkbox" class="custom-control-input" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
-							<label class="custom-control-label">
+							<input type="checkbox" class="custom-control-input" id="privacyConsent" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
+							<label class="custom-control-label" for="privacyConsent">
 								{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
 								{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
 							</label>
@@ -45,8 +45,8 @@
 					{* Ask the user to opt into public email notifications *}
 					<div class="fields">
 						<div class="custom-control custom-checkbox optin optin-email">
-							<input type="checkbox" class="custom-control-input" name="emailConsent" value="1"{if $emailConsent} checked="checked"{/if}>
-							<label class="custom-control-label">
+							<input type="checkbox" class="custom-control-input" name="emailConsent" id="emailConsent" value="1"{if $emailConsent} checked="checked"{/if}>
+							<label class="custom-control-label" for="emailConsent">
 								{translate key="user.register.form.emailConsent"}
 							</label>
 						</div>
@@ -77,7 +77,7 @@
 									{if $userGroup->getPermitSelfRegistration()}
 										{assign var="userGroupId" value=$userGroup->getId()}
 										<input id="checkbox-reviewer-interests" class="custom-control-input" type="checkbox" name="reviewerGroup[{$userGroupId}]" value="1"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
-										<label class="custom-control-label">
+										<label class="custom-control-label" for="checkbox-reviewer-interests">
 											{translate key="user.reviewerPrompt.userGroup" userGroup=$userGroup->getLocalizedName()}
 										</label>
 									{/if}
