@@ -37,40 +37,46 @@
 			<input type="hidden" name="source" value="{$source|strip_unsafe_html|escape}" />
 
 			<fieldset class="fields">
-				<div class="form-group">
-					<label for="username" class="sr-only">
-						{translate key="user.username"}
-					</label>
-					<input type="text" class="form-control" name="username" id="username" value="{$username|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
-					<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
-				</div>
-				<div class="form-group">
-					<label for="password" class="sr-only">
-						{translate key="user.password"}
-					</label>
-					<input type="password" class="form-control" name="password" id="password" value="{$password|escape}" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>
-					<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
-					<a href="{url page="login" op="lostPassword"}">
-						{translate key="user.login.forgotPassword"}
-					</a>
-				</div>
-				<div class="form-group form-check">
-					<input type="checkbox" class="form-check-input" name="remember" id="remember" value="1" checked>
-					<label class="form-check-label" for="remember">{translate key="user.login.rememberUsernameAndPassword"}</label>
-				</div>
+				<div class="row">
+					<div class="form-group col-md-6 offset-md-3">
+						<label for="username" class="sr-only">
+							{translate key="user.username"}
+						</label>
+						<input type="text" class="form-control" name="username" id="username" value="{$username|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
+						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+					</div>
 
-				<div class="buttons">
-					<button class="submit btn-primary" type="submit">
-						{translate key="user.login"}
-					</button>
+					<div class="form-group col-md-6 offset-md-3">
+						<label for="password" class="sr-only">
+							{translate key="user.password"}
+						</label>
+						<input type="password" class="form-control" name="password" id="password" value="{$password|escape}" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>
+						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+						<p>
+							<a href="{url page="login" op="lostPassword"}">
+								{translate key="user.login.forgotPassword"}
+							</a>
+						</p>
+					</div>
 
-					{if !$disableUserReg}
-						{url|assign:registerUrl page="user" op="register" source=$source}
-						<a href="{$registerUrl}" class="register btn-primary">
-							{translate key="user.login.registerNewAccount"}
-						</a>
-					{/if}
-				</div>
+					<div class="col-md-6 offset-md-3 custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1" checked>
+						<label class="custom-control-label" for="remember">{translate key="user.login.rememberUsernameAndPassword"}</label>
+					</div>
+
+					<div class="col-md-6 offset-md-3 buttons">
+						<button class="submit btn btn-primary" type="submit">
+							{translate key="user.login"}
+						</button>
+
+						{if !$disableUserReg}
+							{url|assign:registerUrl page="user" op="register" source=$source}
+							<a href="{$registerUrl}" class="register btn">
+								{translate key="user.login.registerNewAccount"}
+							</a>
+						{/if}
+					</div>
+
 			</fieldset>
 		</form>
 	</div>

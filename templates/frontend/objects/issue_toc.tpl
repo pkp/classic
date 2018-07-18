@@ -83,8 +83,8 @@
 	{* Full-issue galleys *}
 	{if $issueGalleys}
 		<div class="galleys">
-			<h2>
-				{translate key="issue.fullIssue"}
+			<h2 class="sr-only">
+				{translate key="issue.tableOfContents"}
 			</h2>
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}

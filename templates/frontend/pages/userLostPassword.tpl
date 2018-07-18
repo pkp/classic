@@ -15,7 +15,9 @@
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login.resetPassword"}
 
-		<p>{translate key="user.login.resetPasswordInstructions"}</p>
+		<div class="row">
+			<p class="col-md-6 offset-md-3">{translate key="user.login.resetPasswordInstructions"}</p>
+		</div>
 
 		<form class="cmp_form lost_password" id="lostPasswordForm" action="{url page="login" op="requestResetPassword"}" method="post">
 			{csrf}
@@ -28,24 +30,27 @@
 
 			<fieldset class="fields">
 
-				<div class="form-row">
-					<div class="form-group col-sm-12">
+				<div class="row">
+					<div class="form-group col-md-6 offset-md-3">
+						<label for="email" class="sr-only">{translate key="user.login.registeredEmail"}</label>
 						<input type="text" class="form-control" name="email" id="email" value="{$email|escape}" placeholder="{translate key="user.login.registeredEmail"}" required>
 						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 					</div>
 				</div>
 
-				<div class="buttons">
-					<button class="submit btn-primary" type="submit">
-						{translate key="user.login.resetPassword"}
-					</button>
+				<div class="row buttons">
+					<div class="col-md-6 offset-md-3">
+						<button class="submit btn btn-primary" type="submit">
+							{translate key="user.login.resetPassword"}
+						</button>
 
-					{if !$disableUserReg}
-						{url|assign:registerUrl page="user" op="register" source=$source}
-						<a href="{$registerUrl}" class="register btn-primary">
-							{translate key="user.login.registerNewAccount"}
-						</a>
-					{/if}
+						{if !$disableUserReg}
+							{url|assign:registerUrl page="user" op="register" source=$source}
+							<a href="{$registerUrl}" class="register btn">
+								{translate key="user.login.registerNewAccount"}
+							</a>
+						{/if}
+					</div>
 				</div>
 			</fieldset>
 
