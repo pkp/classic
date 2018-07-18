@@ -19,7 +19,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.mySubscriptions"}
 
 <div class="page page_user_subscriptions">
-	<div class="container-fluid container-page container_subscriptions">
+	<div class="container-fluid container-page container_subscriptions container-narrow">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
 		{include file="frontend/components/subscriptionContact.tpl"}

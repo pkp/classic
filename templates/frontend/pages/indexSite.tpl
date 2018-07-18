@@ -11,7 +11,7 @@
 {include file="frontend/components/header.tpl"}
 
 <div class="page_index_site">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 
 		{if $about}
 			<div class="about_site">

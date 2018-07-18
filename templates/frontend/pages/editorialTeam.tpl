@@ -13,7 +13,7 @@
 {include file="frontend/components/header.tpl" pageTitle="about.editorialTeam"}
 
 <div class="page page_editorial_team">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.editorialTeam"}
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.editorialTeam"}
 		{$currentContext->getLocalizedSetting('editorialTeam')}

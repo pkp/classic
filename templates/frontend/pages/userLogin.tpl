@@ -12,7 +12,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.login"}
 
 <div class="page page_login">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login"}
 

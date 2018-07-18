@@ -12,7 +12,7 @@
 {include file="frontend/components/header.tpl"}
 
 <div class="page page_error">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
 		<div class="error-description">
 			<p>{translate key=$errorMsg params=$errorParams}</p>

@@ -11,7 +11,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.purchaseIndividualSubscription"}
 
 <div class="pkp_page_content pkp_page_purchaseIndividualSubscription">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 		<form class="cmp_form purchase_subscription" method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="individual"|to_array:$subscriptionId}">
 			{csrf}
 

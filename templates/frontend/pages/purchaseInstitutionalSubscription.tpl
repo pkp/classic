@@ -11,7 +11,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.purchaseInstitutionalSubscription"}
 
 <div class="pkp_page_content pkp_page_purchaseInstitutionalSubscription">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 		<h1 class="page_title">
 			{translate key="user.subscriptions.purchaseInstitutionalSubscription"}
 		</h1>
