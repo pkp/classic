@@ -59,7 +59,7 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 offset-md-3 custom-control custom-checkbox">
+					<div class="col-md-6 offset-md-3 custom-control custom-checkbox checkbox-remember">
 						<input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1" checked>
 						<label class="custom-control-label" for="remember">{translate key="user.login.rememberUsernameAndPassword"}</label>
 					</div>
