@@ -103,16 +103,16 @@
 							{if $paymentsEnabled}
 								<td>
 									{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-										<a class="cmp_button" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
+										<a class="cmp_button user-subscription-button" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
 											{translate key="user.subscriptions.purchase"}
 										</a>
 									{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 										{if !$isNonExpiring}
-											<a class="cmp_button" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
+											<a class="cmp_button user-subscription-button" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
 												{translate key="user.subscriptions.renew"}
 											</a>
 										{/if}
-										<a class="cmp_button" href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
+										<a class="cmp_button user-subscription-button" href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
 											{translate key="user.subscriptions.purchase"}
 										</a>
 									{/if}
@@ -121,17 +121,13 @@
 						</tr>
 					</table>
 				{elseif $paymentsEnabled}
-					<p>
-						<a class="action btn-primary" href="{url op="purchaseSubscription" path="individual"}">
-							{translate key="user.subscriptions.purchaseNewSubscription"}
-						</a>
-					</p>
+					<a class="action btn-primary" href="{url op="purchaseSubscription" path="individual"}">
+						{translate key="user.subscriptions.purchaseNewSubscription"}
+					</a>
 				{else}
-					<p>
-						<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
-							{translate key="user.subscriptions.viewSubscriptionTypes"}
-						</a>
-					</p>
+					<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+						{translate key="user.subscriptions.viewSubscriptionTypes"}
+					</a>
 				{/if}
 			</div>
 		{/if}
@@ -145,7 +141,7 @@
 						{translate key="subscriptions.institutionalOnlinePaymentDescription"}
 					{/if}
 				</p>
-				{if $userInstitutionalSubscriptions}
+				{if $userInstitutionalSubscriptions->getCount() > 0}
 					<table class="table">
 						<tr>
 							<th>{translate key="user.subscriptions.form.typeId"}</th>
@@ -200,16 +196,16 @@
 								{if $paymentsEnabled}
 									<td>
 										{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-											<a class="cmp_button" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
+											<a class="cmp_button user-subscription-button" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
 												{translate key="user.subscriptions.purchase"}
 											</a>
 										{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 											{if !$isNonExpiring}
-												<a class="cmp_button" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
+												<a class="cmp_button user-subscription-button" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
 													{translate key="user.subscriptions.renew"}
 												</a>
 											{/if}
-											<a class="cmp_button" href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
+											<a class="cmp_button user-subscription-button" href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
 												{translate key="user.subscriptions.purchase"}
 											</a>
 										{/if}
@@ -218,18 +214,15 @@
 							</tr>
 						{/iterate}
 					</table>
+				{elseif $paymentsEnabled}
+					<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
+						{translate key="user.subscriptions.purchaseNewSubscription"}
+					</a>
+				{else}
+					<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+						{translate key="user.subscriptions.viewSubscriptionTypes"}
+					</a>
 				{/if}
-				<p>
-					{if $paymentsEnabled}
-						<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
-							{translate key="user.subscriptions.purchaseNewSubscription"}
-						</a>
-					{else}
-						<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
-							{translate key="user.subscriptions.viewSubscriptionTypes"}
-						</a>
-					{/if}
-				</p>
 			</div>
 		{/if}
 	</div>
