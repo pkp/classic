@@ -1,5 +1,5 @@
 # Classic Theme
-An official theme for [OJS 3.1.1+](https://pkp.sfu.ca/ojs/) in a sunshine palette with a responsive design
+An official theme for [OJS 3.1.1+](https://pkp.sfu.ca/ojs/)
 
 Current version classic v.1.0.0
 
@@ -13,12 +13,15 @@ Manual installation:
 3. Login into the OJS admin dashboard and activate the plugin on the **Plugins** page.
 4. Enable the theme in **Website Settings -> Appearence** menu.
 
-Installation from the master branch:
+Installation from the master branch (should be used only for development):
 1. `git clone https://github.com/Vitaliy-1/classic.git`.
 2. Move to the theme's root folder: `cd classic`. 
-3. Resolve dependencies: `npm install`.
-4. Copy the plugin's folder to `plugins/themes` directory starting from the OJS installation root folder.
-5. Login into the OJS admin dashboard, activate the plugin and enable the theme. 
+3. Make sure that [npm(https://www.npmjs.com/get-npm)] and [Gulp(https://gulpjs.com/)] are installed.
+4. Resolve dependencies: `npm install`. Gulp config file is inside a theme root folder `gulpfile.js`.
+5. To compile external SCSS, concatenate styles and minify: `gulp sass`. The result CSS path is `resources/app.min.css`.
+6. To concatenate and minify javascript: `gulp scripts` and `gulp compress`. The result Javascript file path is `resources/app.min.js`. Run `gulp watch` to view javascript changes inside `dev_js` folder in real time.
+7. Copy the plugin's folder to `plugins/themes` directory starting from the OJS installation root folder.
+8. Login into the OJS admin dashboard, activate the plugin and enable the theme. 
 
 Note that the master branch can contain a code that will not be shipped to the stable release.
 ## Version Compatibility

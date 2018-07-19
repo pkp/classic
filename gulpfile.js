@@ -36,6 +36,5 @@ gulp.task('compress', function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('resources/scss/**/*.scss', ['sass']);
-	gulp.watch('resources/javascript/**/*.js', ['scripts']);
+	gulp.watch('dev_js/**/*.js', ['scripts']);
 });
