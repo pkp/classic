@@ -13,13 +13,13 @@
 
 {include file="frontend/components/header.tpl" pageTitle="about.aboutContext"}
 
-<div class="page page_about">
+<main class="page page_about">
 	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutContext"}
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
 
 		{$currentContext->getLocalizedSetting('about')}
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

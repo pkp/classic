@@ -20,7 +20,7 @@
 
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<div class="page_index_journal">
+<main class="page_index_journal">
 	<div class="container-fluid container-page">
 
 		{call_hook name="Templates::Index::journal"}
@@ -31,7 +31,7 @@
 				{strip}
 					<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
 					{if $issueIdentificationString}
-						<span class="current_issue_title">{$issueIdentificationString|escape}</span>
+						<h1> class="current_issue_title">{$issueIdentificationString|escape}</h1>
 					{/if}
 				{/strip}
 				{include file="frontend/objects/issue_toc.tpl"}
@@ -45,6 +45,6 @@
 			</div>
 		{/if}
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

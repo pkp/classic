@@ -12,7 +12,7 @@
 
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
-<div class="page page_register">
+<main class="page page_register">
 	<div class="container-fluid container-page container-narrow">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.register"}
@@ -162,6 +162,6 @@
 			</div>
 		</form>
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

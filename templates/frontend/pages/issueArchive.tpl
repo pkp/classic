@@ -24,7 +24,7 @@
 {/capture}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$pageTitle}
 
-<div class="page page_issue_archive">
+<main class="page page_issue_archive">
 	<div class="container-fluid container-page">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
@@ -68,7 +68,7 @@
 			}
 		{/if}
 	</div> <!-- end of a container -->
-</div>
+</main>
 
 
 {include file="frontend/components/footer.tpl"}

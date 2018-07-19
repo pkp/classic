@@ -19,7 +19,7 @@
 
 {include file="frontend/components/header.tpl" pageTitle="common.search"}
 
-<div class="page page_search">
+<main class="page page_search">
 	<div class="container-fluid container-page">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="common.search"}
@@ -104,6 +104,6 @@
 		{/if}
 
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

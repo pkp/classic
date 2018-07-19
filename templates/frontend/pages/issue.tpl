@@ -18,7 +18,7 @@
 
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 
-<div class="page page_issue">
+<main class="page page_issue">
 	<div class="container-fluid container-page">
 
 		{* Display a message if no current issue exists *}
@@ -32,6 +32,6 @@
 			{include file="frontend/objects/issue_toc.tpl"}
 		{/if}
 	</div>
-</div>
+</main>
 
 {include file="frontend/components/footer.tpl"}

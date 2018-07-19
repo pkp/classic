@@ -11,7 +11,7 @@
 
 {include file="frontend/components/header.tpl" pageTitle="about.subscriptions"}
 
-<div class="page page_subscriptions">
+<main class="page page_subscriptions">
 	<div class="container-fluid container-page container_subscriptions container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.subscriptions"}
 		{include file="frontend/components/subscriptionContact.tpl"}
@@ -98,6 +98,6 @@
 			</div>
 		{/if}
 	</div>
-</div>
+</main>
 
 {include file="frontend/components/footer.tpl"}

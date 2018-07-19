@@ -11,7 +11,7 @@
 
 {include file="frontend/components/header.tpl"}
 
-<div class="page page_error">
+<main class="page page_error">
 	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
 		<div class="error-description">
@@ -23,6 +23,6 @@
 			</div>
 		{/if}
 	</div>
-</div>
+</main>
 
 {include file="frontend/components/footer.tpl"}
