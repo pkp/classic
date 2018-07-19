@@ -35,21 +35,21 @@ class ClassicThemePlugin extends ThemePlugin
 			$additionalLessVariables[] = '@sun-yellow:' . $this->getOption('primaryColor') . ';';
 		}
 		
-		//
-		$this->addStyle('bootstrap', 'node_modules/bootstrap/dist/css/bootstrap.css');
-		$this->addStyle('tagit', 'node_modules/tag-it/css/jquery.tagit.css');
+		// Importing Bootstrap's and tag-it CSS
+		$this->addStyle('app_css', 'resources/app.min.css');
+		
 		$this->addStyle('stylesheet', 'less/import.less');
 		$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
+		
+		// Importing JQuery, Popper, Bootstrap, JQuery-ui, tag-it (own instance), and custom theme's javascript
+		$this->addScript('app_js', 'resources/app.min.js');
+		
+		// Loading ionicons as external resource 
+		$this->addScript('ionicons',
+			'https://unpkg.com/ionicons@4.2.4/dist/ionicons.js',
+			array('baseUrl' => ''));
 
-		$this->addScript('jquery', 'node_modules/jquery/dist/jquery.min.js');
-		$this->addScript('popper', 'node_modules/popper.js/dist/umd/popper.min.js');
-		$this->addScript('bootstrap-js', 'node_modules/bootstrap/dist/js/bootstrap.min.js');
-		$this->addScript('jqueryui', 'node_modules/jquery-ui-dist/jquery-ui.min.js');
-		$this->addScript('tagit-js', 'js/tag-it.min.js'); // own instance of tag-it library (modified source code)
-		$this->addScript('ionicons', 'node_modules/ionicons/dist/ionicons.js');
-		$this->addScript('main-js', 'js/main-theme.js');
-
-		/* Adding navigation menu as in OJS 3.1+ we can have custom */
+		// Adding navigation menu as in OJS 3.1+ we can have custom
 		$this->addMenuArea(array('primary', 'user'));
 
 		$this->addStyle(
