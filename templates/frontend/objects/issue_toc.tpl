@@ -96,12 +96,6 @@
 		</div>
 	{/if}
 
-	{if $requestedPage|escape === 'issue'}
-		<div class="full_issue_label">
-			<span>{translate key="plugins.themes.classic.fullIssue"}</span>
-		</div>
-	{/if}
-
 	{* Articles *}
 	<div class="sections">
 		{foreach name=sections from=$publishedArticles item=section}
