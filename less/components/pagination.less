@@ -18,13 +18,13 @@
 	color: @black;
 
 	&:hover {
-		color: @primary-colour;
+		color: #fff;
 		background-color: @black;
 		border: 1px solid @black;
 	}
 }
 
-// overriding Bootstrap
+// Overriding Bootstrap
 .page-item:last-child .page-link, .page-item:first-child .page-link {
 	border-radius: 0;
 }
@@ -36,4 +36,10 @@
 	box-shadow: none;
 	color: @black;
 	pointer-events: none;
+}
+
+// Overriding default styling
+.page-link {
+	box-shadow: none;
+	-webkit-box-shadow: none;
 }
