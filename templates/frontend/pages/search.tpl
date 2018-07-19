@@ -65,7 +65,7 @@
 
 
 				<div class="submit buttons">
-					<button class="submit btn-primary" type="submit">{translate key="common.search"}</button>
+					<button class="submit btn btn-primary" type="submit">{translate key="common.search"}</button>
 				</div>
 			</form>
 		</div>

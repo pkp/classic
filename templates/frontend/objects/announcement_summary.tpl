@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="buttons">
-		<a class="btn-primary" href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
+		<a class="btn btn-primary" href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
 			<span aria-hidden="true" role="presentation">
 				{translate key="common.readMore"}
 			</span>

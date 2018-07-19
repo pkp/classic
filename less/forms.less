@@ -74,10 +74,11 @@ select {
 	border-color: #000;
 	background-color: #fff;
 	box-shadow: none;
+	.button();
 }
 
 .btn-primary {
-	.button();
+	
 	font-size: 14px;
 	background-color: @primary-colour;
 	border-color: @primary-colour;
@@ -112,19 +113,9 @@ select {
 	background-color: #000;
 	border-color: #000;
 	color: #fff;
-}
-
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
-	background-color: @black;
-}
-
-.btn-black.btn-black {
-	.button();
-	background-color: @black;
-	color: @white;
-	font-size: 18px;
 	border-bottom: none;
 	box-shadow: none;
+	font-size: 18px;
 	
 	&:hover {
 		background-color: @gunmetal;
@@ -132,6 +123,10 @@ select {
 		color: @white;
 		
 	}
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+	background-color: @black;
 }
 
 // OJS classes

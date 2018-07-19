@@ -121,11 +121,11 @@
 						</tr>
 					</table>
 				{elseif $paymentsEnabled}
-					<a class="action btn-primary" href="{url op="purchaseSubscription" path="individual"}">
+					<a class="action btn btn-primary" href="{url op="purchaseSubscription" path="individual"}">
 						{translate key="user.subscriptions.purchaseNewSubscription"}
 					</a>
 				{else}
-					<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+					<a class="btn btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
 						{translate key="user.subscriptions.viewSubscriptionTypes"}
 					</a>
 				{/if}
@@ -215,11 +215,11 @@
 						{/iterate}
 					</table>
 				{elseif $paymentsEnabled}
-					<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
+					<a class="action btn btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
 						{translate key="user.subscriptions.purchaseNewSubscription"}
 					</a>
 				{else}
-					<a class="btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
+					<a class="btn btn-primary" href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">
 						{translate key="user.subscriptions.viewSubscriptionTypes"}
 					</a>
 				{/if}

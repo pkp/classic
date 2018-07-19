@@ -122,7 +122,7 @@
 														{$author->getLocalizedBiography()|strip_unsafe_html}
 													</div>
 													<div class="modal-footer">
-														<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
+														<button type="button" class="btn btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
 													</div>
 												</div>
 											</div>
@@ -230,7 +230,7 @@
 								{$citation}
 							</div>
 							<div class="citation_formats dropdown">
-								<a class="btn-primary citation_dropdown_button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+								<a class="btn btn-primary citation_dropdown_button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 								        aria-expanded="false">
 									{translate key="submission.howToCite.citationFormats"}
 								</a>
@@ -303,7 +303,7 @@
 										{$copyright|strip_unsafe_html}
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
+										<button type="button" class="btn btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
 									</div>
 								</div>
 							</div>

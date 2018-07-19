@@ -119,7 +119,7 @@
 		{/foreach}
 	</div><!-- .sections -->
 
-	<a class="read_more btn-black" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
+	<a class="read_more btn btn-secondary" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
 		{translate key="journal.viewAllIssues"}
 	</a>
 </div>

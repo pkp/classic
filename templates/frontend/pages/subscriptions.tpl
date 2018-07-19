@@ -53,7 +53,7 @@
 
 				{if $isUserLoggedIn}
 					<div class="subscriptions_individual_purchase">
-						<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="individual"}">
+						<a class="action btn btn-primary" href="{url page="user" op="purchaseSubscription" path="individual"}">
 							{translate key="user.subscriptions.purchaseNewSubscription"}
 						</a>
 					</div>
@@ -90,7 +90,7 @@
 				</table>
 				{if $isUserLoggedIn}
 					<div class="subscriptions_institutional_purchase">
-						<a class="action btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
+						<a class="action btn btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
 							{translate key="user.subscriptions.purchaseNewSubscription"}
 						</a>
 					</div>

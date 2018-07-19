@@ -56,10 +56,10 @@
 							{/if}
 
 							<div class="index-site-journal-links">
-								<a class="btn-primary view" href="{$url|escape}">
+								<a class="btn btn-primary view" href="{$url|escape}">
 									{translate key="site.journalView"}
 								</a>
-								<a class="btn-primary view" href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
+								<a class="btn btn-primary view" href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
 									{translate key="site.journalCurrent"}
 								</a>
 							</div>

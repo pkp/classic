@@ -41,7 +41,7 @@
 			</fieldset>
 
 			<div class="buttons">
-				<button class="submit btn-primary" type="submit">
+				<button class="submit btn btn-primary" type="submit">
 					{translate key="common.save"}
 				</button>
 			</div>
