@@ -49,7 +49,7 @@
 	font-family: @font-family-primary;
 	color: @black;
 	margin-bottom: 20px;
-	
+
 	&:hover {
 		text-decoration: none;
 	}
@@ -63,7 +63,7 @@
 	border-radius: 0;
 	padding-left: 0;
 	padding-right: 0;
-	
+
 	&:focus {
 		border-bottom: 1px solid @primary-colour;
 		box-shadow: none;
@@ -80,7 +80,7 @@
 .search-pagination-results {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
+
 	& span {
 		border-bottom: 2px solid @primary-colour;
 	}
@@ -88,13 +88,13 @@
 
 .search-pagination-numbers {
 	display: flex;
-	
+
 	& a, strong {
 		border: 1px solid #ced4da;
 		padding: 5px;
 		color: @black-two;
 	}
-	
+
 	& strong {
 		background-color: @primary-colour;
 		font-weight: normal;
@@ -105,7 +105,7 @@
 // additional rules for text pages
 
 @media (min-width: 1400px) {
-	
+
 	.container-narrow {
 		padding-left: 28%;
 		padding-right: 28%;
@@ -113,7 +113,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-	
+
 	.container-narrow {
 		padding-left: 25%;
 		padding-right: 25%;
@@ -121,7 +121,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-	
+
 	.container-narrow {
 		padding-left: 17%;
 		padding-right: 17%;
@@ -129,7 +129,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-	
+
 	.container-narrow {
 		padding-left: 8%;
 		padding-right: 8%;
@@ -146,7 +146,7 @@
 .modal-header {
 	background-color: @black-two;
 	color: white;
-	
+
 	& .close span {
 		color: white;
 	}
@@ -158,7 +158,16 @@
 	overflow-x: auto;
 }
 
-table {
+table, .table {
 	border-bottom: 1px solid #ddd;
-}
 
+	th, td {
+		padding-left: 0;
+	}
+
+	p, li {
+		font-family: @font-family-secondary;
+		font-size: smaller;
+	}
+
+}

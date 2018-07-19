@@ -19,6 +19,8 @@
 
 	&:hover {
 		color: @primary-colour;
+		background-color: @black;
+		border: 1px solid @black;
 	}
 }
 
@@ -31,4 +33,7 @@
 .page-item.active .page-link {
 	background-color: @primary-colour;
 	border-color: @primary-colour;
+	box-shadow: none;
+	color: @black;
+	pointer-events: none;
 }
