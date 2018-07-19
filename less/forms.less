@@ -82,6 +82,19 @@ select {
   border-color: @primary-colour;
   font-weight: 600;
   color: #000;
+
+  &:hover {
+    background-color: @black;
+    text-decoration: none;
+    color: white;
+  }
+
+  &:focus {
+    background-color: @black;
+    color: white;
+    border-color: @black;
+  }
+
 }
 
 .btn-primary:hover,
@@ -98,6 +111,26 @@ select {
   color: #fff;
 }
 
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+	background-color: @black;
+}
+
+.btn-black.btn-black {
+	.button();
+	background-color: @black;
+	color: @white;
+	font-size: 18px;
+	border-bottom: none;
+	box-shadow: none;
+
+	&:hover {
+		background-color: @gunmetal;
+		text-decoration: none;
+		color: @white;
+
+	}
+}
+
 
 // OJS classes
 
@@ -105,4 +138,17 @@ select {
   font-family: 'Montserrat', sans-serif;
   font-size: small;
   margin: 0.5em 0;
+}
+
+.more_button {
+	color: @black;
+	border-bottom: 3px solid @primary-colour;
+	line-height: 10px;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		color: @black;
+		text-decoration: none;
+	}
 }

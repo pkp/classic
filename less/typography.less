@@ -9,7 +9,7 @@
  *
  */
 
-// general typographics
+// General typography
 
 body {
 	font-family: @font-family-primary;
@@ -148,29 +148,6 @@ p {
 	font-size: 14px;
 }
 
-.btn-primary {
-	.button();
-	background-color: @primary-colour;
-	color: @black;
-	font-size: 14px;
-	cursor: pointer;
-	border-bottom: none;
-
-	&:hover {
-		background-color: @black;
-		text-decoration: none;
-		color: white;
-		box-shadow: none;
-	}
-
-	&:focus {
-		background-color: @black;
-		color: white;
-		box-shadow: none;
-		border-color: @black-two;
-	}
-}
-
 // ionicons
 .ion-icon-text {
 	display: inline-block;
@@ -179,47 +156,4 @@ p {
 
 ion-icon {
 	vertical-align: middle;
-}
-
-// overriding Bootstrap
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
-	background-color: @black;
-}
-
-.btn-black.btn-black {
-	.button();
-	background-color: @black;
-	color: @white;
-	font-size: 18px;
-	border-bottom: none;
-	box-shadow: none;
-
-	&:hover {
-		background-color: @gunmetal;
-		text-decoration: none;
-		color: @white;
-
-	}
-}
-
-button.btn-primary {
-	border: 0;
-
-	&:focus {
-		box-shadow: none;
-		outline: 0;
-	}
-}
-
-.more_button {
-	color: @black;
-	border-bottom: 3px solid @primary-colour;
-	line-height: 10px;
-	display: inline-block;
-	cursor: pointer;
-
-	&:hover {
-		color: @black;
-		text-decoration: none;
-	}
 }
