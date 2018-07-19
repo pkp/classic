@@ -10,7 +10,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitle="user.login.resetPassword"}
 
-<div class="page page_lost_password">
+<main class="page page_lost_password">
 	<div class="container-fluid container-page">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login.resetPassword"}
@@ -57,6 +57,6 @@
 		</form>
 
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

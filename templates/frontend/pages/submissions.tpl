@@ -13,7 +13,7 @@
 
 {include file="frontend/components/header.tpl" pageTitle="about.submissions"}
 
-<div class="page page_submissions">
+<main class="page page_submissions">
 	<div class="container-fluid container-page container-narrow">
 
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.submissions"}
@@ -82,6 +82,6 @@
 		{/if}
 
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

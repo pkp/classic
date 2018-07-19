@@ -12,7 +12,7 @@
 
 {include file="frontend/components/header.tpl" pageTitle="announcement.announcements"}
 
-<div class="page page_announcements">
+<main class="page page_announcements">
 	<div class="container-fluid container-page">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="announcement.announcements"}
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="announcements" sectionTitleKey="announcement.announcements"}
@@ -23,6 +23,6 @@
 
 		{include file="frontend/components/announcements.tpl"}
 	</div>
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

@@ -16,6 +16,7 @@
 	<message key="plugins.themes.classic.close">Close</message>
 	<message key="plugins.themes.classic.biography">Bio</message>
 	<message key="plugins.themes.classic.more-info">more info</message>
+	<message key="plugins.themes.classic.pagination">Pagination</message>
 
 	<message key="plugins.themes.classic.volume-abbr">Vol</message>
 	<message key="plugins.themes.classic.number-abbr">No</message>

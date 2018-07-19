@@ -17,7 +17,7 @@
 
 {include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
-<div class="page page_article">
+<main class="page page_article">
 	<div class="container-fluid container-page">
 
 		{* Show article overview *}
@@ -28,6 +28,6 @@
 		</div>
 	</div>
 
-</div><!-- .page -->
+</main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

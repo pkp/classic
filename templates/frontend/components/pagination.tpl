@@ -16,6 +16,7 @@
 
 {if $prevUrl || $nextUrl}
 	<nav class="pagination_navigation" aria-label="{translate|escape key="common.pagination.label"}">
+		<h2 class="sr-only">{translate key="issue.pagination"}</h2>
 		<ul class="pagination justify-content-center">
 			<li class="page-item{if !$prevUrl} disabled{/if}">
 				<a class="page-link" href="{$prevUrl}">

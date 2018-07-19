@@ -10,7 +10,7 @@
 
 {include file="frontend/components/header.tpl"}
 
-<div class="page page_register_complete">
+<main class="page page_register_complete">
 	<div class="container-fluid container-page">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
 		<p class="registration-complete-instructions">
@@ -47,6 +47,6 @@
 			</li>
 		</ul>
 	</div>
-</div>
+</main>
 
 {include file="frontend/components/footer.tpl"}

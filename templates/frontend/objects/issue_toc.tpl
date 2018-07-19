@@ -98,13 +98,16 @@
 
 	{* Articles *}
 	<div class="sections">
+		<h2 class="sr-only">
+			{translate key="issue.tableOfContents"}
+		</h2>
 		{foreach name=sections from=$publishedArticles item=section}
 			<div class="section">
 				{if $section.articles}
 					{if $section.title}
-						<div class="section_title">
+						<h3 class="section_title">
 							{$section.title|escape}
-						</div>
+						</h3>
 					{/if}
 					<div class="section_content">
 						{foreach from=$section.articles item=article}
