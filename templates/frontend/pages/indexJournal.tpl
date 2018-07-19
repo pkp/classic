@@ -31,7 +31,7 @@
 				{strip}
 					<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
 					{if $issueIdentificationString}
-						<h1> class="current_issue_title">{$issueIdentificationString|escape}</h1>
+						<h1 class="current_issue_title">{$issueIdentificationString|escape}</h1>
 					{/if}
 				{/strip}
 				{include file="frontend/objects/issue_toc.tpl"}
