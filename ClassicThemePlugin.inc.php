@@ -32,7 +32,7 @@ class ClassicThemePlugin extends ThemePlugin
 		
 		$additionalLessVariables = [];
 		if ($this->getOption('primaryColor') !== '#ffd120') {
-			$additionalLessVariables[] = '@sun-yellow:' . $this->getOption('primaryColor') . ';';
+			$additionalLessVariables[] = '@primary-colour:' . $this->getOption('primaryColor') . ';';
 		}
 		
 		// Importing Bootstrap's and tag-it CSS
