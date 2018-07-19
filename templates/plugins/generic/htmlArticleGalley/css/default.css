@@ -1,14 +1,96 @@
-p, h1, h2, h3, h4, h5, h6 {
-	font-family: 'PT Serif', serif;
-	line-height: 1.6;
+body {
+	font-family: 'Cardo', serif;
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
-p {
-	font-size: 18px;
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Cardo', serif;
+	font-weight: bold;
+}
+
+p, li, blockquote, cite, dd, legend {
+	font-family: 'Cardo', serif;
+	line-height: 1.5;
+}
+
+dt, address, table, label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: smaller;
+}
+
+ol {
+	list-style: none;
+	counter-reset: item;
+
+	& li:before {
+		font-family: 'Montserrat', sans-serif;
+		font-size: smaller;
+		counter-increment: item;
+		content: counter(item) '. ';
+	}
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+blockquote {
+	border-left: 1px solid #000;
+	padding-left: 30px;
+}
+
+cite {
+	display: block;
+	text-align: right;
+}
+
+dt {
+	font-weight: normal;
+	margin: 30px 0 10px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+code {
+	color: #000;
+	font-size: smaller;
 }
 
 a {
-	color: #0a818a;
+	color: #000;
+	background-color: transparent;
+	text-decoration: none;
+	border-bottom: 0.05em solid #CCC;
+	-webkit-box-shadow: inset 0 -4px 0 #CCC;
+	box-shadow: inset 0 -4px 0 #CCC;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+	background-color: #CCC;
+}
+
+address a {
+	border-bottom: 1px solid #000;
+	box-shadow: none;
+
+	&:hover {
+		color: #000;
+		text-decoration: none;
+		background-color: transparent;
+	}
 }
 
 @media (min-width: 1200px) {
