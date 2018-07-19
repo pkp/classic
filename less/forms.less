@@ -37,12 +37,18 @@ select {
   font-family: 'Montserrat', sans-serif;
   font-size: smaller;
   border-radius: 0;
+  transition: all .2s ease-in;
+
+  &:focus {
+    border-color: @primary-colour;
+    box-shadow: 0 0 0 0.1rem @primary-colour;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    transition: all .2s ease-out;
+  }
+
 }
 
-.form-control:focus {
-  border-color: @primary-colour;
-  box-shadow: 0 0 0 0.1rem @primary-colour;
-}
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before,
@@ -68,6 +74,7 @@ select {
   font-size: smaller;
   border-color: #000;
   background-color: #fff;
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -89,4 +96,13 @@ select {
   background-color: #000;
   border-color: #000;
   color: #fff;
+}
+
+
+// OJS classes
+
+.form-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: small;
+  margin: 0.5em 0;
 }
