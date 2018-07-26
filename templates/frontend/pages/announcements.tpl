@@ -13,7 +13,7 @@
 {include file="frontend/components/header.tpl" pageTitle="announcement.announcements"}
 
 <main class="page page_announcements">
-	<div class="container-fluid container-page">
+	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="announcement.announcements"}
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="announcements" sectionTitleKey="announcement.announcements"}
 
