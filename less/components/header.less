@@ -130,11 +130,16 @@
 	background-color: @black;
 	color: @primary-colour;
 }
-.dropdown-item {
 
-	&:focus {
+.dropdown-item {
+	font-family: @font-family-secondary;
+	padding: .75rem 1.5rem;
+
+	&:focus, &:hover, &:active {
 		background-color: @primary-colour;
+		color: @black;
 	}
+
 }
 
 #navigationUser .dropdown-item {
