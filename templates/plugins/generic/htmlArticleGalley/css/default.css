@@ -27,13 +27,13 @@ dt, address, table, label {
 ol {
 	list-style: none;
 	counter-reset: item;
+}
 
-	& li:before {
-		font-family: 'Montserrat', sans-serif;
-		font-size: smaller;
-		counter-increment: item;
-		content: counter(item) '. ';
-	}
+ol li:before {
+	  font-family: 'Montserrat', sans-serif;
+	  font-size: smaller;
+	  counter-increment: item;
+	  content: counter(item) '. ';
 }
 
 li {
@@ -53,10 +53,10 @@ cite {
 dt {
 	font-weight: normal;
 	margin: 30px 0 10px 0;
+}
 
-	&:first-child {
-		margin-top: 0;
-	}
+dt:first-child {
+	margin-top: 0;
 }
 
 code {
@@ -85,12 +85,12 @@ a:hover {
 address a {
 	border-bottom: 1px solid #000;
 	box-shadow: none;
+}
 
-	&:hover {
-		color: #000;
-		text-decoration: none;
-		background-color: transparent;
-	}
+address a:hover {
+	color: #000;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 @media (min-width: 1200px) {
