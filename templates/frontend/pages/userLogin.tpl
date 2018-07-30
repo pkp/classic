@@ -29,8 +29,10 @@
 			{csrf}
 
 			{if $error}
-				<div class="pkp_form_error">
-					{translate key=$error reason=$reason}
+				<div class="row">
+					<div class="pkp_form_error col-md-6 offset-md-3">
+						<div class="alert alert-danger" role="alert">{translate key=$error reason=$reason}</div>
+					</div>
 				</div>
 			{/if}
 
