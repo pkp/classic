@@ -1,0 +1,40 @@
+/**
+ * @file less/pages/searchAuthorIndex.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for search authors page
+ *
+ */
+
+.authors-letter {
+	margin-top: 30px;
+}
+
+.authors-pagination {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	
+	& strong, a {
+		border: 1px solid @pinkish-grey;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	& strong {
+		background-color: @primary-colour;
+		color: white;
+	}
+	
+	& a {
+		border-bottom-color: @pinkish-grey;
+		box-shadow: none;
+		
+		&:hover {
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+/**
+ * @file less/pages/searchAuthorDetails.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for page with author's information
+ *
+ */
+
+.author-details-articles {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 50px;
+}
+
+.author-details-item {
+	margin-bottom: 50px;
+	flex-direction: column;
+}
+
+.author-details-block {
+	margin-bottom: 7px;
+}
+
+.author-details-issue a {
+	border-bottom: none;
+	box-shadow: none;
+	color: @gunmetal;
+	font-weight: bold;
+	font-size: 16px;
+	
+	&:hover {
+		background-color: inherit;
+	}
+}
+
+.author-details-section {
+	color: @gunmetal;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.author-details-article a {
+	color: @black;
+	font-size: 20px;
+	border-bottom: 0;
+	box-shadow: none;
+	
+	&:hover {
+		background-color: inherit;
+	}
+}
+
+.author-details-galleys a {
+	margin-bottom: 5px;
+}
