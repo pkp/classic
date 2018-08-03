@@ -44,9 +44,15 @@ class ClassicThemePlugin extends ThemePlugin
 		// Importing JQuery, Popper, Bootstrap, JQuery-ui, tag-it (own instance), and custom theme's javascript
 		$this->addScript('app_js', 'resources/app.min.js');
 		
-		// Loading ionicons as external resource 
+		// Load icon font Ionicons
+		if (Config::getVar('general', 'enable_cdn')) {
+			$url = 'https://unpkg.com/ionicons@4.2.4/dist/ionicons.js';
+		} else {
+			$url = $this->getRequest()->getBaseUrl() . '/plugins/themes/classic/resources/ionicons.js';
+		}
+		
 		$this->addScript('ionicons',
-			'https://unpkg.com/ionicons@4.2.4/dist/ionicons.js',
+			$url,
 			array('baseUrl' => ''));
 
 		// Adding navigation menu as in OJS 3.1+ we can have custom
