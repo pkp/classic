@@ -16,7 +16,7 @@ Manual installation:
 Installation from the master branch (should be used only for development):
 1. `git clone https://github.com/Vitaliy-1/classic.git`.
 2. Move to the theme's root folder: `cd classic`. 
-3. Make sure that [npm(https://www.npmjs.com/get-npm)] and [Gulp(https://gulpjs.com/)] are installed.
+3. Make sure that [npm](https://www.npmjs.com/get-npm) and [Gulp](https://gulpjs.com/) are installed.
 4. Resolve dependencies: `npm install`. Gulp config file is inside a theme root folder `gulpfile.js`.
 5. To compile external SCSS, concatenate styles and minify: `gulp sass`. The result CSS path is `resources/app.min.css`.
 6. To concatenate and minify javascript: `gulp scripts` and `gulp compress`. The result Javascript file path is `resources/app.min.js`. Run `gulp watch` to view javascript changes inside `dev_js` folder in real time.
