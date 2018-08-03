@@ -148,9 +148,11 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($template !== 'frontend/pages/issue.tpl' && $template !== 'frontend/pages/indexJournal.tpl') return false;
 
 		$issue = $templateMgr->get_template_vars('issue');
+		
+		if (empty($issue)) return false;
 
 		$issueIdentificationString = null;
-
+		
 		if ($issue->getVolume() && $issue->getShowVolume()) {
 			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
 		}
