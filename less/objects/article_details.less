@@ -70,34 +70,34 @@
 		margin-right: 0;
 		margin-left: 5px;
 	}
-	
+
 	.limit-for-mobiles {
 		display: none;
 	}
-	
+
 	.entry_author_block.fifth-author .author-delimiter {
 		display: none;
 	}
-	
+
 	.entry_author_block.fifth-author .author-delimiter.show {
 		display: inline;
 	}
-	
+
 	#show-all-authors, #hide-authors {
 		display: inline-block;
 		cursor: pointer;
 	}
-	
+
 	#show-all-authors.hide, #hide-authors.hide {
 		display: none;
 	}
-	
+
 	.collapse-authors {
 		font-family: "Cardo", serif;
 		color: @black-two;
 		line-height: 1.5;
 	}
-	
+
 	.collapse-authors ion-icon {
 		width: 1.3rem;
 		height: 1.3rem;
@@ -289,7 +289,7 @@
 
 // copyright modal
 
-#copyrightModal a, #copyrightModal p {
+#copyrightModal a, #copyrightModal p, #copyrightModal li {
 	font-size: 18px;
 	line-height: 1.56;
 }
@@ -326,11 +326,11 @@
 
 .references-list {
 	padding-left: 20px;
-	
+
 	& li {
 		margin-bottom: 16px;
 	}
-	
+
 	& a {
 		word-wrap: break-word;
 	}
@@ -339,7 +339,7 @@
 // for mobiles
 
 @media (max-width: 767px) {
-	
+
 	.data-for-mobiles > div {
 		flex-shrink: 0;
 	}
@@ -354,7 +354,7 @@
 	.page_article .btn-primary:first-child {
 		margin-left: 0;
 	}
-	
+
 	// blocks ordering
 
 	.article_main_data {
@@ -362,73 +362,73 @@
 		margin-left: 0;
 		margin-right: 0;
 		flex-wrap: nowrap;
-		
+
 		& .article_cover_wrapper {
 			max-width: 250px;
 		}
-		
+
 		& h3 {
 			font-size: 30px;
 			color: @black-two;
 		}
-		
+
 		& .doi {
 			order: 1;
 		}
-		
+
 		& .published_date {
 			order: 2;
 		}
-		
+
 		& .abstract {
 			order: 3;
 		}
-		
+
 		& .for-mobile-view {
 			order: 4;
 			margin-top: -20px;
 		}
-		
+
 		& .keywords {
 			order: 5;
 		}
-		
+
 		& .citation {
 			order: 6;
 		}
-		
+
 		& .references {
 			order: 7;
 		}
-		
+
 		& .copyright {
 			order: 8;
 		}
 	}
-	
+
 	.article_main_data > * {
 		margin-bottom: 30px;
 	}
-	
+
 	// font-sizes
 	.article-full-title {
 		font-size: 30px;
 	}
-	
+
 	.obj_article_details {
 		& .galleys {
 			margin-top: 10px;
 			margin-bottom: 10px;
 		}
 	}
-	
+
 }
 
 // overriding default typographics
 .orcid-image-url, .more-authors-info-button, .doi_value a {
 	border-bottom: none;
 	box-shadow: none;
-	
+
 	&:hover {
 		background-color: inherit;
 	}
@@ -437,4 +437,3 @@
 .doi_value a {
 	word-wrap: break-word;
 }
-
