@@ -48,18 +48,4 @@
 	<div class="issue_summary_date">
 		{$issue->getDatePublished()|date_format:$dateFormatLong}
 	</div>
-
-	<div class="issue_summary_description">
-		{assign var=issueDescription value=$issue->getLocalizedDescription()|strip_unsafe_html}
-		{if $issueDescription|strlen < 200}
-			<div class="issue_summary_description_text">
-				{$issueDescription}
-			</div>
-		{else}
-			<div class="issue_summary_description_text">
-				{$issueDescription|substr:0:200|mb_convert_encoding:'UTF-8'|replace:'?':''}<span
-						class="three_dots">...</span>
-			</div>
-		{/if}
-	</div>
 </div><!-- .obj_issue_summary -->
