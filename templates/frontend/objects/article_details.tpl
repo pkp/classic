@@ -21,6 +21,7 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published articles.
  * @uses $ccLicenseBadge string An image and text with details about the license
+ * @uses $boolAuthorInfo bool to check whether at least one author has additional info
  *}
 
 <article class="obj_article_details">
@@ -90,15 +91,19 @@
 						</ul>
 					</div>
 					<div class="additional-authors-info">
-						<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
-							<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
-							<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
-							<span class="ion-icon-text">{translate key="plugins.themes.classic.more-info"}</span>
-						</a>
+						{if $boolAuthorInfo}
+							<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
+								<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
+								<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
+								<span class="ion-icon-text">{translate key="plugins.themes.classic.more-info"}</span>
+							</a>
+						{/if}
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$article->getAuthors() item=author}
 								<div class="additional-author-block">
-									<span class="additional-author-name">{$author->getFullName()|escape}</span>
+									{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
+										<span class="additional-author-name">{$author->getFullName()|escape}</span>
+									{/if}
 									{if $author->getLocalizedAffiliation()}
 										<br/>
 										<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>

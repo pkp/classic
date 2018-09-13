@@ -68,6 +68,8 @@ class ClassicThemePlugin extends ThemePlugin
 		HookRegistry::register('TemplateManager::display', array($this, 'hasEmbeddedCSS'));
 		// Get additional issue data to the issue page
 		HookRegistry::register('TemplateManager::display', array($this, 'loadIssueData'));
+		// Check whether authors have additional info
+		HookRegistry::register('TemplateManager::display', array($this, 'hasAuthorsInfo'));
 	}
 
 	public function getDisplayName() {
@@ -111,9 +113,9 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($template !== 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
 
 		$articleArrays = $templateMgr->get_template_vars('article');
-
+		
+		// Deafult styling for HTML galley
 		$boolEmbeddedCss = false;
-
 		foreach ($articleArrays->getGalleys() as $galley) {
 			if ($galley->getFileType() === 'text/html') {
 				$submissionFile = $galley->getFile();
@@ -175,6 +177,27 @@ class ClassicThemePlugin extends ThemePlugin
 		}
 
 		$templateMgr->assign('issueIdentificationString', $issueIdentificationString);
+	}
+	
+	public function hasAuthorsInfo($hookName, $args) {
+		$templateMgr = $args[0];
+		$template = $args[1];
+		
+		// Retun false if not an article page
+		if ($template !== 'frontend/pages/article.tpl') return false;
+		
+		$articleArrays = $templateMgr->get_template_vars('article');
+		
+		// Check if there is additiona info on any of authors
+		$boolAuthorInfo = false;
+		foreach ($articleArrays->getAuthors() as $author) {
+			if ($author->getLocalizedAffiliation() || $author->getLocalizedBiography()) {
+				$boolAuthorInfo = true;
+				break;
+			}
+		}
+		
+		$templateMgr->assign('boolAuthorInfo', $boolAuthorInfo);
 	}
 
 }
