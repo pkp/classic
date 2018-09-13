@@ -40,9 +40,9 @@
 		</a>
 	{/if}
 	{if $issue->getLocalizedTitle() && $issue->getShowTitle()}
-		<div class="issue_title">
+		<a class="issue_title" href="{url op="view" path=$issue->getBestIssueId()}">
 			{$issue->getLocalizedTitle()|escape}
-		</div>
+		</a>
 	{/if}
 
 	<div class="issue_summary_date">
