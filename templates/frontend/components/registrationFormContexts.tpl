@@ -21,34 +21,6 @@
    outside of the context of any one journal/press. *}
 {if !$currentContext}
 
-	{* Added to retain the ability to register from site-wide registration page *}
-	<fieldset class="consent consent-context">
-		<div class="fields">
-			<div class="optin optin-privacy">
-				<label>
-					<input type="checkbox" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
-					{translate key="plugins.themes.classic.register.privacyConsent"}
-				</label>
-				{foreach from=$contexts item=context}
-					{assign var=contextPath value=$context->getPath()|escape}
-					{assign var=privacyContextName value=$context->getLocalizedName()|escape}
-					{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE context=$contextPath page="about" op="privacy"}{/capture}
-					<div class="context_consent_policy">
-						{translate key="plugins.themes.classic.register.privacyConsentContext" privacyUrl=$privacyUrl privacyContextName=$privacyContextName}
-					</div>
-				{/foreach}
-			</div>
-		</div>
-		<div class="fields">
-			<div class="optin optin-email">
-				<label>
-					<input type="checkbox" name="emailConsent" value="1"{if $emailConsent} checked="checked"{/if}>
-					{translate key="user.register.form.emailConsent"}
-				</label>
-			</div>
-		</div>
-	</fieldset>
-
 	{* Allow users to register for any journal/press on this site *}
 	<fieldset name="contexts">
 		<legend>
@@ -59,6 +31,7 @@
 				<ul class="contexts">
 					{foreach from=$contexts item=context}
 						{assign var=contextId value=$context->getId()}
+						{assign var=isSelected value=false}
 						<li class="context">
 							<div class="name">
 								{$context->getLocalizedName()}
@@ -67,25 +40,45 @@
 								<legend>
 									{translate key="user.register.otherContextRoles"}
 								</legend>
-								{foreach from=$readerUserGroups[$contextId] item=userGroup}
-									{if $userGroup->getPermitSelfRegistration()}
-										{assign var="userGroupId" value=$userGroup->getId()}
-										<label>
-											<input type="checkbox" name="readerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
-											{$userGroup->getLocalizedName()}
-										</label>
-									{/if}
-								{/foreach}
-								{foreach from=$reviewerUserGroups[$contextId] item=userGroup}
-									{if $userGroup->getPermitSelfRegistration()}
-										{assign var="userGroupId" value=$userGroup->getId()}
-										<label>
-											<input type="checkbox" name="reviewerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
-											{$userGroup->getLocalizedName()}
-										</label>
-									{/if}
-								{/foreach}
+								<span class="custom-control custom-checkbox context-checkbox">
+									{foreach from=$readerUserGroups[$contextId] item=userGroup}
+										{if $userGroup->getPermitSelfRegistration()}
+											{assign var="userGroupId" value=$userGroup->getId()}
+											<input type="checkbox" class="custom-control-input" id="readerGroup[{$userGroupId}]" name="readerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
+											<label for="readerGroup[{$userGroupId}]" class="custom-control-label">
+												{$userGroup->getLocalizedName()}
+											</label>
+											{if in_array($userGroupId, $userGroupIds)}
+												{assign var=isSelected value=true}
+											{/if}
+										{/if}
+									{/foreach}
+								</span>
+								<span class="custom-control custom-checkbox context-checkbox">
+									{foreach from=$reviewerUserGroups[$contextId] item=userGroup}
+										{if $userGroup->getPermitSelfRegistration()}
+											{assign var="userGroupId" value=$userGroup->getId()}
+											<input type="checkbox" class="custom-control-input" id="reviewerGroup[{$userGroupId}]" name="reviewerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
+											<label for="reviewerGroup[{$userGroupId}]" class="custom-control-label">
+												{$userGroup->getLocalizedName()}
+											</label>
+											{if in_array($userGroupId, $userGroupIds)}
+												{assign var=isSelected value=true}
+											{/if}
+										{/if}
+									{/foreach}
+								</span>
 							</fieldset>
+							{* Require the user to agree to the terms of the context's privacy policy *}
+							{if !$enableSiteWidePrivacyStatement && $context->getSetting('privacyStatement')}
+								<div class="custom-control custom-checkbox context_privacy {if $isSelected}context_privacy_visible{/if}">
+									<input type="checkbox" class="custom-control-input" name="privacyConsent[{$contextId}]" id="privacyConsent[{$contextId}]" value="1"{if $privacyConsent[$contextId]} checked="checked"{/if}>
+									<label for="privacyConsent[{$contextId}]" class="custom-control-label">
+										{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE context=$context->getPath() page="about" op="privacy"}{/capture}
+										{translate key="user.register.form.privacyConsentThisContext" privacyUrl=$privacyUrl}
+									</label>
+								</div>
+							{/if}
 						</li>
 					{/foreach}
 				</ul>
