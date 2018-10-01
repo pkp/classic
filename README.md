@@ -8,13 +8,13 @@ This theme was developed and is maintained by the [Public Knowledge Project](htt
 The theme can be installed through **Plugin Gallery** in you Open Journal Systems website.
 
 Manual installation: 
-1. Download the [latest release](https://github.com/Vitaliy-1/classic/releases).
+1. Download the [latest release](https://github.com/pkp/classic/releases).
 2. Upload through the admin dashboard (**Upload a New Plugin** button on the **Plugins** page) or unpack the archives content inside `plugins/themes` directory starting from OJS web root.  
 3. Login into the OJS admin dashboard and activate the plugin on the **Plugins** page.
 4. Enable the theme in **Website Settings -> Appearence** menu.
 
 Installation from the master branch (should be used only for development):
-1. `git clone https://github.com/Vitaliy-1/classic.git`.
+1. `git clone https://github.com/pkp/classic.git`.
 2. Move to the theme's root folder: `cd classic`. 
 3. Make sure that [npm](https://www.npmjs.com/get-npm) and [Gulp](https://gulpjs.com/) are installed.
 4. Resolve dependencies: `npm install`. Gulp config file is inside a theme root folder `gulpfile.js`.
