@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.themes.classic.name">Classic Theme</message>
+	<message key="plugins.themes.classic.description">Temaet til OJS 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">Grundfarve</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">Skift temaets primærfarve</message>
+	<message key="plugins.themes.classic.menu">Menu</message>
+	<message key="plugins.themes.classic.issueDescription">Nummerbeskrivelse</message>
+	<message key="plugins.themes.classic.more">Mere</message>
+	<message key="plugins.themes.classic.less">Mindre</message>
+	<message key="plugins.themes.classic.fullIssue">Helt nummer</message>
+	<message key="plugins.themes.classic.tableOfContents">Indholdsfortegnelse</message>
+	<message key="plugins.themes.classic.close">Luk</message>
+	<message key="plugins.themes.classic.biography">Bio</message>
+	<message key="plugins.themes.classic.more-info">mere info</message>
+	<message key="plugins.themes.classic.pagination">Sidenummerering</message>
+	<message key="plugins.themes.classic.volume-abbr">Årgang/Bind</message>
+	<message key="plugins.themes.classic.number-abbr">Nej</message>
+	<message key="plugins.themes.classic.register.privacyConsent">Ja, jeg accepterer at få mine data indsamlet og opbevaret i overensstemmelse med vores Erklæring om beskyttelse af personlige oplysninger:</message>
+	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Erklæring om beskyttelse af personlige oplysninger</a> of {$privacyContextName}.]]></message>
+</locale>
