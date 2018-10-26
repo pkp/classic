@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<message key="plugins.themes.classic.name">Classic-Thema</message>
+	<message key="plugins.themes.classic.description">Das Thema für OJS 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">Hauptfarbe</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">Die Hauptfarbe des Themas wechseln</message>
+	<message key="plugins.themes.classic.menu">Menü</message>
+	<message key="plugins.themes.classic.issueDescription">Beschreibung der Ausgabe</message>
+	<message key="plugins.themes.classic.more">Mehr</message>
+	<message key="plugins.themes.classic.less">Weniger</message>
+	<message key="plugins.themes.classic.fullIssue">Komplette Ausgabe</message>
+	<message key="plugins.themes.classic.tableOfContents">Inhaltsverzeichnis</message>
+	<message key="plugins.themes.classic.close">Schließen</message>
+	<message key="plugins.themes.classic.biography">Biografie</message>
+	<message key="plugins.themes.classic.more-info">weitere Informationen</message>
+	<message key="plugins.themes.classic.pagination">Seitenzahlen</message>
+
+	<message key="plugins.themes.classic.volume-abbr">Bd</message>
+	<message key="plugins.themes.classic.number-abbr">Nr</message>
+
+	<message key="plugins.themes.classic.register.privacyConsent">Ja, ich stimme der Erfassung und Speicherung meiner Daten gemäß der Datenschutzerklärung dieser Zeitschrift zu:</message>
+	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[Die <a href="{$privacyUrl}" target="_blank">Datenschutzerklärung</a> von {$privacyContextName}.]]></message>
+
+</locale>
