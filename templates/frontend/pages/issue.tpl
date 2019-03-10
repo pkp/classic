@@ -16,7 +16,7 @@
  * @uses $primaryGenreIds array List of file genre IDs for primary types
  *}
 
-{include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification|escape}
 
 <main class="page page_issue">
 	<div class="container-fluid container-page">

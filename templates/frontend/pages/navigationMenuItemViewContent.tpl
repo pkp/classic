@@ -7,7 +7,7 @@
  *
  * Display NavigationMenuItem content
  *}
-{include file="frontend/components/header.tpl" pageTitleTranslated=$title}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$title|escape}
 
 <main class="page navigation-item-content">
 	<div class="container-fluid container-page container-narrow">

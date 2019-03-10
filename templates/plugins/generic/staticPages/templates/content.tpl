@@ -7,7 +7,7 @@
  *
  * Display Static Page content
  *}
-{include file="frontend/components/header.tpl" pageTitleTranslated=$title}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$title|escape}
 
 <main class="page static_page">
 	<div class="container-fluid container-page container-narrow">

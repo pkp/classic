@@ -18,7 +18,7 @@
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="announcements" sectionTitleKey="announcement.announcements"}
 
 		<div class="announcements-introduction">
-			{$announcementsIntroduction}
+			{$announcementsIntroduction|strip_unsafe_html}
 		</div>
 
 		{include file="frontend/components/announcements.tpl"}

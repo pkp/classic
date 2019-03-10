@@ -17,14 +17,14 @@
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" id="languageToggleMenu{$id|escape}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="sr-only">{translate key="plugins.themes.healthSciences.language.toggle"}</span>
-				{$languageToggleLocales[$currentLocale]}
+				{$languageToggleLocales[$currentLocale]|escape}
 			</a>
 
 			<div class="navigation-dropdown dropdown-menu dropdown-menu-right" aria-labelledby="languageToggleMenu{$id|escape}">
 				{foreach from=$languageToggleLocales item="localeName" key="localeKey"}
 					{if $localeKey !== $currentLocale}
 						<a class="dropdown-item" href="{url router=$smarty.const.ROUTE_PAGE page="user" op="setLocale" path=$localeKey source=$smarty.server.REQUEST_URI}">
-							{$localeName}
+							{$localeName|escape}
 						</a>
 					{/if}
 				{/foreach}

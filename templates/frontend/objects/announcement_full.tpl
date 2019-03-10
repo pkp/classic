@@ -13,7 +13,7 @@
 
 <article class="obj_announcement_full">
 	<h1 class="announcement-full-title">
-		{$announcement->getLocalizedTitle()}
+		{$announcement->getLocalizedTitle()|escape}
 	</h1>
 	<div class="announcement-full-wrapper">
 		<div class="announcement-full-date">
