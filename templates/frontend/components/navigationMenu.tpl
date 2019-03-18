@@ -13,7 +13,7 @@
 	<ul id="{$id|escape}" class="{$ulClass|escape} nav nav-tabs">
 		{foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
 			{if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
-				{php}continue;{/php}
+				{continue}
 			{/if}
 			{if !empty($navigationMenuItemAssignment->children)}
 				{assign var=navItemType value=$navigationMenuItemAssignment->navigationMenuItem->getType()|escape}

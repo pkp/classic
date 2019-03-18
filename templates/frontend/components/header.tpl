@@ -16,9 +16,9 @@
 	{/if}
 
 	{if $currentContext && $multipleContexts}
-		{url|assign:"homeUrl" page="index" router=$smarty.const.ROUTE_PAGE}
+		{capture assign="homeUrl"}{url page="index" router=$smarty.const.ROUTE_PAGE}{/capture}
 	{else}
-		{url|assign:"homeUrl" context="index" router=$smarty.const.ROUTE_PAGE}
+		{capture assign="homeUrl"}{url context="index" router=$smarty.const.ROUTE_PAGE}{/capture}
 	{/if}
 {/strip}
 
@@ -39,7 +39,9 @@
 
 <!DOCTYPE html>
 <html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
-{if !$pageTitleTranslated}{translate|assign:"pageTitleTranslated" key=$pageTitle}{/if}
+{if !$pageTitleTranslated}
+	{capture assign="pageTitleTranslated"}{translate key=$pageTitle}{/capture}
+{/if}
 {include file="frontend/components/headerHead.tpl"}
 <body>
 <header>
