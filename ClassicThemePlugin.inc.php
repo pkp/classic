@@ -28,29 +28,37 @@ class ClassicThemePlugin extends ThemePlugin
 			'description' => 'plugins.themes.classic.option.primaryColor.description',
 			'default' => '#ffd120',
 		));
-		
-		
+
+
 		$additionalLessVariables = [];
 		if ($this->getOption('primaryColor') !== '#ffd120') {
 			$additionalLessVariables[] = '@primary-colour:' . $this->getOption('primaryColor') . ';';
 		}
-		
+
 		// Importing Bootstrap's and tag-it CSS
 		$this->addStyle('app_css', 'resources/app.min.css');
-		
+
+		// Styles for HTML galleys
+		$this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.css', array('contexts' => 'htmlGalley'));
+		$this->addStyle(
+			'htmlFont',
+			'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Montserrat:400,400i,700,700i,900,900i',
+			array('baseUrl' => '', 'contexts' => 'htmlGalley')
+		);
+
 		$this->addStyle('stylesheet', 'less/import.less');
 		$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
-		
+
 		// Importing JQuery, Popper, Bootstrap, JQuery-ui, tag-it (own instance), and custom theme's javascript
 		$this->addScript('app_js', 'resources/app.min.js');
-		
+
 		// Load icon font Ionicons
 		if (Config::getVar('general', 'enable_cdn')) {
 			$url = 'https://unpkg.com/ionicons@4.2.4/dist/ionicons.js';
 		} else {
 			$url = $this->getRequest()->getBaseUrl() . '/plugins/themes/classic/resources/ionicons.js';
 		}
-		
+
 		$this->addScript('ionicons',
 			$url,
 			array('baseUrl' => ''));
@@ -113,7 +121,7 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($template !== 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
 
 		$articleArrays = $templateMgr->get_template_vars('article');
-		
+
 		// Deafult styling for HTML galley
 		$boolEmbeddedCss = false;
 		foreach ($articleArrays->getGalleys() as $galley) {
@@ -150,11 +158,11 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($template !== 'frontend/pages/issue.tpl' && $template !== 'frontend/pages/indexJournal.tpl') return false;
 
 		$issue = $templateMgr->get_template_vars('issue');
-		
+
 		if (empty($issue)) return false;
 
 		$issueIdentificationString = null;
-		
+
 		if ($issue->getVolume() && $issue->getShowVolume()) {
 			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
 		}
@@ -178,16 +186,16 @@ class ClassicThemePlugin extends ThemePlugin
 
 		$templateMgr->assign('issueIdentificationString', $issueIdentificationString);
 	}
-	
+
 	public function hasAuthorsInfo($hookName, $args) {
 		$templateMgr = $args[0];
 		$template = $args[1];
-		
+
 		// Retun false if not an article page
 		if ($template !== 'frontend/pages/article.tpl') return false;
-		
+
 		$articleArrays = $templateMgr->get_template_vars('article');
-		
+
 		// Check if there is additiona info on any of authors
 		$boolAuthorInfo = false;
 		foreach ($articleArrays->getAuthors() as $author) {
@@ -196,7 +204,7 @@ class ClassicThemePlugin extends ThemePlugin
 				break;
 			}
 		}
-		
+
 		$templateMgr->assign('boolAuthorInfo', $boolAuthorInfo);
 	}
 
