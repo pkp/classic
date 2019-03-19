@@ -93,30 +93,20 @@ address a:hover {
 	background-color: transparent;
 }
 
-@media (min-width: 1200px) {
-	body {
-		padding-left: 20%;
-		padding-right: 20%;
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-	body {
-		padding-left: 12%;
-		padding-right: 12%;
-	}
+body {
+	max-width: 794px;
+	margin: auto;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 	body {
-		padding-left: 7%;
-		padding-right: 7%;
+		max-width: 600px;
 	}
 }
 
-@media (max-width: 767px) and (max-width: 767px) {
+@media (max-width: 767px) {
 	body {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 7px;
+		padding-right: 7px;
 	}
 }
