@@ -99,7 +99,7 @@
 							</a>
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
-							{foreach from=$article->getAuthors() item=author}
+							{foreach from=$article->getAuthors() item=author key=number}
 								<div class="additional-author-block">
 									{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
@@ -110,11 +110,11 @@
 									{/if}
 									{if $author->getLocalizedBiography()}
 										<br/>
-										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio">
+										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio-{$number}">
 											{translate key="plugins.themes.classic.biography"}
 										</a>
 										{* author's biography *}
-										<div class="modal fade" id="modalAuthorBio" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
+										<div class="modal fade" id="modalAuthorBio-{$number}" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
