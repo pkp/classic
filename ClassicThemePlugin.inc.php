@@ -120,7 +120,7 @@ class ClassicThemePlugin extends ThemePlugin
 		// Retun false if not a galley page
 		if ($template !== 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
 
-		$articleArrays = $templateMgr->get_template_vars('article');
+		$articleArrays = $templateMgr->getTemplateVars('article');
 
 		// Deafult styling for HTML galley
 		$boolEmbeddedCss = false;
@@ -157,7 +157,7 @@ class ClassicThemePlugin extends ThemePlugin
 		// Return false if not an issue or journal landing page
 		if ($template !== 'frontend/pages/issue.tpl' && $template !== 'frontend/pages/indexJournal.tpl') return false;
 
-		$issue = $templateMgr->get_template_vars('issue');
+		$issue = $templateMgr->getTemplateVars('issue');
 
 		if (empty($issue)) return false;
 
@@ -194,9 +194,9 @@ class ClassicThemePlugin extends ThemePlugin
 		// Retun false if not an article page
 		if ($template !== 'frontend/pages/article.tpl') return false;
 
-		$articleArrays = $templateMgr->get_template_vars('article');
+		$articleArrays = $templateMgr->getTemplateVars('article');
 
-		// Check if there is additiona info on any of authors
+		// Check if there is additional info on any of authors
 		$boolAuthorInfo = false;
 		foreach ($articleArrays->getAuthors() as $author) {
 			if ($author->getLocalizedAffiliation() || $author->getLocalizedBiography()) {
