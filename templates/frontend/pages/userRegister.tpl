@@ -34,13 +34,15 @@
 				<fieldset class="consent">
 					{* Require the user to agree to the terms of the privacy policy *}
 					<div class="fields">
-						<div class="custom-control custom-checkbox optin optin-privacy">
-							<input type="checkbox" class="custom-control-input" id="privacyConsent" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
-							<label class="custom-control-label" for="privacyConsent">
-								{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
-								{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
-							</label>
-						</div>
+						{if $currentContext->getSetting('privacyStatement')}
+							<div class="custom-control custom-checkbox optin optin-privacy">
+								<input type="checkbox" class="custom-control-input" id="privacyConsent" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
+								<label class="custom-control-label" for="privacyConsent">
+									{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
+									{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
+								</label>
+							</div>
+						{/if}
 					</div>
 					{* Ask the user to opt into public email notifications *}
 					<div class="fields">
@@ -78,7 +80,7 @@
 										{assign var="userGroupId" value=$userGroup->getId()}
 										<input id="checkbox-reviewer-interests" class="custom-control-input" type="checkbox" name="reviewerGroup[{$userGroupId}]" value="1"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
 										<label class="custom-control-label" for="checkbox-reviewer-interests">
-											{translate key="user.reviewerPrompt.userGroup" userGroup=$userGroup->getLocalizedName()}
+											{translate key=$checkboxLocaleKey userGroup=$userGroup->getLocalizedName()}
 										</label>
 									{/if}
 								{/foreach}
@@ -139,6 +141,29 @@
 						</div>
 					</div>
 				</fieldset>
+
+				{* Require the user to agree to the terms of the privacy policy *}
+				{if $siteWidePrivacyStatement}
+					<div class="fields">
+						<div class="custom-control custom-checkbox optin optin-privacy">
+							<input type="checkbox" class="custom-control-input" name="privacyConsent[{$smarty.const.CONTEXT_ID_NONE}]" id="privacyConsent[{$smarty.const.CONTEXT_ID_NONE}]" value="1"{if $privacyConsent[$smarty.const.CONTEXT_ID_NONE]} checked="checked"{/if}>
+							<label class="custom-control-label" for="privacyConsent[{$smarty.const.CONTEXT_ID_NONE}]">
+								{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
+								{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
+							</label>
+						</div>
+					</div>
+				{/if}
+
+				{* Ask the user to opt into public email notifications *}
+				<div class="fields">
+					<div class="custom-control custom-checkbox optin optin-email">
+						<input type="checkbox" class="custom-control-input" name="emailConsent" id="emailConsent" value="1"{if $emailConsent} checked="checked"{/if}>
+						<label class="custom-control-label" for="emailConsent">
+							{translate key="user.register.form.emailConsent"}
+						</label>
+					</div>
+				</div>
 			{/if}
 
 			{* recaptcha spam blocker *}
