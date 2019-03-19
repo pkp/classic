@@ -167,7 +167,8 @@ class ClassicThemePlugin extends ThemePlugin
 			$issueIdentificationString .= $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.volume-abbr'), $templateMgr) . " " . $issue->getVolume();
 		}
 		if ($issue->getNumber() && $issue->getShowNumber()) {
-			$issueIdentificationString .= ", " . $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.number-abbr'), $templateMgr) . " " . $issue->getNumber();
+			if ($issue->getVolume() && $issue->getShowVolume()) $issueIdentificationString .= ", ";
+			$issueIdentificationString .=  $templateMgr->smartyTranslate(array('key' =>'plugins.themes.classic.number-abbr'), $templateMgr) . " " . $issue->getNumber();
 		}
 		if ($issue->getYear() && $issue->getShowYear()) {
 			if ($issueIdentificationString !== null) {
