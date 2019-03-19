@@ -1,0 +1,55 @@
+/**
+ * @file less/pages/orcidProfile.less
+ *
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for the ORCID Profile Plugin; orcidAbout.tpl, orcidVerify.tpl, ORCID button on the registration page
+ *
+ */
+
+.page_orcid-profile {
+
+	h2 {
+		margin-top: 36px;
+		margin-bottom: 26px;
+	}
+
+	h3 {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+#connect-orcid-button {
+	border-radius: 0;
+	border: 1px;
+	font-family: @font-family-secondary;
+	box-shadow: none;
+	border-style: solid;
+	font-size: 14px;
+	background-color: #fff;
+	border-color: @black;
+	font-weight: 600;
+	color: #000;
+	.button();
+
+	&:hover {
+		background-color: @primary-colour;
+		text-decoration: none;
+		color: @black;
+		box-shadow: none;
+	}
+
+	&:focus {
+		background-color: @primary-colour;
+		color: @black;
+		border-color: @black;
+	}
+
+	&:hover, &:not(:disabled):not(.disabled).active {
+		background-color: @primary-colour;
+		border-color: #000;
+	}
+}
