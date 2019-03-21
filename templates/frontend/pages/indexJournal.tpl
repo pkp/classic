@@ -35,7 +35,7 @@
 								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()|escape}">
 									{$announcement->getLocalizedTitle()|escape}
 								</a>
-							</h4>
+							</h3>
 						</article>
 					{/foreach}
 				</div>
@@ -49,10 +49,12 @@
 			<section class="current_issue">
 				<header>
 					{strip}
-						<p class="current_issue_label">{translate key="journal.currentIssue"}</p>
-						{if $issueIdentificationString}
-							<h2 class="current_issue_title">{$issueIdentificationString|escape}</h2>
-						{/if}
+						<h2 class="current_issue_title">
+							<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
+							{if $issueIdentificationString}
+						 		<span class="current_issue_identification">{$issueIdentificationString|escape}</span>
+							{/if}
+						</h2>
 					{/strip}
 
 					{* Published date *}
@@ -66,16 +68,16 @@
 							</span>
 						</p>
 					{/if}
-				{/strip}
+				</header>
 				{include file="frontend/objects/issue_toc.tpl"}
-			</div>
+			</section>
 		{/if}
 
 		{* Additional Homepage Content *}
 		{if $additionalHomeContent}
-			<div class="additional_content">
+			<section class="additional_content">
 				{$additionalHomeContent}
-			</div>
+			</section>
 		{/if}
 	</div>
 </main><!-- .page -->
