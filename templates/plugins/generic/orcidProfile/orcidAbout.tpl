@@ -12,7 +12,7 @@
 
 <div class="page page_message page_orcid-profile">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="plugins.generic.orcidProfile.about.title"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="plugins.generic.orcidProfile.about.title"}
 		<h2>
 			{translate key="plugins.generic.orcidProfile.about.title"}
 		</h2>

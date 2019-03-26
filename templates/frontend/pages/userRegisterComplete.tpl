@@ -12,7 +12,7 @@
 
 <main class="page page_register_complete">
 	<div class="container-fluid container-page">
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
+		{include file="frontend/components/headings.tpl" currentTitleKey=$pageTitle}
 		<p class="registration-complete-instructions">
 			{translate key="user.login.registrationComplete.instructions"}
 		</p>

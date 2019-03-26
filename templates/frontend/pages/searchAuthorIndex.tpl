@@ -15,7 +15,7 @@
 
 <div class="page page-author-index">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="search.authorIndex"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="search.authorIndex"}
 
 			<div class="page-content">
 				<p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>

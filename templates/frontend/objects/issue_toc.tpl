@@ -95,7 +95,7 @@
 				{/if}
 				<div class="section_content">
 					{foreach from=$section.articles item=article}
-						{include file="frontend/objects/article_summary.tpl"}
+						{include file="frontend/objects/article_summary.tpl" headingLevel="5"}
 					{/foreach}
 				</div>
 			{/if}
