@@ -13,7 +13,7 @@
 
 <main class="page page_subscriptions">
 	<div class="container-fluid container-page container_subscriptions container-narrow">
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.subscriptions"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="about.subscriptions"}
 		{include file="frontend/components/subscriptionContact.tpl"}
 
 		<a name="subscriptionTypes"></a>

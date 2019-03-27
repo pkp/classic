@@ -23,26 +23,61 @@
 <main class="page_index_journal">
 	<div class="container-fluid container-page">
 
+		{* Announcements *}
+		{if $announcements}
+			<section class="announcements">
+				<h2>{translate key="announcement.announcements"}</h2>
+				<div class="row">
+					{foreach from=$announcements item=announcement}
+						<article class="col-md-4 announcement">
+							<p class="announcement_date">{$announcement->getDatePosted()|date_format:$dateFormatShort|escape}</p>
+							<h3 class="announcement_title">
+								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()|escape}">
+									{$announcement->getLocalizedTitle()|escape}
+								</a>
+							</h3>
+						</article>
+					{/foreach}
+				</div>
+			</section>
+		{/if}
+
 		{call_hook name="Templates::Index::journal"}
 
 		{* Latest issue *}
 		{if $issue}
-			<div class="current_issue">
-				{strip}
-					<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
-					{if $issueIdentificationString}
-						<h1 class="current_issue_title">{$issueIdentificationString|escape}</h1>
+			<section class="current_issue">
+				<header>
+					{strip}
+						<h2 class="current_issue_title">
+							<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
+							{if $issueIdentificationString}
+						 		<span class="current_issue_identification">{$issueIdentificationString|escape}</span>
+							{/if}
+						</h2>
+					{/strip}
+
+					{* Published date *}
+					{if $issue->getDatePublished()}
+						<p class="published">
+							<span class="date_label">
+								{translate key="submissions.published"}
+							</span>
+							<span class="date_format">
+									{$issue->getDatePublished()|date_format:$dateFormatLong}
+							</span>
+						</p>
 					{/if}
-				{/strip}
+				</header>
 				{include file="frontend/objects/issue_toc.tpl"}
-			</div>
+			</section>
 		{/if}
 
 		{* Additional Homepage Content *}
 		{if $additionalHomeContent}
-			<div class="additional_content">
+			<section class="additional_content">
 				{$additionalHomeContent}
-			</div>
+			</section>
 		{/if}
 	</div>
 </main><!-- .page -->

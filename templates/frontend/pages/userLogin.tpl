@@ -14,7 +14,7 @@
 <div class="page page_login">
 	<div class="container-fluid container-page container-narrow">
 
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="user.login"}
 
 		{* A login message may be displayed if the user was redireceted to the
 		   login page from another request. Examples include if login is required

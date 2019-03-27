@@ -47,11 +47,11 @@
 <header>
 	<div class="header container-fluid">
 		<div class="upper-header row">
-			<div class="logo-wraper col-md-7">
+			<h1 class="logo-wrapper col-md-7">
 				<a href="{$homeUrl}" class="home-link">
 					{$journalLogo}
 				</a>
-			</div>
+			</h1>
 			<div id="user-nav-wraper" class="col-md-5">
 				{* user navigation manu *}
 				{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user"}
@@ -88,6 +88,3 @@
 		{/if}
 	</div>
 </header>
-
-
-

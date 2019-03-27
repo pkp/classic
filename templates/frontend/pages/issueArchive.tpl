@@ -27,7 +27,7 @@
 <main class="page page_issue_archive">
 	<div class="container-fluid container-page">
 
-		{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
+		{include file="frontend/components/headings.tpl" currentTitle=$pageTitle}
 
 		{* No issues have been published *}
 		{if empty($issues)}

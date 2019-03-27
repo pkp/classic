@@ -15,7 +15,7 @@
 <main class="page page_register">
 	<div class="container-fluid container-page container-narrow">
 
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.register"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="user.register"}
 
 		<form class="cmp_form register" id="register" method="post" action="{url op="register"}">
 			{csrf}

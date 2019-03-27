@@ -13,7 +13,7 @@
 <main class="page page_lost_password">
 	<div class="container-fluid container-page">
 
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login.resetPassword"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="user.login.resetPassword"}
 
 		<div class="row">
 			<p class="col-md-6 offset-md-3">{translate key="user.login.resetPasswordInstructions"}</p>

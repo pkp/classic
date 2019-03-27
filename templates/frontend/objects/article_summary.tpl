@@ -21,13 +21,21 @@
 	{assign var="showAuthor" value=true}
 {/if}
 
-<div class="article_summary">
+<article class="article_summary">
 	<div class="article_summary_body">
-		<div class="summary_title_wrapper">
-			<a class="summary_title" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
-				{$article->getLocalizedFullTitle()|escape}
-			</a>
-		</div>
+		{if $headingLevel}
+			<h{$headingLevel} class="summary_title_wrapper">
+				<a class="summary_title" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
+					{$article->getLocalizedFullTitle()|escape}
+				</a>
+			</h{$headingLevel}>
+		{else}
+			<div class="summary_title_wrapper">
+				<a class="summary_title" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
+					{$article->getLocalizedFullTitle()|escape}
+				</a>
+			</div>
+		{/if}
 
 		{if $showAuthor || $article->getPages() || ($article->getDatePublished() && $showDatePublished)}
 		<div class="summary_meta">
@@ -73,4 +81,4 @@
 	{/if}
 
 	{call_hook name="Templates::Issue::Issue::Article"}
-</div>
+</article>

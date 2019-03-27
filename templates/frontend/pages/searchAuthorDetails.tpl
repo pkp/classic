@@ -15,7 +15,7 @@
 
 <div class="page page-author-details">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="search.authorDetails"}
+		{include file="frontend/components/headings.tpl" currentTitleKey="search.authorDetails"}
 
 		<div class="page-content" id="authorDetails">
 			<h3 class="author-details-author text-lg-center">{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
