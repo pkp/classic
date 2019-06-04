@@ -204,7 +204,7 @@
 					{foreach from=$keywords item=keywordArray}
 						{foreach from=$keywordArray item=keyword key=k}
 							<li class="keyword_item{if $k>4} more-than-five{/if}">
-								<span>{$keyword|escape}</span>{if $k+1 < $keywordArray|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide"{/if}">,</span>{/if}
+								<span>{$keyword|escape}</span>{if $k+1 < $keywordArray|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">,</span>{/if}
 							</li>
 						{/foreach}
 						{if $keywordArray|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
