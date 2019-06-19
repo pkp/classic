@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="fr_CA" full_name="Français Canadien">
+
+	<message key="plugins.themes.classic.name">Thème classique</message>
+	<message key="plugins.themes.classic.description">Le thème pour OJS 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">Couleur primaire</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">Choisissez la couleur primaire de la marque de votre journal</message>
+	<message key="plugins.themes.classic.menu">Menu</message>
+	<message key="plugins.themes.classic.issueDescription">Description du numéro</message>
+	<message key="plugins.themes.classic.more">Plus</message>
+	<message key="plugins.themes.classic.less">Moins</message>
+	<message key="plugins.themes.classic.fullIssue">Numéro complet</message>
+	<message key="plugins.themes.classic.tableOfContents">Table des matières</message>
+	<message key="plugins.themes.classic.close">Fermer</message>
+	<message key="plugins.themes.classic.biography">Biographie</message>
+	<message key="plugins.themes.classic.more-info">Plus d'informations</message>
+	<message key="plugins.themes.classic.pagination">Pagination</message>
+
+	<message key="plugins.themes.classic.volume-abbr">Vol</message>
+	<message key="plugins.themes.classic.number-abbr">No</message>
+
+	<message key="plugins.themes.classic.register.privacyConsent">Oui,  j’accepte que mes données soient recueillies et archivées selon l’énoncé de politique du journal:</message>
+	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[La <a href="{$privacyUrl}" target="_blank">énoncé de politique</a> de {$privacyContextName}.]]></message>
+
+
+
+</locale>
