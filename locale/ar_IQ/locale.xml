@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="ar_IQ" full_name="العربية">
+
+	<message key="plugins.themes.classic.name">نمط كلاسك</message>
+	<message key="plugins.themes.classic.description">هذا النمط يعمل مع نظام المجلات المفتوحة 3</message>
+	<message key="plugins.themes.classic.option.primaryColor.label">اللون الرئيسي</message>
+	<message key="plugins.themes.classic.option.primaryColor.description">تغيير اللون الرئيسي للنمط</message>
+	<message key="plugins.themes.classic.menu">القائمة</message>
+	<message key="plugins.themes.classic.issueDescription">وصف العدد</message>
+	<message key="plugins.themes.classic.more">أكثر</message>
+	<message key="plugins.themes.classic.less">أقل</message>
+	<message key="plugins.themes.classic.fullIssue">كل العدد</message>
+	<message key="plugins.themes.classic.tableOfContents">جدول المحتويات</message>
+	<message key="plugins.themes.classic.close">إغلاق</message>
+	<message key="plugins.themes.classic.biography">سيرة</message>
+	<message key="plugins.themes.classic.more-info">المزيد من المعلومات</message>
+	<message key="plugins.themes.classic.pagination">ترقيم الصفحات</message>
+
+	<message key="plugins.themes.classic.volume-abbr">مجلد</message>
+	<message key="plugins.themes.classic.number-abbr">رقم</message>
+
+	<message key="plugins.themes.classic.register.privacyConsent">نعم، أنا أوافق على أن يتم تجميع بياناتي وحفظها وفقاً لبيان سياسة المجلة:</message>
+	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">بيان سياسة المجلة</a> of {$privacyContextName}.]]></message>
+
+</locale>
