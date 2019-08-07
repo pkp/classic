@@ -21,6 +21,11 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <main class="page_index_journal">
+	{* Display homepage image if set *}
+	{if $homepageImage}
+		<div class="homepage-image" style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')"></div>
+	{/if}
+
 	<div class="container-fluid container-page">
 
 		{* Announcements *}
