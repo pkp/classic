@@ -24,11 +24,13 @@
 
 	{* Display homepage image if set, and wrap around journal summary if use chooses to display it *}
 	{if $homepageImage}
-		<div class="homepage_image" style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')">
+		<div
+			class="homepage_image"
+			style="background: {if $showJournalSummary}linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), {/if}url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')">
 	{/if}
 
 	{if $showJournalSummary}
-		<section class="container journal_summary">
+		<section class="container journal_summary"{if $homepageImage}style="color: #FFF"{/if}>
 			<h2>{translate key="navigation.about"}</h2>
 			{$currentJournal->getLocalizedDescription()}
 		</section>
