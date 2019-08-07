@@ -21,9 +21,21 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <main class="page_index_journal">
-	{* Display homepage image if set *}
+
+	{* Display homepage image if set, and wrap around journal summary if use chooses to display it *}
 	{if $homepageImage}
-		<div class="homepage-image" style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')"></div>
+		<div class="homepage_image" style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')">
+	{/if}
+
+	{if $showJournalSummary}
+		<section class="container journal_summary">
+			<h2>{translate key="navigation.about"}</h2>
+			{$currentJournal->getLocalizedDescription()}
+		</section>
+	{/if}
+
+	{if $homepageImage}
+		</div>
 	{/if}
 
 	<div class="container-fluid container-page">
