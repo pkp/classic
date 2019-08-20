@@ -37,7 +37,6 @@ class ClassicThemePlugin extends ThemePlugin
 		// Option to show journal summary
 		$this->addOption('journalSummary', 'radio', array(
 			'label' => 'manager.setup.journalSummary',
-			'description' => 'plugins.themes.classic.options.journalSummary.description',
 			'options' => array(
 				0 => 'plugins.themes.classic.options.journalSummary.disable',
 				1 => 'plugins.themes.classic.options.journalSummary.enable'

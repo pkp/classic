@@ -24,8 +24,7 @@
 	<message key="plugins.themes.classic.register.privacyConsent">Yes, I agree to have my data collected and stored according to the journal's Policy Statement:</message>
 	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">Policy Statement</a> of {$privacyContextName}.]]></message>
 
-	<message key="plugins.themes.classic.options.journalSummary.description">If enabled, the journal summary will be shown on the journal’s landing page.</message>
-	<message key="plugins.themes.classic.options.journalSummary.disable">Disable (default)</message>
-	<message key="plugins.themes.classic.options.journalSummary.enable">Enable</message>
+	<message key="plugins.themes.classic.options.journalSummary.disable"> Do not show on the journal's homepage.</message>
+	<message key="plugins.themes.classic.options.journalSummary.enable">Show on the journal's homepage.</message>
 
 </locale>
