@@ -77,22 +77,16 @@ footer {
 }
 
 .block_make_submission_link {
- .button();
- border: 1px solid @secondary-colour;
- background-color: @secondary-colour;
- color: contrast(@contrast-colour);
- display: inline-block;
- text-align: center;
- font-family: @font-family-secondary;
- line-height: 24px;
- font-size: 18px;
+	&:extend(.btn);
+	border-color: @secondary-colour;
+	background-color: @secondary-colour;
+	color: contrast(@contrast-colour);
 
- &:hover, &focus, &:active {
-	 text-decoration: none;
-	 background-color: contrast(@contrast-colour);
-	 border: 1px solid contrast(@contrast-colour);
-	 color: @secondary-colour;
- }
+	&:hover, &focus, &:active {
+		background-color: contrast(@contrast-colour);
+		border-color: contrast(@contrast-colour);
+		color: @secondary-colour;
+	}
 }
 
 .site-footer {
