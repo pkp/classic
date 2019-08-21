@@ -10,160 +10,136 @@
  */
 
 footer {
-	font-family: @font-family-secondary;
-	color: @contrast-colour;
-}
+ font-family: @font-family-secondary;
+ color: @contrast-colour;
 
-footer p,
-footer li,
-footer a {
-	font-size: 16px;
-	font-family: @font-family-secondary;
-}
+ p, li, a {
+	 font-size: 16px;
+	 font-family: @font-family-secondary;
+ }
 
-footer ul {
-	padding-left: 0;
-	list-style-type: none;
-}
+ ul {
+	 padding-left: 0;
+	 list-style-type: none;
+ }
 
-footer a {
-	color: inherit;
+ a {
+	 color: inherit;
 
-	&:hover {
-		color: @secondary-colour;
-	}
+	 &:hover, &:focus, &:active {
+		 color: @secondary-colour;
+	 }
+ }
+
 }
 
 .sidebar_wrapper {
-	display: flex;
-	flex-wrap: wrap;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 @media (min-width: 992px) {
-	.container-footer {
-		.container-padding();
-	}
+ .container-footer {
+	 .container-padding();
+ }
 }
 
 .pkp_block {
-	-webkit-box-flex: 0;
-	position: relative;
-	padding-right: @site-padding;
-	padding-top: @site-padding/3;
-	padding-bottom: @site-padding/3;
+ -webkit-box-flex: 0;
+ position: relative;
+ padding-right: @site-padding;
+ padding-top: @site-padding/3;
+ padding-bottom: @site-padding/3;
+
+ .title {
+	 font-weight: bold;
+ }
 }
 
 @media (min-width: 991px) {
-	.pkp_block {
-		flex: 0 0 100%/4;
-	}
+ .pkp_block {
+	 flex: 0 0 100%/4;
+ }
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
-	.pkp_block {
-		flex: 0 0 100%/2;
-		max-width: 100%/2;
-	}
+ .pkp_block {
+	 flex: 0 0 100%/2;
+	 max-width: 100%/2;
+ }
 }
 
 @media (max-width: 767px) {
-	.pkp_block {
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
-}
-
-.pkp_block .title {
-	font-weight: bolder;
-}
-
-.pkp_block img {
-	width: 100%;
-	border-radius: 5px;
-	padding: 1px;
-	border: 1px solid #ddd;
-}
-
-.pkp_block.block_web_feed img {
-	width: auto;
-	border-radius: 0;
-	padding: 0;
-	border: 0;
-}
-
-.block_web_feed ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.block_web_feed {
-	text-align: left;
+ .pkp_block {
+	 flex: 0 0 100%;
+	 max-width: 100%;
+ }
 }
 
 .block_make_submission_link {
-	.button();
-	border: 1px solid @contrast-colour;
-	background-color: @contrast-colour;
-	color: contrast(@contrast-colour);
-	display: inline-block;
-	text-align: center;
-	font-family: @font-family-secondary;
-	line-height: 24px;
-	font-size: 18px;
+ .button();
+ border: 1px solid @contrast-colour;
+ background-color: @contrast-colour;
+ color: contrast(@contrast-colour);
+ display: inline-block;
+ text-align: center;
+ font-family: @font-family-secondary;
+ line-height: 24px;
+ font-size: 18px;
 
-	&:hover {
-		text-decoration: none;
-		background-color: contrast(@contrast-colour);
-		border: 1px solid contrast(@contrast-colour);
-		color: @contrast-colour;
-	}
+ &:hover, &focus, &:active {
+	 text-decoration: none;
+	 background-color: contrast(@contrast-colour);
+	 border: 1px solid contrast(@contrast-colour);
+	 color: @contrast-colour;
+ }
 }
 
 .site-footer {
-	background-color: @primary-colour;
-	padding-top: @site-padding*2;
-	padding-bottom: @site-padding*2;
+ background-color: @primary-colour;
+ padding-top: @site-padding*2;
+ padding-bottom: @site-padding*2;
 }
 
 .additional-footer-info {
-	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
+ display: flex;
+ justify-content: flex-end;
+ flex-wrap: wrap;
 }
 
 .user-page-footer {
-	max-width: 75%;
-	flex: 0 0 75%;
+ max-width: 75%;
+ flex: 0 0 75%;
 
-	& p {
-		margin-bottom: 6px;
-	}
+ & p {
+	 margin-bottom: 6px;
+ }
 }
 
 .pkpbrand-wrapper {
-	max-width: 25%;
-	flex: 0 0 25%;
-	display: flex;
-	justify-content: flex-end;
+ max-width: 25%;
+ flex: 0 0 25%;
+ display: flex;
+ justify-content: flex-end;
 }
 
 @media (max-width: 991px) {
-	.user-page-footer {
-		max-width: 100%;
-		flex: 0 0 100%;
-	}
-	.pkpbrand-wrapper {
-		max-width: 100%;
-		flex: 0 0 100%;
-	}
+ .user-page-footer {
+	 max-width: 100%;
+	 flex: 0 0 100%;
+ }
+ .pkpbrand-wrapper {
+	 max-width: 100%;
+	 flex: 0 0 100%;
+ }
 }
 
 .sidebar_wrapper + .additional-footer-info {
-	margin-top: 40px;
-	padding-top: 35px;
-	border-top: 1px solid @contrast-colour;
+ margin-top: 40px;
+ padding-top: 35px;
+ border-top: 1px solid @contrast-colour;
 }
 
 .footer-brand-image {
-	width: 100px;
+ width: 100px;
 }
