@@ -29,15 +29,20 @@ class ClassicThemePlugin extends ThemePlugin
 			'default' => '#ffd120',
 		));
 
+		// Calculate secondary colour based on user’s primary colour choice
 		$additionalLessVariables = [];
 		if ($this->getOption('primaryColor') !== '#ffd120') {
-			$additionalLessVariables[] = '@primary-colour:' . $this->getOption('primaryColor') . ';';
+			$additionalLessVariables[] = '
+				@primary-colour:' . $this->getOption('primaryColor') . ';
+				@secondary-colour: darken(@primary-colour, 35%);
+			';
 		}
 
 		// Update contrast colour based on primary colour
 		if ($this->isColourDark($this->getOption('primaryColor'))) {
 			$additionalLessVariables[] = '
-			@contrast-colour: #FFF;
+				@contrast-colour: #FFF;
+				@secondary-colour: lighten(@primary-colour, 35%);
 			';
 		}
 
