@@ -78,7 +78,6 @@ select {
 }
 
 .btn-primary {
-
 	font-size: 14px;
 	background-color: @primary-colour;
 	border-color: @primary-colour;
@@ -86,19 +85,12 @@ select {
 	color: #000;
 	box-shadow: none;
 
-	&:hover {
+	&:hover, &:focus, &:active {
 		background-color: #000;
 		text-decoration: none;
 		color: white;
 		box-shadow: none;
 	}
-
-	&:focus {
-		background-color: #000;
-		color: white;
-		border-color: #000;
-	}
-
 }
 
 .btn-primary:hover,
