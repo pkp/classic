@@ -73,11 +73,13 @@ a {
 	overflow-wrap: break-word;
 	word-break: break-word;
 	word-wrap: break-word;
+	transition: all .15s ease-in-out;
 
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: @contrast-colour;
 		text-decoration: none;
 		background-color: @primary-colour;
+		border-color: @primary-colour;
 	}
 }
 
