@@ -27,7 +27,7 @@
 <article class="obj_article_details">
 	<div class="article_header_wrapper">
 		<div class="article_issue_credentials">
-			{$issue->getIssueIdentification()|strip_unsafe_html}
+			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
 		</div>
 		<div class="article_section_title">
 			{$section->getLocalizedTitle()}
