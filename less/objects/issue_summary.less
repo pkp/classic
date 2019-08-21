@@ -25,35 +25,13 @@ span + .current-issue-year:after {
 	content: ")";
 }
 
-.issue_title {
-	font-family: "Cardo", serif;
-	color: #000;
-	line-height: 1.5;
-	font-size: 17px;
-	border-bottom: none;
-	box-shadow: none;
-	-webkit-box-shadow: none;
-
-	&:hover {
-		background-color: inherit;
-	}
+.cover, .issue_summary_title, .issue_title {
+	border: 0;
 }
 
 .obj_issue_summary {
 	display: flex;
 	flex-direction: column;
-}
-
-.issue_summary_title {
-	color: #000;
-	font-size: 18px;
-	font-family: @font-family-primary;
-	line-height: 1.5;
-
-	&:hover {
-		text-decoration: underline;
-		color: #000;
-	}
 }
 
 .issue_summary_date {

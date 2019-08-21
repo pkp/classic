@@ -235,7 +235,7 @@
 								{$citation}
 							</div>
 							<div class="citation_formats dropdown">
-								<a class="btn btn-primary citation_dropdown_button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+								<a class="btn btn-primary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 								        aria-expanded="false">
 									{translate key="submission.howToCite.citationFormats"}
 								</a>
