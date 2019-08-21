@@ -11,6 +11,7 @@
 
 footer {
 	font-family: @font-family-secondary;
+	color: @contrast-colour;
 }
 
 footer p,
@@ -29,7 +30,7 @@ footer a {
 	color: inherit;
 
 	&:hover {
-		color: #FFF;
+		color: contrast(@contrast-colour);
 	}
 }
 
@@ -101,9 +102,9 @@ footer a {
 
 .block_make_submission_link {
 	.button();
-	border: 1px solid #000;
-	background-color: #000;
-	color: white;
+	border: 1px solid @contrast-colour;
+	background-color: @contrast-colour;
+	color: contrast(@contrast-colour);
 	display: inline-block;
 	text-align: center;
 	font-family: @font-family-secondary;
@@ -112,9 +113,9 @@ footer a {
 
 	&:hover {
 		text-decoration: none;
-		background-color: #FFF;
-		border: 1px solid #FFF;
-		color: #000;
+		background-color: contrast(@contrast-colour);
+		border: 1px solid contrast(@contrast-colour);
+		color: @contrast-colour;
 	}
 }
 
@@ -160,7 +161,7 @@ footer a {
 .sidebar_wrapper + .additional-footer-info {
 	margin-top: 40px;
 	padding-top: 35px;
-	border-top: 1px solid #000;
+	border-top: 1px solid @contrast-colour;
 }
 
 .footer-brand-image {
