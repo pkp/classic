@@ -70,7 +70,7 @@ select {
 .btn {
 	border-radius: 0;
 	font-family: @font-family-secondary;
-	font-size: smaller;
+	font-size: 0.85rem;
 	border-color: #000;
 	background-color: #fff;
 	box-shadow: none;
@@ -82,11 +82,10 @@ select {
 }
 
 .btn-primary {
-	font-size: 14px;
 	background-color: @primary-colour;
 	border-color: @primary-colour;
 	font-weight: 600;
-	color: #000;
+	color: @contrast-colour;
 	box-shadow: none;
 
 	&:hover, &:focus, &:active {
@@ -111,7 +110,6 @@ select {
 	color: #fff;
 	border-bottom: none;
 	box-shadow: none;
-	font-size: 18px;
 
 	&:hover, &:focus, &:active {
 		background-color: @primary-colour;
