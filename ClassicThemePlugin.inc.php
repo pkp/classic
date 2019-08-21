@@ -29,11 +29,19 @@ class ClassicThemePlugin extends ThemePlugin
 			'default' => '#ffd120',
 		));
 
-
 		$additionalLessVariables = [];
 		if ($this->getOption('primaryColor') !== '#ffd120') {
 			$additionalLessVariables[] = '@primary-colour:' . $this->getOption('primaryColor') . ';';
 		}
+
+		// Option to show journal summary
+		$this->addOption('journalSummary', 'radio', array(
+			'label' => 'manager.setup.journalSummary',
+			'options' => array(
+				0 => 'plugins.themes.classic.options.journalSummary.disable',
+				1 => 'plugins.themes.classic.options.journalSummary.enable'
+			)
+		));
 
 		// Importing Bootstrap's and tag-it CSS
 		$this->addStyle('app_css', 'resources/app.min.css');
@@ -78,6 +86,8 @@ class ClassicThemePlugin extends ThemePlugin
 		HookRegistry::register('TemplateManager::display', array($this, 'loadIssueData'));
 		// Check whether authors have additional info
 		HookRegistry::register('TemplateManager::display', array($this, 'hasAuthorsInfo'));
+		// Display journal summary on the homepage
+		HookRegistry::register ('TemplateManager::display', array($this, 'homepageJournalSummary'));
 	}
 
 	public function getDisplayName() {
@@ -207,6 +217,17 @@ class ClassicThemePlugin extends ThemePlugin
 		}
 
 		$templateMgr->assign('boolAuthorInfo', $boolAuthorInfo);
+	}
+
+	public function homepageJournalSummary($hookName, $args) {
+		$templateMgr = $args[0];
+		$template = $args[1];
+
+		if ($template != "frontend/pages/indexJournal.tpl") return false;
+
+		$templateMgr->assign(array(
+			'showJournalSummary' => $this->getOption('journalSummary'),
+		));
 	}
 
 }
