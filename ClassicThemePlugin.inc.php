@@ -34,6 +34,13 @@ class ClassicThemePlugin extends ThemePlugin
 			$additionalLessVariables[] = '@primary-colour:' . $this->getOption('primaryColor') . ';';
 		}
 
+		// Update contrast colour based on primary colour
+		if ($this->isColourDark($this->getOption('primaryColor'))) {
+			$additionalLessVariables[] = '
+			@contrast-colour: #FFF;
+			';
+		}
+
 		// Option to show journal summary
 		$this->addOption('journalSummary', 'radio', array(
 			'label' => 'manager.setup.journalSummary',
