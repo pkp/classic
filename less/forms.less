@@ -39,7 +39,7 @@ select {
 	border-radius: 0;
 	transition: all .2s ease-in;
 
-	&:focus {
+	&:hover, &:focus, &:active {
 		border-color: @primary-colour;
 		box-shadow: 0 0 0 0.1rem @primary-colour;
 		padding-left: 0.25em;
@@ -109,7 +109,7 @@ select {
 	box-shadow: none;
 	font-size: 18px;
 
-	&:hover {
+	&:hover, &:focus, &:active {
 		background-color: @primary-colour;
 		border-color: @primary-colour;
 		text-decoration: none;
@@ -128,19 +128,6 @@ select {
 	font-family: @font-family-secondary;
 	font-size: small;
 	margin: 0.5em 0;
-}
-
-.more_button {
-	color: #000;
-	border-bottom: 3px solid @primary-colour;
-	line-height: 10px;
-	display: inline-block;
-	cursor: pointer;
-
-	&:hover {
-		color: #000;
-		text-decoration: none;
-	}
 }
 
 .custom-control-label a {
