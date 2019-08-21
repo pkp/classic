@@ -29,7 +29,7 @@
 			style="background: {if $showJournalSummary}linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), {/if}url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')">
 	{/if}
 
-	{if $showJournalSummary}
+	{if $showJournalSummary && $currentJournal->getLocalizedDescription()}
 		<section class="container journal_summary"{if $homepageImage}style="color: #FFF"{/if}>
 			<h2>{translate key="navigation.about"}</h2>
 			{$currentJournal->getLocalizedDescription()}
