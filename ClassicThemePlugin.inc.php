@@ -34,7 +34,7 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($this->getOption('primaryColor') !== '#ffd120') {
 			$additionalLessVariables[] = '
 				@primary-colour:' . $this->getOption('primaryColor') . ';
-				@secondary-colour: darken(@primary-colour, 35%);
+				@secondary-colour: darken(@primary-colour, 45%);
 			';
 		}
 
@@ -42,7 +42,7 @@ class ClassicThemePlugin extends ThemePlugin
 		if ($this->isColourDark($this->getOption('primaryColor'))) {
 			$additionalLessVariables[] = '
 				@contrast-colour: #FFF;
-				@secondary-colour: lighten(@primary-colour, 35%);
+				@secondary-colour: lighten(@primary-colour, 45%);
 			';
 		}
 
