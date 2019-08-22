@@ -15,13 +15,11 @@
 	font-family: @font-family-primary;
 	font-size: 20px;
 	font-weight: bold;
-	color: @dark-grey;
 	padding-top: 9px;
 	padding-bottom: 17px;
 }
 
 .article_section_title {
-	color: @mid-grey;
 	font-size: 14px;
 	font-family: @font-family-primary;
 	text-transform: uppercase;
@@ -94,7 +92,6 @@
 
 	.collapse-authors {
 		font-family: "Cardo", serif;
-		color: @dark-grey;
 		line-height: 1.5;
 	}
 
@@ -116,11 +113,6 @@
 .more-authors-info-button {
 	color: #000;
 	text-transform: capitalize;
-
-	&:hover {
-		text-decoration: none;
-		color: @dark-grey;
-	}
 }
 
 #authorInfoCollapse {
@@ -163,27 +155,6 @@
 	margin-bottom: 30px;
 }
 
-// article's data block
-
-// doi and date
-
-.doi, .published_date {
-	color: @mid-grey;
-	font-size: 14px;
-}
-
-.doi_value a {
-	color: @mid-grey;
-
-	&:hover {
-		color: @primary-colour;
-	}
-}
-
-.doi + .published_date {
-	margin-top: -25px;
-}
-
 // authors' data
 
 .entry_authors_list {
@@ -192,11 +163,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-}
-
-.affiliation_wrapper, .author_orcid {
-	font-size: 14px;
-	color: @mid-grey;
 }
 
 // keywords
@@ -252,12 +218,6 @@
 .citation_format_label {
 	font-size: 24px;
 	padding-bottom: 15px;
-}
-
-.citation_dropdown_button {
-	margin-top: 10px;
-	display: block;
-	cursor: pointer;
 }
 
 #dropdown-cit a {
@@ -363,11 +323,6 @@
 			max-width: 250px;
 		}
 
-		& h3 {
-			font-size: 30px;
-			color: @dark-grey;
-		}
-
 		& .doi {
 			order: 1;
 		}
@@ -417,19 +372,4 @@
 			margin-bottom: 10px;
 		}
 	}
-
-}
-
-// overriding default typographics
-.orcid-image-url, .more-authors-info-button, .doi_value a {
-	border-bottom: none;
-	box-shadow: none;
-
-	&:hover {
-		background-color: inherit;
-	}
-}
-
-.doi_value a {
-	word-wrap: break-word;
 }

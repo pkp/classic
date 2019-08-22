@@ -39,7 +39,7 @@ select {
 	border-radius: 0;
 	transition: all .2s ease-in;
 
-	&:focus {
+	&:hover, &:focus, &:active {
 		border-color: @primary-colour;
 		box-shadow: 0 0 0 0.1rem @primary-colour;
 		padding-left: 0.25em;
@@ -70,35 +70,31 @@ select {
 .btn {
 	border-radius: 0;
 	font-family: @font-family-secondary;
-	font-size: smaller;
+	font-size: 0.65rem;
 	border-color: #000;
 	background-color: #fff;
 	box-shadow: none;
 	.button();
+
+	&:hover, &:focus, &:active {
+		color: @contrast-colour;
+	}
 }
 
 .btn-primary {
-
-	font-size: 14px;
+	&:extend(.btn);
 	background-color: @primary-colour;
 	border-color: @primary-colour;
 	font-weight: 600;
-	color: #000;
+	color: @contrast-colour;
 	box-shadow: none;
 
-	&:hover {
+	&:hover, &:focus, &:active {
 		background-color: #000;
 		text-decoration: none;
 		color: white;
 		box-shadow: none;
 	}
-
-	&:focus {
-		background-color: #000;
-		color: white;
-		border-color: #000;
-	}
-
 }
 
 .btn-primary:hover,
@@ -110,18 +106,16 @@ select {
 }
 
 .btn-secondary {
-	background-color: #000;
+	&:extend(.btn);
+	background-color: #FFF;
 	border-color: #000;
-	color: #fff;
-	border-bottom: none;
-	box-shadow: none;
-	font-size: 18px;
+	color: #000;
 
-	&:hover {
+	&:hover, &:focus, &:active {
 		background-color: @primary-colour;
 		border-color: @primary-colour;
 		text-decoration: none;
-		color: #FFF;
+		color: @contrast-colour;
 
 	}
 }
@@ -136,19 +130,6 @@ select {
 	font-family: @font-family-secondary;
 	font-size: small;
 	margin: 0.5em 0;
-}
-
-.more_button {
-	color: #000;
-	border-bottom: 3px solid @primary-colour;
-	line-height: 10px;
-	display: inline-block;
-	cursor: pointer;
-
-	&:hover {
-		color: #000;
-		text-decoration: none;
-	}
 }
 
 .custom-control-label a {

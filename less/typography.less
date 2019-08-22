@@ -14,7 +14,7 @@
 body {
 	font-family: @font-family-primary;
 	color: #000;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
@@ -25,11 +25,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-primary;
 	font-weight: bold;
+
+	a {
+		border-bottom: none;
+		box-shadow: none;
+	}
 }
 
-p, li, blockquote, cite, dd, legend {
+p, li, a, blockquote {
 	font-family: @font-family-primary;
-	line-height: 1.5;
+	font-size: 1rem;
+	line-height: 1.8;
 }
 
 dt, address, table, label {
@@ -49,10 +55,6 @@ ol {
 	}
 }
 
-li {
-	margin-bottom: 0.25em;
-}
-
 blockquote {
 	border-left: 1px solid #000;
 	padding-left: 30px;
@@ -63,94 +65,25 @@ cite {
 	text-align: right;
 }
 
-dt {
-	font-weight: normal;
-	margin: 30px 0 10px 0;
-
-	&:first-child {
-		margin-top: 0;
-	}
-}
-
-code {
-	color: #000;
-	font-size: smaller;
-}
-
-// links
-
 a {
 	color: #000;
 	background-color: transparent;
 	text-decoration: none;
-	border-bottom: 0.05em solid @primary-colour;
-	-webkit-box-shadow: inset 0 -4px 0 @primary-colour;
-	box-shadow: inset 0 -4px 0 @primary-colour;
+	border-bottom: 1px solid @secondary-colour;
 	overflow-wrap: break-word;
 	word-break: break-word;
 	word-wrap: break-word;
+	transition: all .15s ease-in-out;
 
-	&:hover {
-		color: #000;
+	&:hover, &:active, &:focus {
+		color: @contrast-colour;
 		text-decoration: none;
 		background-color: @primary-colour;
+		border-color: @primary-colour;
 	}
 }
 
-address a {
-	border-bottom: 1px solid #000;
-	box-shadow: none;
-
-	&:hover {
-		color: #000;
-		text-decoration: none;
-		background-color: transparent;
-	}
-}
-
-// overriding for header, footer links, buttons and articles' summary title
-
-header a, footer a {
-	box-shadow: none;
-	&:hover {
-		background-color: inherit;
-	}
-}
-
-.summary_title, .issue_summary_title, .cmp_notification a {
-	border-bottom: none;
-	box-shadow: none;
-	&:hover {
-		background-color: inherit;
-	}
-}
-
-
-p, li, a, blockquote {
-	font-family: @font-family-primary;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: @font-family-primary;
-	font-weight: bold;
-
-}
-
-p {
-	font-size: 18px;
-	line-height: 1.56;
-	letter-spacing: 0.2px;
-}
-
-.nav-link {
-	color: #FFF;
-	font-family: @font-family-secondary;
-	font-size: 14px;
-}
-
-// ionicons
 .ion-icon-text {
-	display: inline-block;
 	vertical-align: middle;
 }
 

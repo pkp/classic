@@ -1,36 +1,37 @@
 /**
- * @file less/components/footer.less
- *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2003-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @brief Stylesheet for site footer
- *
- */
+* @file less/components/footer.less
+*
+* Copyright (c) 2014-2019 Simon Fraser University
+* Copyright (c) 2003-2019 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for site footer
+*
+*/
 
 footer {
 	font-family: @font-family-secondary;
-}
+	color: @contrast-colour;
 
-footer p,
-footer li,
-footer a {
-	font-size: 16px;
-	font-family: @font-family-secondary;
-}
-
-footer ul {
-	padding-left: 0;
-	list-style-type: none;
-}
-
-footer a {
-	color: inherit;
-
-	&:hover {
-		color: #FFF;
+	p, li, a, .title {
+		font-size: 0.85rem;
+		font-family: @font-family-secondary;
 	}
+
+	ul {
+		padding-left: 0;
+		list-style-type: none;
+	}
+
+	a {
+		color: inherit;
+		border: 0;
+
+		&:hover, &:focus, &:active {
+			color: @secondary-colour;
+		}
+	}
+
 }
 
 .sidebar_wrapper {
@@ -50,6 +51,10 @@ footer a {
 	padding-right: @site-padding;
 	padding-top: @site-padding/3;
 	padding-bottom: @site-padding/3;
+
+	.title {
+		font-weight: bold;
+	}
 }
 
 @media (min-width: 991px) {
@@ -72,49 +77,16 @@ footer a {
 	}
 }
 
-.pkp_block .title {
-	font-weight: bolder;
-}
-
-.pkp_block img {
-	width: 100%;
-	border-radius: 5px;
-	padding: 1px;
-	border: 1px solid #ddd;
-}
-
-.pkp_block.block_web_feed img {
-	width: auto;
-	border-radius: 0;
-	padding: 0;
-	border: 0;
-}
-
-.block_web_feed ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.block_web_feed {
-	text-align: left;
-}
-
 .block_make_submission_link {
-	.button();
-	border: 1px solid #000;
-	background-color: #000;
-	color: white;
-	display: inline-block;
-	text-align: center;
-	font-family: @font-family-secondary;
-	line-height: 24px;
-	font-size: 18px;
+	&:extend(.btn);
+	border-color: @secondary-colour;
+	background-color: @secondary-colour;
+	color: contrast(@contrast-colour);
 
-	&:hover {
-		text-decoration: none;
-		background-color: #FFF;
-		border: 1px solid #FFF;
-		color: #000;
+	&:hover, &:focus, &:active {
+		background-color: contrast(@contrast-colour);
+		border-color: contrast(@contrast-colour);
+		color: @secondary-colour;
 	}
 }
 
@@ -160,7 +132,7 @@ footer a {
 .sidebar_wrapper + .additional-footer-info {
 	margin-top: 40px;
 	padding-top: 35px;
-	border-top: 1px solid #000;
+	border-top: 1px solid @contrast-colour;
 }
 
 .footer-brand-image {
