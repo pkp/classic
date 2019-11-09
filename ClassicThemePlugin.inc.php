@@ -22,24 +22,23 @@ class ClassicThemePlugin extends ThemePlugin
 	public function init()
 	{
 		/* Additional theme options */
-		// Changing theme primary color
-		$this->addOption('primaryColor', 'colour', array(
-			'label' => 'plugins.themes.classic.option.primaryColor.label',
-			'description' => 'plugins.themes.classic.option.primaryColor.description',
-			'default' => '#ffd120',
+		// Changing theme accent colour
+		$this->addOption('baseColour', 'colour', array(
+			'label' => 'plugins.themes.default.option.colour.label',
+			'default' => '#FFD120',
 		));
 
-		// Calculate secondary colour based on user’s primary colour choice
+		// Calculate secondary colour based on user’s accent colour choice
 		$additionalLessVariables = [];
-		if ($this->getOption('primaryColor') !== '#ffd120') {
+		if ($this->getOption('baseColour') !== '#FFD120') {
 			$additionalLessVariables[] = '
-				@primary-colour:' . $this->getOption('primaryColor') . ';
+				@primary-colour:' . $this->getOption('baseColour') . ';
 				@secondary-colour: darken(@primary-colour, 45%);
 			';
 		}
 
 		// Update contrast colour based on primary colour
-		if ($this->isColourDark($this->getOption('primaryColor'))) {
+		if ($this->isColourDark($this->getOption('baseColour'))) {
 			$additionalLessVariables[] = '
 				@contrast-colour: #FFF;
 				@secondary-colour: lighten(@primary-colour, 45%);
