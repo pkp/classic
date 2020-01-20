@@ -16,8 +16,13 @@
 	padding-top: 7px;
 }
 
-.home-link:hover {
-	text-decoration: none;
+.home-link {
+
+	&:hover, &:focus {
+		text-decoration: none;
+		background-color: inherit;
+		border: 0;
+	}
 }
 
 .header .row {
