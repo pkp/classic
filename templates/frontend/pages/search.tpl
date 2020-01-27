@@ -24,9 +24,13 @@
 
 		{include file="frontend/components/headings.tpl" currentTitleKey="common.search"}
 
+		{capture name="searchFormUrl"}{url op="search" escape=false}{/capture}
+		{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
 		<div class="row">
-			<form class="cmp_form col-sm-10 offset-sm-1 col-md-8 offset-md-2" method="post" action="{url op="search"}">
-				{csrf}
+			<form class="cmp_form col-sm-10 offset-sm-1 col-md-8 offset-md-2" method="get" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}">
+				{foreach from=$formUrlParameters key=paramKey item=paramValue}
+					<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
+				{/foreach}
 
 				{* Repeat the label text just so that screen readers have a clear
 				   label/input relationship *}
