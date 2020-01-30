@@ -26,6 +26,17 @@
 
 <article class="obj_article_details">
 	<div class="article_header_wrapper">
+		{* Notification that this is an old version *}
+		{if $currentPublication->getId() !== $publication->getId()}
+		<div class="cmp_notification notice" role="alert">
+			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+			{translate key="submission.outdatedVersion"
+				datePublished=$publication->getData('datePublished')|date_format:$dateFormatShort
+				urlRecentVersion=$latestVersionUrl|escape
+			}
+		</div>
+		{/if}
+
 		<div class="article_issue_credentials">
 			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
 		</div>
