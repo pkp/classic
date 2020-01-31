@@ -228,9 +228,9 @@
 			{if !empty($keywords[$currentLocale])}
 			<div class="item keywords">
 				{strip}
-				<div class="keywords_label">
+				<h3>
 					{translate key="article.subject"}
-				</div>
+				</h3>
 				<ul class="keywords_value">
 					{foreach from=$keywords item=keywordArray}
 						{foreach from=$keywordArray item=keyword key=k}
@@ -258,9 +258,9 @@
 			{if $citation}
 				<div class="item citation">
 					<div class="sub_item citation_display">
-						<div class="citation_format_label">
+						<h3>
 							{translate key="submission.howToCite"}
-						</div>
+						</h3>
 						<div class="citation_format_value">
 							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
@@ -357,7 +357,7 @@
 			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
 				<div class="abstract">
-					<h3 class="abstract_label">{translate key="article.abstract"}</h3>
+					<h2>{translate key="article.abstract"}</h2>
 					{$article->getLocalizedAbstract()|strip_unsafe_html}
 				</div>
 			{/if}
