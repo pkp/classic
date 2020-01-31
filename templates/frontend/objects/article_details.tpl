@@ -192,17 +192,37 @@
 				{/if}
 			{/foreach}
 
-			{* Published date *}
-			{if $article->getDatePublished()}
-				<div class="published_date">
-					<span class="published_date_label">
-						{translate key="submissions.published"}
-					</span>
-					<span class="published_date_value">
-						{$article->getDatePublished()|date_format:$dateFormatLong}
-					</span>
-				</div>
-			{/if}
+			{* Publication & update dates; previous versions *}
+      {if $publication->getData('datePublished')}
+        <p>
+          {translate key="submissions.published"}
+          {* If this is the original version *}
+          {if $firstPublication->getID() === $publication->getId()}
+            {$firstPublication->getData('datePublished')|date_format:$dateFormatShort}
+          {* If this is an updated version *}
+          {else}
+            {translate key="submission.updatedOn" datePublished=$firstPublication->getData('datePublished')|date_format:$dateFormatShort dateUpdated=$publication->getData('datePublished')|date_format:$dateFormatShort}
+          {/if}
+        </p>
+
+        {if count($article->getPublishedPublications()) > 1}
+          <h3>{translate key="submission.versions"}</h3>
+          <ul>
+            {foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
+              {capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort version=$iPublication->getData('version')}{/capture}
+              <li>
+                {if $iPublication->getId() === $publication->getId()}
+                  {$name}
+                {elseif $iPublication->getId() === $currentPublication->getId()}
+                  <a href="{url page="article" op="view" path=$article->getBestId()}">{$name}</a>
+                {else}
+                  <a href="{url page="article" op="view" path=$article->getBestId()|to_array:"version":$iPublication->getId()}">{$name}</a>
+                {/if}
+              </li>
+            {/foreach}
+          </ul>
+        {/if}
+      {/if}
 
 			{* Keywords *}
 			{if !empty($keywords[$currentLocale])}
