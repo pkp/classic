@@ -48,7 +48,7 @@
 
 				{* article title, subtitle and authors *}
 				<h1 class="page_title article-full-title">
-					{$article->getLocalizedFullTitle()|escape}
+					{$publication->getLocalizedFullTitle()|escape}
 				</h1>
 
 
@@ -77,11 +77,11 @@
 			<div class="col-md-12">
 
 				{* authors list *}
-				{if $article->getAuthors()}
+				{if $publication->getData('authors')}
 					<div class="authors_info">
 						<ul class="entry_authors_list">
 							{strip}
-								{foreach from=$article->getAuthors() item=author key=authorNumber}
+								{foreach from=$publication->getData('authors') item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
 										{if $author->getOrcid()}
 											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$baseUrl}/{$orcidImageUrl}"></a>
@@ -89,12 +89,12 @@
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
 										</span>
-										{if $authorNumber+1 !== $article->getAuthors()|@count}
+										{if $authorNumber+1 !== $publication->getData('authors')|@count}
 											<span class="author-delimiter">, </span>
 										{/if}
 									</li>
 								{/foreach}
-								{if $article->getAuthors()|@count > 4}
+								{if $publication->getData('authors')|@count > 4}
 									<span class="collapse-authors" id="show-all-authors"><ion-icon name="add-circle"></ion-icon></span>
 									<span class="collapse-authors hide" id="hide-authors"><ion-icon name="remove-circle"></ion-icon></ion-icon></span>
 								{/if}
@@ -110,7 +110,7 @@
 							</a>
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
-							{foreach from=$article->getAuthors() item=author key=number}
+							{foreach from=$publication->getData('authors') item=author key=number}
 								<div class="additional-author-block">
 									{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
@@ -157,13 +157,22 @@
 		<div class="main_entry col-md-4" id="mainEntry" >
 
 			{* Article/Issue cover image *}
-			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
+			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
 				<div class="article_cover_wrapper">
-					{if $article->getLocalizedCoverImage()}
-						<img class="img-fluid" src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
+					{if $publication->getLocalizedData('coverImage')}
+						{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+						<img
+							class="img-fluid"
+							src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+							alt="{$coverImage.altText|escape|default:''}"
+						>
 					{else}
 						<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-							<img class="img-fluid" src="{$issue->getLocalizedCoverImageUrl()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+							<img
+								class="img-fluid"
+								src="{$issue->getLocalizedCoverImageUrl()|escape}"
+								alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}"
+							>
 						</a>
 					{/if}
 				</div>
@@ -355,10 +364,10 @@
 		<div class="article_abstract_block col-md-8" id="articleAbstractBlock">
 
 			{* Abstract *}
-			{if $article->getLocalizedAbstract()}
+			{if $publication->getLocalizedData('abstract')}
 				<div class="abstract">
 					<h2>{translate key="article.abstract"}</h2>
-					{$article->getLocalizedAbstract()|strip_unsafe_html}
+					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
 				</div>
 			{/if}
 
