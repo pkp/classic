@@ -21,11 +21,11 @@
 			<h3 class="author-details-author text-lg-center">{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
 			<ul class="author-details-articles">
 				{foreach from=$publishedArticles item=article}
-					{assign var=issueId value=$article->getIssueId()}
+					{assign var=issueId value=$article->getCurrentPublication()->getData('issueId')}
 					{assign var=issue value=$issues[$issueId]}
 					{assign var=issueUnavailable value=$issuesUnavailable.$issueId}
 					{assign var=sectionId value=$article->getSectionId()}
-					{assign var=journalId value=$article->getJournalId()}
+					{assign var=journalId value=$article->getData('contextId')}
 					{assign var=journal value=$journals[$journalId]}
 					{assign var=section value=$sections[$sectionId]}
 					{if $issue->getPublished() && $section && $journal}
@@ -37,12 +37,12 @@
 								<span>{$section->getLocalizedTitle()|escape}</span>
 							</div>
 							<div class="author-details-block author-details-article">
-								<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
+								<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
 							</div>
 							{if (!$issueUnavailable || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
 								<div class="author-details-block author-details-galleys">
 									{foreach from=$article->getGalleys() item=galley name=galleyList}
-										<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}"
+										<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|to_array:$galley->getBestGalleyId()}"
 										   class="btn btn-primary">{$galley->getGalleyLabel()|escape}</a>
 									{/foreach}
 								</div>

@@ -25,7 +25,7 @@
 						{foreach from=$article->getAuthors() item=author}
 							{$author->getFullName()|escape},
 						{/foreach}
-						<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()}">
+						<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestId()}">
 							{$article->getLocalizedTitle()|strip_unsafe_html}
 						</a>,
 						<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
