@@ -39,7 +39,7 @@
 							<div class="author-details-block author-details-article">
 								<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()}">{$article->getCurrentPublication()->getLocalizedTitle()|strip_unsafe_html}</a>
 							</div>
-							{if (!$issueUnavailable || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
+							{if (!$issueUnavailable || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}}
 								<div class="author-details-block author-details-galleys">
 									{foreach from=$article->getGalleys() item=galley name=galleyList}
 										<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|to_array:$galley->getBestGalleyId()}"
