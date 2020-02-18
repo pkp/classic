@@ -383,20 +383,20 @@
 			{call_hook name="Templates::Article::Main"}
 
 			{* References *}
-			{if $parsedCitations->getCount() || $article->getCitations()}
+			{if $parsedCitations || $publication->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
-					{if $parsedCitations->getCount()}
+					{if $parsedCitations}
 						<ol class="references-list">
-							{iterate from=parsedCitations item=parsedCitation}
+							{foreach from=$parsedCitations item=parsedCitation}
 								<li>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</li>
-							{/iterate}
+							{/foreach}
 						</ol>
-					{elseif $article->getCitations()}
+					{else}
 						<div class="value">
-							{$article->getCitations()|nl2br}
+							{$publication->getData('citationsRaw')|nl2br}
 						</div>
 					{/if}
 				</div>

@@ -76,9 +76,10 @@
 
 		{* Search results, finally! *}
 		{if !$results->wasEmpty()}
+
 			<div class="search_results">
 				{iterate from=results item=result}
-					{include file="frontend/objects/article_summary.tpl" headingLevel="2" article=$result.publishedArticle journal=$result.journal showDatePublished=true hideGalleys=true}
+					{include file="frontend/objects/article_summary.tpl" headingLevel="2" article=$result.publishedSubmission journal=$result.journal showDatePublished=true hideGalleys=true}
 				{/iterate}
 			</div>
 		{/if}

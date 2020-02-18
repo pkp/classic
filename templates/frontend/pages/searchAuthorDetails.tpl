@@ -20,7 +20,7 @@
 		<div class="page-content" id="authorDetails">
 			<h3 class="author-details-author text-lg-center">{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
 			<ul class="author-details-articles">
-				{foreach from=$publishedArticles item=article}
+				{foreach from=$submissions item=article}
 					{assign var=issueId value=$article->getCurrentPublication()->getData('issueId')}
 					{assign var=issue value=$issues[$issueId]}
 					{assign var=issueUnavailable value=$issuesUnavailable.$issueId}
@@ -37,7 +37,7 @@
 								<span>{$section->getLocalizedTitle()|escape}</span>
 							</div>
 							<div class="author-details-block author-details-article">
-								<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
+								<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()}">{$article->getCurrentPublication()->getLocalizedTitle()|strip_unsafe_html}</a>
 							</div>
 							{if (!$issueUnavailable || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
 								<div class="author-details-block author-details-galleys">
