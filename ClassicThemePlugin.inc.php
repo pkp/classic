@@ -29,6 +29,15 @@ class ClassicThemePlugin extends ThemePlugin
 			'default' => '#ffd120',
 		));
 
+		// Option to show journal summary
+		$this->addOption('journalSummary', 'radio', array(
+			'label' => 'manager.setup.journalSummary',
+			'options' => array(
+				0 => 'plugins.themes.classic.options.journalSummary.disable',
+				1 => 'plugins.themes.classic.options.journalSummary.enable'
+			)
+		));
+
 		// Calculate secondary colour based on user’s primary colour choice
 		$additionalLessVariables = [];
 		if ($this->getOption('primaryColor') !== '#ffd120') {
@@ -45,15 +54,6 @@ class ClassicThemePlugin extends ThemePlugin
 				@secondary-colour: lighten(@primary-colour, 45%);
 			';
 		}
-
-		// Option to show journal summary
-		$this->addOption('journalSummary', 'radio', array(
-			'label' => 'manager.setup.journalSummary',
-			'options' => array(
-				0 => 'plugins.themes.classic.options.journalSummary.disable',
-				1 => 'plugins.themes.classic.options.journalSummary.enable'
-			)
-		));
 
 		// Importing Bootstrap's and tag-it CSS
 		$this->addStyle('app_css', 'resources/app.min.css');
@@ -235,7 +235,7 @@ class ClassicThemePlugin extends ThemePlugin
 		$templateMgr = $args[0];
 		$template = $args[1];
 
-		if ($template != "frontend/pages/indexJournal.tpl") return false;
+		if ($template !== "frontend/pages/indexJournal.tpl") return false;
 
 		$templateMgr->assign(array(
 			'showJournalSummary' => $this->getOption('journalSummary'),

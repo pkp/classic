@@ -11,26 +11,35 @@
 
 <!DOCTYPE html>
 <html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
-{capture assign="pageTitleTranslated"}{translate key="article.pageTitle" title=$article->getLocalizedTitle()|escape}{/capture}
+{capture assign="pageTitleTranslated"}{translate key="article.pageTitle" title=$galleyPublication->getLocalizedTitle()|escape}{/capture}
 {include file="frontend/components/headerHead.tpl"}
 <body class="pkp_page_{$requestedPage|escape} pkp_op_{$requestedOp|escape}">
 
 {* Header wrapper *}
 <header class="header_view">
 
-	<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="return">
+	<a href="{url page="article" op="view" path=$article->getBestId()}" class="return">
 		<span class="pkp_screen_reader">
 			{translate key="article.return"}
 		</span>
 	</a>
-
-	<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="title">
-		{$article->getLocalizedTitle()|escape}
+	{if !$isLatestPublication}
+	<div class="cmp_notification notice" role="alert">
+		{translate key="submission.outdatedVersion"
+			datePublished=$galleyPublication->getData('datePublished')|date_format:$dateFormatLong
+			urlRecentVersion=$parentUrl
+		}
+	</div>
+	{else}
+	<a href="{url page="article" op="view" path=$article->getBestId()}" class="title">
+		{$galleyPublication->getLocalizedTitle()|escape}
 	</a>
+	{/if}
+
 </header>
 
 <div id="htmlContainer" class="galley_view" style="overflow:visible;-webkit-overflow-scrolling:touch">
-	<iframe id="htmlGalleyFrame" name="htmlFrame" src="{url page="article" op="download" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId() inline=true}" allowfullscreen webkitallowfullscreen></iframe>
+	<iframe id="htmlGalleyFrame" name="htmlFrame" src="{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}" allowfullscreen webkitallowfullscreen></iframe>
 </div>
 {call_hook name="Templates::Common::Footer::PageFooter"}
 

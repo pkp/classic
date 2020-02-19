@@ -21,7 +21,7 @@
 
 		<div class="index-site-journals">
 			<h2>
-				{translate key="journal.journals"}
+				{translate key="context.contexts"}
 			</h2>
 			{if !count($journals)}
 				{translate key="site.noJournals"}

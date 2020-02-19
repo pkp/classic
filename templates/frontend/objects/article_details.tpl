@@ -26,6 +26,17 @@
 
 <article class="obj_article_details">
 	<div class="article_header_wrapper">
+		{* Notification that this is an old version *}
+		{if $currentPublication->getId() !== $publication->getId()}
+		<div class="cmp_notification notice" role="alert">
+			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+			{translate key="submission.outdatedVersion"
+				datePublished=$publication->getData('datePublished')|date_format:$dateFormatShort
+				urlRecentVersion=$latestVersionUrl|escape
+			}
+		</div>
+		{/if}
+
 		<div class="article_issue_credentials">
 			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
 		</div>
@@ -37,7 +48,7 @@
 
 				{* article title, subtitle and authors *}
 				<h1 class="page_title article-full-title">
-					{$article->getLocalizedFullTitle()|escape}
+					{$publication->getLocalizedFullTitle()|escape}
 				</h1>
 
 
@@ -66,11 +77,11 @@
 			<div class="col-md-12">
 
 				{* authors list *}
-				{if $article->getAuthors()}
+				{if $publication->getData('authors')}
 					<div class="authors_info">
 						<ul class="entry_authors_list">
 							{strip}
-								{foreach from=$article->getAuthors() item=author key=authorNumber}
+								{foreach from=$publication->getData('authors') item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
 										{if $author->getOrcid()}
 											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$baseUrl}/{$orcidImageUrl}"></a>
@@ -78,12 +89,12 @@
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
 										</span>
-										{if $authorNumber+1 !== $article->getAuthors()|@count}
+										{if $authorNumber+1 !== $publication->getData('authors')|@count}
 											<span class="author-delimiter">, </span>
 										{/if}
 									</li>
 								{/foreach}
-								{if $article->getAuthors()|@count > 4}
+								{if $publication->getData('authors')|@count > 4}
 									<span class="collapse-authors" id="show-all-authors"><ion-icon name="add-circle"></ion-icon></span>
 									<span class="collapse-authors hide" id="hide-authors"><ion-icon name="remove-circle"></ion-icon></ion-icon></span>
 								{/if}
@@ -99,7 +110,7 @@
 							</a>
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
-							{foreach from=$article->getAuthors() item=author key=number}
+							{foreach from=$publication->getData('authors') item=author key=number}
 								<div class="additional-author-block">
 									{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
@@ -146,13 +157,22 @@
 		<div class="main_entry col-md-4" id="mainEntry" >
 
 			{* Article/Issue cover image *}
-			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
+			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
 				<div class="article_cover_wrapper">
-					{if $article->getLocalizedCoverImage()}
-						<img class="img-fluid" src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
+					{if $publication->getLocalizedData('coverImage')}
+						{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+						<img
+							class="img-fluid"
+							src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+							alt="{$coverImage.altText|escape|default:''}"
+						>
 					{else}
 						<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-							<img class="img-fluid" src="{$issue->getLocalizedCoverImageUrl()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+							<img
+								class="img-fluid"
+								src="{$issue->getLocalizedCoverImageUrl()|escape}"
+								alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}"
+							>
 						</a>
 					{/if}
 				</div>
@@ -181,25 +201,45 @@
 				{/if}
 			{/foreach}
 
-			{* Published date *}
-			{if $article->getDatePublished()}
-				<div class="published_date">
-					<span class="published_date_label">
-						{translate key="submissions.published"}
-					</span>
-					<span class="published_date_value">
-						{$article->getDatePublished()|date_format:$dateFormatLong}
-					</span>
-				</div>
-			{/if}
+			{* Publication & update dates; previous versions *}
+      {if $publication->getData('datePublished')}
+        <p>
+          {translate key="submissions.published"}
+          {* If this is the original version *}
+          {if $firstPublication->getID() === $publication->getId()}
+            {$firstPublication->getData('datePublished')|date_format:$dateFormatShort}
+          {* If this is an updated version *}
+          {else}
+            {translate key="submission.updatedOn" datePublished=$firstPublication->getData('datePublished')|date_format:$dateFormatShort dateUpdated=$publication->getData('datePublished')|date_format:$dateFormatShort}
+          {/if}
+        </p>
+
+        {if count($article->getPublishedPublications()) > 1}
+          <h3>{translate key="submission.versions"}</h3>
+          <ul>
+            {foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
+              {capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort version=$iPublication->getData('version')}{/capture}
+              <li>
+                {if $iPublication->getId() === $publication->getId()}
+                  {$name}
+                {elseif $iPublication->getId() === $currentPublication->getId()}
+                  <a href="{url page="article" op="view" path=$article->getBestId()}">{$name}</a>
+                {else}
+                  <a href="{url page="article" op="view" path=$article->getBestId()|to_array:"version":$iPublication->getId()}">{$name}</a>
+                {/if}
+              </li>
+            {/foreach}
+          </ul>
+        {/if}
+      {/if}
 
 			{* Keywords *}
 			{if !empty($keywords[$currentLocale])}
 			<div class="item keywords">
 				{strip}
-				<div class="keywords_label">
+				<h3>
 					{translate key="article.subject"}
-				</div>
+				</h3>
 				<ul class="keywords_value">
 					{foreach from=$keywords item=keywordArray}
 						{foreach from=$keywordArray item=keyword key=k}
@@ -227,9 +267,9 @@
 			{if $citation}
 				<div class="item citation">
 					<div class="sub_item citation_display">
-						<div class="citation_format_label">
+						<h3>
 							{translate key="submission.howToCite"}
-						</div>
+						</h3>
 						<div class="citation_format_value">
 							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
@@ -324,10 +364,10 @@
 		<div class="article_abstract_block col-md-8" id="articleAbstractBlock">
 
 			{* Abstract *}
-			{if $article->getLocalizedAbstract()}
+			{if $publication->getLocalizedData('abstract')}
 				<div class="abstract">
-					<h3 class="abstract_label">{translate key="article.abstract"}</h3>
-					{$article->getLocalizedAbstract()|strip_unsafe_html}
+					<h2>{translate key="article.abstract"}</h2>
+					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
 				</div>
 			{/if}
 
@@ -352,20 +392,20 @@
 			{call_hook name="Templates::Article::Main"}
 
 			{* References *}
-			{if $parsedCitations->getCount() || $article->getCitations()}
+			{if $parsedCitations || $publication->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
-					{if $parsedCitations->getCount()}
+					{if $parsedCitations}
 						<ol class="references-list">
-							{iterate from=parsedCitations item=parsedCitation}
+							{foreach from=$parsedCitations item=parsedCitation}
 								<li>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</li>
-							{/iterate}
+							{/foreach}
 						</ol>
-					{elseif $article->getCitations()}
+					{else}
 						<div class="value">
-							{$article->getCitations()|nl2br}
+							{$publication->getData('citationsRaw')|nl2br}
 						</div>
 					{/if}
 				</div>

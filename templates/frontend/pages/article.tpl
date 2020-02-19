@@ -15,7 +15,7 @@
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  *}
 
-{include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$publication->getLocalizedTitle()|escape}
 
 <main class="page page_article">
 	<div class="container-fluid container-page">
