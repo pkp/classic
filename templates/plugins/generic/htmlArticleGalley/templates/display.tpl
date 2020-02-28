@@ -24,22 +24,28 @@
 		</span>
 	</a>
 	{if !$isLatestPublication}
-	<div class="cmp_notification notice" role="alert">
-		{translate key="submission.outdatedVersion"
-			datePublished=$galleyPublication->getData('datePublished')|date_format:$dateFormatLong
-			urlRecentVersion=$parentUrl
-		}
-	</div>
+		<div class="cmp_notification notice" role="alert">
+			{translate key="submission.outdatedVersion"
+				datePublished=$galleyPublication->getData('datePublished')|date_format:$dateFormatLong
+				urlRecentVersion=$parentUrl
+			}
+		</div>
+		{capture assign="htmlUrl"}
+			{url page="article" op="download" path=$article->getBestId()|to_array:'version':$galleyPublication->getId():$galley->getBestGalleyId() inline=true}
+		{/capture}
 	{else}
-	<a href="{url page="article" op="view" path=$article->getBestId()}" class="title">
-		{$galleyPublication->getLocalizedTitle()|escape}
-	</a>
+		<a href="{url page="article" op="view" path=$article->getBestId()}" class="title">
+			{$galleyPublication->getLocalizedTitle()|escape}
+		</a>
+		{capture assign="htmlUrl"}
+			{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}
+		{/capture}
 	{/if}
 
 </header>
 
 <div id="htmlContainer" class="galley_view" style="overflow:visible;-webkit-overflow-scrolling:touch">
-	<iframe id="htmlGalleyFrame" name="htmlFrame" src="{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}" allowfullscreen webkitallowfullscreen></iframe>
+	<iframe id="htmlGalleyFrame" name="htmlFrame" src="{$htmlUrl}" allowfullscreen webkitallowfullscreen></iframe>
 </div>
 {call_hook name="Templates::Common::Footer::PageFooter"}
 

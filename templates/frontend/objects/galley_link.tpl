@@ -35,9 +35,16 @@
 {if $parent instanceOf Issue}
 	{assign var="page" value="issue"}
 	{assign var="parentId" value=$parent->getBestIssueId()}
+	{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
 {else}
 	{assign var="page" value="article"}
 	{assign var="parentId" value=$parent->getBestId()}
+	{* Get a versioned link if we have an older publication *}
+	{if $publication && $publication->getId() !== $parent->getCurrentPublication()->getId()}
+		{assign var="path" value=$parentId|to_array:"version":$publication->getId():$galley->getBestGalleyId()}
+	{else}
+		{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
+	{/if}
 {/if}
 
 {* Get user access flag *}
@@ -50,7 +57,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="btn galley-link {if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}">
+<a class="btn galley-link {if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}" {if $labelledBy} aria-labelledby={$labelledBy}{/if}>
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}
