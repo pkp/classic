@@ -11,7 +11,7 @@
 
 <main class="page navigation-item-content">
 	<div class="container-fluid container-page container-narrow">
-		<h1 class="page_title">{$title|escape}</h1>
+		<h1 class="page_title text-center">{$title|escape}</h1>
 		{$content}
 	</div>
 </main>

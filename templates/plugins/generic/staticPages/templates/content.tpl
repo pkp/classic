@@ -11,7 +11,7 @@
 
 <main class="page static_page">
 	<div class="container-fluid container-page container-narrow">
-		<h2>{$title|escape}</h2>
+		<h1 class="page_title text-center">{$title|escape}</h1>
 		{$content}
 	</div>
 </main>
