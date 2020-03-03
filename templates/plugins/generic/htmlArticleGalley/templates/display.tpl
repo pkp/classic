@@ -18,8 +18,10 @@
 {* Header wrapper *}
 <header class="header_view">
 
-	<a href="{url page="article" op="view" path=$article->getBestId()}" class="return">
-		<span class="pkp_screen_reader">
+	{capture assign="articleUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+
+	<a href="{$articleUrl}" class="return">
+		<span class="sr-only">
 			{translate key="article.return"}
 		</span>
 	</a>
@@ -27,7 +29,7 @@
 		<div class="cmp_notification notice" role="alert">
 			{translate key="submission.outdatedVersion"
 				datePublished=$galleyPublication->getData('datePublished')|date_format:$dateFormatLong
-				urlRecentVersion=$parentUrl
+				urlRecentVersion=$articleUrl
 			}
 		</div>
 		{capture assign="htmlUrl"}
