@@ -16,16 +16,16 @@
     var modal = document.getElementById('modal-on-small');
     var btn = document.getElementById("show-modal");
     var span = document.getElementById("close-small-modal");
-    
+
     if ((btn && span && modal) !== null) {
 	    btn.onclick = function () {
 		    modal.classList.remove('hide');
 	    };
-	
+
 	    span.onclick = function () {
 		    modal.classList.add('hide');
 	    };
-	
+
 	    // Close the menu when user clicks outside it
 	    window.onclick = function (event) {
 		    if (event.target == modal) {
@@ -37,22 +37,65 @@
 
 // initiating tag-it
 
-$(document).ready(function() {
-    $("#tagitInput").tagit();
+$("#tagitInput").each(function() {
+	var autocomplete_url = $(this).data("autocomplete-url");
+	$(this).tagit({
+		fieldName: $(this).data("field-name"),
+		allowSpaces: false,
+		autocomplete: {
+			source: function(request, response) {
+				$.ajax({
+					url: autocomplete_url,
+					data: {term: request.term},
+					dataType: "json",
+					success: function(jsonData) {
+						if (jsonData.status === true) {
+							response(jsonData.content);
+						}
+					}
+				});
+			}
+		}
+	});
 });
 
 (function () {
-    var checkbox = document.getElementById("checkbox-reviewer-interests");
-    if (checkbox != null) {
-        checkbox.onclick = function () {
-            var tagitInput = document.getElementById("reviewerInterests");
-            if (checkbox.checked == true) {
-                tagitInput.classList.remove("hidden");
-            } else {
-                tagitInput.classList.add("hidden");
-            }
-        }
-    }
+	/**
+	 * Determine if the user has opted to register as a reviewer
+	 *
+	 * @see: /templates/frontend/pages/userRegister.tpl
+	 */
+	function isReviewerSelected() {
+		var group = $("#reviewerOptinGroup").find("input");
+		var is_checked = false;
+		group.each(function() {
+			if ($(this).is(":checked")) {
+				is_checked = true;
+				return false;
+			}
+		});
+
+		return is_checked;
+	}
+
+	/**
+	 * Reveal the reviewer interests field on the registration form when a
+	 * user has opted to register as a reviewer
+	 *
+	 * @see: /templates/frontend/pages/userRegister.tpl
+	 */
+	function reviewerInterestsToggle() {
+		var is_checked = isReviewerSelected();
+		if (is_checked) {
+			$("#reviewerInterests").removeClass("hidden");
+		} else {
+			$("#reviewerInterests").addClass("hidden");
+		}
+	}
+
+	// Update interests on page load and when the toggled is toggled
+	reviewerInterestsToggle();
+	$("#reviewerOptinGroup input").click(reviewerInterestsToggle);
 })();
 
 // more keywords functionality
@@ -104,7 +147,7 @@ $(document).ready(function () {
 	var articleAbstractBlock = $("#articleAbstractBlock");
 	var articleAbstractBlockChildren = articleAbstractBlock.children();
 	var dataForMobilesMark = "data-for-mobiles";
-	
+
 	// article's blocks in one column for mobiles and two for big screens
 	function reorganizeArticleBlocks() {
 		if (articleMainData !== null && !articleMainData.hasClass(dataForMobilesMark) && window.innerWidth < 768) {
@@ -117,9 +160,9 @@ $(document).ready(function () {
 			articleMainData.removeClass(dataForMobilesMark);
 		}
 	}
-	
+
 	reorganizeArticleBlocks();
-	
+
 	window.addEventListener("resize", function () {
 		reorganizeArticleBlocks();
 	});
@@ -135,7 +178,7 @@ $(document).ready(function () {
 		$('#hide-authors').removeClass("hide");
 		$('.fifth-author .author-delimiter').addClass("show");
 	});
-	
+
 	$('#hide-authors').click(function () {
 		authorViewLimit.addClass("limit-for-mobiles");
 		$('.limit-for-mobiles').removeClass("show-authors");
