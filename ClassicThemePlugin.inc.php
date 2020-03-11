@@ -113,7 +113,7 @@ class ClassicThemePlugin extends ThemePlugin
 	public function loadAdditionalData($hookName, $args) {
 		$smarty = $args[0];
 
-		$request = Application::getRequest();
+		$request = $this->getRequest();
 		$context = $request->getContext();
 
 		if (!defined('SESSION_DISABLE_INIT')) {
