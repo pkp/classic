@@ -405,7 +405,7 @@
 						</ol>
 					{else}
 						<div class="value">
-							{$publication->getData('citationsRaw')|nl2br}
+							{$publication->getData('citationsRaw')|escape|nl2br}
 						</div>
 					{/if}
 				</div>
