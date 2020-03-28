@@ -24,4 +24,7 @@
 	<message key="plugins.themes.classic.register.privacyConsent">نعم، أنا أوافق على أن يتم تجميع بياناتي وحفظها وفقاً لبيان سياسة المجلة:</message>
 	<message key="plugins.themes.classic.register.privacyConsentContext"><![CDATA[The <a href="{$privacyUrl}" target="_blank">بيان سياسة المجلة</a> of {$privacyContextName}.]]></message>
 
-</locale>
+	<message key="plugins.themes.classic.options.journalSummary.disable">لا تعرضه على الصفحة الرئيسية للمجلة.</message>
+	<message key="plugins.themes.classic.options.journalSummary.enable">يظهر على الصفحة الرئيسية للمجلة.</message>
+	
+	</locale>
