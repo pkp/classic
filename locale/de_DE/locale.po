@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-22T16:12:30+00:00\n"
+"PO-Revision-Date: 2020-04-22T16:12:30+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.classic.name"
+msgstr "Classic-Thema"
+
+msgid "plugins.themes.classic.description"
+msgstr "Das Thema für OJS 3"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Hauptfarbe"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Die Hauptfarbe des Themas wechseln"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menü"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Beschreibung der Ausgabe"
+
+msgid "plugins.themes.classic.more"
+msgstr "Mehr"
+
+msgid "plugins.themes.classic.less"
+msgstr "Weniger"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Komplette Ausgabe"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Inhaltsverzeichnis"
+
+msgid "plugins.themes.classic.close"
+msgstr "Schließen"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografie"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "weitere Informationen"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Seitenzahlen"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Bd"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Nr"

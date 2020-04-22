@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-22T16:13:13+00:00\n"
+"PO-Revision-Date: 2020-04-22T16:13:13+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.classic.name"
+msgstr "Класична тема"
+
+msgid "plugins.themes.classic.description"
+msgstr "Тема для OJS 3"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Основний колір"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Змінити основний колір для цієї теми"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Меню"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Опис випуску"
+
+msgid "plugins.themes.classic.more"
+msgstr "Більше"
+
+msgid "plugins.themes.classic.less"
+msgstr "Менше"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Повний випуск"
+
+msgid "plugins.themes.classic.close"
+msgstr "Закрити"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Біографія"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "більше інформації"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Вип"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "№"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Не показувати на головній сторінці журналу"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Показувати на головній сторінці журналу"

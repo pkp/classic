@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-22T15:43:40+00:00\n"
+"PO-Revision-Date: 2020-04-22T15:43:40+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.classic.name"
+msgstr "Classic Theme"
+
+msgid "plugins.themes.classic.description"
+msgstr "The Theme For OJS 3"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Primary color"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Change primary color of the theme"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menu"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Issue Description"
+
+msgid "plugins.themes.classic.more"
+msgstr "More"
+
+msgid "plugins.themes.classic.less"
+msgstr "Less"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Full Issue"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Table of Contents"
+
+msgid "plugins.themes.classic.close"
+msgstr "Close"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "more info"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Pagination"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "No"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Do not show on the journal's homepage."
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Show on the journal's homepage."
