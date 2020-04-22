@@ -28,7 +28,7 @@
 		     {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"
 		     {else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if}>
 	{elseif $displayPageHeaderTitle && !$displayPageHeaderLogo && is_string($displayPageHeaderTitle)}
-		<div class="journal-logo-text">{$displayPageHeaderTitle}</div>
+		<div class="journal-logo-text">{$displayPageHeaderTitle|escape}</div>
 	{elseif $displayPageHeaderTitle && !$displayPageHeaderLogo && is_array($displayPageHeaderTitle)}
 		<img class="journal-logo" src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}"
 		     alt="{$displayPageHeaderTitle.altText|escape}">
