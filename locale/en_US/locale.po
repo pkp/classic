@@ -15,7 +15,7 @@ msgid "plugins.themes.classic.name"
 msgstr "Classic Theme"
 
 msgid "plugins.themes.classic.description"
-msgstr "The Theme For OJS 3"
+msgstr "An OJS theme that plays on colour and font contrasts based on literary classics’ book design and featuring a starkly contrasting black header and brand coloured-footer."
 
 msgid "plugins.themes.classic.option.primaryColor.label"
 msgstr "Primary color"
