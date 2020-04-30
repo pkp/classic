@@ -10,7 +10,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "ionicons": "^4.2.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui-dist": "^1.12.1",
     "popper.js": "^1.15.0",
     "tag-it": "^2.0.0"
