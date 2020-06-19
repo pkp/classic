@@ -275,10 +275,10 @@
 								{$citation}
 							</div>
 							<div class="citation_formats dropdown">
-								<a class="btn btn-primary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+								<button class="btn btn-primary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 								        aria-expanded="false">
 									{translate key="submission.howToCite.citationFormats"}
-								</a>
+								</button>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-cit">
 									{foreach from=$citationStyles item="citationStyle"}
 										<a
