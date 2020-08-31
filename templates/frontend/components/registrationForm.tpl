@@ -72,7 +72,7 @@
 				<label for="email" class="sr-only">
 					{translate key="user.email"}
 				</label>
-				<input type="text" class="form-control" name="email" id="email" value="{$email|escape}" maxlength="90" placeholder="{translate key="user.email"}" required>
+				<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" maxlength="90" placeholder="{translate key="user.email"}" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group col-sm-12">
