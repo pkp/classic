@@ -8,14 +8,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-04-22T16:13:13+00:00\n"
-"PO-Revision-Date: 2020-04-22T16:13:13+00:00\n"
+"PO-Revision-Date: 2020-06-19T11:50:00+00:00\n"
 "Language: \n"
 
 msgid "plugins.themes.classic.name"
 msgstr "Класична тема"
 
 msgid "plugins.themes.classic.description"
-msgstr "Тема для OJS 3"
+msgstr "Тема OJS, яка грає на кольорових та шрифтових контрастах, заснованих на дизайні книг літературної класики та містить надзвичайно контрастний чорний заголовок та кольоровий колонтитул марки."
 
 msgid "plugins.themes.classic.option.primaryColor.label"
 msgstr "Основний колір"
@@ -54,7 +54,7 @@ msgid "plugins.themes.classic.number-abbr"
 msgstr "№"
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "Не показувати на головній сторінці журналу"
+msgstr "Не показувати на головній сторінці журналу."
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Показувати на головній сторінці журналу"
+msgstr "Показувати на головній сторінці журналу."

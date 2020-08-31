@@ -8,14 +8,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-04-22T16:13:05+00:00\n"
-"PO-Revision-Date: 2020-04-22T16:13:05+00:00\n"
+"PO-Revision-Date: 2020-06-19T11:50:00+00:00\n"
 "Language: \n"
 
 msgid "plugins.themes.classic.name"
 msgstr "Tema Classic"
 
 msgid "plugins.themes.classic.description"
-msgstr "Il tema per OJS 3"
+msgstr "Un tema OJS che gioca su contrasti di colore e carattere basati sul design del libro dei classici letterari e caratterizzato da un'intestazione nera in netto contrasto e da un piè di pagina del marchio."
 
 msgid "plugins.themes.classic.option.primaryColor.label"
 msgstr "Colore primario"
@@ -58,3 +58,9 @@ msgstr "Vol"
 
 msgid "plugins.themes.classic.number-abbr"
 msgstr "N"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Non mostrare sulla homepage del diario."
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Mostra sulla homepage del diario."
