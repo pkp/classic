@@ -39,7 +39,7 @@
 						<label class="pkp_screen_reader" for="query">
 							{translate key="search.searchFor"}
 						</label>
-						<input type="text" id="query" name="query" value="{$query|escape}" class="query form-control" placeholder="{translate|escape key="common.search"}">
+						<input type="search" id="query" name="query" value="{$query|escape}" class="query form-control" placeholder="{translate|escape key="common.search"}">
 					</div>
 				</div>
 
