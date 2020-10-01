@@ -234,29 +234,28 @@
       		{/if}
 
 			{* Keywords *}
-			{if !empty($keywords[$currentLocale])}
+			{assign 'keywords' $publication->getLocalizedData('keywords')}
+			{if !empty($keywords)}
 			<div class="item keywords">
 				{strip}
 				<h3>
 					{translate key="article.subject"}
 				</h3>
 				<ul class="keywords_value">
-					{foreach from=$keywords item=keywordArray}
-						{foreach from=$keywordArray item=keyword key=k}
-							<li class="keyword_item{if $k>4} more-than-five{/if}">
-								<span>{$keyword|escape}</span>{if $k+1 < $keywordArray|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">,</span>{/if}
-							</li>
-						{/foreach}
-						{if $keywordArray|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
-							<a class="more_button" id="more_keywords">
-								{translate key="plugins.themes.classic.more"}
-							</a>
-							<br/>
-							<a class="more_button hide" id="less_keywords">
-								{translate key="plugins.themes.classic.less"}
-							</a>
-						{/if}
+					{foreach from=$keywords key=k item=keyword}
+						<li class="keyword_item{if $k>4} more-than-five{/if}">
+							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">,</span>{/if}
+						</li>
 					{/foreach}
+					{if $keywords|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
+						<a class="more_button" id="more_keywords">
+							{translate key="plugins.themes.classic.more"}
+						</a>
+						<br/>
+						<a class="more_button hide" id="less_keywords">
+							{translate key="plugins.themes.classic.less"}
+						</a>
+					{/if}
 				</ul>
 				{/strip}
 			</div>
