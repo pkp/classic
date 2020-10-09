@@ -60,14 +60,14 @@
 				{if $primaryGalleys}
 					<div class="item galleys">
 						{foreach from=$primaryGalleys item=galley}
-							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+							{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 						{/foreach}
 					</div>
 				{/if}
 				{if $supplementaryGalleys}
 					<div class="item galleys">
 						{foreach from=$supplementaryGalleys item=galley}
-							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
+							{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication galley=$galley isSupplementary="1"}
 						{/foreach}
 					</div>
 				{/if}
@@ -194,7 +194,7 @@
 						<span class="doi_value">
 							<a href="{$doiUrl}">
 								{* maching DOI's (with new and old format) *}
-								{$doiUrl|escape}
+								{$doiUrl}
 							</a>
 						</span>
 					</div>

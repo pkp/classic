@@ -34,7 +34,7 @@
 				<fieldset class="consent">
 					{* Require the user to agree to the terms of the privacy policy *}
 					<div class="fields">
-						{if $currentContext->getSetting('privacyStatement')}
+						{if $currentContext->getData('privacyStatement')}
 							<div class="custom-control custom-checkbox optin optin-privacy">
 								<input type="checkbox" class="custom-control-input" id="privacyConsent" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
 								<label class="custom-control-label" for="privacyConsent">
