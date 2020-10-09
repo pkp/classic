@@ -12,7 +12,7 @@
 <footer class="site-footer">
 	<div class="container-fluid container-footer">
 		{if $hasSidebar}
-			<div class="sidebar_wrapper">
+			<div class="sidebar_wrapper" role="complementary">
 				{call_hook name="Templates::Common::Sidebar"}
 			</div>
 		{/if}
@@ -22,7 +22,7 @@
 					{$pageFooter}
 				</div>
 			{/if}
-			<div class="pkpbrand-wrapper">
+			<div class="pkpbrand-wrapper" role="complementary">
 				<a href="{url page="about" op="aboutThisPublishingSystem"}">
 					<img class="footer-brand-image" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
 				</a>

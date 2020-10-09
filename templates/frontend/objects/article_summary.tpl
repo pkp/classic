@@ -15,7 +15,7 @@
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
 
-{assign var=articlePath value=$article->getBestId()}
+{assign var="articlePath" value=$article->getBestId()}
 
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
@@ -75,7 +75,7 @@
 				{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getCurrentPublication()->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
 					{assign var="hasArticleAccess" value=1}
 				{/if}
-				{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+				{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
 			{/foreach}
 		</div>
 	{/if}
