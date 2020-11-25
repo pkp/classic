@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-27 12:50+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"ca_ES/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Mostrar a la pàgina d'inici de la revista."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "No mostrar a la pàgina d'inici de la revista."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "No"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Paginació"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "més informació"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografia"
+
+msgid "plugins.themes.classic.close"
+msgstr "Tancar"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Taula de continguts"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Número complet"
+
+msgid "plugins.themes.classic.less"
+msgstr "Menys"
+
+msgid "plugins.themes.classic.more"
+msgstr "Més"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Descripció del número"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menú"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Canviar el color principal del tema"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Color principal"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Aquest és un tema d'OJS que juga amb els contrastos de fonts i colors basat "
+"en el disseny de llibres de la literatura clàssica i que presenta un "
+"contrast pronunciat entre la capçalera negra i l'estil acolorit del peu."
+
+msgid "plugins.themes.classic.name"
+msgstr "Tema Classic"
