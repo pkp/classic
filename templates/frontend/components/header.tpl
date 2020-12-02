@@ -11,7 +11,7 @@
 
 {strip}
 	{assign var="showingLogo" value=true}
-	{if $displayPageHeaderTitle && !$displayPageHeaderLogo && is_string($displayPageHeaderTitle)}
+	{if !$displayPageHeaderLogo}
 		{assign var="showingLogo" value=false}
 	{/if}
 
@@ -21,15 +21,12 @@
 {/strip}
 
 {capture assign="journalLogo"}
-	{if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
+	{if $displayPageHeaderLogo}
 		<img class="journal-logo" src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}"
 		     {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"
 		     {else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if}>
-	{elseif $displayPageHeaderTitle && !$displayPageHeaderLogo && is_string($displayPageHeaderTitle)}
+	{elseif $displayPageHeaderTitle}
 		<div class="journal-logo-text">{$displayPageHeaderTitle|escape}</div>
-	{elseif $displayPageHeaderTitle && !$displayPageHeaderLogo && is_array($displayPageHeaderTitle)}
-		<img class="journal-logo" src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}"
-		     alt="{$displayPageHeaderTitle.altText|escape}">
 	{else}
 		<img class="journal-logo" src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}">
 	{/if}
