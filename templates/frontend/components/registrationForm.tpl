@@ -28,14 +28,14 @@
 				<label for="givenName" class="sr-only">
 					{translate key="user.givenName"}
 				</label>
-				<input type="text"  class="form-control" name="givenName" id="givenName" value="{$givenName|escape}" maxlength="255" placeholder="{translate key="user.givenName"}" required>
+				<input type="text"  class="form-control" name="givenName" autocomplete="given-name" id="givenName" value="{$givenName|escape}" maxlength="255" placeholder="{translate key="user.givenName"}" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group middle-name col-sm-12">
 				<label for="familyName" class="sr-only">
 					{translate key="user.middleName"}
 				</label>
-				<input type="text" class="form-control" name="familyName" id="familyName" value="{$familyName|escape}" maxlength="255" placeholder="{translate key="user.familyName"}">
+				<input type="text" class="form-control" name="familyName" autocomplete="family-name" id="familyName" value="{$familyName|escape}" maxlength="255" placeholder="{translate key="user.familyName"}">
 			</div>
 		</div>
 
@@ -72,14 +72,14 @@
 				<label for="email" class="sr-only">
 					{translate key="user.email"}
 				</label>
-				<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" maxlength="90" placeholder="{translate key="user.email"}" required>
+				<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" maxlength="90" placeholder="{translate key="user.email"}" autocomplete="email" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group col-sm-12">
 				<label for="username" class="sr-only">
 					{translate key="user.username"}
 				</label>
-				<input type="text" class="form-control" name="username" id="username" value="{$username|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
+				<input type="text" class="form-control" name="username" id="username" value="{$username|escape}" maxlength="32" placeholder="{translate key="user.username"}" autocomplete="username" required>
 				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 			</div>
 		</div>
