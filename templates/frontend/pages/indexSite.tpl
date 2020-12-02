@@ -23,11 +23,11 @@
 			<h2>
 				{translate key="context.contexts"}
 			</h2>
-			{if $journals->wasEmpty()}
+			{if !$journals|@count}
 				{translate key="site.noJournals"}
 			{else}
 				<div>
-					{iterate from=journals item=journal}
+					{foreach from=$journals item=journal}
 						{capture assign="url"}{url journal=$journal->getPath()}{/capture}
 						{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
 						{assign var="description" value=$journal->getLocalizedDescription()}
@@ -63,7 +63,7 @@
 								</a>
 							</div>
 						</div>
-					{/iterate}
+					{/foreach}
 				</div>
 			{/if}
 		</div>

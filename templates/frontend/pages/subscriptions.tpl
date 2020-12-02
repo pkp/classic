@@ -17,7 +17,7 @@
 		{include file="frontend/components/subscriptionContact.tpl"}
 
 		<a name="subscriptionTypes"></a>
-		{if !$individualSubscriptionTypes->wasEmpty()}
+		{if $individualSubscriptionTypes|@count}
 			<div class="subscriptions_individual">
 				<h3 class="subscriptions-heading"><span>{translate key="about.subscriptions.individual"}</span></h3>
 				<p>{translate key="subscriptions.individualDescription"}</p>
@@ -32,7 +32,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{iterate from=individualSubscriptionTypes item=subscriptionType}
+							{foreach from=$individualSubscriptionTypes item=subscriptionType}
 								<tr>
 									<td>
 										<div class="subscription_name">
@@ -46,7 +46,7 @@
 									<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 									<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 								</tr>
-							{/iterate}
+							{/foreach}
 						</tbody>
 					</table>
 				</div>
@@ -61,7 +61,7 @@
 			</div>
 		{/if}
 
-		{if !$institutionalSubscriptionTypes->wasEmpty()}
+		{if $institutionalSubscriptionTypes|@count}
 			<div class="subscriptions-institutional">
 				<h3 class="subscriptions-heading"><span>{translate key="about.subscriptions.institutional"}</span></h3>
 				<p>{translate key="subscriptions.institutionalDescription"}</p>
@@ -72,7 +72,7 @@
 						<th>{translate key="about.subscriptionTypes.duration"}</th>
 						<th>{translate key="about.subscriptionTypes.cost"}</th>
 					</tr>
-					{iterate from=institutionalSubscriptionTypes item=subscriptionType}
+					{foreach from=$institutionalSubscriptionTypes item=subscriptionType}
 						<tr>
 							<td>
 								<div class="subscription_name">
@@ -86,7 +86,7 @@
 							<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 							<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 						</tr>
-					{/iterate}
+					{/foreach}
 				</table>
 				{if $isUserLoggedIn}
 					<div class="subscriptions_institutional_purchase">
