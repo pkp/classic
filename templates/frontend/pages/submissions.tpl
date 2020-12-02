@@ -37,7 +37,7 @@
 			<div class="submission_checklist submission-item-block">
 				<h2>
 					{translate key="about.submissionPreparationChecklist"}
-					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission" sectionTitleKey="about.submissionPreparationChecklist"}
+					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/submissionChecklist" sectionTitleKey="about.submissionPreparationChecklist"}
 				</h2>
 				<p>{translate key="about.submissionPreparationChecklist.description"}</p>
 				<ul class="submission-checklist-list">
@@ -55,7 +55,7 @@
 		<div class="author_guidelines submission-item-block" id="authorGuidelines">
 			<h2>
 				{translate key="about.authorGuidelines"}
-				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission" sectionTitleKey="about.authorGuidelines"}
+				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/authorGuidelines" sectionTitleKey="about.authorGuidelines"}
 			</h2>
 			{$currentContext->getLocalizedData('authorGuidelines')}
 		</div>
@@ -80,7 +80,7 @@
 			<div class="copyright_notice submission-item-block">
 				<h2>
 					{translate key="about.copyrightNotice"}
-					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="distribution" anchor="license" sectionTitleKey="about.copyrightNotice"}
+					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/authorGuidelines" sectionTitleKey="about.copyrightNotice"}
 				</h2>
 				{$currentContext->getLocalizedData('copyrightNotice')}
 			</div>
@@ -90,7 +90,7 @@
 		<div class="privacy_statement submission-item-block">
 			<h2>
 				{translate key="about.privacyStatement"}
-				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="setup" sectionTitleKey="about.privacyStatement"}
+				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="setup/privacy" sectionTitleKey="about.privacyStatement"}
 			</h2>
 			{$currentContext->getLocalizedData('privacyStatement')}
 		</div>

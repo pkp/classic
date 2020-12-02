@@ -16,7 +16,7 @@
 <main class="page page_information">
 	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/headings.tpl" currentTitleKey=$pageTitle}
-		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="information" sectionTitleKey="manager.website.information"}
+		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="setup/information" sectionTitleKey="manager.website.information"}
 
 		<div class="info-description">
 			{$content}

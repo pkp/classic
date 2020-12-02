@@ -15,7 +15,7 @@
 <main class="page page_announcements">
 	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/headings.tpl" currentTitleKey="announcement.announcements"}
-		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" sectionTitleKey="announcement.announcements"}
+		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" anchor="announcements" sectionTitleKey="announcement.announcements"}
 
 		<div class="announcements-introduction">
 			{$announcementsIntroduction|strip_unsafe_html}
