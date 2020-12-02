@@ -210,6 +210,17 @@
 				{/if}
 			{/foreach}
 
+			{if $categories}
+				<div class="categories">
+					<span class="categories_label">{translate key="category.category"}</span>
+					<ul class="categories">
+						{foreach from=$categories item=category}
+							<li><a href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+			{/if}
+
 			{* Publication & update dates; previous versions *}
 			{if $publication->getData('datePublished')}
         		<p>
