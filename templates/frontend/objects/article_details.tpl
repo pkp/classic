@@ -84,7 +84,13 @@
 								{foreach from=$publication->getData('authors') item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
 										{if $author->getOrcid()}
-											<a class="orcid-image-url" href="{$author->getOrcid()}"><img src="{$baseUrl}/{$orcidImageUrl}"></a>
+											<a class="orcid-image-url" href="{$author->getOrcid()}">
+												{if $orcidIcon}
+													{$orcidIcon}
+												{else}
+													<img src="{$baseUrl}/{$orcidImageUrl}">
+												{/if}
+											</a>
 										{/if}
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
