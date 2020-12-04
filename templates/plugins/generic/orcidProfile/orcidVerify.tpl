@@ -1,8 +1,8 @@
 {**
  * plugins/generic/orcidProfile/templates/orcidVerify.tpl
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2000-2019 John Willinsky
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
  * Copyright (c) 2018-2019 University Library Heidelberg
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
