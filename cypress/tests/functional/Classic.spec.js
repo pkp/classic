@@ -13,15 +13,15 @@ describe('Theme plugin tests', function() {
 	const path = '/' + index + '/' + journalPath;
 
 	const date = new Date();
-	const day = date.getDate().toString();
+	const day = date.getDate() + '';
 	const month = (function() {
-		let numericMonth = date.getMonth() + 1;
-		if ([...numericMonth.toString()].length === 1) {
+		let numericMonth = (date.getMonth() + 1) + '';
+		if ([...numericMonth].length === 1) {
 			numericMonth = '0' + numericMonth;
 		}
 		return numericMonth;
 	})();
-	const year = date.getFullYear().toString();
+	const year = date.getFullYear() + '';
 
 	const user = {
 		'givenName': 'John',
