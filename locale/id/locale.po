@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-15 06:53+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/id_ID/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Tampilkan pada beranda jurnal."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Jangan tampilkan pada beranda jurnal."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "No"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Pengaturan halaman"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "info selengkapnya"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografi"
+
+msgid "plugins.themes.classic.close"
+msgstr "Tutup"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Daftar Isi"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Terbitan Lengkap"
+
+msgid "plugins.themes.classic.less"
+msgstr "Sembunyikan"
+
+msgid "plugins.themes.classic.more"
+msgstr "Selengkapnya"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Deskripsi Terbitan"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menu"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Ubah warna utama tema"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Warna utama"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Satu tema OJS yang menghadirkan kontras warna dan huruf berbasis desain buku "
+"yang benar-benar klasik dan bercirikan header hitam yang sangat kontras "
+"serta footer berbasis brand."
+
+msgid "plugins.themes.classic.name"
+msgstr "Tema Klasik"
