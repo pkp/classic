@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-16 23:53+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
+"plugins/classic/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Vis på tidsskriftets hjemmeside."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Ikke vis på tidsskriftets hjemmeside."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Nei"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Volum"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Paginering"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "mer info"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.classic.close"
+msgstr "Lukk"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Innholdsfortegnelse"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Helt nummer"
+
+msgid "plugins.themes.classic.less"
+msgstr "Mindre"
+
+msgid "plugins.themes.classic.more"
+msgstr "Mer"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Nummerbeskrivelse"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Meny"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Endre temaets primærfarge"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Grunnfarge"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Et OJS-theme som spiller på farge- og skrifttype-kontraster som er basert på "
+"litterære klassikeres bokdesign og med et sterkt kontrasterende sort "
+"sidehode og en slags varemerket sidefot."
+
+msgid "plugins.themes.classic.name"
+msgstr "Klassisk Theme"
