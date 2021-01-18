@@ -60,36 +60,23 @@ class ClassicThemePlugin extends ThemePlugin
 
 		// Styles for HTML galleys
 		$this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.css', array('contexts' => 'htmlGalley'));
-		$this->addStyle(
-			'htmlFont',
-			'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Montserrat:400,400i,700,700i,900,900i',
-			array('baseUrl' => '', 'contexts' => 'htmlGalley')
-		);
+		$this->addStyle('htmlFont', 'less/fonts.less', ['contexts' => 'htmlGalley']);
 
 		$this->addStyle('stylesheet', 'less/import.less');
-		$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
+		$this->modifyStyle('stylesheet', array('addLessVariables' => join("\n", $additionalLessVariables)));
 
 		// Importing JQuery, Popper, Bootstrap, JQuery-ui, tag-it (own instance), and custom theme's javascript
 		$this->addScript('app_js', 'resources/app.min.js');
 
 		// Load icon font Ionicons
-		if (Config::getVar('general', 'enable_cdn')) {
-			$url = 'https://unpkg.com/ionicons@4.2.4/dist/ionicons.js';
-		} else {
-			$url = $this->getRequest()->getBaseUrl() . '/plugins/themes/classic/resources/ionicons.js';
-		}
-
-		$this->addScript('ionicons',
-			$url,
-			array('baseUrl' => ''));
+		$this->addScript(
+			'ionicons',
+			$this->getRequest()->getBaseUrl() . '/plugins/themes/classic/resources/ionicons.js',
+			array('baseUrl' => '')
+		);
 
 		// Adding navigation menu as in OJS 3.1+ we can have custom
 		$this->addMenuArea(array('primary', 'user'));
-
-		$this->addStyle(
-			'fonts',
-			'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Montserrat:400,400i,700,700i,900,900i',
-			array('baseUrl' => ''));
 
 		HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
 		// Check if CSS embedded to the HTML galley
