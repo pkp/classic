@@ -60,7 +60,7 @@ class ClassicThemePlugin extends ThemePlugin
 
 		// Styles for HTML galleys
 		$this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.css', array('contexts' => 'htmlGalley'));
-		$this->addStyle('htmlFont', 'less/fonts.less'. ['contexts' => 'htmlGalley']);
+		$this->addStyle('htmlFont', 'less/fonts.less', ['contexts' => 'htmlGalley']);
 
 		$this->addStyle('stylesheet', 'less/import.less');
 		$this->modifyStyle('stylesheet', array('addLessVariables' => join("\n", $additionalLessVariables)));
