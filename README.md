@@ -74,3 +74,4 @@ For technical question regarding the theme (bugs, enhancements, etc.), please op
 ## License
 This theme is released under the GPL license.
 
+The Cardo and Montserrat fonts are distributed under the terms of the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
