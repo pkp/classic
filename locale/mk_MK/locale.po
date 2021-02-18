@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-05 08:23+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Прикажи на страницата на списанието."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Не прикажувај на страницата од списанието."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Бр"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Вол"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Внесување страници"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "Повеќе инфо"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Био"
+
+msgid "plugins.themes.classic.close"
+msgstr "Затвори"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Содржина"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Целосен број"
+
+msgid "plugins.themes.classic.less"
+msgstr "Помалку"
+
+msgid "plugins.themes.classic.more"
+msgstr "Повеќе"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Опис на бројот"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Мени"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Смени примарна боја и тема"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Примарна боја"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"OJS тема која внесува контрастна боја и фонт врз основа на дизајно од "
+"класична литературна книга и избира јасно контрастно црно заглавие."
+
+msgid "plugins.themes.classic.name"
+msgstr "Класична тема"

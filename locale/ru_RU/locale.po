@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-23 06:29+0000\n"
+"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"ru_RU/>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Показывать на главной странице журнала."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Не показывать на главной странице журнала."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "№"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Том"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Разбивка на страницы"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "больше информации"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Биография"
+
+msgid "plugins.themes.classic.close"
+msgstr "Закрыть"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Содержание"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Полный выпуск"
+
+msgid "plugins.themes.classic.less"
+msgstr "Меньше"
+
+msgid "plugins.themes.classic.more"
+msgstr "Больше"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Описание выпуска"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Меню"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Изменить основной цвет темы"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Основной цвет"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Тема OJS, которая играет на цветовом и шрифтовом контрасте, основанном на "
+"книжном дизайне литературной классики, и отличающаяся высоко контрастным "
+"черным заголовком и нижним колонтитулом заданного цвета."
+
+msgid "plugins.themes.classic.name"
+msgstr "Тема «Классика»"
