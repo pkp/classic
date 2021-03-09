@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-10 18:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Mostrar na páxina de inicio da publicación."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Non mostrar na páxina de inicio da publicación."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Nº"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Paxinación"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "máis información"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografía"
+
+msgid "plugins.themes.classic.close"
+msgstr "Pechar"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Táboa de contidos"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Número completo"
+
+msgid "plugins.themes.classic.less"
+msgstr "Menos"
+
+msgid "plugins.themes.classic.more"
+msgstr "Máis"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Descrición do número"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menú"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Cambia a cor principal do tema"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Cor principal"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Un tema OJS que xoga con contrastes de cores e tipos de letra baseados no "
+"deseño de libros de clásicos literarios e que presenta unha cabeceira negra "
+"e un pé de páxina de cor de marcado contraste."
+
+msgid "plugins.themes.classic.name"
+msgstr "Tema Classic"
