@@ -1,2 +1,36 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-04-01 10:55+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "ძირითადი ფერი"
+
+msgid "plugins.themes.classic.menu"
+msgstr "მენიუ"
+
+msgid "plugins.themes.classic.more"
+msgstr "მეტი"
+
+msgid "plugins.themes.classic.less"
+msgstr "ნაკლები"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "თავფურცელი"
+
+msgid "plugins.themes.classic.close"
+msgstr "დახურვა"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "ნავიგაცია"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "არა"
