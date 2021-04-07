@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 10:55+0000\n"
+"PO-Revision-Date: 2021-04-08 10:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/ka_GE/>\n"
@@ -30,7 +30,40 @@ msgid "plugins.themes.classic.close"
 msgstr "დახურვა"
 
 msgid "plugins.themes.classic.pagination"
-msgstr "ნავიგაცია"
+msgstr "გვერდებად დანომვრა"
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "არა"
+msgstr "ნომერი"
+
+msgid "plugins.themes.classic.name"
+msgstr "თემა Classic"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"OJS თემა, რომელიც თამაშობს ფერთა და შრიფტის კონტრასტებს, ემყარება "
+"ლიტერატურული კლასიკოსების წიგნის დიზაინს და შეიცავს მკვეთრად კონტრასტულ შავ "
+"სათაურს და ფერადი ქვედა კოლონტიტულს."
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "შეცვალეთ თემის ძირითადი ფერი"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "გამოცემის აღწერა"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "სრული ნომერი"
+
+msgid "plugins.themes.classic.biography"
+msgstr "ბიოგრაფია"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "მეტი ინფორმაცია"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "ტომი"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "ჟურნალის მთავარი გვერდზე დამალვა."
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "ჩვენება ჟურნალის მთავარ გვერდზე."
