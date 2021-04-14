@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-04-15 12:55+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"sv_SE/>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Visa på tidskriftens förstasida."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Visa inte på tidskriftens förstasida."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Nummer"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Volym"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Sidnumrering"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "mer information"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografi"
+
+msgid "plugins.themes.classic.close"
+msgstr "Stäng"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Innehållsförteckning"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Helt nummer"
+
+msgid "plugins.themes.classic.less"
+msgstr "MIndre"
+
+msgid "plugins.themes.classic.more"
+msgstr "Mer"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Nummerbeskrivning"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Meny"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Ändra temats grundfärg"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Grundfärg"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Ett OJS tema som har inspirerats av klassisk bokdesign när det gäller färg- "
+"och  teckensnitts kontraster. Det har ett starkt kontrasterande svart "
+"sidhuvud och ett slags varumärkes sidfot."
+
+msgid "plugins.themes.classic.name"
+msgstr "Klassiskt tema"
