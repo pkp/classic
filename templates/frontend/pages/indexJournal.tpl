@@ -26,7 +26,7 @@
 	{if $homepageImage}
 		<div
 			class="homepage_image"
-			style="background: {if $showJournalSummary}linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), {/if}url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}')">
+			style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}'){if $showJournalSummary}, linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)){/if}">
 	{/if}
 
 	{if $showJournalSummary && $currentJournal->getLocalizedDescription()}
