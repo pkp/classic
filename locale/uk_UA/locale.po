@@ -1,10 +1,11 @@
+# Petro Bilous <petrobilous@ukr.net>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:13:13+00:00\n"
-"PO-Revision-Date: 2020-10-21 11:38+0000\n"
-"Last-Translator: Manuel Garcia <usuariodemanuel@gmail.com>\n"
+"PO-Revision-Date: 2022-02-22 11:06+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/uk_UA/>\n"
 "Language: uk_UA\n"
@@ -65,3 +66,9 @@ msgstr "Не показувати на головній сторінці жур�
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Показувати на головній сторінці журналу."
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Зміст"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Нумерація сторінок"
