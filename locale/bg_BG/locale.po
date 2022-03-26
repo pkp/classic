@@ -1,8 +1,70 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-03-27 15:57+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/bg_BG/>\n"
 "Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Да  се показва на началната страница на списанието."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Да не се показва на началната страница на списанието."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Брой"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Том"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "На страници"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "повече информация"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Биография"
+
+msgid "plugins.themes.classic.close"
+msgstr "Затваряне"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Съдържание"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Пълния брой"
+
+msgid "plugins.themes.classic.less"
+msgstr "По-малко"
+
+msgid "plugins.themes.classic.more"
+msgstr "Повече"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Описание на броя"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Меню"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Промяна на основния цвят на темата"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Основен цвят"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Тема на OJS, която е съобразена с контрастите на цветовете и шрифта, "
+"базирана на дизайна на книгата на литературните класики и включваща рязко "
+"контрастиращо черно заглавие и долен колонтитул в цвят на марката."
+
+msgid "plugins.themes.classic.name"
+msgstr "Класическа тема"
