@@ -1,8 +1,70 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-06-09 04:39+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/"
+"plugins/classic/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Mostrar en la página principal de la revista."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "No mostrar en la página principal de la revista."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "No"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Paginación"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "más información"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografía"
+
+msgid "plugins.themes.classic.close"
+msgstr "Cerrar"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Tabla de Contenidos"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Publicación completa"
+
+msgid "plugins.themes.classic.less"
+msgstr "Menos"
+
+msgid "plugins.themes.classic.more"
+msgstr "Más"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Descripción de la publicación"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menú"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Cambiar color principal del tema"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Color principal"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Un tema de OJS que juega con los contrastes de color y fuente, basado en el "
+"diseño de los libros de los clásicos literarios y que presenta una cabecera "
+"negra de marcado contraste y un pie de página de color."
+
+msgid "plugins.themes.classic.name"
+msgstr "Tema Classic"
