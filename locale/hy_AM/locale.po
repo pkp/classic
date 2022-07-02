@@ -1,8 +1,71 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-03 05:31+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Ցուցադրեք ամսագրի գլխավոր էջում:"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Մի ցուցադրեք ամսագրի գլխավոր էջում:"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Հմր"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Հատոր"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Էջակալում"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "ավելի տեղեկատվություն"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Կենսագրություն"
+
+msgid "plugins.themes.classic.close"
+msgstr "Փակել"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Բովանդակություն"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Ամբողջական թողարկում"
+
+msgid "plugins.themes.classic.less"
+msgstr "Պակաս"
+
+msgid "plugins.themes.classic.more"
+msgstr "Ավելին"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Թողարկման նկարագրություն"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Ընտրացանկ"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Փոխեք թեմայի հիմնական գույնը"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Հիմնական գույն"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"OJS թեմա, որը խաղում է գույների և տառատեսակների հակադրությունների հետ՝ "
+"հիմնված գրական դասականների գրքերի ձևավորման վրա և առանձնանում է խիստ "
+"հակադրվող սև վերնախորագրով և գունավորված տողատակով:"
+
+msgid "plugins.themes.classic.name"
+msgstr "Թեմա Դասական"
