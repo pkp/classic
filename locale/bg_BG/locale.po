@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-27 15:57+0000\n"
+"PO-Revision-Date: 2022-08-18 15:33+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/bg_BG/>\n"
@@ -10,10 +10,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Да  се показва на началната страница на списанието."
+msgstr "Да се показва на началната страница на списанието."
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
 msgstr "Да не се показва на началната страница на списанието."
