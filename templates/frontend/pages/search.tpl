@@ -25,6 +25,7 @@
 		{include file="frontend/components/headings.tpl" currentTitleKey="common.search"}
 
 		{capture name="searchFormUrl"}{url op="search" escape=false}{/capture}
+		{assign var=formUrlParameters value=[]}{* Prevent Smarty warning *}
 		{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
 		<div class="row">
 			<form class="cmp_form col-sm-10 offset-sm-1 col-md-8 offset-md-2" method="get" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}">
