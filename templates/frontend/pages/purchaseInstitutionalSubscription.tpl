@@ -37,7 +37,7 @@
 						<div class="col-sm-8">
 							<select class="form-control" name="typeId" id="typeId" required>
 								{foreach name=types from=$subscriptionTypes item=subscriptionType}
-									<option class="choose-subscription" value="{$subscriptionType->getId()}"{if $typeId == $subscriptionType->getId()} selected{/if}>{$subscriptionType->getLocalizedName()|escape}</option>
+									<option class="choose-subscription" value="{$subscriptionType->getId()}"{if $typeId == $subscriptionType->getId()} selected{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 								{/foreach}
 							</select>
 							<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
