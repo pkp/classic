@@ -107,7 +107,18 @@
 }
 
 #languageNav .show #languageToggleMenulanguageNav {
-	color: @primary-colour;
+	color: @secondary-colour;
+}
+
+#languageToggleMenulanguageNav {
+	&:hover {
+		background-color: inherit;
+		color: @secondary-colour;
+	}
+
+	&:focus {
+		color: @secondary-colour;
+	}
 }
 
 .task_count {
