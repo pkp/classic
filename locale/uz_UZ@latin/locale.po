@@ -1,0 +1,71 @@
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-11-16 05:02+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Asosiy rang"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Adabiy klassiklar kitobi dizayniga asoslangan rang va shrift kontrastlarida "
+"oʻynaydigan OJS mavzusi va qora rangdagi sarlavha va brend rangli altbilgisi "
+"keskin qarama-qarshi."
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Muammo tavsifi"
+
+msgid "plugins.themes.classic.close"
+msgstr "Yopish"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.classic.less"
+msgstr "Kamroq"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Dizaynning asosiy rangini o'zgartiring"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "qo'shimcha ma'lumot"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Jurnalning bosh sahifasida ko'rsatilmasin."
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Sahifalar"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Jild"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Yo'q"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menyu"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Toʻliq son"
+
+msgid "plugins.themes.classic.more"
+msgstr "Ko'proq"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Jurnalning bosh sahifasida ko'rsating."
+
+msgid "plugins.themes.classic.name"
+msgstr "Klassik dizayn"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Mundarija"
