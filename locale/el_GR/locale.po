@@ -1,0 +1,70 @@
+# Manolis Saldaris <omanos@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-27 10:57+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Να εμφανίζεται στην αρχική σελίδα του περιοδικού."
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Να μην εμφανίζεται στην αρχική σελίδα του περιοδικού."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Αρ"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Τόμος"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Σελιδοποίηση"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "περισσότερες πληροφορίες"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Βιογραφικό"
+
+msgid "plugins.themes.classic.close"
+msgstr "Κλείσιμο"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Πίνακας Περιεχομένων"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Πλήρες Τεύχος"
+
+msgid "plugins.themes.classic.less"
+msgstr "Λιγότερα"
+
+msgid "plugins.themes.classic.more"
+msgstr "Περισσότερα"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Περιγραφή Τεύχους"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Μενού"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Αλλαγή του κύριου χρώματος του θέματος"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Κύριο χρώμα"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Ένα θέμα OJS που παίζει με τις αντιθέσεις χρωμάτων και γραμματοσειρών που "
+"βασίζεται στο σχέδιο βιβλίων των κλασικών λογοτεχνιών και διαθέτει μια "
+"έντονη μαύρη κεφαλίδα με έντονη αντίθεση και έγχρωμο υποσέλιδο επωνυμίας."
+
+msgid "plugins.themes.classic.name"
+msgstr "Κλασικό Θέμα"

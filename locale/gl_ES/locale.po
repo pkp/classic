@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-15 12:55+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
-"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"sv_SE/>\n"
-"Language: sv_SE\n"
+"PO-Revision-Date: 2021-03-10 18:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/gl_ES/>\n"
+"Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,58 +12,58 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Visa på tidskriftens förstasida."
+msgstr "Mostrar na páxina de inicio da publicación."
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "Visa inte på tidskriftens förstasida."
+msgstr "Non mostrar na páxina de inicio da publicación."
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "Nummer"
+msgstr "Nº"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Volym"
+msgstr "Vol"
 
 msgid "plugins.themes.classic.pagination"
-msgstr "Sidnumrering"
+msgstr "Paxinación"
 
 msgid "plugins.themes.classic.more-info"
-msgstr "mer information"
+msgstr "máis información"
 
 msgid "plugins.themes.classic.biography"
-msgstr "Biografi"
+msgstr "Biografía"
 
 msgid "plugins.themes.classic.close"
-msgstr "Stäng"
+msgstr "Pechar"
 
 msgid "plugins.themes.classic.tableOfContents"
-msgstr "Innehållsförteckning"
+msgstr "Táboa de contidos"
 
 msgid "plugins.themes.classic.fullIssue"
-msgstr "Helt nummer"
+msgstr "Número completo"
 
 msgid "plugins.themes.classic.less"
-msgstr "MIndre"
+msgstr "Menos"
 
 msgid "plugins.themes.classic.more"
-msgstr "Mer"
+msgstr "Máis"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Nummerbeskrivning"
+msgstr "Descrición do número"
 
 msgid "plugins.themes.classic.menu"
-msgstr "Meny"
+msgstr "Menú"
 
 msgid "plugins.themes.classic.option.primaryColor.description"
-msgstr "Ändra temats grundfärg"
+msgstr "Cambia a cor principal do tema"
 
 msgid "plugins.themes.classic.option.primaryColor.label"
-msgstr "Grundfärg"
+msgstr "Cor principal"
 
 msgid "plugins.themes.classic.description"
 msgstr ""
-"Ett OJS tema som har inspirerats av klassisk bokdesign när det gäller färg- "
-"och  teckensnitts kontraster. Det har ett starkt kontrasterande svart "
-"sidhuvud och ett slags varumärkes sidfot."
+"Un tema OJS que xoga con contrastes de cores e tipos de letra baseados no "
+"deseño de libros de clásicos literarios e que presenta unha cabeceira negra "
+"e un pé de páxina de cor de marcado contraste."
 
 msgid "plugins.themes.classic.name"
-msgstr "Klassiskt tema"
+msgstr "Tema Classic"

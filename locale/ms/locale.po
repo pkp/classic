@@ -1,69 +1,70 @@
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-15 12:55+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
-"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"sv_SE/>\n"
-"Language: sv_SE\n"
+"PO-Revision-Date: 2021-10-04 16:06+0000\n"
+"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"ms/>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Visa på tidskriftens förstasida."
+msgstr "Tunjukkan di laman utama jurnal."
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "Visa inte på tidskriftens förstasida."
+msgstr "Jangan tunjukkan di laman utama jurnal."
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "Nummer"
+msgstr "Tidak"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Volym"
+msgstr "Vol"
 
 msgid "plugins.themes.classic.pagination"
-msgstr "Sidnumrering"
+msgstr "Penomboran"
 
 msgid "plugins.themes.classic.more-info"
-msgstr "mer information"
+msgstr "maklumat lanjut"
 
 msgid "plugins.themes.classic.biography"
-msgstr "Biografi"
+msgstr "Bio"
 
 msgid "plugins.themes.classic.close"
-msgstr "Stäng"
+msgstr "Tutup"
 
 msgid "plugins.themes.classic.tableOfContents"
-msgstr "Innehållsförteckning"
+msgstr "Isi kandungan"
 
 msgid "plugins.themes.classic.fullIssue"
-msgstr "Helt nummer"
+msgstr "Isu Penuh"
 
 msgid "plugins.themes.classic.less"
-msgstr "MIndre"
+msgstr "Kurang"
 
 msgid "plugins.themes.classic.more"
-msgstr "Mer"
+msgstr "lebih lagi"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Nummerbeskrivning"
+msgstr "Butiran Isu"
 
 msgid "plugins.themes.classic.menu"
-msgstr "Meny"
+msgstr "Menu"
 
 msgid "plugins.themes.classic.option.primaryColor.description"
-msgstr "Ändra temats grundfärg"
+msgstr "Tukar warna utama tema"
 
 msgid "plugins.themes.classic.option.primaryColor.label"
-msgstr "Grundfärg"
+msgstr "Warna primer"
 
 msgid "plugins.themes.classic.description"
 msgstr ""
-"Ett OJS tema som har inspirerats av klassisk bokdesign när det gäller färg- "
-"och  teckensnitts kontraster. Det har ett starkt kontrasterande svart "
-"sidhuvud och ett slags varumärkes sidfot."
+"Tema OJS yang berbeza dengan warna dan fon berdasarkan reka bentuk buku "
+"klasik sastera dan menampilkan tajuk hitam dan jenama berwarna yang sangat "
+"berbeza."
 
 msgid "plugins.themes.classic.name"
-msgstr "Klassiskt tema"
+msgstr "Tema Klasik"
