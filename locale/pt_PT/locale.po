@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-11-23 18:02+0000\n"
-"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"Last-Translator: Patricia M. <pmangahi@sfu.ca>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "plugins/classic/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -47,10 +47,10 @@ msgid "plugins.themes.classic.pagination"
 msgstr "Paginação"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Volume"
+msgstr "Vol"
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "Número"
+msgstr "Nº"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Mostrar na página principal da revista."
