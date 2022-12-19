@@ -217,12 +217,12 @@ class ClassicThemePlugin extends ThemePlugin
         // Retun false if not an article page
         if ($template !== 'frontend/pages/article.tpl') return false;
 
-        $articleArrays = $templateMgr->getTemplateVars('article');
+        $publication = $templateMgr->getTemplateVars('article'); /** @var $publication \APP\publication\Publication */
 
         // Check if there is additional info on any of authors
         $boolAuthorInfo = false;
-        foreach ($articleArrays->getAuthors() as $author) {
-            if ($author->getLocalizedAffiliation() || $author->getLocalizedBiography()) {
+        foreach ($publication->getData('authors') as $author) {
+            if ($author->getLocalizedData('affiliation') || $author->getLocalizedData('biography')) {
                 $boolAuthorInfo = true;
                 break;
             }
