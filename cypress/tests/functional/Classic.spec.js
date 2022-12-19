@@ -94,7 +94,8 @@ describe('Theme plugin tests', function() {
 
 	it('Checks category pages & publication versioning', function() {
 		cy.login('admin', 'admin', journalPath);
-		cy.visit(path + '/management/settings/context#categories');
+		cy.visit(path + '/management/settings/context');
+		cy.get('button').contains('Categories').click();
 		cy.get('#categoriesContainer a').contains('Add Category').click();
 		cy.wait(2000);
 		cy.get('input[name="name[en_US]"]').type('First category', {delay: 0});
@@ -103,7 +104,8 @@ describe('Theme plugin tests', function() {
 			cy.setTinyMceContent(node.attr('id'), categoryDescription);
 		});
 		cy.get('#categoryDetails [id^="submitFormButton"]').click();
-		cy.visit(path + '/workflow/index/1/5#publication');
+		cy.visit(path + '/workflow/index/1/5');
+		cy.get('button').contains('Publication').click();
 		cy.get('.pkpButton').contains('Create New Version').click();
 		cy.get('#modals-container .pkpButton').contains('Yes').click();
 		cy.wait(2000); // wait for a new version init
