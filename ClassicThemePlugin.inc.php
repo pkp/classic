@@ -63,7 +63,7 @@ class ClassicThemePlugin extends ThemePlugin
         $this->addStyle('app_css', 'resources/app.min.css');
 
         // Styles for HTML galleys
-        $this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.css', array('contexts' => 'htmlGalley'));
+        $this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.less', array('contexts' => 'htmlGalley'));
         $this->addStyle('htmlFont', 'less/fonts.less', ['contexts' => 'htmlGalley']);
 
         $this->addStyle('stylesheet', 'less/import.less');
@@ -83,8 +83,6 @@ class ClassicThemePlugin extends ThemePlugin
         $this->addMenuArea(array('primary', 'user'));
 
         HookRegistry::register('TemplateManager::display', array($this, 'loadAdditionalData'));
-        // Check if CSS embedded to the HTML galley
-        HookRegistry::register('TemplateManager::display', array($this, 'hasEmbeddedCSS'));
         // Get additional issue data to the issue page
         HookRegistry::register('TemplateManager::display', array($this, 'loadIssueData'));
         // Check whether authors have additional info
@@ -126,48 +124,6 @@ class ClassicThemePlugin extends ThemePlugin
                 'orcidImageUrl' => $orcidImageUrl,
             ));
         }
-    }
-
-    public function hasEmbeddedCSS($hookName, $args)
-    {
-        $templateMgr = $args[0];
-        $template = $args[1];
-        $request = $this->getRequest();
-
-        // Retun false if not a galley page
-        if ($template !== 'plugins/plugins/generic/htmlArticleGalley/generic/htmlArticleGalley:display.tpl') return false;
-
-        $articleArrays = $templateMgr->getTemplateVars('article');
-
-        // Default styling for HTML galley
-        $boolEmbeddedCss = false;
-        foreach ($articleArrays->getGalleys() as $galley) {
-            if ($galley->getFileType() === 'text/html') {
-                $submissionFile = $galley->getFile();
-
-                $embeddableFiles = Repo::submissionFile()->getCollector()
-                    ->filterByAssoc(
-                        PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
-                        [$submissionFile->getId()]
-                    )
-                    ->filterBySubmissionIds([$submissionFile->getData('submissionId')])
-                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT, SubmissionFile::SUBMISSION_FILE_PROOF])
-                    ->includeDependentFiles()
-                    ->getMany();
-
-                foreach ($embeddableFiles as $embeddableFile) {
-                    if ($embeddableFile->getFileType() == 'text/css') {
-                        $boolEmbeddedCss = true;
-                    }
-                }
-            }
-
-        }
-
-        $templateMgr->assign(array(
-            'boolEmbeddedCss' => $boolEmbeddedCss,
-            'themePath' => $request->getBaseUrl() . "/" . $this->getPluginPath(),
-        ));
     }
 
     public function loadIssueData($hookName, $args)
