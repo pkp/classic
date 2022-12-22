@@ -155,6 +155,7 @@ describe('Theme plugin tests', function() {
 		cy.get('button[type="submit"]').click();
 		cy.get('.search_results').children().should('have.length', 1);
 		cy.get('.article_summary').first().click();
+		cy.waitJQuery();
 		cy.get('.article-full-title').contains(
 			'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran'
 		);
