@@ -64,3 +64,6 @@ msgstr "Do not show on the journal's homepage."
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Show on the journal's homepage."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Change the language. The current language is:"

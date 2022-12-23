@@ -16,7 +16,7 @@
 	<ul id="{$id|escape}" class="dropdown language-toggle nav nav-tabs">
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" id="languageToggleMenu{$id|escape}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="sr-only">{translate key="plugins.themes.healthSciences.language.toggle"}</span>
+				<span class="sr-only">{translate key="plugins.themes.classic.language.toggle"}</span>
 				{$languageToggleLocales[$currentLocale]|escape}
 			</a>
 
