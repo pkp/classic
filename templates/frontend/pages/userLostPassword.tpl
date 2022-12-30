@@ -34,7 +34,7 @@
 
 				<div class="row">
 					<div class="form-group col-md-6 offset-md-3">
-						<label for="email" class="sr-only">{translate key="user.login.registeredEmail"}</label>
+						<label for="email" class="visually-hidden">{translate key="user.login.registeredEmail"}</label>
 						<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" placeholder="{translate key="user.login.registeredEmail"}" required>
 						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 					</div>

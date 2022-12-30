@@ -81,7 +81,8 @@
 					<div class="authors_info">
 						<ul class="entry_authors_list">
 							{strip}
-								{foreach from=$publication->getData('authors') item=author key=authorNumber}
+								{assign var="authors" value=$publication->getData('authors')->toArray()|array_values}
+								{foreach from=$authors item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
 										{if $author->getData('rorId')}
 											<a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
@@ -98,12 +99,12 @@
 										<span class="name_wrapper">
 											{$author->getFullName()|escape}
 										</span>
-										{if $authorNumber+1 !== $publication->getData('authors')|@count}
+										{if $authorNumber+1 !== $publication->getData('authors')|count}
 											<span class="author-delimiter">, </span>
 										{/if}
 									</li>
 								{/foreach}
-								{if $publication->getData('authors')|@count > 4}
+								{if $publication->getData('authors')|count > 5}
 									<span class="collapse-authors" id="show-all-authors"><ion-icon name="add-circle"></ion-icon></span>
 									<span class="collapse-authors hide" id="hide-authors"><ion-icon name="remove-circle"></ion-icon></ion-icon></span>
 								{/if}
@@ -112,48 +113,48 @@
 					</div>
 					<div class="additional-authors-info">
 						{if $boolAuthorInfo}
-							<a class="more-authors-info-button" id="collapseButton" data-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
+							<a class="more-authors-info-button" id="collapseButton" data-bs-toggle="collapse" href="#authorInfoCollapse" role="button" aria-expanded="false" aria-controls="authorInfoCollapse">
 								<ion-icon name="add" class="ion_icon" id="more-authors-data-symbol"></ion-icon>
 								<ion-icon name="remove" class="ion_icon hide" id="less-authors-data-symbol"></ion-icon>
 								<span class="ion-icon-text">{translate key="plugins.themes.classic.more-info"}</span>
 							</a>
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
-							{foreach from=$publication->getData('authors') item=author key=number}
-								<div class="additional-author-block">
-									{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
+							{foreach from=$authors item=author key=number}
+								{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
+									<div class="additional-author-block">
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
-									{/if}
-									{if $author->getLocalizedAffiliation()}
-										<br/>
-										<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
-									{/if}
-									{if $author->getLocalizedBiography()}
-										<br/>
-										<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio-{$number}">
-											{translate key="plugins.themes.classic.biography"}
-										</a>
-										{* author's biography *}
-										<div class="modal fade" id="modalAuthorBio-{$number}" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="modalAuthorBioTitle">{translate key="submission.authorBiography"}</h5>
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
-													</div>
-													<div class="modal-body">
-														{$author->getLocalizedBiography()|strip_unsafe_html}
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
+										{if $author->getLocalizedAffiliation()}
+											<br/>
+											<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
+										{/if}
+										{if $author->getLocalizedBiography()}
+											<br/>
+											<a class="more_button" data-toggle="modal" data-target="#modalAuthorBio-{$number}">
+												{translate key="plugins.themes.classic.biography"}
+											</a>
+											{* author's biography *}
+											<div class="modal fade" id="modalAuthorBio-{$number}" tabindex="-1" role="dialog" aria-labelledby="modalAuthorBioTitle" aria-hidden="true">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="modalAuthorBioTitle">{translate key="submission.authorBiography"}</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+															{$author->getLocalizedBiography()|strip_unsafe_html}
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-primary" data-dismiss="modal">{translate key="plugins.themes.classic.close"}</button>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-									{/if}
-								</div>
+										{/if}
+									</div>
+								{/if}
 							{/foreach}
 						</div>
 					</div>
@@ -294,7 +295,7 @@
 								{$citation}
 							</div>
 							<div class="citation_formats dropdown">
-								<button class="btn btn-primary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+								<button class="btn btn-primary" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true"
 								        aria-expanded="false">
 									{translate key="submission.howToCite.citationFormats"}
 								</button>

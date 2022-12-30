@@ -17,7 +17,7 @@
 		<div class="pdf-return-article">
 			<a href="{$parentUrl}" class="back-button{if !$isLatestPublication} back-button_outdated{/if}">
 				←
-				<span class="sr-only">
+				<span class="visually-hidden">
 					{if $parent instanceOf Issue}
 						{translate key="issue.return"}
 					{else}
