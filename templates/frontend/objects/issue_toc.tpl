@@ -67,7 +67,7 @@
 {* Full-issue galleys *}
 {if $issueGalleys}
 	<section class="galleys">
-		<h4 class="sr-only">
+		<h4 class="visually-hidden">
 			{translate key="issue.tableOfContents"}
 		</h4>
 		<ul class="galleys_links">
@@ -82,7 +82,7 @@
 
 {* Articles *}
 <section class="sections">
-	<h3 class="sr-only">
+	<h3 class="visually-hidden">
 		{translate key="issue.toc"}
 	</h3>
 	{foreach name=sections from=$publishedSubmissions item=section}

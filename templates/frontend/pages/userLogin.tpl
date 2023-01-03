@@ -41,7 +41,7 @@
 			<fieldset class="fields">
 				<div class="row">
 					<div class="form-group col-md-6 offset-md-3">
-						<label for="username" class="sr-only">
+						<label for="username" class="visually-hidden">
 							{translate key="user.username"}
 						</label>
 						<input type="text" class="form-control" name="username" id="username" value="{$username|default:""|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
@@ -49,7 +49,7 @@
 					</div>
 
 					<div class="form-group col-md-6 offset-md-3">
-						<label for="password" class="sr-only">
+						<label for="password" class="visually-hidden">
 							{translate key="user.password"}
 						</label>
 						<input type="password" class="form-control" name="password" id="password" value="{$password|default:""|escape}" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>

@@ -20,7 +20,7 @@
 	{capture assign="articleUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
 
 	<a href="{$articleUrl}" class="return">
-		<span class="sr-only">
+		<span class="visually-hidden">
 			{translate key="article.return"}
 		</span>
 	</a>

@@ -173,7 +173,7 @@ class ClassicThemePlugin extends ThemePlugin
         // Retun false if not an article page
         if ($template !== 'frontend/pages/article.tpl') return false;
 
-        $publication = $templateMgr->getTemplateVars('article'); /** @var $publication \APP\publication\Publication */
+        $publication = $templateMgr->getTemplateVars('publication'); /** @var $publication \APP\publication\Publication */
 
         // Check if there is additional info on any of authors
         $boolAuthorInfo = false;

@@ -19,9 +19,9 @@
 				{assign var=navItemType value=$navigationMenuItemAssignment->navigationMenuItem->getType()|escape}
 				<li class="{$liClass|escape} nav-item dropdown">
 					<a{if $navItemType === "NMI_TYPE_USER_DASHBOARD"} id="user-dashboard-link"{/if}
-							class="nav-link dropdown-toggle{if !($languageToggleLocales && $languageToggleLocales|@count > 1)} locales-toogle-off{/if}"
+							class="nav-link dropdown-toggle{if !($languageToggleLocales && $languageToggleLocales|@count > 1)} locales-toggle-off{/if}"
 							href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
 					</a>
 					<div class="navigation-dropdown dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

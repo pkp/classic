@@ -13,69 +13,36 @@
  * We want to treat it like a typical modal
  */
 (function () {
-    var modal = document.getElementById('modal-on-small');
-    var btn = document.getElementById("show-modal");
-    var span = document.getElementById("close-small-modal");
+	var modal = document.getElementById('modal-on-small');
+	var btn = document.getElementById("show-modal");
+	var span = document.getElementById("close-small-modal");
 
-    if ((btn && span && modal) !== null) {
-	    btn.onclick = function () {
-		    modal.classList.remove('hide');
-	    };
+	if ((btn && span && modal) !== null) {
+		btn.onclick = function () {
+			modal.classList.remove('hide');
+		};
 
-	    span.onclick = function () {
-		    modal.classList.add('hide');
-	    };
+		span.onclick = function () {
+			modal.classList.add('hide');
+		};
 
-	    // Close the menu when user clicks outside it
-	    window.onclick = function (event) {
-		    if (event.target == modal) {
-			    modal.classList.add('hide');
-		    }
-	    }
-    }
+		// Close the menu when user clicks outside it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.classList.add('hide');
+			}
+		};
+	}
 })();
 
-// initiating tag-it
+(function() {
+	if (!document.querySelector('main.page_register')) {
+		return;
+	}
 
-$("#tagitInput").each(function() {
-	var autocomplete_url = $(this).data("autocomplete-url");
-	$(this).tagit({
-		fieldName: $(this).data("field-name"),
-		allowSpaces: false,
-		autocomplete: {
-			source: function(request, response) {
-				$.ajax({
-					url: autocomplete_url,
-					data: {term: request.term},
-					dataType: "json",
-					success: function(jsonData) {
-						if (jsonData.status === true) {
-							response(jsonData.content);
-						}
-					}
-				});
-			}
-		}
-	});
-});
-
-(function () {
-	/**
-	 * Determine if the user has opted to register as a reviewer
-	 *
-	 * @see: /templates/frontend/pages/userRegister.tpl
-	 */
-	function isReviewerSelected() {
-		var group = $("#reviewerOptinGroup").find("input");
-		var is_checked = false;
-		group.each(function() {
-			if ($(this).is(":checked")) {
-				is_checked = true;
-				return false;
-			}
-		});
-
-		return is_checked;
+	const checkboxReviewerInterests = document.getElementById('checkbox-reviewer-interests');
+	if (!checkboxReviewerInterests) {
+		return;
 	}
 
 	/**
@@ -85,79 +52,109 @@ $("#tagitInput").each(function() {
 	 * @see: /templates/frontend/pages/userRegister.tpl
 	 */
 	function reviewerInterestsToggle() {
-		var is_checked = isReviewerSelected();
-		if (is_checked) {
-			$("#reviewerInterests").removeClass("hidden");
+		if (checkboxReviewerInterests.checked) {
+			document.getElementById('reviewerInterests').classList.remove('hidden');
 		} else {
-			$("#reviewerInterests").addClass("hidden");
+			document.getElementById('reviewerInterests').classList.add('hidden');
 		}
 	}
 
 	// Update interests on page load and when the toggled is toggled
 	reviewerInterestsToggle();
-	$("#reviewerOptinGroup input").click(reviewerInterestsToggle);
+	document.querySelector('#reviewerOptinGroup input').addEventListener('click', reviewerInterestsToggle);
 })();
 
 // more keywords functionality
+(function () {
+	if (!document.querySelector('main.page_article')) {
+		return;
+	}
 
-$(document).ready(function(){
-    $("#more_keywords").click(function(){
-        $(".keyword_item").removeClass("more-than-five");
-        $(this).addClass("hide");
-        $("#keywords-ellipsis").addClass("hide");
-        $("#less_keywords").removeClass("hide");
-        $(".fifth-keyword-delimeter").removeClass("hide");
-    });
+	const moreKeywords = document.getElementById('more_keywords');
+	if (!moreKeywords) {
+		return;
+	}
+	moreKeywords.addEventListener('click', function () {
+		document.querySelectorAll('.keyword_item').forEach((item) => {
+			item.classList.remove('more-than-five');
+		});
+		this.classList.add('hide');
+		document.getElementById('keywords-ellipsis').classList.add('hide');
+		document.getElementById('less_keywords').classList.remove('hide');
+		document.querySelector('.fifth-keyword-delimeter').classList.remove('hide');
+	});
 
-    $("#less_keywords").click(function () {
-
-        $(".keyword_item").each(function(i) {
-            if (i > 4) {
-                $(this).addClass("more-than-five");
-            }
-        });
-
-        $(this).addClass("hide");
-        $("#keywords-ellipsis").removeClass("hide");
-        $("#more_keywords").removeClass("hide");
-        $(".fifth-keyword-delimeter").addClass("hide");
-    });
-});
+	document.getElementById('less_keywords').addEventListener('click', function () {
+		document.querySelectorAll('.keyword_item').forEach((item, number) => {
+			if (number > 4) {
+				item.classList.add('more-than-five');
+			}
+		});
+		this.classList.add('hide');
+		document.getElementById('keywords-ellipsis').classList.remove('hide');
+		document.getElementById('more_keywords').classList.remove('hide');
+		document.querySelector('.fifth-keyword-delimeter').classList.add('hide');
+	});
+})();
 
 // more authors data functionality
+(function () {
+	if (!document.querySelector('main.page_article')) {
+		return;
+	}
 
-$(document).ready(function () {
-    $("#collapseButton").click(function () {
-        if ($("#authorInfoCollapse").hasClass("show")) {
-            $("#more-authors-data-symbol").removeClass("hide");
-            $("#less-authors-data-symbol").addClass("hide");
-        } else {
-            $("#more-authors-data-symbol").addClass("hide");
-            $("#less-authors-data-symbol").removeClass("hide");
-        }
-    });
-});
+	const authorInfoCollapsible = document.getElementById('authorInfoCollapse');
+	if (!authorInfoCollapsible) {
+		return;
+	}
+	const moreSymbol = document.getElementById('more-authors-data-symbol');
+	const lessSymbol = document.getElementById('less-authors-data-symbol');
+
+	authorInfoCollapsible.addEventListener('shown.bs.collapse', event => {
+		moreSymbol.classList.add('hide');
+		lessSymbol.classList.remove('hide');
+	});
+
+	authorInfoCollapsible.addEventListener('hidden.bs.collapse', event => {
+		moreSymbol.classList.remove('hide');
+		lessSymbol.classList.add('hide');
+	});
+})();
 
 // change article's blocks logic for small screens
-
 (function () {
-	var articleMainData = $("#articleMainData");
-	var mainEntry = $("#mainEntry");
-	var mainEntryChildren = mainEntry.children();
-	var articleAbstractBlock = $("#articleAbstractBlock");
-	var articleAbstractBlockChildren = articleAbstractBlock.children();
-	var dataForMobilesMark = "data-for-mobiles";
+	if (!document.querySelector('main.page_article')) {
+		return;
+	}
+
+	const articleMainData = document.getElementById('articleMainData');
+	const mainEntry = document.getElementById('mainEntry');
+	let mainEntryChildren = mainEntry.children;
+	const articleAbstractBlock = document.getElementById('articleAbstractBlock');
+	let articleAbstractBlockChildren = articleAbstractBlock.children;
+	const dataForMobilesMark = 'data-for-mobiles';
 
 	// article's blocks in one column for mobiles and two for big screens
 	function reorganizeArticleBlocks() {
-		if (articleMainData !== null && !articleMainData.hasClass(dataForMobilesMark) && window.innerWidth < 768) {
-			mainEntryChildren.unwrap();
-			articleAbstractBlockChildren.unwrap();
-			articleMainData.addClass(dataForMobilesMark);
-		} else if (articleMainData !== null && articleMainData.hasClass(dataForMobilesMark) && window.innerWidth >= 768) {
-			mainEntryChildren.wrapAll("<div class='main_entry col-md-4' id='mainEntry'></div>");
-			articleAbstractBlockChildren.wrapAll("<div class='article_abstract_block col-md-8' id='articleAbstractBlock'></div>");
-			articleMainData.removeClass(dataForMobilesMark);
+		if (articleMainData !== null && !articleMainData.classList.contains(dataForMobilesMark) && window.innerWidth < 768) {
+			let childrenClone = [].concat(...mainEntryChildren);
+			mainEntry.replaceWith(...mainEntryChildren);
+			mainEntryChildren = childrenClone;
+
+			childrenClone = [].concat(...articleAbstractBlockChildren);
+			articleAbstractBlock.replaceWith(...articleAbstractBlockChildren);
+			articleAbstractBlockChildren = childrenClone;
+
+			articleMainData.classList.add(dataForMobilesMark);
+		} else if (articleMainData !== null && articleMainData.classList.contains(dataForMobilesMark) && window.innerWidth >= 768) {
+			while (articleMainData.lastElementChild) {
+				articleMainData.removeChild(articleMainData.lastElementChild);
+			}
+			articleMainData.appendChild(mainEntry);
+			mainEntry.append(...mainEntryChildren);
+			articleMainData.appendChild(articleAbstractBlock);
+			articleAbstractBlock.append(...articleAbstractBlockChildren);
+			articleMainData.classList.remove(dataForMobilesMark);
 		}
 	}
 
@@ -168,36 +165,71 @@ $(document).ready(function () {
 	});
 })();
 
-// hide authors for mobiles
+(function () {
+	if (!document.querySelector('main.page_article')) {
+		return;
+	}
 
-$(document).ready(function () {
-	var authorViewLimit = $('.limit-for-mobiles');
-	$('#show-all-authors').click(function () {
-		authorViewLimit.removeClass("limit-for-mobiles");
-		$(this).addClass("hide");
-		$('#hide-authors').removeClass("hide");
-		$('.fifth-author .author-delimiter').addClass("show");
+	const authorsToLimit = document.querySelectorAll('.limit-for-mobiles');
+	const showAllAuthors = document.getElementById('show-all-authors');
+	if (!authorsToLimit || !showAllAuthors) {
+		return;
+	}
+	showAllAuthors.addEventListener('click', function () {
+		authorsToLimit.forEach((item) => {
+			item.classList.remove('limit-for-mobiles');
+		});
+		this.classList.add('hide');
+		document.getElementById('hide-authors').classList.remove('hide');
+		document.querySelector('.fifth-author .author-delimiter').classList.add('show');
 	});
 
-	$('#hide-authors').click(function () {
-		authorViewLimit.addClass("limit-for-mobiles");
-		$('.limit-for-mobiles').removeClass("show-authors");
-		$(this).addClass("hide");
-		$('#show-all-authors').removeClass("hide");
-		$('.fifth-author .author-delimiter').removeClass("show");
-	})
-});
-
-// Toggle display of consent checkboxes in site-wide registration
-var $contextOptinGroup = $('#contextOptinGroup');
-if ($contextOptinGroup.length) {
-	var $roles = $contextOptinGroup.find('.roles :checkbox');
-	$roles.change(function() {
-		var $thisRoles = $(this).closest('.roles');
-		if ($thisRoles.find(':checked').length) {
-			$thisRoles.siblings('.context_privacy').addClass('context_privacy_visible');
-		} else {
-			$thisRoles.siblings('.context_privacy').removeClass('context_privacy_visible');
-		}
+	document.getElementById('hide-authors').addEventListener('click', function () {
+		authorsToLimit.forEach((item) => {
+			item.classList.add('limit-for-mobiles');
+		});
+		this.classList.add('hide');
+		document.getElementById('show-all-authors').classList.remove('hide');
+		document.querySelector('.fifth-author .author-delimiter').classList.remove('show');
 	});
-}
+})();
+
+(function () {
+	const contextOptinGroup = document.getElementById('contextOptinGroup');
+	if (!contextOptinGroup) {
+		return;
+	}
+
+	const privacyVisible = 'context_privacy_visible';
+
+	document.querySelectorAll('.context').forEach((context) => {
+		const roleInputs = context.querySelectorAll(':scope .roles input[type=checkbox]');
+		roleInputs.forEach((roleInput) => {
+			roleInput.addEventListener('change', function () {
+				const contextPrivacy = context.querySelector(':scope .context_privacy');
+				if (!contextPrivacy) {
+					return;
+				}
+
+				if (this.checked) {
+					if (!contextPrivacy.classList.contains(privacyVisible)) {
+						contextPrivacy.classList.add(privacyVisible);
+						return;
+					}
+				}
+
+				for (let i = 0; i < roleInputs.length; i++) {
+					const sibling = roleInputs[i];
+					if (sibling === roleInput) {
+						continue;
+					}
+					if (sibling.checked) {
+						return;
+					}
+				}
+
+				contextPrivacy.classList.remove(privacyVisible);
+			});
+		});
+	});
+})();
