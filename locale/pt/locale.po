@@ -1,26 +1,38 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
-# Patricia M. <pmangahi@sfu.ca>, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2022.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-11-23 18:02+0000\n"
-"Last-Translator: Patricia M. <pmangahi@sfu.ca>\n"
-"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
-"plugins/classic/pt_PT/>\n"
-"Language: pt_PT\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
+"Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/plugins/"
+"classic/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "plugins.themes.classic.name"
+msgstr "Tema Clássico"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Um tema para o OJS que brinca com contrastes de cores e fontes baseados no "
+"design de clássicos da literatura e apresenta um cabeçalho preto fortemente "
+"contrastante com um marcado rodapé colorido."
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Cor principal"
+
 msgid "plugins.themes.classic.option.primaryColor.description"
-msgstr "Alterar cor primária do tema"
+msgstr "Mudar a cor principal do tema"
 
 msgid "plugins.themes.classic.menu"
 msgstr "Menu"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Descrição"
+msgstr "Descrição do número"
 
 msgid "plugins.themes.classic.more"
 msgstr "Mais"
@@ -29,7 +41,7 @@ msgid "plugins.themes.classic.less"
 msgstr "Menos"
 
 msgid "plugins.themes.classic.fullIssue"
-msgstr "Edição Completa"
+msgstr "Edição completa"
 
 msgid "plugins.themes.classic.tableOfContents"
 msgstr "Índice"
@@ -41,31 +53,19 @@ msgid "plugins.themes.classic.biography"
 msgstr "Biografia"
 
 msgid "plugins.themes.classic.more-info"
-msgstr "mais informação"
+msgstr "mais informações"
 
 msgid "plugins.themes.classic.pagination"
 msgstr "Paginação"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Vol"
+msgstr "Vol."
 
 msgid "plugins.themes.classic.number-abbr"
 msgstr "Nº"
 
-msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Mostrar na página principal da revista."
-
-msgid "plugins.themes.classic.name"
-msgstr "Tema Clássico"
-
-msgid "plugins.themes.classic.option.primaryColor.label"
-msgstr "Cor Primária"
-
 msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "Não mostrar na página principal da revista."
+msgstr "Não mostrar na página inicial da revista."
 
-msgid "plugins.themes.classic.description"
-msgstr ""
-"Um tema OJS que joga com cores e fontes contrastantes com base no desenho do "
-"livro de clássicos literários e que apresenta um cabeçalho preto "
-"contrastante e um rodapé de cor de marca."
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Mostrar na página inicial da revista."
