@@ -1,7 +1,8 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-13 00:33+0000\n"
-"Last-Translator: Gabriel Nunes Santos <nunesgabrielbr@gmail.com>\n"
+"PO-Revision-Date: 2023-02-01 16:48+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/"
 "plugins/classic/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Mostrar na página inicial da revista."
@@ -67,3 +68,6 @@ msgstr ""
 
 msgid "plugins.themes.classic.name"
 msgstr "Tema Clássico"
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Alterar o idioma. O idioma atual é:"
