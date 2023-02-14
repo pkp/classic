@@ -67,3 +67,24 @@ msgstr "Show on the journal's homepage."
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Change the language. The current language is:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Usage statistics display options"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Do not display submission usage statistics chart for reader."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Use bar type of the chart for usage statistics display."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Use line type of the chart for usage statistics display."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Download data is not yet available."
