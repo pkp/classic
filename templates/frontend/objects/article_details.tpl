@@ -417,6 +417,22 @@
 
 			{call_hook name="Templates::Article::Main"}
 
+			{* Usage statistics chart*}
+			{if $activeTheme->getOption('displayStats') != 'none'}
+				{$activeTheme->displayUsageStatsGraph($article->getId())}
+				<section class="item downloads_chart">
+					<h2 class="label">
+						{translate key="plugins.themes.classic.displayStats.downloads"}
+					</h2>
+					<div class="value">
+						<canvas class="usageStatsGraph" data-object-type="Submission" data-object-id="{$article->getId()|escape}"></canvas>
+						<div class="usageStatsUnavailable" data-object-type="Submission" data-object-id="{$article->getId()|escape}">
+							{translate key="plugins.themes.classic.displayStats.noStats"}
+						</div>
+					</div>
+				</section>
+			{/if}
+
 			{* References *}
 			{if $parsedCitations || $publication->getData('citationsRaw')}
 				<div class="item references">

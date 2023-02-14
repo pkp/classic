@@ -42,6 +42,27 @@ class ClassicThemePlugin extends ThemePlugin
             )
         ));
 
+        // Add usage stats display options
+        $this->addOption('displayStats', 'FieldOptions', [
+            'type' => 'radio',
+            'label' => __('plugins.themes.classic.option.displayStats.label'),
+            'options' => [
+                [
+                    'value' => 'none',
+                    'label' => __('plugins.themes.classic.option.displayStats.none'),
+                ],
+                [
+                    'value' => 'bar',
+                    'label' => __('plugins.themes.classic.option.displayStats.bar'),
+                ],
+                [
+                    'value' => 'line',
+                    'label' => __('plugins.themes.classic.option.displayStats.line'),
+                ],
+            ],
+            'default' => 'none',
+        ]);
+
         // Calculate secondary colour based on user’s primary colour choice
         $additionalLessVariables = [];
         if ($this->getOption('primaryColor') !== '#ffd120') {
