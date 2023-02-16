@@ -2,7 +2,7 @@
 # Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-01 16:48+0000\n"
+"PO-Revision-Date: 2023-02-17 22:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/classic/"
 "cs_CZ/>\n"
@@ -72,3 +72,24 @@ msgstr "Téma Classic"
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Změna jazyka. Aktuální jazyk je:"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Pro zobrazení statistik používání použijte sloupcový typ grafu."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Pro zobrazení statistik používání použijte čarový typ grafu."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Led Úno Bře Dub Kvě Čer Čvc Srp Zář Říj Lis Pro"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Stažení"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Data ke stažení zatím nejsou k dispozici."
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Možnosti zobrazení statistik používání"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Nezobrazujte čtenářům tabulku statistik zobrazování příspěvku."
