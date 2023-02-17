@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-16 05:48+0000\n"
+"PO-Revision-Date: 2023-02-17 22:22+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/hy_AM/>\n"
@@ -72,3 +72,29 @@ msgstr "Թեմա Դասական"
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Փոխեք լեզուն։ Ներկայիս լեզուն է:"
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Հնվ Փտր Մար Ապր Մյս Հնս Հլս Օգս Սպտ Հկտ Նյբ Դկտ"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Օգտագործման վիճակագրության ցուցադրման ընտրանքներ"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr ""
+"Մի ցուցադրեք ներկայացումների օգտագործման վիճակագրության աղյուսակը ընթերցողի "
+"համար:"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք աղյուսակի գծապատկերի "
+"տեսակը:"
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք աղյուսակի գծի տեսակը:"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Ներբեռնումներ"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Ներբեռնման տվյալները դեռ հասանելի չեն:"
