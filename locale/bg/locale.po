@@ -1,7 +1,7 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2022.
+# Cyril Kamburov <cc@intermedia.bg>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-18 15:33+0000\n"
+"PO-Revision-Date: 2023-02-07 03:52+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/bg_BG/>\n"
@@ -68,3 +68,6 @@ msgstr ""
 
 msgid "plugins.themes.classic.name"
 msgstr "Класическа тема"
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Промяна на езика. В момента езикът е:"

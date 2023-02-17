@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:12:13+00:00\n"
-"PO-Revision-Date: 2020-07-25 09:47+0000\n"
+"PO-Revision-Date: 2023-02-17 22:22+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/plugins/classic/"
 "ar_IQ/>\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.name"
 msgstr "نمط كلاسك"
@@ -71,3 +72,27 @@ msgstr "لا تعرضه على الصفحة الرئيسية للمجلة."
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "يظهر على الصفحة الرئيسية للمجلة."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "تغيير اللغة. اللغة الحالية هي:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "خيارات عرض إحصائبات الاستعمال"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "لا تعرض مخطط إحصائيات التقديم للقراء."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "استعمل المخطط من نوع أعمدة لعرض إحصائيات الاستعمال."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "استعمل المخطط من نوع خطوط لعرض إحصائيات الاستعمال."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "كا2 شبا آذا نيس أيا حزي تمو آب أيل تش1 تش2 كا1"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "التنزيلات"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "تنزيل البيانات غير متاح بعد."
