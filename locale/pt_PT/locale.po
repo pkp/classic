@@ -1,10 +1,11 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
 # Patricia M. <pmangahi@sfu.ca>, 2022.
 # José Carvalho <jcarvalho@keep.pt>, 2023.
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-07 03:52+0000\n"
-"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
+"PO-Revision-Date: 2023-02-25 14:48+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "plugins/classic/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -73,3 +74,9 @@ msgstr ""
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Alterar o idioma. O idioma atual é:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Opções de visualização das estatísticas de uso"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Não dispor as estatísticas de uso da submissão ao leitor."
