@@ -1,11 +1,11 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-07 03:52+0000\n"
+"PO-Revision-Date: 2023-02-27 16:48+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
-"classic/bg_BG/>\n"
-"Language: bg_BG\n"
+"classic/bg/>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -71,3 +71,30 @@ msgstr "Класическа тема"
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Промяна на езика. В момента езикът е:"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Изтегляния"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr ""
+"Не показвайте диаграма със статистически данни за използването на подаването "
+"за четец."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr ""
+"Използвайте тип линия на диаграмата за показване на статистически данни за "
+"употребата."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "яну фев мар апр май юни юли авг сеп окт ное дек"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Данните за изтегляне все още не са налични."
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Опции за показване на статистика за употреба"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr ""
+"Използвайте лентов тип на диаграмата за показване на статистически данни за "
+"употребата."
