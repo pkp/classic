@@ -1,7 +1,7 @@
 # Classic Theme
 An official theme for [OJS 3.1.1+](https://pkp.sfu.ca/ojs/)
 
-Current version classic v.1.1.0
+Current version classic v.1.1.2
 
 This theme was developed and is maintained by the [Public Knowledge Project](https://pkp.sfu.ca/).
 ## Installation
@@ -31,6 +31,8 @@ Note that the master branch can contain a code that will not be shipped to the s
 * Classic theme version 1.0.3 is compatible with OJS 3.2.0.
 * Classic theme version 1.0.4 is compatible with OJS 3.2.0 and 3.2.1.
 * Classic theme version 1.1.0 is compatible with OJS 3.3.0.
+* Classic theme version 1.1.1 is compatible with OJS 3.3.0.
+* Classic theme version 1.1.2 is compatible with OJS 3.4.0.
 ## Contributors
 Classic theme was designed and developed by Sophy Ouch ([@sssoz](https://github.com/sssoz)), Vitalii Bezsheiko ([@Vitaliy-1](https://github.com/Vitaliy-1)), John Willinsky, and Kevin Stranack.
 ## Troubleshooting
