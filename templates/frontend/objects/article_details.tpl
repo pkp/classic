@@ -46,12 +46,10 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				{* article title, subtitle and authors *}
+				{* article title and subtitle *}
 				<h1 class="page_title article-full-title">
-					{$publication->getLocalizedFullTitle()|escape}
+					{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 				</h1>
-
-
 			</div>
 
 			<div class="col-md-4">
