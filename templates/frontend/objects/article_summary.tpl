@@ -16,6 +16,7 @@
  *}
 
 {assign var="articlePath" value=$article->getBestId()}
+{assign var="publication" value=$article->getCurrentPublication()}
 
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
@@ -37,7 +38,9 @@
 			</div>
 		{/if}
 
-		{if $showAuthor || $article->getPages() || ($article->getDatePublished() && $showDatePublished)}
+		{assign var=submissionPages value=$publication->getData('pages')}
+		{assign var=submissionDatePublished value=$publication->getData('datePublished')}
+		{if $showAuthor || $submissionPages || ($submissionDatePublished && $showDatePublished)}
 		<div class="summary_meta">
 			{if $showAuthor}
 			<div class="authors">
@@ -46,15 +49,15 @@
 			{/if}
 
 			{* Page numbers for this article *}
-			{if $article->getPages()}
+			{if $submissionPages}
 				<div class="pages">
-					{$article->getPages()|escape}
+					{$submissionPages|escape}
 				</div>
 			{/if}
 
-			{if $showDatePublished && $article->getDatePublished()}
+			{if $showDatePublished && $submissionDatePublished}
 				<div class="published">
-					{$article->getDatePublished()|date_format:$dateFormatShort}
+					{$submissionDatePublished|date_format:$dateFormatShort}
 				</div>
 			{/if}
 
@@ -72,10 +75,10 @@
 					{/if}
 				{/if}
 				{assign var="hasArticleAccess" value=$hasAccess}
-				{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getCurrentPublication()->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
+				{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
 					{assign var="hasArticleAccess" value=1}
 				{/if}
-				{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
+				{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
 			{/foreach}
 		</div>
 	{/if}
