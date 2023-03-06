@@ -4,8 +4,8 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-25 14:48+0000\n"
-"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
+"PO-Revision-Date: 2023-03-07 03:19+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "plugins/classic/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -80,3 +80,18 @@ msgstr "Opções de visualização das estatísticas de uso"
 
 msgid "plugins.themes.classic.option.displayStats.none"
 msgstr "Não dispor as estatísticas de uso da submissão ao leitor."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Use o gráfico de linha para exibição de estatísticas de uso."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Os dados de download ainda não estão disponíveis."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Use o tipo gráfico de barra para exibição de estatísticas de uso."
