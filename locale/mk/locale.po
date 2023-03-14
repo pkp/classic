@@ -1,15 +1,16 @@
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-05 08:23+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2023-03-15 12:48+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
-"classic/mk_MK/>\n"
-"Language: mk_MK\n"
+"classic/mk/>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Прикажи на страницата на списанието."
@@ -66,3 +67,30 @@ msgstr ""
 
 msgid "plugins.themes.classic.name"
 msgstr "Класична тема"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Опции за прикажување на статистиката за користење"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr ""
+"Користете столбест дијаграм на графиконот за прикажување на статистиката за "
+"користење."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Јан Фев Мар Апр Мај Јун Јул Авг Сеп Окт Ное Дек"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Преземања"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Податоците за преземање сè уште не се достапни."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Променете го јазикот. Тековниот јазик е:"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr ""
+"Не прикажувај табела за статистика за користење на поднесоците за читателот."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Користете линиски графикон за прикажување на статистиката за користење."
