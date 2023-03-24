@@ -2,11 +2,11 @@
 # Mohamad Shabilullah <shabilhamid91@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-09 11:48+0000\n"
+"PO-Revision-Date: 2023-03-25 22:48+0000\n"
 "Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"ms_MY/>\n"
-"Language: ms_MY\n"
+"ms/>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,3 +72,24 @@ msgstr "Tema Klasik"
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Tukar bahasa. Bahasa semasa ialah:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Pilihan paparan statistik penggunaan"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Jangan paparkan carta statistik penggunaan penyerahan untuk pembaca."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Gunakan jenis bar carta untuk paparan statistik penggunaan."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Gunakan jenis baris carta untuk paparan statistik penggunaan."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Jan Feb Mac Apr Mei Jun Jul Ogos Sep Okt Nov Dis"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Muat turun"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Muat turun data belum tersedia."
