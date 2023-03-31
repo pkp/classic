@@ -4,11 +4,11 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:12:23+00:00\n"
-"PO-Revision-Date: 2023-02-04 05:00+0000\n"
+"PO-Revision-Date: 2023-04-01 09:48+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"da_DK/>\n"
-"Language: da_DK\n"
+"da/>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,3 +74,24 @@ msgstr "Vis ikke på tidsskriftets hjemmeside."
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Skift sprog. Det aktuelle sprog er:"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Fremvis ikke diagram over indsendelsesstatistik for læseren."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Anvend kurvediagram til visning af brugsstatistik."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Aug Sep Okt Nov Dec"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Download-data er endnu ikke tilgængelige."
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Visningsmuligheder for brugsstatistik"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Anvend søjlediagram til visning af brugsstatistik."
