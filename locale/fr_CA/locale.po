@@ -1,11 +1,13 @@
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:12:58+00:00\n"
-"PO-Revision-Date: 2023-04-22 13:49+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2023-04-24 10:30+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/plugins/"
 "classic/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -72,34 +74,32 @@ msgstr "Afficher sur la page d'accueil de la revue."
 msgid "plugins.themes.classic.options.journalSummary.disable"
 msgstr "Ne pas afficher sur la page d'accueil de la revue."
 
-#, fuzzy
 msgid "plugins.themes.classic.displayStats.noStats"
 msgstr "Les données de téléchargement ne sont pas encore disponibles."
 
 msgid "plugins.themes.classic.option.displayStats.label"
 msgstr "Options d'affichage des statistiques d'utilisation"
 
-#, fuzzy
 msgid "plugins.themes.classic.option.displayStats.none"
 msgstr ""
-"Ne pas afficher aux lecteurs le graphique des statistiques d'utilisation des "
-"soumissions."
+"Ne pas afficher aux lecteur.trice.s le graphique des statistiques "
+"d'utilisation des soumissions."
 
-#, fuzzy
 msgid "plugins.themes.classic.option.displayStats.line"
 msgstr ""
-"Utiliser le type de ligne du graphique pour l'affichage des statistiques "
+"Utiliser le type de graphique à ligne pour afficher les statistiques "
 "d'utilisation."
 
 msgid "plugins.themes.classic.displayStats.monthInitials"
-msgstr "janv. févr. mars avr. mai juin juill. août sept. oct. nov. déc."
+msgstr "Jan. Fév. Mar. Avr. Mai Juin Juil. Août Sept. Oct. Nov. Déc."
 
 msgid "plugins.themes.classic.displayStats.downloads"
 msgstr "Téléchargements"
 
 msgid "plugins.themes.classic.option.displayStats.bar"
 msgstr ""
-"Utiliser le types de barre pour l'affichage des statistiques d'utilisation."
+"Utiliser le type de graphique à barres pour afficher les statistiques "
+"d'utilisation."
 
 msgid "plugins.themes.classic.language.toggle"
 msgstr "Changer la langue. La langue actuelle est:"
