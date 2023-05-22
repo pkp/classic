@@ -1,6 +1,7 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-27 16:55+0000\n"
+"PO-Revision-Date: 2023-05-23 19:49+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
 "tr/>\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Derginin ana sayfasında göster."
@@ -67,3 +68,27 @@ msgstr ""
 
 msgid "plugins.themes.classic.name"
 msgstr "Klasik Tema"
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Dili değiştir. Geçerli dil:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Kullanım istatistikleri görüntüleme seçenekleri"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Okuyucu için kullanım istatistikleri tablosunu görüntüleme."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Kullanım istatistikleri için çubuk grafik tipini kullanın."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Kullanım istatistikleri için çizgi grafik tipini kullanın."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Oca Şub Mar Nis May Haz Tem Ağu Eyl Ekim Kas Ara"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "İndirmeler"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "İndirme verileri henüz mevcut değil."
