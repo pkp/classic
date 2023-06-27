@@ -37,9 +37,12 @@
 		</div>
 		{/if}
 
-		<div class="article_issue_credentials">
-			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
-		</div>
+		{if $issue}
+			<div class="article_issue_credentials">
+				<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
+			</div>
+		{/if}
+
 		<div class="article_section_title">
 			{$section->getLocalizedTitle()}
 		</div>
