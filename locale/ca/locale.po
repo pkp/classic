@@ -1,15 +1,16 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-27 12:50+0000\n"
+"PO-Revision-Date: 2023-07-25 10:58+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"ca_ES/>\n"
-"Language: ca_ES\n"
+"ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Mostrar a la pàgina d'inici de la revista."
@@ -21,7 +22,7 @@ msgid "plugins.themes.classic.number-abbr"
 msgstr "No"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Vol"
+msgstr "Vol."
 
 msgid "plugins.themes.classic.pagination"
 msgstr "Paginació"
@@ -67,3 +68,27 @@ msgstr ""
 
 msgid "plugins.themes.classic.name"
 msgstr "Tema Classic"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "No mostrar el gràfic d'estadístiques de trameses als lectors/ores."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Utilitzar un gràfic de barres per mostrar les estadístiques d'ús."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Gen. Feb. Març Abr. Maig Juny Jul. Ag. Set. Oct. Nov. Des."
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Descàrregues"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Les dades de descàrrega encara no estan disponibles."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Canviar l'idioma. L'idioma actual és:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Opcions de visualització de les estadístiques d'us"
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Utilitzar un gràfic de línies per mostrar les estadístiques d'ús."
