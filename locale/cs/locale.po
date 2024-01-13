@@ -1,17 +1,17 @@
 # Weblate Admin <alec@smecher.bc.ca>, 2022.
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-17 22:22+0000\n"
+"PO-Revision-Date: 2024-01-14 09:39+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"cs_CZ/>\n"
-"Language: cs_CZ\n"
+"cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Zobrazit na domovské stránce časopisu."
@@ -41,7 +41,7 @@ msgid "plugins.themes.classic.tableOfContents"
 msgstr "Obsah"
 
 msgid "plugins.themes.classic.fullIssue"
-msgstr "Celé číslo"
+msgstr "Celé vydání"
 
 msgid "plugins.themes.classic.less"
 msgstr "Méně"
@@ -50,7 +50,7 @@ msgid "plugins.themes.classic.more"
 msgstr "Více"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Popis čísla"
+msgstr "Popis vydání"
 
 msgid "plugins.themes.classic.menu"
 msgstr "Menu"
