@@ -1,11 +1,12 @@
 # Marc Bria <marc.bria@gmail.com>, 2023.
+# Jordi LC <jordi.lacruz@uab.cat>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:12:50+00:00\n"
-"PO-Revision-Date: 2023-04-26 09:49+0000\n"
-"Last-Translator: Marc Bria <marc.bria@gmail.com>\n"
+"PO-Revision-Date: 2024-04-20 03:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/plugins/classic/"
 "es/>\n"
 "Language: es\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.classic.name"
 msgstr "Tema Classic"
@@ -34,7 +35,7 @@ msgid "plugins.themes.classic.menu"
 msgstr "Menú"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Descripción de la publicación"
+msgstr "Descripción del número"
 
 msgid "plugins.themes.classic.more"
 msgstr "Más"
@@ -61,16 +62,16 @@ msgid "plugins.themes.classic.pagination"
 msgstr "Paginación"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Vol"
+msgstr "Vol."
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "No"
+msgstr "Núm."
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
-msgstr "Mostrar en la página principal de la revista."
+msgstr "Mostrar en la página de inicio de la revista."
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "No mostrar en la página principal de la revista."
+msgstr "No mostrar en la página de inicio de la revista."
 
 msgid "plugins.themes.classic.option.displayStats.label"
 msgstr "Opciones de visualización de las estadísticas de uso"

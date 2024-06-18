@@ -1,19 +1,20 @@
 # Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
+# Marco Urso <urso.marco+weblate@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22T16:13:05+00:00\n"
-"PO-Revision-Date: 2022-08-09 11:25+0000\n"
-"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
+"PO-Revision-Date: 2024-05-18 07:39+0000\n"
+"Last-Translator: Marco Urso <urso.marco+weblate@gmail.com>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/plugins/classic/"
-"it_IT/>\n"
-"Language: it_IT\n"
+"it/>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.classic.name"
 msgstr "Tema Classico"
@@ -64,10 +65,35 @@ msgid "plugins.themes.classic.volume-abbr"
 msgstr "Vol"
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "N"
+msgstr "No"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Mostra sulla homepage della rivista."
 
 msgid "plugins.themes.classic.options.journalSummary.disable"
 msgstr "Non mostrare sulla homepage della rivista."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Cambia la lingua. La lingua corrente è:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Opzione di visualizzazione delle statistiche d'uso"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr ""
+"Non mostrare l'invio del grafico delle statistiche d'uso per il lettore."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Utilizza il tipo grafico a barre per visualizzare le statistiche."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Utilizza il tipo grafico a linee per visualizzare le statistiche."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Gen Feb Mar Apr Mag Giu Lug Ago Set Ott Nov Dic"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Download"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "I dati di download non sono ancora disponibili."

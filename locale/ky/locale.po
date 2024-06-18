@@ -1,0 +1,91 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-05 12:39+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.classic.name"
+msgstr "Темасы \"Классикалык\""
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Адабий классиктердин китеп дизайнына негизделген түс жана шрифт контрастында "
+"ойнолуучу OJS темасы, ыңгайлаштырылган түстөгү жогорку контрасттуу кара баш "
+"жана төмөнкү колонтитул."
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Негизги түс"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Негизги теманын түсүн өзгөртүү"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Меню"
+
+msgid "plugins.themes.classic.more"
+msgstr "Дагы"
+
+msgid "plugins.themes.classic.less"
+msgstr "Азыраак"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Толук чыгаруу"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Мазмун"
+
+msgid "plugins.themes.classic.close"
+msgstr "Жабуу"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Өмүр баяны"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "көбүрөөк маалымат"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Барактоо"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Көлөм"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "№"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Журналдын башкы бетинде көрсөтпөңүз."
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Журналдын башкы бетинде көрсөтүү."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Тилди өзгөртүү. Учурдагы тил:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Колдонуу статистикасын көрсөтүү параметрлери"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Окурманга материалды колдонуу статистикасынын графигин көрсөтпөңүз."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Колдонуу статистикасын көрсөтүү үчүн тилке диаграммасын колдонуңуз."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Колдонуу статистикасын көрсөтүү үчүн сызык диаграммасын колдонуңуз."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Янв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Жүктөлүп алынгандар"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Жүктөө дайындары азырынча жеткиликтүү эмес."

@@ -1,0 +1,100 @@
+# Weblate Admin <alec@smecher.bc.ca>, 2023.
+# Rudy Hahusseau <rudy.hahusseau@univ-lorraine.fr>, 2023.
+# Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-04-26 12:23+0000\n"
+"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"fr_FR/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.classic.name"
+msgstr "Thème classique"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Couleur primaire"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Changer la couleur primaire du thème"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Menu"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Description du numéro"
+
+msgid "plugins.themes.classic.more"
+msgstr "Plus"
+
+msgid "plugins.themes.classic.less"
+msgstr "Moins"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Numéro complet"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Table des matières"
+
+msgid "plugins.themes.classic.close"
+msgstr "Fermer"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biographie"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "Plus d'informations"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Pagination"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Vol"
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Un thème pour OJS qui joue sur les contrastes de couleurs et de polices en "
+"s'inspirant du design des ouvrages littéraires classiques, avec un en-tête "
+"noir très contrasté et un pied de page aux couleurs de la marque."
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Nº"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Ne pas afficher sur la page d'accueil de la revue."
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Afficher sur la page d'accueil de la revue."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Changer la langue. La langue actuelle est :"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Options d'affichage des statistiques d'utilisation"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr ""
+"Ne pas afficher aux lecteur·rice·s le tableau des statistiques d'utilisation "
+"des soumissions."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr ""
+"Utiliser un graphique linéaire pour afficher les statistiques d'utilisation."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Janv. Févr. Mars Avr. Mai Juin Juill. Août Sept. Oct. Nov. Déc."
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Téléchargements"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Les données de téléchargement ne sont pas encore disponibles."
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr ""
+"Utiliser un graphique à barres pour afficher les statistiques d'utilisation."
