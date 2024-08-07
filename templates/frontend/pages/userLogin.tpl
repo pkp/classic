@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/userLogin.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User login form.
@@ -67,6 +67,20 @@
 						<input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1" checked>
 						<label class="custom-control-label" for="remember">{translate key="user.login.rememberUsernameAndPassword"}</label>
 					</div>
+
+					{* recaptcha spam blocker *}
+					{if $recaptchaPublicKey}
+						<div class="col-md-6 offset-md-3">
+							<fieldset class="recaptcha_wrapper">
+								<div class="fields">
+									<div class="recaptcha">
+										<div class="g-recaptcha" data-sitekey="{$recaptchaPublicKey|escape}">
+										</div><label for="g-recaptcha-response" style="display:none;" hidden>Recaptcha response</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					{/if}
 
 					<div class="col-md-6 offset-md-3 buttons">
 						<button class="submit btn btn-primary" type="submit">
