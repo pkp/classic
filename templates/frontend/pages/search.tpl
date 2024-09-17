@@ -66,6 +66,7 @@
 					<div class="filter-authors">
 						<input type="text" class="form-control" for="authors" name="authors" value="{$authors|escape}" placeholder="{translate key="search.author"}">
 					</div>
+					{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 				</fieldset>
 
 
