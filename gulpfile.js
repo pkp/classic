@@ -43,6 +43,8 @@ gulp.task('compress', function() {
 		.pipe(gulp.dest('resources'));
 });
 
+gulp.task('build', gulp.series('sass', 'scripts', 'compress'));
+
 gulp.task('watch', function() {
 	return gulp.watch('dev_js/**/*.js', gulp.series('scripts', 'compress'));
 });
