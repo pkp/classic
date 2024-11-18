@@ -1,0 +1,95 @@
+# Ana Jelenković <jelenkovicana@hotmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-17 15:40+0000\n"
+"Last-Translator: Ana Jelenković <jelenkovicana@hotmail.com>\n"
+"Language-Team: Serbian <http://translate.pkp.sfu.ca/projects/plugins/classic/"
+"sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Primarna boja"
+
+msgid "plugins.themes.classic.option.primaryColor.description"
+msgstr "Promeni primarnu boju teme"
+
+msgid "plugins.themes.classic.menu"
+msgstr "Meni"
+
+msgid "plugins.themes.classic.issueDescription"
+msgstr "Opis problema"
+
+msgid "plugins.themes.classic.more"
+msgstr "Više"
+
+msgid "plugins.themes.classic.fullIssue"
+msgstr "Ceo problem"
+
+msgid "plugins.themes.classic.tableOfContents"
+msgstr "Sadržaj"
+
+msgid "plugins.themes.classic.close"
+msgstr "Zatvori"
+
+msgid "plugins.themes.classic.biography"
+msgstr "Biografija"
+
+msgid "plugins.themes.classic.more-info"
+msgstr "više informacija"
+
+msgid "plugins.themes.classic.volume-abbr"
+msgstr "Izdanje"
+
+msgid "plugins.themes.classic.number-abbr"
+msgstr "Ne"
+
+msgid "plugins.themes.classic.options.journalSummary.enable"
+msgstr "Prikaži na početnoj strani časopisa."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Promeni jezik. Trenutni jezik je:"
+
+msgid "plugins.themes.classic.option.displayStats.label"
+msgstr "Opciije za prikaz statistike korišćenja"
+
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Koristite trakasti tip grafikona za prikaz statistike korišćenja."
+
+msgid "plugins.themes.classic.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Avg Sep Okt Nov Dec"
+
+msgid "plugins.themes.classic.displayStats.downloads"
+msgstr "Preuzimanja"
+
+msgid "plugins.themes.classic.displayStats.noStats"
+msgstr "Preuzimanje podataka još uvek nije dostupno."
+
+msgid "plugins.themes.classic.name"
+msgstr "Klasična tema"
+
+msgid "plugins.themes.classic.option.displayStats.none"
+msgstr "Ne prikazuj čitaocu grafikon statistike upotrebe podnošenja."
+
+msgid "plugins.themes.classic.option.displayStats.line"
+msgstr "Koristiti linijski tip grafikona za prikaz statistike korišćenja."
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"OJS tema koja igra na kontrastima boja i fontova zasnovana na dizajnu knjiga "
+"književnih klasika i koja ima izrazito kontrastno crno zaglavlje i podnožje "
+"u boji brenda."
+
+msgid "plugins.themes.classic.less"
+msgstr "Manje"
+
+msgid "plugins.themes.classic.pagination"
+msgstr "Paginacija"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Ne prikazuj na početnoj strani časopisa."
