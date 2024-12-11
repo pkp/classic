@@ -1,39 +1,28 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
-# José Carvalho <jcarvalho@keep.pt>, 2022.
-# Carla Marques <carla.marques@usdb.uminho.pt>, 2023.
+# Patricia M. <pmangahi@sfu.ca>, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2023.
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-18 10:48+0000\n"
+"PO-Revision-Date: 2024-12-10 19:22+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
-"Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/plugins/"
-"classic/pt/>\n"
-"Language: pt\n"
+"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
+"plugins/classic/pt_PT/>\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
-
-msgid "plugins.themes.classic.name"
-msgstr "Tema Clássico"
-
-msgid "plugins.themes.classic.description"
-msgstr ""
-"Um tema para o OJS que brinca com contrastes de cores e fontes baseados no "
-"design de clássicos da literatura e apresenta um cabeçalho preto fortemente "
-"contrastante com um marcado rodapé colorido."
-
-msgid "plugins.themes.classic.option.primaryColor.label"
-msgstr "Cor principal"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.classic.option.primaryColor.description"
-msgstr "Mudar a cor principal do tema"
+msgstr "Alterar a cor principal do tema"
 
 msgid "plugins.themes.classic.menu"
 msgstr "Menu"
 
 msgid "plugins.themes.classic.issueDescription"
-msgstr "Descrição do número"
+msgstr "Descrição da edição"
 
 msgid "plugins.themes.classic.more"
 msgstr "Mais"
@@ -42,7 +31,7 @@ msgid "plugins.themes.classic.less"
 msgstr "Menos"
 
 msgid "plugins.themes.classic.fullIssue"
-msgstr "Edição completa"
+msgstr "Edição Completa"
 
 msgid "plugins.themes.classic.tableOfContents"
 msgstr "Índice"
@@ -54,35 +43,46 @@ msgid "plugins.themes.classic.biography"
 msgstr "Biografia"
 
 msgid "plugins.themes.classic.more-info"
-msgstr "mais informações"
+msgstr "mais informação"
 
 msgid "plugins.themes.classic.pagination"
 msgstr "Paginação"
 
 msgid "plugins.themes.classic.volume-abbr"
-msgstr "Vol."
+msgstr "Vol"
 
 msgid "plugins.themes.classic.number-abbr"
-msgstr "Nº"
-
-msgid "plugins.themes.classic.options.journalSummary.disable"
-msgstr "Não mostrar na página inicial da revista."
+msgstr "N.º"
 
 msgid "plugins.themes.classic.options.journalSummary.enable"
 msgstr "Mostrar na página inicial da revista."
+
+msgid "plugins.themes.classic.name"
+msgstr "Tema Clássico"
+
+msgid "plugins.themes.classic.option.primaryColor.label"
+msgstr "Cor Principal"
+
+msgid "plugins.themes.classic.options.journalSummary.disable"
+msgstr "Não mostrar na página principal da revista."
+
+msgid "plugins.themes.classic.description"
+msgstr ""
+"Um tema OJS que joga com contraste de cores e fontes baseados em design de "
+"livros de literatura clássicos e que apresenta um cabeçalho preto "
+"contrastante e um rodapé de cor da marca."
+
+msgid "plugins.themes.classic.language.toggle"
+msgstr "Alterar o idioma. O idioma atual é:"
 
 msgid "plugins.themes.classic.option.displayStats.label"
 msgstr "Opções de visualização das estatísticas de uso"
 
 msgid "plugins.themes.classic.option.displayStats.none"
-msgstr ""
-"Não disponibilizar grágico de estatísticas de uso da submissão para o leitor."
-
-msgid "plugins.themes.classic.option.displayStats.bar"
-msgstr "Use o gráfico de barras para exibir as estatísticas de uso."
+msgstr "Não exibir as estatísticas de uso da submissão ao leitor."
 
 msgid "plugins.themes.classic.option.displayStats.line"
-msgstr "Use o gráfico de linhas para exibir as estatísticas de uso."
+msgstr "Use um gráfico de linhas para exibição de estatísticas de uso."
 
 msgid "plugins.themes.classic.displayStats.monthInitials"
 msgstr "Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez"
@@ -93,5 +93,5 @@ msgstr "Downloads"
 msgid "plugins.themes.classic.displayStats.noStats"
 msgstr "Os dados de download ainda não estão disponíveis."
 
-msgid "plugins.themes.classic.language.toggle"
-msgstr "Alterar o idioma. O idioma atual é:"
+msgid "plugins.themes.classic.option.displayStats.bar"
+msgstr "Use um gráfico de barras para exibição de estatísticas de uso."
