@@ -13,18 +13,18 @@
 
 <article class="obj_announcement_full">
 	<h1 class="announcement-full-title">
-		{$announcement->getLocalizedTitle()|escape}
+		{$announcement->getLocalizedData('title')|escape}
 	</h1>
 	<div class="announcement-full-wrapper">
 		<div class="announcement-full-date">
 			<i class="far fa-calendar-alt"></i>
-			{$announcement->getDatePosted()|date_format:$dateFormatShort}
+			{$announcement->datePosted|date_format:$dateFormatShort}
 		</div>
 		<div class="announcement-full-description">
-			{if $announcement->getLocalizedDescription()}
-				{$announcement->getLocalizedDescription()|strip_unsafe_html}
+			{if $announcement->getLocalizedData('description')}
+				{$announcement->getLocalizedData('description')|strip_unsafe_html}
 			{else}
-				{$announcement->getLocalizedDescriptionShort()|strip_unsafe_html}
+				{$announcement->getLocalizedData('descriptionShort')|strip_unsafe_html}
 			{/if}
 		</div>
 	</div>

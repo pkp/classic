@@ -49,10 +49,10 @@
 				<div class="row">
 					{foreach from=$announcements item=announcement}
 						<article class="col-md-4 announcement">
-							<p class="announcement_date">{$announcement->getDatePosted()|date_format:$dateFormatShort|escape}</p>
+							<p class="announcement_date">{$announcement->datePosted|date_format:$dateFormatShort|escape}</p>
 							<h3 class="announcement_title">
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()|escape}">
-									{$announcement->getLocalizedTitle()|escape}
+								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->id|escape}">
+									{$announcement->getLocalizedData('title')|escape}
 								</a>
 							</h3>
 						</article>

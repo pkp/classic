@@ -7,12 +7,13 @@
  *
  * @brief View of an Article which displays all details about the article.
  *
- * @uses $article Article This article
+ * @uses $article Submission This article
  * @uses $publication Publication The publication being displayed
  * @uses $firstPublication Publication The first published version of this article
  * @uses $currentPublication Publication The most recently published version of this article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
+ * @uses $categories Category The category this article is assigned to
  * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
@@ -85,24 +86,23 @@
 								{assign var="authors" value=$publication->getData('authors')->toArray()|array_values}
 								{foreach from=$authors item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
-										{if $author->getData('rorId')}
-											<a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-										{/if}
-										{if $author->getOrcid()}
-											<a class="orcid-image-url" href="{$author->getOrcid()}">
-												{if $orcidIcon}
-													{$orcidIcon}
-												{else}
-													<img src="{$baseUrl}/{$orcidImageUrl}">
-												{/if}
+									{if $author->getData('orcid')}
+										{if $author->getData('orcidAccessToken')}
+											<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+											{if $orcidIcon}
+												{$orcidIcon}
+											{else}
+												<img src="{$baseUrl}/{$orcidImageUrl}">
+											{/if}
 											</a>
 										{/if}
-										<span class="name_wrapper">
-											{$author->getFullName()|escape}
-										</span>
-										{if $authorNumber+1 !== $publication->getData('authors')|count}
-											<span class="author-delimiter">, </span>
-										{/if}
+									{/if}
+									<span class="name_wrapper">
+										{$author->getFullName()|escape}
+									</span>
+									{if $authorNumber+1 !== $publication->getData('authors')|count}
+										<span class="author-delimiter">, </span>
+									{/if}
 									</li>
 								{/foreach}
 								{if $publication->getData('authors')|count > 5}
@@ -125,8 +125,26 @@
 								{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
 									<div class="additional-author-block">
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
+										{if $author->getData('orcid')}
+											<br/>
+											{if $author->getData('orcidAccessToken')}
+												<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+												{if $orcidIcon}
+													{$orcidIcon}
+												{else}
+													<img src="{$baseUrl}/{$orcidImageUrl}">
+												{/if}
+												</a>
+											{/if}
+											<a href="{$author->getData('orcid')|escape}" target="_blank">
+												{$author->getData('orcid')|escape}
+											</a>
+										{/if}
 										{if $author->getLocalizedAffiliation()}
 											<br/>
+											{if $author->getData('rorId')}
+												<a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
+											{/if}
 											<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
 										{/if}
 										{if $author->getLocalizedBiography()}
