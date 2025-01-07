@@ -42,11 +42,11 @@
 								</legend>
 								<span class="custom-control custom-checkbox context-checkbox">
 									{foreach from=$readerUserGroups[$contextId] item=userGroup}
-										{if $userGroup->getPermitSelfRegistration()}
-											{assign var="userGroupId" value=$userGroup->getId()}
+										{if $userGroup->permitSelfRegistration}
+											{assign var="userGroupId" value=$userGroup->id}
 											<input type="checkbox" class="custom-control-input" id="readerGroup[{$userGroupId}]" name="readerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
 											<label for="readerGroup[{$userGroupId}]" class="custom-control-label">
-												{$userGroup->getLocalizedName()}
+												{$userGroup->getLocalizedData('name')|escape}
 											</label>
 											{if in_array($userGroupId, $userGroupIds)}
 												{assign var=isSelected value=true}
@@ -56,11 +56,11 @@
 								</span>
 								<span class="custom-control custom-checkbox context-checkbox">
 									{foreach from=$reviewerUserGroups[$contextId] item=userGroup}
-										{if $userGroup->getPermitSelfRegistration()}
-											{assign var="userGroupId" value=$userGroup->getId()}
+										{if $userGroup->permitSelfRegistration}
+											{assign var="userGroupId" value=$userGroup->id}
 											<input type="checkbox" class="custom-control-input" id="reviewerGroup[{$userGroupId}]" name="reviewerGroup[{$userGroupId}]"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
 											<label for="reviewerGroup[{$userGroupId}]" class="custom-control-label">
-												{$userGroup->getLocalizedName()}
+												{$userGroup->getLocalizedData('name')|escape}
 											</label>
 											{if in_array($userGroupId, $userGroupIds)}
 												{assign var=isSelected value=true}
