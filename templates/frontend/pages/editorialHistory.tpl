@@ -33,11 +33,7 @@
 								{$mastheadUser['user']->getFullName()|escape}
 									{if $mastheadUser['user']->getData('orcid') && $mastheadUser['user']->getData('orcidAccessToken')}
 										<a class="orcid-image-url" href="{$mastheadUser['user']->getData('orcid')|escape}" target="_blank" aria-label="{translate key="common.editorialHistory.page.orcidLink" name=$mastheadUser['user']->getFullName()|escape}">
-											{if $orcidIcon}
-												{$orcidIcon}
-											{else}
-												<img src="{$baseUrl}/{$orcidImageUrl}">
-											{/if}
+											{$orcidIcon}
 										</a>
 									{/if}
 								</span>

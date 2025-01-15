@@ -10,7 +10,7 @@
  *}
 {include file="frontend/components/header.tpl"}
 
-<div class="page page_message page_orcid-profile">
+<main class="page page_message page_orcid-profile">
 	<div class="container-fluid container-page container-narrow">
 		{include file="frontend/components/headings.tpl" currentTitleKey="orcid.verify.title"}
 		<h2>
@@ -61,7 +61,7 @@
 		{/if}
 		</div>
 	</div>
-</div>
+</main>
 
 {include file="frontend/components/footer.tpl"}
 

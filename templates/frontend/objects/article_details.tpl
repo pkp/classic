@@ -86,20 +86,16 @@
 								{assign var="authors" value=$publication->getData('authors')->toArray()|array_values}
 								{foreach from=$authors item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
-									{if $author->getData('orcid')}
-										{if $author->getData('orcidAccessToken')}
-											<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
-											{if $orcidIcon}
-												{$orcidIcon}
-											{else}
-												<img src="{$baseUrl}/{$orcidImageUrl}">
-											{/if}
-											</a>
-										{/if}
-									{/if}
 									<span class="name_wrapper">
 										{$author->getFullName()|escape}
 									</span>
+                                    {if $author->getData('orcid')}
+                                        {if $author->getData('orcidAccessToken')}
+                                            <a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+                                                {$orcidIcon}
+                                            </a>
+                                        {/if}
+                                    {/if}
 									{if $authorNumber+1 !== $publication->getData('authors')|count}
 										<span class="author-delimiter">, </span>
 									{/if}
@@ -129,11 +125,7 @@
 											<br/>
 											{if $author->getData('orcidAccessToken')}
 												<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
-												{if $orcidIcon}
-													{$orcidIcon}
-												{else}
-													<img src="{$baseUrl}/{$orcidImageUrl}">
-												{/if}
+                                                    {$orcidIcon}
 												</a>
 											{/if}
 											<a href="{$author->getData('orcid')|escape}" target="_blank">
@@ -142,10 +134,10 @@
 										{/if}
 										{if $author->getLocalizedAffiliation()}
 											<br/>
-											{if $author->getData('rorId')}
-												<a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-											{/if}
 											<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
+                                            {if $author->getData('rorId')}
+                                                <a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
+                                            {/if}
 										{/if}
 										{if $author->getLocalizedBiography()}
 											<br/>
