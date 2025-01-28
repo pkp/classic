@@ -90,11 +90,13 @@
 										{$author->getFullName()|escape}
 									</span>
                                     {if $author->getData('orcid')}
-                                        {if $author->getData('orcidAccessToken')}
-                                            <a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
-                                                {$orcidIcon}
-                                            </a>
-                                        {/if}
+										<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+											{if $author->hasVerifiedOrcid()}
+												{$orcidIcon}
+											{else}
+												{$orcidUnauthenticatedIcon}
+											{/if}
+										</a>
                                     {/if}
 									{if $authorNumber+1 !== $publication->getData('authors')|count}
 										<span class="author-delimiter">, </span>
@@ -123,13 +125,15 @@
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
 										{if $author->getData('orcid')}
 											<br/>
-											{if $author->getData('orcidAccessToken')}
-												<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
-                                                    {$orcidIcon}
-												</a>
-											{/if}
+											<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+												{if $author->hasVerifiedOrcid()}
+													{$orcidIcon}
+												{else}
+													{$orcidUnauthenticatedIcon}
+												{/if}
+											</a>
 											<a href="{$author->getData('orcid')|escape}" target="_blank">
-												{$author->getData('orcid')|escape}
+												{$author->getOrcidDisplayValue()|escape}
 											</a>
 										{/if}
 										{if $author->getLocalizedAffiliation()}
