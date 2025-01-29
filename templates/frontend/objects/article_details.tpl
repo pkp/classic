@@ -99,7 +99,7 @@
 										</a>
                                     {/if}
 									{if $authorNumber+1 !== $publication->getData('authors')|count}
-										<span class="author-delimiter">, </span>
+										<span class="author-delimiter">{translate key="common.commaListSeparator"}</span>
 									{/if}
 									</li>
 								{/foreach}
@@ -280,7 +280,7 @@
 				<ul class="keywords_value">
 					{foreach from=$keywords key=k item=keyword}
 						<li class="keyword_item{if $k>4} more-than-five{/if}">
-							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">,</span>{/if}
+							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">{translate key="common.commaListSeparator"}</span>{/if}
 						</li>
 					{/foreach}
 					{if $keywords|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
