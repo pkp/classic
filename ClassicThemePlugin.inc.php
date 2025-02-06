@@ -199,7 +199,7 @@ class ClassicThemePlugin extends ThemePlugin
         // Check if there is additional info on any of authors
         $boolAuthorInfo = false;
         foreach ($publication->getData('authors') as $author) {
-            if ($author->getLocalizedData('affiliation') || $author->getLocalizedData('biography')) {
+            if ($author->getLocalizedData('affiliations') || $author->getLocalizedData('biography')) {
                 $boolAuthorInfo = true;
                 break;
             }

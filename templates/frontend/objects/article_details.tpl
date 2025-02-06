@@ -120,7 +120,7 @@
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$authors item=author key=number}
-								{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
+								{if count($author->getAffiliations()) > 0 || $author->getLocalizedBiography()}
 									<div class="additional-author-block">
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
 										{if $author->getData('orcid')}
@@ -136,12 +136,15 @@
 												{$author->getOrcidDisplayValue()|escape}
 											</a>
 										{/if}
-										{if $author->getLocalizedAffiliation()}
+										{if count($author->getAffiliations()) > 0}
+											{foreach name="affiliations" from=$author->getAffiliations() item="affiliation"}
+												<span class="additional-author-affiliation">{$affiliation->getLocalizedName()|escape}</span>
+												{if $affiliation->getRor()}
+													<a class="ror-image-url" href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>
+												{/if}
+												{if !$smarty.foreach.affiliations.last}{translate key="common.commaListSeparator"}{/if}
+											{/foreach}
 											<br/>
-											<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
-                                            {if $author->getData('rorId')}
-                                                <a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-                                            {/if}
 										{/if}
 										{if $author->getLocalizedBiography()}
 											<br/>
