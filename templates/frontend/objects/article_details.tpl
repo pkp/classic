@@ -7,12 +7,13 @@
  *
  * @brief View of an Article which displays all details about the article.
  *
- * @uses $article Article This article
+ * @uses $article Submission This article
  * @uses $publication Publication The publication being displayed
  * @uses $firstPublication Publication The first published version of this article
  * @uses $currentPublication Publication The most recently published version of this article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
+ * @uses $categories Category The category this article is assigned to
  * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
@@ -85,24 +86,21 @@
 								{assign var="authors" value=$publication->getData('authors')->toArray()|array_values}
 								{foreach from=$authors item=author key=authorNumber}
 									<li class="entry_author_block{if $authorNumber > 4} limit-for-mobiles{elseif $authorNumber === 4} fifth-author{/if}">
-										{if $author->getData('rorId')}
-											<a class="ror-image-url" href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-										{/if}
-										{if $author->getOrcid()}
-											<a class="orcid-image-url" href="{$author->getOrcid()}">
-												{if $orcidIcon}
-													{$orcidIcon}
-												{else}
-													<img src="{$baseUrl}/{$orcidImageUrl}">
-												{/if}
-											</a>
-										{/if}
-										<span class="name_wrapper">
-											{$author->getFullName()|escape}
-										</span>
-										{if $authorNumber+1 !== $publication->getData('authors')|count}
-											<span class="author-delimiter">, </span>
-										{/if}
+									<span class="name_wrapper">
+										{$author->getFullName()|escape}
+									</span>
+                                    {if $author->getData('orcid')}
+										<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+											{if $author->hasVerifiedOrcid()}
+												{$orcidIcon}
+											{else}
+												{$orcidUnauthenticatedIcon}
+											{/if}
+										</a>
+                                    {/if}
+									{if $authorNumber+1 !== $publication->getData('authors')|count}
+										<span class="author-delimiter">{translate key="common.commaListSeparator"}</span>
+									{/if}
 									</li>
 								{/foreach}
 								{if $publication->getData('authors')|count > 5}
@@ -122,12 +120,31 @@
 						{/if}
 						<div class="collapse" id="authorInfoCollapse">
 							{foreach from=$authors item=author key=number}
-								{if $author->getLocalizedAffiliation() || $author->getLocalizedBiography()}
+								{if count($author->getAffiliations()) > 0 || $author->getLocalizedBiography()}
 									<div class="additional-author-block">
 										<span class="additional-author-name">{$author->getFullName()|escape}</span>
-										{if $author->getLocalizedAffiliation()}
+										{if $author->getData('orcid')}
 											<br/>
-											<span class="additional-author-affiliation">{$author->getLocalizedAffiliation()|escape}</span>
+											<a class="orcid-image-url" href="{$author->getData('orcid')|escape}">
+												{if $author->hasVerifiedOrcid()}
+													{$orcidIcon}
+												{else}
+													{$orcidUnauthenticatedIcon}
+												{/if}
+											</a>
+											<a href="{$author->getData('orcid')|escape}" target="_blank">
+												{$author->getOrcidDisplayValue()|escape}
+											</a>
+										{/if}
+										{if count($author->getAffiliations()) > 0}
+											{foreach name="affiliations" from=$author->getAffiliations() item="affiliation"}
+												<span class="additional-author-affiliation">{$affiliation->getLocalizedName()|escape}</span>
+												{if $affiliation->getRor()}
+													<a class="ror-image-url" href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>
+												{/if}
+												{if !$smarty.foreach.affiliations.last}{translate key="common.commaListSeparator"}{/if}
+											{/foreach}
+											<br/>
 										{/if}
 										{if $author->getLocalizedBiography()}
 											<br/>
@@ -266,7 +283,7 @@
 				<ul class="keywords_value">
 					{foreach from=$keywords key=k item=keyword}
 						<li class="keyword_item{if $k>4} more-than-five{/if}">
-							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">,</span>{/if}
+							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">{translate key="common.commaListSeparator"}</span>{/if}
 						</li>
 					{/foreach}
 					{if $keywords|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>

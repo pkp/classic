@@ -1,11 +1,11 @@
 /**
- * @file less/pages/orcidProfile.less
+ * @file less/pages/orcid.less
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @brief Stylesheet for the ORCID Profile Plugin; orcidAbout.tpl, orcidVerify.tpl, ORCID button on the registration page
+ * @brief Stylesheet for ORCID pages (orcidAbout.tpl, orcidVerify.tpl) and buttons
  *
  */
 
@@ -24,13 +24,11 @@
 
 #connect-orcid-button {
 	border-radius: 0;
-	border: 1px;
 	font-family: @font-family-secondary;
 	box-shadow: none;
-	border-style: solid;
 	font-size: 14px;
 	background-color: #fff;
-	border-color: #000;
+	border: 1px solid #000;
 	font-weight: 600;
 	color: #000;
 	.button();
@@ -52,4 +50,10 @@
 		background-color: @primary-colour;
 		border-color: #000;
 	}
+}
+
+.orcid_icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
 }

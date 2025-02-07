@@ -64,11 +64,6 @@
 
 @media (max-width: 767px) {
 
-	.orcid-image-url, .ror-image-url {
-		margin-right: 0;
-		margin-left: 5px;
-	}
-
 	.limit-for-mobiles {
 		display: none;
 	}
@@ -102,7 +97,8 @@
 }
 
 .orcid-image-url, .ror-image-url {
-	margin-right: 5px;
+	margin-left: 5px;
+	margin-right: 2px;
 	border-bottom: 0;
 
 	&:hover {
@@ -129,6 +125,10 @@
 
 	&:not(:last-child) {
 		margin-bottom: 10px;
+	}
+
+	.orcid-image-url {
+		margin-left: 0;
 	}
 }
 
