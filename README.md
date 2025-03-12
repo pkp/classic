@@ -1,7 +1,10 @@
 # Classic Theme
 An official theme for [OJS 3.1.1+](https://pkp.sfu.ca/ojs/)
 
-Current version classic v.1.1.2
+
+| main                                                                                                                                         | 3.5.0                                                                                                                                                        | 3.4.0                                                                                                                                                        | 3.3.0                                                                                                                                                        |
+|----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![classic](https://github.com/pkp/classic/actions/workflows/main.yml/badge.svg)](https://github.com/pkp/classic/actions/workflows/main.yml) | [![classic](https://github.com/pkp/classic/actions/workflows/stable-3_5_0.yml/badge.svg)](https://github.com/pkp/classic/actions/workflows/stable-3_5_0.yml) | [![classic](https://github.com/pkp/classic/actions/workflows/stable-3_4_0.yml/badge.svg)](https://github.com/pkp/classic/actions/workflows/stable-3_4_0.yml) | [![classic](https://github.com/pkp/classic/actions/workflows/stable-3_3_0.yml/badge.svg)](https://github.com/pkp/classic/actions/workflows/stable-3_3_0.yml) |                                                                                                                                                                                                 |
 
 This theme was developed and is maintained by the [Public Knowledge Project](https://pkp.sfu.ca/).
 
