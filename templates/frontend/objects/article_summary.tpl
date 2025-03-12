@@ -65,7 +65,7 @@
 
 	{if !$hideGalleys}
 		<div class="galleys_links">
-			{foreach from=$article->getGalleys() item=galley}
+			{foreach from=$publication->getData('galleys') item=galley}
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
 					{if !$galley->getData('urlRemote') && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
