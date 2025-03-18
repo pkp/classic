@@ -1,4 +1,4 @@
-on: [push]
+on: [push, pull_request]
 name: classic
 jobs:
   classic:
@@ -24,7 +24,7 @@ jobs:
       - uses: pkp/pkp-github-actions@v1
         with:
          node_version: 20
-         branch: stable-3_5_0
+         branch: 'stable-3_5_0'
          repository: pkp
          plugin: true
          dataset_inject: true
