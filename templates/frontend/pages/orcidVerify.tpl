@@ -4,7 +4,7 @@
  * Copyright (c) 2014-2024 Simon Fraser University
  * Copyright (c) 2003-2024 John Willinsky
  * Copyright (c) 2018-2019 University Library Heidelberg
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Page template to display from the OrcidHandler to show ORCID verification success or failure.
  *}
