@@ -40,15 +40,18 @@ class ClassicThemePlugin extends ThemePlugin
 
 		// Calculate secondary colour based on user’s primary colour choice
 		$additionalLessVariables = [];
-		if ($this->getOption('primaryColor') !== '#ffd120') {
+		$primaryColor = $this->getOption('primaryColor');
+		if (!preg_match('/^#[0-9a-fA-F]{1,6}$/', (string) $primaryColor)) $primaryColor = '#ffd120'; // pkp/pkp-lib#11974
+
+		if ($primaryColor !== '#ffd120') {
 			$additionalLessVariables[] = '
-				@primary-colour:' . $this->getOption('primaryColor') . ';
+				@primary-colour:' . $primaryColor . ';
 				@secondary-colour: darken(@primary-colour, 45%);
 			';
 		}
 
 		// Update contrast colour based on primary colour
-		if ($this->isColourDark($this->getOption('primaryColor'))) {
+		if ($this->isColourDark($primaryColor)) {
 			$additionalLessVariables[] = '
 				@contrast-colour: #FFF;
 				@secondary-colour: lighten(@primary-colour, 45%);
@@ -87,6 +90,13 @@ class ClassicThemePlugin extends ThemePlugin
 		HookRegistry::register('TemplateManager::display', array($this, 'hasAuthorsInfo'));
 		// Display journal summary on the homepage
 		HookRegistry::register ('TemplateManager::display', array($this, 'homepageJournalSummary'));
+	}
+
+	/** @see ThemePlugin::saveOption */
+	public function saveOption($name, $value, $contextId = null) {
+		// Validate the base colour setting value.
+		if ($name == 'primaryColor' && !preg_match('/^#[0-9a-fA-F]{1,6}$/', $value)) $value = null; // pkp/pkp-lib#11974
+		parent::saveOption($name, $value, $contextId);
 	}
 
 	public function getDisplayName() {
