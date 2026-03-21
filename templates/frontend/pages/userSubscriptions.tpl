@@ -141,7 +141,7 @@
 						{translate key="subscriptions.institutionalOnlinePaymentDescription"}
 					{/if}
 				</p>
-				{if $userInstitutionalSubscriptions->getCount() > 0}
+				{if count($userInstitutionalSubscriptions)}
 					<table class="table">
 						<tr>
 							<th>{translate key="user.subscriptions.form.typeId"}</th>
@@ -151,7 +151,7 @@
 								<th></th>
 							{/if}
 						</tr>
-						{iterate from=userInstitutionalSubscriptions item=userInstitutionalSubscription}
+						{foreach from=$userInstitutionalSubscriptions item=userInstitutionalSubscription}
 							<tr>
 								<td>{$userInstitutionalSubscription->getSubscriptionTypeName()|escape}</td>
 								<td>{$userInstitutionalSubscription->getInstitutionName()|escape}</td>
@@ -212,7 +212,7 @@
 									</td>
 								{/if}
 							</tr>
-						{/iterate}
+						{/foreach}
 					</table>
 				{elseif $paymentsEnabled}
 					<a class="action btn btn-primary" href="{url page="user" op="purchaseSubscription" path="institutional"}">
