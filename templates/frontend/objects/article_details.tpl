@@ -283,7 +283,7 @@
 				<ul class="keywords_value">
 					{foreach from=$keywords key=k item=keyword}
 						<li class="keyword_item{if $k>4} more-than-five{/if}">
-							<span>{$keyword|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">{translate key="common.commaListSeparator"}</span>{/if}
+							<span>{$keyword.name|escape}</span>{if $k+1 < $keywords|@count}<span class="keyword-delimeter{if $k === 4} fifth-keyword-delimeter hide{/if}">{translate key="common.commaListSeparator"}</span>{/if}
 						</li>
 					{/foreach}
 					{if $keywords|@count > 5}<span class="ellipsis" id="keywords-ellipsis">...</span>
