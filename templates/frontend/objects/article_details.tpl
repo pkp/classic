@@ -1,8 +1,8 @@
  {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -23,10 +23,22 @@
  *   included with published articles.
  * @uses $ccLicenseBadge string An image and text with details about the license
  * @uses $boolAuthorInfo bool to check whether at least one author has additional info
+ *
+ * @hook Templates::Article::Main []
+ * @hook Templates::Article::Details []
+ * @hook Templates::Article::Details::Reference []
  *}
 
 <article class="obj_article_details">
 	<div class="article_header_wrapper">
+
+		{* Indicate if this is only a preview *}
+		{if $publication->getData('status') !== PKP\submission\PKPSubmission::STATUS_PUBLISHED}
+			<div class="cmp_notification notice" role="alert">
+				{capture assign="submissionUrl"}{url page="dashboard" op="editorial" workflowSubmissionId=$article->getId()}{/capture}
+				{translate key="submission.viewingPreview" url=$submissionUrl}
+			</div>
+		{/if}
 		{* Notification that this is an old version *}
 		{if $currentPublication->getId() !== $publication->getId()}
 		<div class="cmp_notification notice" role="alert">
@@ -300,6 +312,19 @@
 			</div>
 			{/if}
 
+			{* Data Availability Statement *}
+			{assign 'dataAvailability' $publication->getLocalizedData('dataAvailability')}
+			{if $dataAvailability}
+				<div class="item dataAvailability">
+					<h3>
+						{translate key="submission.dataAvailability"}
+					</h3>
+					<p>
+						{$dataAvailability|strip_unsafe_html}
+					</p>
+				</div>
+			{/if}
+
 			{* Licensing info *}
 			{assign 'licenseTerms' $currentContext->getLocalizedData('licenseTerms')}
 			{assign 'copyrightHolder' $publication->getLocalizedData('copyrightHolder')}
@@ -403,12 +428,12 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || $publication->getData('citationsRaw')}
+			{if count($parsedCitations) || (string) $publication->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
-					{if $parsedCitations}
+					{if count($parsedCitations)}
 						<ol class="references-list">
 							{foreach from=$parsedCitations item=parsedCitation}
 								<li>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</li>
