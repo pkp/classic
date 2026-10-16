@@ -3,8 +3,8 @@
 /**
  * @file plugins/themes/traditional/ClassicThemePlugin.inc.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ClassicThemePlugin
@@ -14,6 +14,7 @@
  */
 
 use APP\publication\Publication;
+use PKP\plugins\Hook;
 use PKP\plugins\ThemePlugin;
 
 class ClassicThemePlugin extends ThemePlugin
@@ -22,19 +23,27 @@ class ClassicThemePlugin extends ThemePlugin
     {
         /* Additional theme options */
         // Changing theme primary color
-        $this->addOption('primaryColor', 'colour', [
-            'label' => 'plugins.themes.classic.option.primaryColor.label',
-            'description' => 'plugins.themes.classic.option.primaryColor.description',
+        $this->addOption('primaryColor', 'FieldColor', [
+            'label' => __('plugins.themes.classic.option.primaryColor.label'),
+            'description' => __('plugins.themes.classic.option.primaryColor.description'),
             'default' => '#ffd120',
         ]);
 
         // Option to show journal summary
-        $this->addOption('journalSummary', 'radio', [
-            'label' => 'manager.setup.contextSummary',
+        $this->addOption('journalSummary', 'FieldOptions', [
+            'type' => 'radio',
+            'label' => __('manager.setup.contextSummary'),
             'options' => [
-                0 => 'plugins.themes.classic.options.journalSummary.disable',
-                1 => 'plugins.themes.classic.options.journalSummary.enable'
-            ]
+                [
+                    'value' => 0,
+                    'label' => __('plugins.themes.classic.options.journalSummary.disable'),
+                ],
+                [
+                    'value' => 1,
+                    'label' => __('plugins.themes.classic.options.journalSummary.enable'),
+                ],
+            ],
+            'default' => 0,
         ]);
 
         // Add usage stats display options
@@ -100,13 +109,13 @@ class ClassicThemePlugin extends ThemePlugin
         // Adding navigation menu as in OJS 3.1+ we can have custom
         $this->addMenuArea(['primary', 'user']);
 
-        HookRegistry::add('TemplateManager::display', [$this, 'loadAdditionalData']);
+        Hook::add('TemplateManager::display', [$this, 'loadAdditionalData']);
         // Get additional issue data to the issue page
-        HookRegistry::add('TemplateManager::display', [$this, 'loadIssueData']);
+        Hook::add('TemplateManager::display', [$this, 'loadIssueData']);
         // Check whether authors have additional info
-        HookRegistry::add('TemplateManager::display', [$this, 'hasAuthorsInfo']);
+        Hook::add('TemplateManager::display', [$this, 'hasAuthorsInfo']);
         // Display journal summary on the homepage
-        HookRegistry::add('TemplateManager::display', [$this, 'homepageJournalSummary']);
+        Hook::add('TemplateManager::display', [$this, 'homepageJournalSummary']);
     }
 
     /** @see ThemePlugin::saveOption */

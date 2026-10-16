@@ -74,7 +74,7 @@
 								<div class="custom-control custom-checkbox context_privacy {if $isSelected}context_privacy_visible{/if}">
 									<input type="checkbox" class="custom-control-input" name="privacyConsent[{$contextId}]" id="privacyConsent[{$contextId}]" value="1"{if $privacyConsent[$contextId]} checked="checked"{/if}>
 									<label for="privacyConsent[{$contextId}]" class="custom-control-label">
-										{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE context=$context->getPath() page="about" op="privacy"}{/capture}
+										{capture assign="privacyUrl"}{url router=PKP\core\PKPApplication::ROUTE_PAGE context=$context->getPath() page="about" op="privacy"}{/capture}
 										{translate key="user.register.form.privacyConsentThisContext" privacyUrl=$privacyUrl}
 									</label>
 								</div>

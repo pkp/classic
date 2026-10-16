@@ -17,6 +17,7 @@
                         {foreach from=$citationStyles item="citationStyle"}
 							<a
 									class="dropdown-cite-link dropdown-item"
+									rel="nofollow"
 									aria-controls="citationOutput"
 									href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
 									data-load-citation

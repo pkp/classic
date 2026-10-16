@@ -33,7 +33,7 @@
 			</div>
 			<div class="form-group middle-name col-sm-12">
 				<label for="familyName" class="visually-hidden">
-					{translate key="user.middleName"}
+					{translate key="user.familyName"}
 				</label>
 				<input type="text" class="form-control" name="familyName" autocomplete="family-name" id="familyName" value="{$familyName|default:""|escape}" maxlength="255" placeholder="{translate key="user.familyName"}">
 			</div>

@@ -57,7 +57,7 @@
 		{/if}
 
 		<div class="article_section_title">
-			{$section->getLocalizedTitle()}
+			{$section->getLocalizedTitle()|escape}
 		</div>
 		<div class="row">
 			<div class="col-md-8">
@@ -149,12 +149,18 @@
 											</a>
 										{/if}
 										{if count($author->getAffiliations()) > 0}
-											{foreach name="affiliations" from=$author->getAffiliations() item="affiliation"}
-												<span class="additional-author-affiliation">{$affiliation->getLocalizedName()|escape}</span>
-												{if $affiliation->getRor()}
-													<a class="ror-image-url" href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>
+											{assign var="renderedAffiliation" value=false}
+											{foreach from=$author->getAffiliations() item="affiliation"}
+												{if $affiliation->getLocalizedName() || $affiliation->getRor()}
+													{if $renderedAffiliation}{translate key="common.commaListSeparator"}{/if}
+													{if $affiliation->getLocalizedName()}
+														<span class="additional-author-affiliation">{$affiliation->getLocalizedName()|escape}</span>
+													{/if}
+													{if $affiliation->getRor()}
+														<a class="ror-image-url" href="{$affiliation->getRor()|escape}">{$rorIdIcon|trim}</a>
+													{/if}
+													{assign var="renderedAffiliation" value=true}
 												{/if}
-												{if !$smarty.foreach.affiliations.last}{translate key="common.commaListSeparator"}{/if}
 											{/foreach}
 											<br/>
 										{/if}
@@ -169,7 +175,7 @@
 													<div class="modal-content">
 														<div class="modal-header">
 															<h5 class="modal-title" id="modalAuthorBioTitle">{translate key="submission.authorBiography"}</h5>
-															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<button type="button" class="close" data-dismiss="modal" aria-label="{translate|escape key="common.close"}">
 																<span aria-hidden="true">&times;</span>
 															</button>
 														</div>
@@ -218,24 +224,42 @@
 				</div>
 			{/if}
 
-			{* DOI (requires plugin) *}
+			{* DOI *}
+			{assign var=doiObject value=$article->getCurrentPublication()->getData('doiObject')}
+			{if $doiObject}
+				{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
+				<div class="doi">
+					<span class="doi_label">
+						{capture assign=translatedDOI}{translate key="doi.readerDisplayName"}{/capture}
+						{translate key="semicolon" label=$translatedDOI}
+					</span>
+					<span class="doi_value">
+						<a href="{$doiUrl}">
+							{$doiUrl}
+						</a>
+					</span>
+				</div>
+			{/if}
+
+			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
-				{if $pubIdPlugin->getPubIdType() != 'doi'}
+				{if $pubIdPlugin->getPubIdType() == 'doi'}
 					{continue}
 				{/if}
-				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{assign var=pubId value=$publication->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
-					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					<div class="doi">
-						<span class="doi_label">
-							{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
-							{translate key="semicolon" label=$translatedDOI}
+					<div class="pubid">
+						<span class="pubid_label">
+							{$pubIdPlugin->getPubIdDisplayType()|escape}
 						</span>
-						<span class="doi_value">
-							<a href="{$doiUrl}">
-								{* maching DOI's (with new and old format) *}
-								{$doiUrl}
-							</a>
+						<span class="pubid_value">
+							{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+								<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">
+									{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+								</a>
+							{else}
+								{$pubId|escape}
+							{/if}
 						</span>
 					</div>
 				{/if}
@@ -246,7 +270,7 @@
 					<span class="categories_label">{translate key="category.category"}</span>
 					<ul class="categories">
 						{foreach from=$categories item=category}
-							<li><a href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+							<li><a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
 						{/foreach}
 					</ul>
 				</div>
@@ -315,13 +339,11 @@
 			{* Data Availability Statement *}
 			{assign 'dataAvailability' $publication->getLocalizedData('dataAvailability')}
 			{if $dataAvailability}
-				<div class="item dataAvailability">
+				<div class="item dataAvailability" id="data-availability-statement">
 					<h3>
 						{translate key="submission.dataAvailability"}
 					</h3>
-					<p>
-						{$dataAvailability|strip_unsafe_html}
-					</p>
+					{$dataAvailability|strip_unsafe_html}
 				</div>
 			{/if}
 
@@ -360,7 +382,7 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<h5 class="modal-title" id="copyrightModalTitle">{translate key="about.copyrightNotice"}</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<button type="button" class="close" data-dismiss="modal" aria-label="{translate|escape key="common.close"}">
 											<span aria-hidden="true">&times;</span>
 										</button>
 									</div>
@@ -396,14 +418,14 @@
 				{if $primaryGalleys}
 					<div class="item galleys">
 						{foreach from=$primaryGalleys item=galley}
-							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+							{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 						{/foreach}
 					</div>
 				{/if}
 				{if $supplementaryGalleys}
 					<div class="item galleys">
 						{foreach from=$supplementaryGalleys item=galley}
-							{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
+							{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication galley=$galley isSupplementary="1"}
 						{/foreach}
 					</div>
 				{/if}
