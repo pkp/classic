@@ -17,7 +17,7 @@
 
 <article class="obj_announcement_summary">
 	<{$heading} class="announcement-summary-heading">
-		<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->id}">
+		<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->id}">
 			{$announcement->getLocalizedData('title')|escape}
 		</a>
 	</{$heading}>
@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="buttons">
-		<a class="btn btn-secondary" href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->id}">
+		<a class="btn btn-secondary" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->id}">
 			<span aria-hidden="true" role="presentation">
 				{translate key="common.readMore"}
 			</span>

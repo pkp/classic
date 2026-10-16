@@ -87,7 +87,7 @@
 							{translate key="user.subscriptions.form.ipRange"}
 						</label>
 						<div class="col-sm-8">
-							<input class="form-control" type="text" name="ipRanges" id="ipRanges" value="{$ipRanges|escape}" aria-describedby="subscriptionIPDescription">
+							<textarea class="form-control" name="ipRanges" id="ipRanges" aria-describedby="subscriptionIPDescription">{$ipRanges|escape}</textarea>
 							<small class="form-text text-muted" id="subscriptionIPDescription">{translate key="user.subscriptions.form.ipRangeInstructions"}</small>
 						</div>
 					</div>

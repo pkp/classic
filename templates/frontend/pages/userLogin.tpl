@@ -42,9 +42,9 @@
 				<div class="row">
 					<div class="form-group col-md-6 offset-md-3">
 						<label for="username" class="visually-hidden">
-							{translate key="user.username"}
+							{translate key="user.usernameOrEmail"}
 						</label>
-						<input type="text" class="form-control" name="username" id="username" value="{$username|default:""|escape}" maxlength="32" placeholder="{translate key="user.username"}" required>
+						<input type="text" class="form-control" name="username" id="username" value="{$username|default:""|escape}" placeholder="{translate key="user.usernameOrEmail"}" required>
 						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
 					</div>
 
