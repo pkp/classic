@@ -88,6 +88,7 @@ describe('Theme plugin tests', function() {
 
 		// Check if applied
 		cy.get('header a').contains('Journal of Public Knowledge').click();
+		cy.reload(true); // Bypass the cached stylesheet
 		cy.get('.site-footer').should('have.css', 'background-color', 'rgb(170, 170, 170)');
 		cy.get('.journal_summary').contains(journalDescription);
 	});
