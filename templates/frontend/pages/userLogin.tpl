@@ -45,7 +45,7 @@
 							{translate key="user.usernameOrEmail"}
 						</label>
 						<input type="text" class="form-control" name="username" id="username" value="{$username|default:""|escape}" placeholder="{translate key="user.usernameOrEmail"}" required>
-						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+						<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 					</div>
 
 					<div class="form-group col-md-6 offset-md-3">
@@ -53,7 +53,7 @@
 							{translate key="user.password"}
 						</label>
 						<input type="password" class="form-control" name="password" id="password" value="{$password|default:""|escape}" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>
-						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+						<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 						<p>
 							<small>
 								<a href="{url page="login" op="lostPassword"}">

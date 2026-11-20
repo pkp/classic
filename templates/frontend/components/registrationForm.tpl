@@ -29,7 +29,7 @@
 					{translate key="user.givenName"}
 				</label>
 				<input type="text"  class="form-control" name="givenName" autocomplete="given-name" id="givenName" value="{$givenName|default:""|escape}" maxlength="255" placeholder="{translate key="user.givenName"}" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group middle-name col-sm-12">
 				<label for="familyName" class="visually-hidden">
@@ -45,7 +45,7 @@
 					{translate key="user.affiliation"}
 				</label>
 				<input type="text" class="form-control" name="affiliation" id="affiliation" value="{$affiliation|default:""|escape}" placeholder="{translate key="user.affiliation"}" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="country" class="visually-hidden">
@@ -55,7 +55,7 @@
 					<option class="choose-country">{translate key="common.country"}</option>
 					{html_options options=$countries selected=$country}
 				</select>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 		</div>
 
@@ -73,14 +73,14 @@
 					{translate key="user.email"}
 				</label>
 				<input type="email" class="form-control" name="email" id="email" value="{$email|default:""|escape}" maxlength="90" placeholder="{translate key="user.email"}" autocomplete="email" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group col-sm-12">
 				<label for="username" class="visually-hidden">
 					{translate key="user.username"}
 				</label>
 				<input type="text" class="form-control" name="username" id="username" value="{$username|default:""|escape}" maxlength="32" placeholder="{translate key="user.username"}" autocomplete="username" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 		</div>
 		<div class="form-row">
@@ -89,14 +89,14 @@
 					{translate key="user.password"}
 				</label>
 				<input type="password" class="form-control" name="password" id="password" password="true" maxlength="32" placeholder="{translate key="user.password"}" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 			<div class="form-group col-sm-6">
 				<label for="password2" class="visually-hidden">
 					{translate key="user.repeatPassword"}
 				</label>
 				<input type="password" class="form-control" name="password2" id="password2" password="true" maxlength="32" placeholder="{translate key="user.repeatPassword"}" required>
-				<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+				<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 			</div>
 		</div>
 	</div>
