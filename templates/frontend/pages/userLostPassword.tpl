@@ -36,7 +36,7 @@
 					<div class="form-group col-md-6 offset-md-3">
 						<label for="email" class="visually-hidden">{translate key="user.login.registeredEmail"}</label>
 						<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" placeholder="{translate key="user.login.registeredEmail"}" required>
-						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+						<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 					</div>
 				</div>
 

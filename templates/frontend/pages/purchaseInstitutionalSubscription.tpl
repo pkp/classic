@@ -40,7 +40,7 @@
 									<option class="choose-subscription" value="{$subscriptionType->getId()}"{if $typeId == $subscriptionType->getId()} selected{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 								{/foreach}
 							</select>
-							<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+							<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 						</div>
 					</div>
 					<div class="subscription_membership subscription-form-item form-group row">
