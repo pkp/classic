@@ -225,7 +225,6 @@
 			{/if}
 
 			{* DOI *}
-			{assign var=doiObject value=$article->getCurrentPublication()->getData('doiObject')}
 			{if $doiObject}
 				{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
 				<div class="doi">
