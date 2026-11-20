@@ -43,7 +43,7 @@
 	<div class="container-fluid container-page">
 
 		{* Announcements *}
-		{if $announcements}
+		{if $numAnnouncementsHomepage && $announcements|@count}
 			<section class="announcements">
 				<h2>{translate key="announcement.announcements"}</h2>
 				<div class="row">
@@ -51,7 +51,7 @@
 						<article class="col-md-4 announcement">
 							<p class="announcement_date">{$announcement->datePosted|date_format:$dateFormatShort|escape}</p>
 							<h3 class="announcement_title">
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->id|escape}">
+								<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->id|escape}">
 									{$announcement->getLocalizedData('title')|escape}
 								</a>
 							</h3>

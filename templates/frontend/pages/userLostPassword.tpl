@@ -24,7 +24,7 @@
 			{if $error}
 				<div class="row">
 					<div class="pkp_form_error col-md-6 offset-md-3">
-						<div class="alert alert-danger" role="alert">{translate key=$error}</div>
+						<div class="alert alert-danger" role="alert">{translate key=$error reason=$reason}</div>
 					</div>
 				</div>
 			{/if}
@@ -36,7 +36,7 @@
 					<div class="form-group col-md-6 offset-md-3">
 						<label for="email" class="visually-hidden">{translate key="user.login.registeredEmail"}</label>
 						<input type="email" class="form-control" name="email" id="email" value="{$email|escape}" placeholder="{translate key="user.login.registeredEmail"}" required>
-						<small class="form-text text-muted"><span class="required">*</span>{translate key="common.required"}</small>
+						<small class="form-text text-muted"><span class="required" aria-hidden="true">*</span>{translate key="common.required"}</small>
 					</div>
 				</div>
 
@@ -68,7 +68,7 @@
 						</button>
 
 						{if !$disableUserReg}
-							{capture name="registerUrl"}{url page="user" op="register" source=$source}{/capture}
+							{capture assign="registerUrl"}{url page="user" op="register" source=$source}{/capture}
 							<a href="{$registerUrl}" class="register btn">
 								{translate key="user.login.registerNewAccount"}
 							</a>

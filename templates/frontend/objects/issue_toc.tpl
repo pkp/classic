@@ -64,11 +64,50 @@
 	</section>
 {/if}
 
+{* Pub IDs (eg - URN) *}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
+	{if $pubId}
+		{assign var="resolvingUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+		<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
+			<span class="type">
+				{$pubIdPlugin->getPubIdDisplayType()|escape}:
+			</span>
+			<span class="id">
+				{if $resolvingUrl}
+					<a href="{$resolvingUrl|escape}">
+						{$resolvingUrl}
+					</a>
+				{else}
+					{$pubId}
+				{/if}
+			</span>
+		</div>
+	{/if}
+{/foreach}
+
+{* DOI *}
+{assign var=doiObject value=$issue->getData('doiObject')}
+{if $doiObject}
+	{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
+	<div class="pub_id doi">
+		<span class="type">
+			{capture assign=translatedDOI}{translate key="doi.readerDisplayName"}{/capture}
+			{translate key="semicolon" label=$translatedDOI}
+		</span>
+		<span class="id">
+			<a href="{$doiUrl|escape}">
+				{$doiUrl}
+			</a>
+		</span>
+	</div>
+{/if}
+
 {* Full-issue galleys *}
 {if $issueGalleys}
 	<section class="galleys">
 		<h4 class="visually-hidden">
-			{translate key="issue.tableOfContents"}
+			{translate key="issue.fullIssue"}
 		</h4>
 		<ul class="galleys_links">
 			{foreach from=$issueGalleys item=galley}
@@ -103,6 +142,6 @@
 	{/foreach}
 </section><!-- .sections -->
 
-<a class="read_more btn btn-secondary" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
+<a class="read_more btn btn-secondary" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
 	{translate key="journal.viewAllIssues"}
 </a>
