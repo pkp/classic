@@ -67,7 +67,7 @@
 					{if $isUserLoggedIn}
 						{capture assign="sectionSubmissionUrl"}{url page="submission" sectionId=$section->getId()}{/capture}
 						<p>
-							{translate key="about.onlineSubmissions.submitToSection" name=$section->getLocalizedTitle() url=$sectionSubmissionUrl}
+							{translate key="about.onlineSubmissions.submitToSection" name=$section->getLocalizedTitle()|escape url=$sectionSubmissionUrl}
 						</p>
 					{/if}
 				</div>
@@ -78,14 +78,14 @@
 			<div class="copyright_notice submission-item-block">
 				<h2>
 					{translate key="about.copyrightNotice"}
-					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/authorGuidelines" sectionTitleKey="about.copyrightNotice"}
+					{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/instructions" sectionTitleKey="about.copyrightNotice"}
 				</h2>
 				{$currentContext->getLocalizedData('copyrightNotice')}
 			</div>
 		{/if}
 
 		{if $currentContext->getLocalizedData('privacyStatement')}
-		<div class="privacy_statement submission-item-block">
+		<div class="privacy_statement submission-item-block" id="privacyStatement">
 			<h2>
 				{translate key="about.privacyStatement"}
 				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="setup/privacy" sectionTitleKey="about.privacyStatement"}
