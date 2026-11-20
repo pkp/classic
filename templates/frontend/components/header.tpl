@@ -16,15 +16,14 @@
 	{/if}
 
 	{capture assign="homeUrl"}
-		{url page="index" router=$smarty.const.ROUTE_PAGE}
+		{url page="index" router=PKP\core\PKPApplication::ROUTE_PAGE}
 	{/capture}
 {/strip}
 
 {capture assign="journalLogo"}
 	{if $displayPageHeaderLogo}
 		<img class="journal-logo" src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}"
-		     {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"
-		     {else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if}>
+		     {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if}>
 	{elseif $displayPageHeaderTitle}
 		<div class="journal-logo-text">{$displayPageHeaderTitle|escape}</div>
 	{else}
